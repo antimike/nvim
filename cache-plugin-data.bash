@@ -4,7 +4,7 @@
 
 # "Public" (exported) global variables
 export STAGING_DIR="$HOME/.q"
-export PLUGINS="${STAGING_DIR}/plugins.tsv"
+export PLUGINS="${STAGING_DIR}/nvim-plugins.tsv.q"
 export -A PLUGIN_ENV=(
     [NAME]=
     [URL]=
@@ -23,7 +23,6 @@ if ! [ -r "$PLUGIN_TEMPLATE" ]; then
 fi
 
 # "Private" global variables
-declare ERR_EXIT=1
 declare -A DELIMS=( 
     [col]='	'       # Tab
     [kvpair]=":" 
@@ -35,8 +34,13 @@ declare -A DELIMS=(
 ######################
 
 _add() {
-    cat "$PLUGIN_TEMPLATE" | env
+    cat "$PLUGIN_TEMPLATE" | __envsubst_plugin
 }
+
+_mod() {
+    :
+}
+
 
 #######################
 ## "Private" functions
