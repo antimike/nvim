@@ -3,6 +3,8 @@
 # writing the results to a designated logfile / queue (default: stdout)
 
 declare -A FIELDS=(
+    # jq expressions to extract desired information from JSON returned by Github
+    # API
     [name]=".name"
     [owner]=".owner.login"
     [description]=".description"
@@ -18,6 +20,7 @@ declare -A URLS=(
 )
 
 declare -A PROPS=(
+    # User-provided information
     [priority]=
     [tags]=
     [config]=
@@ -25,6 +28,12 @@ declare -A PROPS=(
 )
 
 __get_docstring() {
+    # Prints commented lines found directly underneath a function definition
+    # (inspired by Python's docstring)
+    # Before printing, the text is trimmed to remove leading whitespace and #,
+    # then `eval`d to allow the use of Bash variables and command substitutions
+    # Params:
+    #   $1 --> Name of function to find docstring for
     eval "cat <<-EOF
 		`awk -v f="$1" '$1 == f {
 		        found = 1; next;
@@ -42,7 +51,7 @@ __get_docstring() {
 _usage() {
     # Display this message and exit
     cat <<-USAGE
-		Usage: funcname \${urls[@]}
+		Usage: funcname url
 		Functions: 
 		`while read -r line; do
 		    printf '  * %s\n' "${line#_}"
@@ -51,8 +60,21 @@ _usage() {
 		USAGE
 }
 
+_to_tsv() {
+    # Convert a JSON object to TSV.  Sorts by keys before dumping TSV data.
+    # Input (stdin): A JSON object
+    # Output (stdout): A single tab-delimited line containing the **values**
+    # found in the input, printed in the sort-order of the corresponding keys
+    cat - | jq -S '.' | jq -r 'map_values(@text) | [.[]] | @tsv'
+}
+
 _api_query() {
     # Get the raw JSON returned by the Github API for the passed URL
+    # Input:
+    #   $1 --> URL of github repo.  Can be either a full Github URL or
+    #   abbreviated (e.g., "antimike/dotfiles.git")
+    # Output (stdout): Full JSON dump of the repository data returned by the
+    # Github API, formatted by `jq`
     local stem="${1#${URLS[base]}/}"
     local url="${URLS[api]}/${stem}"
     local -a opts=(
@@ -66,15 +88,21 @@ _api_query() {
 
 _jq_query() {
     # Get the properties stored in the array FIELDS from the JSON passed via stdin
-    # Fields: `printf '\n  - %s' "${FIELDS[@]}"`
-    cat - | jq "{`for k in "${!FIELDS[@]}"; do \
+    # Input (stdin): A JSON object containing the keys found in FIELDS (see
+    # below)
+    # Output (stdout): JSON object containing only the keys found in FIELDS and
+    # the corresponding values
+    # Fields: `printf '\n  - %s' "${!FIELDS[@]}"`
+    cat - | jq -S "{`for k in "${!FIELDS[@]}"; do \
         printf '"%s":%s,' "$k" "${FIELDS[$k]}"; done;`}"
     return $?
 }
 
 _get_readme() {
     # Get the README.md associated with the passed repository
-    # Print to stdout
+    # Input:
+    #   $1 --> Repository URL
+    # Output (stdout): Raw text of README.md for the passed repository
     local stem="${1#${URLS[base]}/}"
     local url="${URLS[raw]}/${stem}/README.md"
     curl "$url"
@@ -98,6 +126,9 @@ _get_props() {
 }
 
 main() {
+    # Checks if first argument is the name of a function defined in this script
+    # If it is, the function is executed with the rest of the params as
+    # arguments
     if grep -q -s "^_${1}()" "${BASH_SOURCE[0]}"; then
         local func="_${1}"; shift
         $func "$@"; exit $?
