@@ -31,9 +31,12 @@ __get_docstring() {
     # Prints commented lines found directly underneath a function definition
     # (inspired by Python's docstring)
     # Before printing, the text is trimmed to remove leading whitespace and #,
-    # then `eval`d to allow the use of Bash variables and command substitutions
+    # then \`eval\`d to allow the use of Bash variables and command
+    # substitutions
     # Params:
-    #   $1 --> Name of function to find docstring for
+    #   \$1 --> Name of function to find docstring for
+    # NOTE: Since the docstring contents are \`eval\`d, shell metacharacters
+    # must be escaped in order to be printed literally
     eval "cat <<-EOF
 		`awk -v f="$1" '$1 == f {
 		        found = 1; next;
@@ -44,7 +47,7 @@ __get_docstring() {
 		        else 
 		            found = 0
 		    }' "${BASH_SOURCE[0]}" |
-		        sed 's/^[[:space:]]*# //'`
+		        sed 's/^[[:space:]]*# \?//'`
 		EOF"
 }
 
@@ -71,10 +74,10 @@ _to_tsv() {
 _api_query() {
     # Get the raw JSON returned by the Github API for the passed URL
     # Input:
-    #   $1 --> URL of github repo.  Can be either a full Github URL or
+    #   \$1 --> URL of github repo.  Can be either a full Github URL or
     #   abbreviated (e.g., "antimike/dotfiles.git")
     # Output (stdout): Full JSON dump of the repository data returned by the
-    # Github API, formatted by `jq`
+    # Github API, formatted by \`jq\`
     local stem="${1#${URLS[base]}/}"
     local url="${URLS[api]}/${stem}"
     local -a opts=(
@@ -101,7 +104,7 @@ _jq_query() {
 _get_readme() {
     # Get the README.md associated with the passed repository
     # Input:
-    #   $1 --> Repository URL
+    #   \$1 --> Repository URL
     # Output (stdout): Raw text of README.md for the passed repository
     local stem="${1#${URLS[base]}/}"
     local url="${URLS[raw]}/${stem}/README.md"
