@@ -102,13 +102,15 @@ _jq_query() {
 }
 
 _get_readme() {
-    # Get the README.md associated with the passed repository
+    # Get the README.{md,rst} associated with the passed repository
     # Input:
     #   \$1 --> Repository URL
-    # Output (stdout): Raw text of README.md for the passed repository
+    # Output (stdout): Raw text of README.{md,rst} for the passed repository
+    # Stores the docname 
+    
     local stem="${1#${URLS[base]}/}"
-    local url="${URLS[raw]}/${stem}/README.md"
-    curl "$url"
+    local url="${URLS[raw]}/${stem}/README"
+    curl "${url}.md" || curl "${url}.rst"
     return $?
 }
 
@@ -128,7 +130,40 @@ _get_props() {
     done
 }
 
-main() {
+_process_urls() {
+    # Processes a list of URLs of vim/nvim plugin repos on Github
+    # Specifically, the following actions are performed:
+    #   - A directory in \`pwd\` is created for each plugin
+    #   - The README.md for each plugin is downloaded and stored in its
+    #   directory
+    #   - The JSON data from \`get_plugin_data\` is stored as a YAML frontmatter
+    #   header to the README, and is also added to a "master" TSV file
+    #   containing summaries of all the plugins
+    # Input (stdin): A list of URLs of Github repos
+    # Output (stdout): None
+    local stem= url= owner=
+    local url="${URLS[raw]}/${stem}/README.md"
+    local json=
+    while read -r url; do
+        # Text processing
+        json="$(_get_plugin_data "$url")"
+        dir="$(jq '.name' <<<"$json")"
+        yaml="$(json-to-dhall <<<"$json" | dhall-to-yaml)"
+        until [ $? -ne 0 ] || mkdir "$dir"; do
+            echo "Failed to make plugin directory '${dir}'."
+            read -r -p "
+Enter another name to attempt directory creation for this plugin again: " dir
+        done
+        _get_readme "$url" >"${dir}/README.md"
+
+        # Make a directory for this plugin
+
+        # Get README
+        # Get summary data and tee it to both the README and the master TSV
+    done < <(cat -)
+}
+
+__fetch_main() {
     # Checks if first argument is the name of a function defined in this script
     # If it is, the function is executed with the rest of the params as
     # arguments
@@ -140,4 +175,4 @@ main() {
     fi
 }
 
-main "$@"
+__fetch_main "$@"
