@@ -27,6 +27,14 @@ declare -A PROPS=(
     [comments]=
 )
 
+declare -a README_EXTS=(
+    md
+    markdown
+    rst
+)
+
+declare EXT=
+
 __get_docstring() {
     # Prints commented lines found directly underneath a function definition
     # (inspired by Python's docstring)
@@ -58,6 +66,7 @@ _usage() {
 		Functions: 
 		`while read -r line; do
 		    printf '  * %s\n' "${line#_}"
+            printf '    %s\n' "$(tr [[:graph:]] [-*] <<<"${line#_}")"
 		    __get_docstring "$line" | sed 's/^/    | /'
 		done < <(grep -o '^_[^_][^[:space:]]\+\(\)' "${BASH_SOURCE[0]}")`
 		USAGE
@@ -102,15 +111,24 @@ _jq_query() {
 }
 
 _get_readme() {
-    # Get the README.{md,rst} associated with the passed repository
+    # Get the README.{ext} associated with the passed repository, where 'ext' is
+    # one of the following possible extensions: `printf '\n  - %s' \
+    # "${README_EXTS[@]}"`
     # Input:
     #   \$1 --> Repository URL
-    # Output (stdout): Raw text of README.{md,rst} for the passed repository
-    # Stores the docname 
-    
-    local stem="${1#${URLS[base]}/}"
-    local url="${URLS[raw]}/${stem}/README"
-    curl "${url}.md" || curl "${url}.rst"
+    #   \$2 --> Branch (defaults to 'master')
+    # Output (stdout): Raw text of README.{ext} for the passed repository
+    # Actions: Stores the found extension in the variable EXT 
+    local -a opts=(
+        --silent
+    )
+    local branch="${2:-master}"
+    local stem="${1#${URLS[base]}/}" 
+    local url="${URLS[raw]}/${stem}/${branch}/README"
+    for ext in "${README_EXTS[@]}"; do
+        # echo "Trying to \`curl\` ${url}.${ext}..." >&2
+        curl "${opts[@]}" "${url}.${ext}" && export EXT="$ext" && return 0
+    done
     return $?
 }
 
