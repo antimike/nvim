@@ -2,3 +2,4 @@ setup.sh
 test.*
 Session.vim
 *.test.*
+.history
