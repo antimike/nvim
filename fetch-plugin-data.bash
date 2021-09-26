@@ -11,6 +11,7 @@ declare -A FIELDS=(
     [url]=".url"
     [stars]=".stargazers_count"
     [archived]=".archived"
+    [default_branch]=".default_branch"
 )
 
 declare -A URLS=(
@@ -59,17 +60,32 @@ __get_docstring() {
 		EOF"
 }
 
+_functions() {
+    # Lists functions defined in this script
+    # If any arguments are passed, they are treated as function names to search
+    # for and are re-echoed if found
+    while true; do
+        local fn_re="${1:-[a-zA-Z_]\+}()"  # Regex to search for
+        grep -o "^_${fn_re}" "${BASH_SOURCE[0]}" | 
+            sed 's/^_//' |
+            grep -v '^_' 
+        shift && [ $# -gt 0 ] || break
+    done
+}
+
 _usage() {
-    # Display this message and exit
-    cat <<-USAGE
-		Usage: funcname url
-		Functions: 
-		`while read -r line; do
-		    printf '  * %s\n' "${line#_}"
-            printf '    %s\n' "$(tr [[:graph:]] [-*] <<<"${line#_}")"
-		    __get_docstring "$line" | sed 's/^/    | /'
-		done < <(grep -o '^_[^_][^[:space:]]\+\(\)' "${BASH_SOURCE[0]}")`
-		USAGE
+    # Display helptext for passed functions
+    # If no arguments are provided, display helptext for all functions
+    # Input:
+    #   \$1 --> Name of function to print helptext.  A leading underscore is
+    #   added to the passed function name.
+    # Output (stdout): Helptext ("docstring") associated to the passed function
+    # name.
+    while read -r line; do
+        printf '* %s\n' "$line"
+        printf '  %s\n' "$(tr [[:graph:]] [-*] <<<"$line")"
+        __get_docstring "_${line}" | sed 's/^/    | /'
+    done < <(_functions "$@")
 }
 
 _to_tsv() {
@@ -126,7 +142,6 @@ _get_readme() {
     local stem="${1#${URLS[base]}/}" 
     local url="${URLS[raw]}/${stem}/${branch}/README"
     for ext in "${README_EXTS[@]}"; do
-        # echo "Trying to \`curl\` ${url}.${ext}..." >&2
         curl "${opts[@]}" "${url}.${ext}" && export EXT="$ext" && return 0
     done
     return $?
@@ -159,24 +174,26 @@ _process_urls() {
     #   containing summaries of all the plugins
     # Input (stdin): A list of URLs of Github repos
     # Output (stdout): None
-    local stem= url= owner=
-    local url="${URLS[raw]}/${stem}/README.md"
-    local json=
+    local json= dir= yaml= readme=
     while read -r url; do
         # Text processing
         json="$(_get_plugin_data "$url")"
         dir="$(jq '.name' <<<"$json")"
         yaml="$(json-to-dhall <<<"$json" | dhall-to-yaml)"
+
+        # Make plugin directory
         until [ $? -ne 0 ] || mkdir "$dir"; do
             echo "Failed to make plugin directory '${dir}'."
             read -r -p "
-Enter another name to attempt directory creation for this plugin again: " dir
+Enter another name to attempt directory creation for this plugin: " dir
         done
-        _get_readme "$url" >"${dir}/README.md"
 
-        # Make a directory for this plugin
+        # Write README to plugin dir with YAML header
+        readme="${dir}/README.${EXT}"
+        printf '%s\n' "---" "$yaml" "---" >"$readme"
+        _get_readme "$url" >>"$readme"
 
-        # Get README
+
         # Get summary data and tee it to both the README and the master TSV
     done < <(cat -)
 }
