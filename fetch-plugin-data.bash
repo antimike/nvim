@@ -141,7 +141,7 @@ _get_readme() {
             echo "Directory '$dir' does not exist" >&2
             return 9
         elif [ -e "$dest" ]; then
-            read -n 1 -s -p "File '$fname' already exists.  Overwrite? "
+            read -n 1 -s -p "File '${dest}' already exists.  Overwrite? "
             case "$REPLY" in
                 y|Y) ;;
                 *) echo "Aborted" >&2; return 7 ;;
@@ -220,7 +220,7 @@ _process_urls() (
             { failed["$dir"]="Failed to make plugin dir"; continue; }
         pushd "$dir" >/dev/null || exit 8
 
-        _get_readme "$url" ||
+        _get_readme "$url" </dev/tty ||
             { failed["$dir"]="Failed to get README"; continue; }
         yq -Y '.' <<<"$json" >"$yaml"
 
