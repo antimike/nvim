@@ -190,7 +190,7 @@ _process_urls() (
         # Text processing
         json="$(_get_plugin_data "$url")"
         dir="$(jq '.name' <<<"$json")"
-        yaml="$(json-to-dhall <<<"$json" | dhall-to-yaml)"
+        yaml="$(yq -Y '.' <<<"$json")"
 
         # Make plugin directory
         until [ $? -ne 0 ] || mkdir "$dir"; do
