@@ -34,6 +34,7 @@ declare -a README_EXTS=(
     rst
 )
 
+declare MASTER_TSV="`pwd`/nvim-plugins.tsv"
 declare EXT=
 
 __get_docstring() {
@@ -163,7 +164,7 @@ _get_props() {
     done
 }
 
-_process_urls() {
+_process_urls() (
     # Processes a list of URLs of vim/nvim plugin repos on Github
     # Specifically, the following actions are performed:
     #   - A directory in \`pwd\` is created for each plugin
@@ -172,8 +173,18 @@ _process_urls() {
     #   - The JSON data from \`get_plugin_data\` is stored as a YAML frontmatter
     #   header to the README, and is also added to a "master" TSV file
     #   containing summaries of all the plugins
-    # Input (stdin): A list of URLs of Github repos
+    # Input (stdin and params): A list of URLs of Github repos
     # Output (stdout): None
+    # Options:
+    #   -l      Logfile (master TSV).  Defaults to "\`pwd\`/nvim-plugins.tsv".
+    while getopts ":l:" opt; do
+        case "$opt" in
+            l) MASTER_TSV="$OPTARG" ;;
+            *) _usage process_urls ;;
+        esac
+    done
+    shift $(( OPTIND - 1 )); OPTIND=1
+
     local json= dir= yaml= readme=
     while read -r url; do
         # Text processing
@@ -193,10 +204,10 @@ Enter another name to attempt directory creation for this plugin: " dir
         printf '%s\n' "---" "$yaml" "---" >"$readme"
         _get_readme "$url" >>"$readme"
 
-
-        # Get summary data and tee it to both the README and the master TSV
-    done < <(cat -)
-}
+        # Append plugin summary to master TSV
+        printf '%s\n' "$(_to_tsv <<<"$json")" >>"$MASTER_TSV"
+    done < <(cat - <(printf '%s\n' "$@"))
+)
 
 __fetch_main() {
     # Checks if first argument is the name of a function defined in this script
