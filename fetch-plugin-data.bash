@@ -183,16 +183,6 @@ _get_plugin_data() {
     return $?
 }
 
-_get_props() {
-    # Not implemented
-    echo "Not implemented" >&2; exit 2
-    for p in "${!PROPS[@]}"; do
-        if [ -z "${PROPS[$p]}" ]; then
-            PROPS[$p]="$(_user_query "$p")"
-        fi
-    done
-}
-
 _process_urls() (
     # Process a list of URLs of vim/nvim plugin repos on Github
     # Specifically, the following actions are performed:
