@@ -149,10 +149,8 @@ _get_readme() {
         fi
         local -a opts=(
             --silent
-            -w
-            "%{http_code}"
-            -o
-            "$dest"
+            -w "%{http_code}"
+            -o "$dest"
         )
 
         local http="$(curl "${opts[@]}" \
