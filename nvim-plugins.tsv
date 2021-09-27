@@ -1,1 +1,2 @@
-archived	default_branch	description	name	owner	stars	url
+archived	default_branch	description	downloaded	name	owner	stars	url
+false	master	A git blame plugin for neovim inspired by VS Code's GitLens plugin	Mon Sep 27 05:44:13 PM UTC 2021	blamer.nvim	APZelos	403	https://api.github.com/repos/APZelos/blamer.nvim
