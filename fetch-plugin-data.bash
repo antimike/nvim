@@ -120,14 +120,11 @@ _get_readme() {
     #   \$1 --> Repository URL
     #   \$2 --> Branch (defaults to 'master')
     # Output (stdout): Raw text of README.{ext} for the passed repository
-    # Actions: Stores the found extension in the variable EXT 
     # Options:
-    #   -d      Directory to write retrieved README file to
-    local -a opts=(
-        --silent
-    )
+    #   -d      Directory to write retrieved README file to.  (Defaults to
+    #           \`pwd\`.)
 
-    local dir=
+    local dir="`pwd`"
     while getopts ':d:' opt; do
         case "$opt" in
             d) dir="$OPTARG" ;;
@@ -163,10 +160,10 @@ _get_readme() {
         if [ "$http" -lt 200 ] || [ "$http" -gt 299 ]; then
             rm -f "$dest"
         else
-            break
+            return 0
         fi
     done
-    return $?
+    return 1
 }
 
 _get_plugin_data() {
