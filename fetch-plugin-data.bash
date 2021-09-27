@@ -201,6 +201,14 @@ _process_urls() (
     done
     shift $(( OPTIND - 1 )); OPTIND=1
 
+    # From https://unix.stackexchange.com/questions/301426/bash-function-that-accepts-input-from-parameter-or-pipe/301432
+    # The point is to redirect positional params to stdin if there are any
+    # Note that this entire function runs in a subshell, so the \`exec\` call
+    # won't cause the parent shell to exit.
+    if [ $# -gt 0 ]; then
+        exec < <(printf '%s\n' "$@")
+    fi
+
     local -A failed=( )
     local json= dir=
     while read -r url; do
@@ -223,10 +231,12 @@ Enter another name to attempt directory creation for this plugin: " dir
 
         # Append plugin summary to master TSV
         printf '%s\n' "$(_to_tsv <<<"$json")" >>"$MASTER_TSV"
-    done < <(cat - <(printf '%s\n' "$@"))
-    if [ ${#failed[@]} -ne 0 ]; then
+    done
+    if [ ${#failed[@]} -gt 0 ]; then
         echo "Failed:"
-        printf '  %s	%s\n' "${failed[@]@K}"
+        # Gross...
+        # TODO: Find a better way to do this
+        eval printf "'  %s	%s\n'" "${failed[@]@K}"
     fi >&2
     return ${#failed[@]}
 )
