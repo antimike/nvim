@@ -37,7 +37,6 @@ declare -a README_EXTS=(
 )
 
 declare MASTER_TSV="`pwd`/nvim-plugins.tsv"
-export EXT=
 
 __get_docstring() {
     # Prints commented lines found directly underneath a function definition
@@ -102,34 +101,15 @@ _to_tsv() {
     cat - | jq -S '.' | jq -r 'map_values(@text) | [.[]] | @tsv'
 }
 
-_api_query() {
-    # Get the raw JSON returned by the Github API for the passed URL
+_query_from_dict() {
+    # Construct \`jq\` query from a Bash associative array
     # Input:
-    #   \$1 --> URL of github repo.  Can be either a full Github URL or
-    #   abbreviated (e.g., "antimike/dotfiles.git")
-    # Output (stdout): Full JSON dump of the repository data returned by the
-    # Github API, formatted by \`jq\`
-    local stem="${1#${URLS[base]}/}"
-    local url="${URLS[api]}/${stem}"
-    local -a opts=(
-        --silent
-        -H
-        'Accept: application/vnd.github.preview'
-    )
-    curl "${opts[@]}" "$url"
-    return $?
-}
-
-_jq_query() {
-    # Get the properties stored in the array FIELDS from the JSON passed via stdin
-    # Input (stdin): A JSON object containing the keys found in FIELDS (see
-    # below)
-    # Output (stdout): JSON object containing only the keys found in FIELDS and
-    # the corresponding values
-    # Fields: `printf '\n  - %s' "${!FIELDS[@]}"`
-    cat - | jq -S "{`for k in "${!FIELDS[@]}"; do \
-        printf '"%s":%s,' "$k" "${FIELDS[$k]}"; done;`}"
-    return $?
+    #   \$1 --> nameref for an associative array
+    # Output (stdout): elements of associative array formatted as a \`jq\` query
+    local -n ref="$1"
+    printf '{'
+    eval printf "'\"%s\":%s,'" "${ref[@]@K}" | sed 's/,$//'
+    printf '}'
 }
 
 _get_readme() {
@@ -159,24 +139,47 @@ _get_readme() {
     local stem="${1#${URLS[base]}/}" branch="${2:-master}" fname= dest=
     for ext in "${README_EXTS[@]}"; do
         fname="README.${ext}" dest="${dir}/${fname}"
-        mkdir -p "$dir" 2>/dev/null || fname="/dev/null"
-        if [ -e "$fname" ]; then
+
+        if ! [ -d "$dir" ]; then 
+            echo "Directory '$dir' does not exist" >&2
+            return 9
+        elif [ -e "$dest" ]; then
             read -n 1 -s -p "File '$fname' already exists.  Overwrite? "
             case "$REPLY" in
                 y|Y) ;;
                 *) echo "Aborted" >&2; return 7 ;;
             esac
         fi
+        local -a opts=(
+            --silent
+            -w
+            "%{http_code}"
+            -o
+            "$dest"
+        )
 
-        { curl "${opts[@]}" "${URLS[raw]}/${stem}/${branch}/${fname}" | 
-            tee "$dest"; } && export EXT="$ext"
+        local http="$(curl "${opts[@]}" \
+            "${URLS[raw]}/${stem}/${branch}/${fname}")"
+        if [ "$http" -lt 200 ] || [ "$http" -gt 299 ]; then
+            rm -f "$dest"
+        else
+            break
+        fi
     done
     return $?
 }
 
 _get_plugin_data() {
     # Pipes output of api_query to jq_query
-    _api_query "$1" | _jq_query
+    local stem="${1#${URLS[base]}/}"
+    local url="${URLS[api]}/${stem}"
+    local -a opts=(
+        --silent
+        -H
+        'Accept: application/vnd.github.preview'
+    )
+    FIELDS[downloaded]="\"$(date -u)\""
+    curl "${opts[@]}" "$url" | jq -S "$(_query_from_dict FIELDS)"
     return $?
 }
 
@@ -191,7 +194,7 @@ _get_props() {
 }
 
 _process_urls() (
-    # Processes a list of URLs of vim/nvim plugin repos on Github
+    # Process a list of URLs of vim/nvim plugin repos on Github
     # Specifically, the following actions are performed:
     #   - A directory in \`pwd\` is created for each plugin
     #   - The README.md for each plugin is downloaded and stored in its
