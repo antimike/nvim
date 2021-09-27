@@ -210,24 +210,21 @@ _process_urls() (
     fi
 
     local -A failed=( )
-    local json= dir=
+    local json= dir= yaml="info.yaml"
     while read -r url; do
         # Text processing
-        json="$(_get_plugin_data "$url")"
-        dir="$(jq '.name' <<<"$json")"
-        yaml="$(yq -Y '.' <<<"$json")"
+        json="$(_get_plugin_data "$url")" &&
+            dir="$(jq '.name' <<<"$json" | sed -e 's/^"\(.*\)"$/\1/')" ||
+            { failed["$dir"]="Failed to get plugin data"; continue; }
 
         # Make plugin directory
-        until [ $? -ne 0 ] || mkdir "$dir"; do
-            echo "Failed to make plugin directory '${dir}'."
-            read -r -p "
-Enter another name to attempt directory creation for this plugin: " dir
-        done
+        mkdir "$dir" 2>/dev/null || [ -d "$dir" ] ||
+            { failed["$dir"]="Failed to make plugin dir"; continue; }
+        pushd "$dir" >/dev/null || exit 8
 
-        # Write README to plugin dir with YAML header
-        readme="${dir}/README.${EXT}"
-        printf '%s\n' "---" "$yaml" "---" >"$readme"
-        _get_readme "$url" >>"$readme"
+        _get_readme "$url" ||
+            { failed["$dir"]="Failed to get README"; continue; }
+        yq -Y '.' <<<"$json" >"$yaml"
 
         # Append plugin summary to master TSV
         printf '%s\n' "$(_to_tsv <<<"$json")" >>"$MASTER_TSV"
