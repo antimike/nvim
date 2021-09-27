@@ -2,6 +2,8 @@
 # Uses the Github API to fetch repository metadata for a list of vim plugins,
 # writing the results to a designated logfile / queue (default: stdout)
 
+set -o pipefail
+
 declare -A FIELDS=(
     # jq expressions to extract desired information from JSON returned by Github
     # API
@@ -139,14 +141,35 @@ _get_readme() {
     #   \$2 --> Branch (defaults to 'master')
     # Output (stdout): Raw text of README.{ext} for the passed repository
     # Actions: Stores the found extension in the variable EXT 
+    # Options:
+    #   -d      Directory to write retrieved README file to
     local -a opts=(
         --silent
     )
-    local branch="${2:-master}"
-    local stem="${1#${URLS[base]}/}" 
-    local url="${URLS[raw]}/${stem}/${branch}/README"
+
+    local dir=
+    while getopts ':d:' opt; do
+        case "$opt" in
+            d) dir="$OPTARG" ;;
+            *) _usage get_readme >&2; exit 4 ;;
+        esac
+    done
+    shift $(( OPTIND - 1 )); OPTIND=1
+
+    local stem="${1#${URLS[base]}/}" branch="${2:-master}" fname= dest=
     for ext in "${README_EXTS[@]}"; do
-        curl "${opts[@]}" "${url}.${ext}" && export EXT="$ext" && return 0
+        fname="README.${ext}" dest="${dir}/${fname}"
+        mkdir -p "$dir" 2>/dev/null || fname="/dev/null"
+        if [ -e "$fname" ]; then
+            read -n 1 -s -p "File '$fname' already exists.  Overwrite? "
+            case "$REPLY" in
+                y|Y) ;;
+                *) echo "Aborted" >&2; return 7 ;;
+            esac
+        fi
+
+        { curl "${opts[@]}" "${URLS[raw]}/${stem}/${branch}/${fname}" | 
+            tee "$dest"; } && export EXT="$ext"
     done
     return $?
 }
