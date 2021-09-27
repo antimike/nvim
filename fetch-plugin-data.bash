@@ -37,6 +37,7 @@ declare -a README_EXTS=(
 )
 
 declare MASTER_TSV="`pwd`/nvim-plugins.tsv"
+declare GH_PAT=
 
 __get_docstring() {
     # Prints commented lines found directly underneath a function definition
@@ -60,6 +61,21 @@ __get_docstring() {
 		    }' "${BASH_SOURCE[0]}" |
 		        sed 's/^[[:space:]]*# \?//'`
 		EOF"
+}
+
+__require_pat() {
+    # Makes sure the variable \$GH_PAT is nonempty, and queries \`pass\` for it
+    # if not
+    if [ -z "$GH_PAT" ]; then
+        echo "Obtaining Github PAT from \`pass\`..." >&2
+        GH_PAT="$(pass show csu/tokens/github | awk '
+            NR == 1 { printf "%s	%s\n", "1", $0; }
+            /^username/ { printf "%s	%s", "0", $2; }
+            ' | sort -t '	' -k 1 | 
+                awk -v FS='	' -v ORS=':' '{ print $2; }' |
+                sed 's/:$//')"
+        echo "PAT obtained: ${GH_PAT@A}" >&2
+    fi
 }
 
 _functions() {
@@ -147,35 +163,50 @@ _get_readme() {
                 *) echo "Aborted" >&2; return 7 ;;
             esac
         fi
+        __require_pat
         local -a opts=(
             --silent
             -w "%{http_code}"
             -o "$dest"
+            -u "${GH_PAT}"
         )
 
-        local http="$(curl "${opts[@]}" \
+        local -i http="$(curl "${opts[@]}" \
             "${URLS[raw]}/${stem}/${branch}/${fname}")"
         if [ "$http" -lt 200 ] || [ "$http" -gt 299 ]; then
             rm -f "$dest"
         else
-            return 0
+            let http=0
+            break
         fi
     done
-    return 1
+    echo "HTTP return status for README: $http" >&2
+    return $http
 }
 
 _get_plugin_data() {
     # Pipes output of api_query to jq_query
     local stem="${1#${URLS[base]}/}"
     local url="${URLS[api]}/${stem}"
+    local tf="$(mktemp)"
+    __require_pat
     local -a opts=(
         --silent
-        -H
-        'Accept: application/vnd.github.preview'
+        -H 'Accept: application/vnd.github.preview'
+        -w "%{http_code}"
+        -o "$tf"
+        -u "${GH_PAT}"
     )
     FIELDS[downloaded]="\"$(date -u)\""
-    curl "${opts[@]}" "$url" | jq -S "$(_query_from_dict FIELDS)"
-    return $?
+
+    local -i http="$(curl "${opts[@]}" "$url")"
+
+    if [ "$http" -ge 200 ] && [ "$http" -le 299 ]; then
+        let http=0
+        jq -S "$(_query_from_dict FIELDS)" <"$tf"
+    fi
+    rm -rf "$tf"
+    return $http
 }
 
 _process_urls() (
@@ -191,6 +222,7 @@ _process_urls() (
     # Output (stdout): None
     # Options:
     #   -l      Logfile (master TSV).  Defaults to "\`pwd\`/nvim-plugins.tsv".
+    __require_pat
     while getopts ":l:" opt; do
         case "$opt" in
             l) MASTER_TSV="$OPTARG" ;;
@@ -213,7 +245,7 @@ _process_urls() (
         # Text processing
         json="$(_get_plugin_data "$url")" &&
             dir="$(jq '.name' <<<"$json" | sed -e 's/^"\(.*\)"$/\1/')" ||
-            { failed["$dir"]="Failed to get plugin data"; continue; }
+            { failed["${dir:-$url}"]="Failed to get plugin data"; continue; }
 
         # Make plugin directory
         mkdir "$dir" 2>/dev/null || [ -d "$dir" ] ||
@@ -221,8 +253,11 @@ _process_urls() (
         pushd "$dir" >/dev/null || exit 8
 
         _get_readme "$url" </dev/tty ||
-            { failed["$dir"]="Failed to get README"; continue; }
+            { failed["$dir"]="Failed to get README"; 
+                popd >/dev/null; continue; }
         yq -Y '.' <<<"$json" >"$yaml"
+
+        popd >/dev/null
 
         # Append plugin summary to master TSV
         printf '%s\n' "$(_to_tsv <<<"$json")" >>"$MASTER_TSV"
