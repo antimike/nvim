@@ -35,7 +35,7 @@ declare -a README_EXTS=(
 )
 
 declare MASTER_TSV="`pwd`/nvim-plugins.tsv"
-declare EXT=
+export EXT=
 
 __get_docstring() {
     # Prints commented lines found directly underneath a function definition
@@ -65,13 +65,15 @@ _functions() {
     # Lists functions defined in this script
     # If any arguments are passed, they are treated as function names to search
     # for and are re-echoed if found
+    local -i ret=0
     while true; do
         local fn_re="${1:-[a-zA-Z_]\+}()"  # Regex to search for
         grep -o "^_${fn_re}" "${BASH_SOURCE[0]}" | 
             sed 's/^_//' |
-            grep -v '^_' 
+            grep -v '^_' || let ret+=1
         shift && [ $# -gt 0 ] || break
     done
+    return $ret
 }
 
 _usage() {
@@ -87,6 +89,7 @@ _usage() {
         printf '  %s\n' "$(tr [[:graph:]] [-*] <<<"$line")"
         __get_docstring "_${line}" | sed 's/^/    | /'
     done < <(_functions "$@")
+    return $?
 }
 
 _to_tsv() {
@@ -180,12 +183,13 @@ _process_urls() (
     while getopts ":l:" opt; do
         case "$opt" in
             l) MASTER_TSV="$OPTARG" ;;
-            *) _usage process_urls ;;
+            *) _usage process_urls >&2; exit 5 ;;
         esac
     done
     shift $(( OPTIND - 1 )); OPTIND=1
 
-    local json= dir= yaml= readme=
+    local -A failed=( )
+    local json= dir=
     while read -r url; do
         # Text processing
         json="$(_get_plugin_data "$url")"
@@ -207,6 +211,11 @@ Enter another name to attempt directory creation for this plugin: " dir
         # Append plugin summary to master TSV
         printf '%s\n' "$(_to_tsv <<<"$json")" >>"$MASTER_TSV"
     done < <(cat - <(printf '%s\n' "$@"))
+    if [ ${#failed[@]} -ne 0 ]; then
+        echo "Failed:"
+        printf '  %s	%s\n' "${failed[@]@K}"
+    fi >&2
+    return ${#failed[@]}
 )
 
 __fetch_main() {
@@ -217,7 +226,7 @@ __fetch_main() {
         local func="_${1}"; shift
         $func "$@"; exit $?
     else
-        _usage; exit -1
+        _usage "$func"; exit -1
     fi
 }
 
