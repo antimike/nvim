@@ -74,7 +74,7 @@ __require_pat() {
             ' | sort -t '	' -k 1 | 
                 awk -v FS='	' -v ORS=':' '{ print $2; }' |
                 sed 's/:$//')"
-        echo "PAT obtained: ${GH_PAT@A}" >&2
+        echo "PAT obtained" >&2
     fi
 }
 
@@ -180,7 +180,6 @@ _get_readme() {
             break
         fi
     done
-    echo "HTTP return status for README: $http" >&2
     return $http
 }
 
