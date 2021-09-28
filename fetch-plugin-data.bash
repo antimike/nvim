@@ -196,6 +196,9 @@ _get_plugin_data() {
         -o "$tf"
         -u "${GH_PAT}"
     )
+
+    # Timestamp
+    # Format: ISO-8601 (format understood by JQ)
     FIELDS[downloaded]="\"$(date -Iseconds)\""
 
     local -i http="$(curl "${opts[@]}" "$url")"
