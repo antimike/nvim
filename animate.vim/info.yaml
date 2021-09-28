@@ -1,8 +1,9 @@
 archived: false
 default_branch: "master"
 description: "A Vim Window Animation Library"
-downloaded: "Mon Sep 27 09:59:51 PM UTC 2021"
 name: "animate.vim"
 owner: "camspiers"
 stars: 184
 url: "https://api.github.com/repos/camspiers/animate.vim"
+history:
+  Mon Sep 27 09:59:51 PM UTC 2021: metadata acquired

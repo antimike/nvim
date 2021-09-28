@@ -1,8 +1,9 @@
 archived: false
 default_branch: "master"
 description: "A more adventurous wildmenu"
-downloaded: "Mon Sep 27 10:00:02 PM UTC 2021"
 name: "wilder.nvim"
 owner: "gelguy"
 stars: 364
 url: "https://api.github.com/repos/gelguy/wilder.nvim"
+history:
+  Mon Sep 27 10:00:02 PM UTC 2021: metadata acquired

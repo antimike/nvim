@@ -1,8 +1,9 @@
 archived: false
 default_branch: "master"
 description: "A colorscheme template that is \"lite\" on logic for the developer."
-downloaded: "Mon Sep 27 09:59:43 PM UTC 2021"
 name: "nvim-highlite"
 owner: "Iron-E"
 stars: 106
 url: "https://api.github.com/repos/Iron-E/nvim-highlite"
+history:
+  Mon Sep 27 09:59:43 PM UTC 2021: metadata acquired

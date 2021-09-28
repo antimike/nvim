@@ -1,8 +1,9 @@
 archived: false
 default_branch: "master"
 description: "A Vim Automatic Window Resizing Plugin"
-downloaded: "Mon Sep 27 09:59:52 PM UTC 2021"
 name: "lens.vim"
 owner: "camspiers"
 stars: 421
 url: "https://api.github.com/repos/camspiers/lens.vim"
+history:
+  Mon Sep 27 09:59:52 PM UTC 2021: metadata acquired

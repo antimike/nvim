@@ -1,8 +1,9 @@
 archived: false
 default_branch: "main"
 description: "neovim lsp plugin "
-downloaded: "Mon Sep 27 10:00:05 PM UTC 2021"
 name: "lspsaga.nvim"
 owner: "glepnir"
 stars: 969
 url: "https://api.github.com/repos/glepnir/lspsaga.nvim"
+history:
+  Mon Sep 27 10:00:05 PM UTC 2021: metadata acquired

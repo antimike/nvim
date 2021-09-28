@@ -1,8 +1,9 @@
 archived: false
 default_branch: "master"
 description: "A snazzy bufferline for Neovim"
-downloaded: "Mon Sep 27 09:59:48 PM UTC 2021"
 name: "bufferline.nvim"
 owner: "akinsho"
 stars: 604
 url: "https://api.github.com/repos/akinsho/bufferline.nvim"
+history:
+  Mon Sep 27 09:59:48 PM UTC 2021: metadata acquired

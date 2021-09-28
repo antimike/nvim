@@ -1,8 +1,9 @@
 archived: false
 default_branch: "master"
 description: "Vim plugin to control splits with visual selections or text objects"
-downloaded: "Mon Sep 27 10:00:46 PM UTC 2021"
 name: "visual-split.vim"
 owner: "wellle"
 stars: 201
 url: "https://api.github.com/repos/wellle/visual-split.vim"
+history:
+  Mon Sep 27 10:00:46 PM UTC 2021: metadata acquired

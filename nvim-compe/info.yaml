@@ -1,8 +1,9 @@
 archived: false
 default_branch: "master"
 description: "Auto completion Lua plugin for nvim"
-downloaded: "Mon Sep 27 10:00:10 PM UTC 2021"
 name: "nvim-compe"
 owner: "hrsh7th"
 stars: 1339
 url: "https://api.github.com/repos/hrsh7th/nvim-compe"
+history:
+  Mon Sep 27 10:00:10 PM UTC 2021: metadata acquired

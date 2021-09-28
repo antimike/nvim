@@ -1,8 +1,9 @@
 archived: false
 default_branch: "main"
 description: "A fast Neovim http client written in Lua"
-downloaded: "Mon Sep 27 09:59:44 PM UTC 2021"
 name: "rest.nvim"
 owner: "NTBBloodbath"
 stars: 184
 url: "https://api.github.com/repos/NTBBloodbath/rest.nvim"
+history:
+  Mon Sep 27 09:59:44 PM UTC 2021: metadata acquired

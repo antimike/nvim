@@ -1,8 +1,9 @@
 archived: false
 default_branch: "master"
 description: ":heart: Slim, Fast and Hackable Completion Framework for Neovim"
-downloaded: "Mon Sep 27 10:00:28 PM UTC 2021"
 name: "ncm2"
 owner: "ncm2"
 stars: 1254
 url: "https://api.github.com/repos/ncm2/ncm2"
+history:
+  Mon Sep 27 10:00:28 PM UTC 2021: metadata acquired

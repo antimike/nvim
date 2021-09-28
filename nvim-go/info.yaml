@@ -1,8 +1,9 @@
 archived: false
 default_branch: "main"
 description: "Go development plugin for Neovim written in pure Go"
-downloaded: "Mon Sep 27 10:00:48 PM UTC 2021"
 name: "nvim-go"
 owner: "zchee"
 stars: 243
 url: "https://api.github.com/repos/zchee/nvim-go"
+history:
+  Mon Sep 27 10:00:48 PM UTC 2021: metadata acquired

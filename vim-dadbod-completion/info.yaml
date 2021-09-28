@@ -1,8 +1,9 @@
 archived: false
 default_branch: "master"
 description: "Database autocompletion powered by https://github.com/tpope/vim-dadbod"
-downloaded: "Mon Sep 27 10:00:19 PM UTC 2021"
 name: "vim-dadbod-completion"
 owner: "kristijanhusak"
 stars: 236
 url: "https://api.github.com/repos/kristijanhusak/vim-dadbod-completion"
+history:
+  Mon Sep 27 10:00:19 PM UTC 2021: metadata acquired

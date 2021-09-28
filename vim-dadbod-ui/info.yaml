@@ -1,8 +1,9 @@
 archived: false
 default_branch: "master"
 description: "Simple UI for https://github.com/tpope/vim-dadbod"
-downloaded: "Mon Sep 27 10:00:19 PM UTC 2021"
 name: "vim-dadbod-ui"
 owner: "kristijanhusak"
 stars: 424
 url: "https://api.github.com/repos/kristijanhusak/vim-dadbod-ui"
+history:
+  Mon Sep 27 10:00:19 PM UTC 2021: metadata acquired

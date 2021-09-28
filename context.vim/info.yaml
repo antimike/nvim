@@ -1,8 +1,9 @@
 archived: false
 default_branch: "master"
 description: "Vim plugin that shows the context of the currently visible buffer contents"
-downloaded: "Mon Sep 27 10:00:46 PM UTC 2021"
 name: "context.vim"
 owner: "wellle"
 stars: 809
 url: "https://api.github.com/repos/wellle/context.vim"
+history:
+  Mon Sep 27 10:00:46 PM UTC 2021: metadata acquired

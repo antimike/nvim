@@ -1,8 +1,9 @@
 archived: false
 default_branch: "master"
 description: "Async completion framework made ease."
-downloaded: "Mon Sep 27 10:00:24 PM UTC 2021"
 name: "completor.vim"
 owner: "maralla"
 stars: 1180
 url: "https://api.github.com/repos/maralla/completor.vim"
+history:
+  Mon Sep 27 10:00:24 PM UTC 2021: metadata acquired

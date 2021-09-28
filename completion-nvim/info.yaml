@@ -2,8 +2,9 @@ archived: false
 default_branch: "master"
 description: "A async completion framework aims to provide completion to neovim's\
   \ built in LSP written in Lua"
-downloaded: "Mon Sep 27 10:00:30 PM UTC 2021"
 name: "completion-nvim"
 owner: "nvim-lua"
 stars: 990
 url: "https://api.github.com/repos/nvim-lua/completion-nvim"
+history:
+  Mon Sep 27 10:00:30 PM UTC 2021: metadata acquired

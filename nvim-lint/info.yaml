@@ -2,8 +2,9 @@ archived: false
 default_branch: "master"
 description: "An asynchronous linter plugin for Neovim (>= 0.5) complementary to the\
   \ built-in Language Server Protocol support."
-downloaded: "Mon Sep 27 10:00:25 PM UTC 2021"
 name: "nvim-lint"
 owner: "mfussenegger"
 stars: 173
 url: "https://api.github.com/repos/mfussenegger/nvim-lint"
+history:
+  Mon Sep 27 10:00:25 PM UTC 2021: metadata acquired

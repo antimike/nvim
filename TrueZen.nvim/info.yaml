@@ -1,8 +1,9 @@
 archived: false
 default_branch: "main"
 description: "\U0001F99D Clean and elegant distraction-free writing for NeoVim."
-downloaded: "Mon Sep 27 09:59:46 PM UTC 2021"
 name: "TrueZen.nvim"
 owner: "Pocco81"
 stars: 286
 url: "https://api.github.com/repos/Pocco81/TrueZen.nvim"
+history:
+  Mon Sep 27 09:59:46 PM UTC 2021: metadata acquired

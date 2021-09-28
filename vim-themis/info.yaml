@@ -1,8 +1,9 @@
 archived: false
 default_branch: "master"
 description: "A testing framework for Vim script."
-downloaded: "Mon Sep 27 10:00:43 PM UTC 2021"
 name: "vim-themis"
 owner: "thinca"
 stars: 204
 url: "https://api.github.com/repos/thinca/vim-themis"
+history:
+  Mon Sep 27 10:00:43 PM UTC 2021: metadata acquired

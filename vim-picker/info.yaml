@@ -1,8 +1,9 @@
 archived: false
 default_branch: "main"
 description: "A Vim plugin for fuzzy selection of files, buffers, tags, and more"
-downloaded: "Mon Sep 27 10:00:40 PM UTC 2021"
 name: "vim-picker"
 owner: "srstevenson"
 stars: 192
 url: "https://api.github.com/repos/srstevenson/vim-picker"
+history:
+  Mon Sep 27 10:00:40 PM UTC 2021: metadata acquired

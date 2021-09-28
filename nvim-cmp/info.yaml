@@ -1,8 +1,9 @@
 archived: false
 default_branch: "main"
 description: "A completion plugin for neovim coded in Lua."
-downloaded: "Mon Sep 27 10:00:09 PM UTC 2021"
 name: "nvim-cmp"
 owner: "hrsh7th"
 stars: 824
 url: "https://api.github.com/repos/hrsh7th/nvim-cmp"
+history:
+  Mon Sep 27 10:00:09 PM UTC 2021: metadata acquired

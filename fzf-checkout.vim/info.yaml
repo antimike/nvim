@@ -1,8 +1,9 @@
 archived: false
 default_branch: "master"
 description: "Manage branches and tags with fzf"
-downloaded: "Mon Sep 27 10:00:41 PM UTC 2021"
 name: "fzf-checkout.vim"
 owner: "stsewd"
 stars: 162
 url: "https://api.github.com/repos/stsewd/fzf-checkout.vim"
+history:
+  Mon Sep 27 10:00:41 PM UTC 2021: metadata acquired

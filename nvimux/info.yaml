@@ -1,8 +1,9 @@
 archived: false
 default_branch: "master"
 description: "Neovim as a TMUX replacement"
-downloaded: "Mon Sep 27 10:00:08 PM UTC 2021"
 name: "nvimux"
 owner: "hkupty"
 stars: 325
 url: "https://api.github.com/repos/hkupty/nvimux"
+history:
+  Mon Sep 27 10:00:08 PM UTC 2021: metadata acquired

@@ -1,8 +1,9 @@
 archived: false
 default_branch: "master"
 description: "Simple templates plugin for Vim "
-downloaded: "Mon Sep 27 09:59:48 PM UTC 2021"
 name: "vim-template"
 owner: "aperezdc"
 stars: 343
 url: "https://api.github.com/repos/aperezdc/vim-template"
+history:
+  Mon Sep 27 09:59:48 PM UTC 2021: metadata acquired

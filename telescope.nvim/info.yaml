@@ -1,8 +1,9 @@
 archived: false
 default_branch: "master"
 description: "Find, Filter, Preview, Pick. All lua, all the time."
-downloaded: "Mon Sep 27 10:00:30 PM UTC 2021"
 name: "telescope.nvim"
 owner: "nvim-telescope"
 stars: 3494
 url: "https://api.github.com/repos/nvim-telescope/telescope.nvim"
+history:
+  Mon Sep 27 10:00:30 PM UTC 2021: metadata acquired

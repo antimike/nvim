@@ -1,8 +1,9 @@
 archived: false
 default_branch: "master"
 description: "Set of operators and textobjects to search/select/edit sandwiched texts."
-downloaded: "Mon Sep 27 10:00:23 PM UTC 2021"
 name: "vim-sandwich"
 owner: "machakann"
 stars: 892
 url: "https://api.github.com/repos/machakann/vim-sandwich"
+history:
+  Mon Sep 27 10:00:23 PM UTC 2021: metadata acquired

@@ -1,8 +1,9 @@
 archived: false
 default_branch: "master"
 description: "Run your tests at the speed of thought"
-downloaded: "Mon Sep 27 10:00:44 PM UTC 2021"
 name: "vim-test"
 owner: "vim-test"
 stars: 2195
 url: "https://api.github.com/repos/vim-test/vim-test"
+history:
+  Mon Sep 27 10:00:44 PM UTC 2021: metadata acquired

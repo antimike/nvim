@@ -1,8 +1,9 @@
 archived: false
 default_branch: "master"
 description: "A todoist extension for neovim"
-downloaded: "Mon Sep 27 10:00:38 PM UTC 2021"
 name: "todoist.nvim"
 owner: "romgrk"
 stars: 96
 url: "https://api.github.com/repos/romgrk/todoist.nvim"
+history:
+  Mon Sep 27 10:00:38 PM UTC 2021: metadata acquired

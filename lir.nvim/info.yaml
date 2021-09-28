@@ -1,8 +1,9 @@
 archived: false
 default_branch: "master"
 description: "\U0001F6AA A simple file explorer"
-downloaded: "Mon Sep 27 10:00:42 PM UTC 2021"
 name: "lir.nvim"
 owner: "tamago324"
 stars: 122
 url: "https://api.github.com/repos/tamago324/lir.nvim"
+history:
+  Mon Sep 27 10:00:42 PM UTC 2021: metadata acquired

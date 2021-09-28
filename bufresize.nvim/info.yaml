@@ -1,8 +1,9 @@
 archived: false
 default_branch: "master"
 description: "Keep buffer dimensions in proportion when terminal window is resized"
-downloaded: "Mon Sep 27 10:00:20 PM UTC 2021"
 name: "bufresize.nvim"
 owner: "kwkarlwang"
 stars: 54
 url: "https://api.github.com/repos/kwkarlwang/bufresize.nvim"
+history:
+  Mon Sep 27 10:00:20 PM UTC 2021: metadata acquired

@@ -2,8 +2,9 @@ archived: false
 default_branch: "master"
 description: "A use-package inspired plugin manager for Neovim. Uses native packages,\
   \ supports Luarocks dependencies, written in Lua, allows for expressive config"
-downloaded: "Mon Sep 27 10:00:45 PM UTC 2021"
 name: "packer.nvim"
 owner: "wbthomason"
 stars: 1409
 url: "https://api.github.com/repos/wbthomason/packer.nvim"
+history:
+  Mon Sep 27 10:00:45 PM UTC 2021: metadata acquired

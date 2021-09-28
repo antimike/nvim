@@ -1,8 +1,9 @@
 archived: false
 default_branch: "master"
 description: ":sunflower: A Vim alignment plugin"
-downloaded: "Mon Sep 27 10:00:15 PM UTC 2021"
 name: "vim-easy-align"
 owner: "junegunn"
 stars: 3429
 url: "https://api.github.com/repos/junegunn/vim-easy-align"
+history:
+  Mon Sep 27 10:00:15 PM UTC 2021: metadata acquired

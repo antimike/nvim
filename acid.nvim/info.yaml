@@ -1,8 +1,9 @@
 archived: false
 default_branch: "master"
 description: "Asynchronous Clojure Interactive Development"
-downloaded: "Mon Sep 27 09:59:53 PM UTC 2021"
 name: "acid.nvim"
 owner: "clojure-vim"
 stars: 149
 url: "https://api.github.com/repos/clojure-vim/acid.nvim"
+history:
+  Mon Sep 27 09:59:53 PM UTC 2021: metadata acquired

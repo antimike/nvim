@@ -1,8 +1,9 @@
 archived: false
 default_branch: "master"
 description: "collaborative editing in Neovim using built-in capabilities"
-downloaded: "Mon Sep 27 10:00:12 PM UTC 2021"
 name: "instant.nvim"
 owner: "jbyuki"
 stars: 437
 url: "https://api.github.com/repos/jbyuki/instant.nvim"
+history:
+  Mon Sep 27 10:00:12 PM UTC 2021: metadata acquired
