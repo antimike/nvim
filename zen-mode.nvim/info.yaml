@@ -1,0 +1,8 @@
+archived: false
+default_branch: "main"
+description: "\U0001F9D8  Distraction-free coding for Neovim"
+downloaded: "Mon Sep 27 10:00:01 PM UTC 2021"
+name: "zen-mode.nvim"
+owner: "folke"
+stars: 243
+url: "https://api.github.com/repos/folke/zen-mode.nvim"

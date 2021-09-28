@@ -1,0 +1,9 @@
+archived: false
+default_branch: "master"
+description: "An efficient fuzzy finder that helps to locate files, buffers, mrus,\
+  \ gtags, etc. on the fly for both vim and neovim."
+downloaded: "Mon Sep 27 09:59:47 PM UTC 2021"
+name: "LeaderF"
+owner: "Yggdroot"
+stars: 1672
+url: "https://api.github.com/repos/Yggdroot/LeaderF"

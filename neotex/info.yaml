@@ -1,0 +1,8 @@
+archived: true
+default_branch: "master"
+description: "latex live preview - plugin for neovim and vim 8"
+downloaded: "Mon Sep 27 09:59:55 PM UTC 2021"
+name: "neotex"
+owner: "donRaphaco"
+stars: 174
+url: "https://api.github.com/repos/donRaphaco/neotex"

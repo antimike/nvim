@@ -1,0 +1,9 @@
+archived: false
+default_branch: "main"
+description: "Single tabpage interface for easily cycling through diffs for all modified\
+  \ files for any git rev."
+downloaded: "Mon Sep 27 10:00:39 PM UTC 2021"
+name: "diffview.nvim"
+owner: "sindrets"
+stars: 505
+url: "https://api.github.com/repos/sindrets/diffview.nvim"

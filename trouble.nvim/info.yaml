@@ -1,0 +1,9 @@
+archived: false
+default_branch: "main"
+description: "\U0001F6A6 A pretty diagnostics, references, telescope results, quickfix\
+  \ and location list to help you solve all the trouble your code is causing."
+downloaded: "Mon Sep 27 09:59:59 PM UTC 2021"
+name: "trouble.nvim"
+owner: "folke"
+stars: 859
+url: "https://api.github.com/repos/folke/trouble.nvim"

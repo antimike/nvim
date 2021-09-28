@@ -1,0 +1,8 @@
+archived: false
+default_branch: "master"
+description: "Debug Adapter Protocol client implementation for Neovim (>= 0.5)"
+downloaded: "Mon Sep 27 10:00:24 PM UTC 2021"
+name: "nvim-dap"
+owner: "mfussenegger"
+stars: 836
+url: "https://api.github.com/repos/mfussenegger/nvim-dap"

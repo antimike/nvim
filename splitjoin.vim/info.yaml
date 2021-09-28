@@ -1,0 +1,8 @@
+archived: false
+default_branch: "main"
+description: "Switch between single-line and multiline forms of code"
+downloaded: "Mon Sep 27 09:59:42 PM UTC 2021"
+name: "splitjoin.vim"
+owner: "AndrewRadev"
+stars: 1550
+url: "https://api.github.com/repos/AndrewRadev/splitjoin.vim"

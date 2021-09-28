@@ -1,0 +1,8 @@
+archived: false
+default_branch: "main"
+description: "Provides the missing :LspInstall for nvim-lspconfig"
+downloaded: "Mon Sep 27 10:00:15 PM UTC 2021"
+name: "nvim-lspinstall"
+owner: "kabouzeid"
+stars: 514
+url: "https://api.github.com/repos/kabouzeid/nvim-lspinstall"

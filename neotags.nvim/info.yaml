@@ -1,0 +1,8 @@
+archived: false
+default_branch: "master"
+description: "Tag highlight in neovim"
+downloaded: "Mon Sep 27 09:59:50 PM UTC 2021"
+name: "neotags.nvim"
+owner: "c0r73x"
+stars: 127
+url: "https://api.github.com/repos/c0r73x/neotags.nvim"

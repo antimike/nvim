@@ -1,0 +1,8 @@
+archived: false
+default_branch: "master"
+description: "An asynchronous markdown preview plugin for Vim and Neovim."
+downloaded: "Mon Sep 27 09:59:56 PM UTC 2021"
+name: "vim-markdown-composer"
+owner: "euclio"
+stars: 529
+url: "https://api.github.com/repos/euclio/vim-markdown-composer"

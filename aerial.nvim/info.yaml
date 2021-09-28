@@ -1,0 +1,8 @@
+archived: false
+default_branch: "master"
+description: "Neovim plugin for a code outline window"
+downloaded: "Mon Sep 27 10:00:41 PM UTC 2021"
+name: "aerial.nvim"
+owner: "stevearc"
+stars: 140
+url: "https://api.github.com/repos/stevearc/aerial.nvim"

@@ -1,0 +1,8 @@
+archived: false
+default_branch: "master"
+description: ":file_folder: The dark powered file explorer implementation for neovim/Vim8"
+downloaded: "Mon Sep 27 09:59:46 PM UTC 2021"
+name: "defx.nvim"
+owner: "Shougo"
+stars: 1013
+url: "https://api.github.com/repos/Shougo/defx.nvim"

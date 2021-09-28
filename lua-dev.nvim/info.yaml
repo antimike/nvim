@@ -1,0 +1,9 @@
+archived: false
+default_branch: "main"
+description: "\U0001F4BB  Dev setup for init.lua and plugin development with full\
+  \ signature help, docs and completion for the nvim lua API."
+downloaded: "Mon Sep 27 09:59:58 PM UTC 2021"
+name: "lua-dev.nvim"
+owner: "folke"
+stars: 199
+url: "https://api.github.com/repos/folke/lua-dev.nvim"

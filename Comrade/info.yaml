@@ -1,0 +1,8 @@
+archived: false
+default_branch: "master"
+description: "Brings JetBrains/IntelliJ IDEs magic to Neovim with minimal setup."
+downloaded: "Mon Sep 27 09:59:50 PM UTC 2021"
+name: "Comrade"
+owner: "beeender"
+stars: 156
+url: "https://api.github.com/repos/beeender/Comrade"

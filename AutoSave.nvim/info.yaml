@@ -1,0 +1,9 @@
+archived: false
+default_branch: "main"
+description: "\U0001F9B4 A NeoVim plugin for saving your work before the world collapses\
+  \ or you type :qa!"
+downloaded: "Mon Sep 27 09:59:45 PM UTC 2021"
+name: "AutoSave.nvim"
+owner: "Pocco81"
+stars: 74
+url: "https://api.github.com/repos/Pocco81/AutoSave.nvim"

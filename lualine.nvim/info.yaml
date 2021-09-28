@@ -1,0 +1,9 @@
+archived: false
+default_branch: "master"
+description: "A blazing fast and easy to configure neovim statusline plugin written\
+  \ in pure lua."
+downloaded: "Mon Sep 27 10:00:08 PM UTC 2021"
+name: "lualine.nvim"
+owner: "hoob3rt"
+stars: 704
+url: "https://api.github.com/repos/hoob3rt/lualine.nvim"

@@ -1,0 +1,8 @@
+archived: false
+default_branch: "main"
+description: "Git signs written in pure lua"
+downloaded: "Mon Sep 27 10:00:20 PM UTC 2021"
+name: "gitsigns.nvim"
+owner: "lewis6991"
+stars: 757
+url: "https://api.github.com/repos/lewis6991/gitsigns.nvim"

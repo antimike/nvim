@@ -1,0 +1,8 @@
+archived: false
+default_branch: "master"
+description: "lua-fmt is pretty-printer for Lua code"
+downloaded: "Mon Sep 27 10:00:44 PM UTC 2021"
+name: "lua-fmt"
+owner: "trixnz"
+stars: 157
+url: "https://api.github.com/repos/trixnz/lua-fmt"

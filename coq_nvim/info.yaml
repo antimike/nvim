@@ -1,0 +1,9 @@
+archived: false
+default_branch: "coq"
+description: "Fast as FUCK nvim completion. SQLite, concurrent scheduler, hundreds\
+  \ of hours of optimization."
+downloaded: "Mon Sep 27 10:00:28 PM UTC 2021"
+name: "coq_nvim"
+owner: "ms-jpq"
+stars: 1573
+url: "https://api.github.com/repos/ms-jpq/coq_nvim"

@@ -1,0 +1,9 @@
+archived: false
+default_branch: "master"
+description: "A neovim plugin to run lines/blocs of code (independently of the rest\
+  \ of the file), supporting multiples languages"
+downloaded: "Mon Sep 27 10:00:26 PM UTC 2021"
+name: "sniprun"
+owner: "michaelb"
+stars: 353
+url: "https://api.github.com/repos/michaelb/sniprun"

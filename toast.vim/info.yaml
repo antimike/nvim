@@ -1,0 +1,10 @@
+archived: false
+default_branch: "master"
+description: "\U0001F35E Toast! A colorful, medium-contrast color scheme with full\
+  \ Vim and Neovim support and automatic light and dark variants. Easy to read without\
+  \ frying your retinae."
+downloaded: "Mon Sep 27 10:00:14 PM UTC 2021"
+name: "toast.vim"
+owner: "jsit"
+stars: 117
+url: "https://api.github.com/repos/jsit/toast.vim"

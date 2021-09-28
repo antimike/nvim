@@ -1,0 +1,8 @@
+archived: false
+default_branch: "main"
+description: "Visual Git Plugin for Neovim"
+downloaded: "Mon Sep 27 10:00:42 PM UTC 2021"
+name: "vgit.nvim"
+owner: "tanvirtin"
+stars: 160
+url: "https://api.github.com/repos/tanvirtin/vgit.nvim"

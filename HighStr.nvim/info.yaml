@@ -1,0 +1,9 @@
+archived: false
+default_branch: "main"
+description: "\U0001F98E A NeoVim plugin for highlighting visual selections like in\
+  \ a normal document editor!"
+downloaded: "Mon Sep 27 09:59:45 PM UTC 2021"
+name: "HighStr.nvim"
+owner: "Pocco81"
+stars: 117
+url: "https://api.github.com/repos/Pocco81/HighStr.nvim"

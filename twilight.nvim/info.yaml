@@ -1,0 +1,9 @@
+archived: false
+default_branch: "main"
+description: "\U0001F305  Twilight is a Lua plugin for Neovim 0.5 that dims inactive\
+  \ portions of the code you're editing using TreeSitter."
+downloaded: "Mon Sep 27 09:59:59 PM UTC 2021"
+name: "twilight.nvim"
+owner: "folke"
+stars: 241
+url: "https://api.github.com/repos/folke/twilight.nvim"

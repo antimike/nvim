@@ -1,0 +1,8 @@
+archived: false
+default_branch: "main"
+description: "A markdown preview directly in your neovim."
+downloaded: "Mon Sep 27 09:59:56 PM UTC 2021"
+name: "glow.nvim"
+owner: "ellisonleao"
+stars: 275
+url: "https://api.github.com/repos/ellisonleao/glow.nvim"

@@ -1,0 +1,8 @@
+archived: false
+default_branch: "master"
+description: "Make neovim the best note taking application"
+downloaded: "Mon Sep 27 10:00:31 PM UTC 2021"
+name: "neuron.nvim"
+owner: "oberblastmeister"
+stars: 214
+url: "https://api.github.com/repos/oberblastmeister/neuron.nvim"

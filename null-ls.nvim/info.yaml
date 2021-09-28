@@ -1,0 +1,9 @@
+archived: false
+default_branch: "main"
+description: "Use Neovim as a language server to inject LSP diagnostics, code actions,\
+  \ and more via Lua."
+downloaded: "Mon Sep 27 10:00:12 PM UTC 2021"
+name: "null-ls.nvim"
+owner: "jose-elias-alvarez"
+stars: 334
+url: "https://api.github.com/repos/jose-elias-alvarez/null-ls.nvim"

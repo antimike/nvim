@@ -1,0 +1,8 @@
+archived: false
+default_branch: "master"
+description: "Orgmode clone written in Lua for Neovim 0.5+."
+downloaded: "Mon Sep 27 10:00:18 PM UTC 2021"
+name: "orgmode.nvim"
+owner: "kristijanhusak"
+stars: 712
+url: "https://api.github.com/repos/kristijanhusak/orgmode.nvim"
