@@ -196,6 +196,11 @@ _get_plugin_data() {
         -o "$tf"
         -u "${GH_PAT}"
     )
+    local -A fields=( )
+
+    shift; if [ $# -gt 0 ]; then
+        query=
+    fi
 
     # Timestamp
     # Format: ISO-8601 (format understood by JQ)
@@ -205,7 +210,8 @@ _get_plugin_data() {
 
     if [ "$http" -ge 200 ] && [ "$http" -le 299 ]; then
         let http=0
-        jq -S "$(_query_from_dict FIELDS)" <"$tf"
+        # jq -S "$(_query_from_dict FIELDS)" <"$tf"
+        jq -S 'keys' <"$tf"
     fi
     rm -rf "$tf"
     return $http
