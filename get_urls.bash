@@ -10,6 +10,36 @@ get_urls ()
     yq -i -S -Y '.urls=$urls[] | del(.url)'  "$fname" --slurpfile urls <(get_url_arr "$url")
 }
 
+_jsonify_arg() {
+    { local -n ref="$1" && declare -p "${!ref}"; } >/dev/null 2>&1 || 
+        { printf '"%q"' "$1"; return 0; }
+    case "${ref@a}" in
+        *a*)        # Array
+            printf '['
+            for elem in "${ref[@]}"; do
+                printf "$(_jsonify_arg "$elem"),"
+            done | sed 's/,$//'
+            printf ']'
+            ;;
+        *A*)        # Associative array
+            printf '{'
+            for key in "${!ref[@]}"; do
+                printf '%s:%s,' \
+                    "$(_jsonify_arg "$key")" \
+                    "$(_jsonify_arg "${ref[$key]}")"
+            done | sed 's/,$//'
+            printf '}'
+            ;;
+        *i*)        # Integer
+            printf "$ref"
+            ;;
+        *)          # Anything else gets treated as string
+            printf '"%s"' "$ref"
+            ;;
+    esac
+    return $?
+}
+
 add_attrs() {
     local -n vals="$1" && shift || return -1
     for f in "$@"; do
