@@ -6,5 +6,6 @@ get_urls ()
         echo "Whoops" 1>&2;
         return 1
     };
-    yq -i -S -Y '.urls=$urls | del(.url)' --slurpfile urls <(get_url_arr "$url") "$fname"
+    echo "Obtaining repository URLs from API endpoint '$url'..." >&2
+    yq -i -S -Y '.urls=$urls[] | del(.url)'  "$fname" --slurpfile urls <(get_url_arr "$url")
 }
