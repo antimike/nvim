@@ -11,6 +11,11 @@ get_urls ()
 }
 
 _jsonify_arg() {
+    if [ $# -gt 1 ]; then
+        local -a args=( "$@" )
+        _jsonify_arg args
+        return $?
+    fi
     { local -n ref="$1" && declare -p "${!ref}"; } >/dev/null 2>&1 || 
         { printf '"%q"' "$1"; return 0; }
     case "${ref@a}" in
