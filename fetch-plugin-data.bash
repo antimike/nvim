@@ -10,10 +10,11 @@ declare -A FIELDS=(
     [name]=".name"
     [owner]=".owner.login"
     [description]=".description"
-    [url]=".url"
+    [urls]="with_entries(select(.key|test(\"url\")))"
     [stars]=".stargazers_count"
     [archived]=".archived"
     [default_branch]=".default_branch"
+    [history]=".history"
 )
 
 declare -A URLS=(
@@ -91,6 +92,40 @@ _functions() {
         shift && [ $# -gt 0 ] || break
     done
     return $ret
+}
+
+_add_attrs_inplace() {
+    # Add an array of strings to a property whose name is the same as the
+    # array's
+    # Input:
+    #   \$1     --> nameref to an array of strings to add
+    #   \@[1:]  --> YAML documents to modify in-place
+    # Output: None
+    local -n vals="$1" && shift || return -1
+    for f in "$@"; do
+        yq -Y -S -i '
+    $ARGS.positional[0] as $n |
+        $ARGS.positional[1:] as $vs |
+        .[$n]+=$vs |
+        .history+={(now|todate): ["Added \($vs | length) items to \"\($n)\""]}
+        ' "$f" --args "${!vals}" "${vals[@]}"
+    done
+}
+
+__convert_timestamp() {
+    # Hack to convert incorrectly-formatted timestamps
+    local search="$1" && shift
+    local fmt="%Y-%m-%dT%H:%M:%SZ"
+    for f in "$@"; do
+        ts="$(yq '.history | keys[] | select(.|test($search))' "$f" \
+            --arg search "$search" | 
+            xargs -I {} date "+${fmt}" -d {})"
+        yq -S -i -Y '.history += (.history |
+            with_entries(select(.key|test($search))|.key=($ts))) |
+            delpaths([paths | select(.[-1] | strings | test($search))])' \
+            "$f" \
+            --arg search "$search" --arg ts "$ts"
+    done
 }
 
 _usage() {
