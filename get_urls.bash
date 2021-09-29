@@ -21,3 +21,16 @@ add_attrs() {
         ' "$f" --args "${!vals}" "${vals[@]}"
     done
 }
+
+convert_timestamp() {
+    local search="$1" && shift
+    local fmt="%Y-%m-%dT%H:%M:%SZ"
+    for f in "$@"; do
+        ts="$(yq '.history | keys[] | select(.|test($search))' "$f" \
+            --arg search "$search" | 
+            xargs -I {} date "+${fmt}" -d {})"
+        yq -S -i -Y '.history |= (.history |
+            with_items(select(.key|test($search))|.key=($ts)))' "$f" \
+            --arg search "$search" --arg ts "$ts"
+    done
+}
