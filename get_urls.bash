@@ -29,8 +29,10 @@ convert_timestamp() {
         ts="$(yq '.history | keys[] | select(.|test($search))' "$f" \
             --arg search "$search" | 
             xargs -I {} date "+${fmt}" -d {})"
-        yq -S -i -Y '.history |= (.history |
-            with_items(select(.key|test($search))|.key=($ts)))' "$f" \
+        yq -S -i -Y '.history += (.history |
+            with_entries(select(.key|test($search))|.key=($ts))) |
+            delpaths([paths | select(.[-1] | strings | test($search))])' \
+            "$f" \
             --arg search "$search" --arg ts "$ts"
     done
 }
