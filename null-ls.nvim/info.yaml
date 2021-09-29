@@ -5,9 +5,9 @@ default_branch: "main"
 description: "Use Neovim as a language server to inject LSP diagnostics, code actions,\
   \ and more via Lua."
 history:
+  '2021-09-27T17:00:12Z': metadata acquired
   '2021-09-29T17:35:12Z': Added 1 items to "comments"
   '2021-09-29T17:36:14Z': Added 2 items to "tags"
-  Mon Sep 27 10:00:12 PM UTC 2021: metadata acquired
 name: "null-ls.nvim"
 owner: "jose-elias-alvarez"
 stars: 334

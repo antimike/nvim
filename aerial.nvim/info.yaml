@@ -4,9 +4,9 @@ comments:
 default_branch: "master"
 description: "Neovim plugin for a code outline window"
 history:
+  '2021-09-27T17:00:41Z': metadata acquired
   '2021-09-29T17:35:16Z': Added 1 items to "comments"
   '2021-09-29T17:36:18Z': Added 2 items to "tags"
-  Mon Sep 27 10:00:41 PM UTC 2021: metadata acquired
 name: "aerial.nvim"
 owner: "stevearc"
 stars: 140

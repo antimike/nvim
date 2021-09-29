@@ -5,9 +5,9 @@ default_branch: "main"
 description: "Neovim treesitter plugin for setting the commentstring based on the\
   \ cursor location in a file."
 history:
+  '2021-09-27T16:59:43Z': metadata acquired
   '2021-09-29T17:35:08Z': Added 1 items to "comments"
   '2021-09-29T17:36:10Z': Added 2 items to "tags"
-  Mon Sep 27 09:59:43 PM UTC 2021: metadata acquired
 name: "nvim-ts-context-commentstring"
 owner: "JoosepAlviste"
 stars: 272

@@ -4,9 +4,9 @@ comments:
 default_branch: "master"
 description: "Set of operators and textobjects to search/select/edit sandwiched texts."
 history:
+  '2021-09-27T17:00:23Z': metadata acquired
   '2021-09-29T17:35:13Z': Added 1 items to "comments"
   '2021-09-29T17:36:15Z': Added 2 items to "tags"
-  Mon Sep 27 10:00:23 PM UTC 2021: metadata acquired
 name: "vim-sandwich"
 owner: "machakann"
 stars: 892

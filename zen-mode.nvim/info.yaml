@@ -4,9 +4,9 @@ comments:
 default_branch: "main"
 description: "\U0001F9D8  Distraction-free coding for Neovim"
 history:
+  '2021-09-27T17:00:01Z': metadata acquired
   '2021-09-29T17:35:10Z': Added 1 items to "comments"
   '2021-09-29T17:36:12Z': Added 2 items to "tags"
-  Mon Sep 27 10:00:01 PM UTC 2021: metadata acquired
 name: "zen-mode.nvim"
 owner: "folke"
 stars: 243

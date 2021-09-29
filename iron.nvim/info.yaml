@@ -4,9 +4,9 @@ comments:
 default_branch: "master"
 description: "Interactive Repl Over Neovim"
 history:
+  '2021-09-27T17:00:07Z': metadata acquired
   '2021-09-29T17:35:11Z': Added 1 items to "comments"
   '2021-09-29T17:36:13Z': Added 2 items to "tags"
-  Mon Sep 27 10:00:07 PM UTC 2021: metadata acquired
 name: "iron.nvim"
 owner: "hkupty"
 stars: 317

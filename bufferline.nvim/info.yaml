@@ -4,9 +4,9 @@ comments:
 default_branch: "master"
 description: "A snazzy bufferline for Neovim"
 history:
+  '2021-09-27T16:59:48Z': metadata acquired
   '2021-09-29T17:35:09Z': Added 1 items to "comments"
   '2021-09-29T17:36:11Z': Added 2 items to "tags"
-  Mon Sep 27 09:59:48 PM UTC 2021: metadata acquired
 name: "bufferline.nvim"
 owner: "akinsho"
 stars: 604

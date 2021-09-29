@@ -4,9 +4,9 @@ comments:
 default_branch: "main"
 description: "A fast Neovim http client written in Lua"
 history:
+  '2021-09-27T16:59:44Z': metadata acquired
   '2021-09-29T17:35:08Z': Added 1 items to "comments"
   '2021-09-29T17:36:10Z': Added 2 items to "tags"
-  Mon Sep 27 09:59:44 PM UTC 2021: metadata acquired
 name: "rest.nvim"
 owner: "NTBBloodbath"
 stars: 184

@@ -4,9 +4,9 @@ comments:
 default_branch: "master"
 description: "Keep buffer dimensions in proportion when terminal window is resized"
 history:
+  '2021-09-27T17:00:20Z': metadata acquired
   '2021-09-29T17:35:13Z': Added 1 items to "comments"
   '2021-09-29T17:36:15Z': Added 2 items to "tags"
-  Mon Sep 27 10:00:20 PM UTC 2021: metadata acquired
 name: "bufresize.nvim"
 owner: "kwkarlwang"
 stars: 54

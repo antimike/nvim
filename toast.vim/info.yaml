@@ -6,9 +6,9 @@ description: "\U0001F35E Toast! A colorful, medium-contrast color scheme with fu
   \ Vim and Neovim support and automatic light and dark variants. Easy to read without\
   \ frying your retinae."
 history:
+  '2021-09-27T17:00:14Z': metadata acquired
   '2021-09-29T17:35:12Z': Added 1 items to "comments"
   '2021-09-29T17:36:14Z': Added 2 items to "tags"
-  Mon Sep 27 10:00:14 PM UTC 2021: metadata acquired
 name: "toast.vim"
 owner: "jsit"
 stars: 117

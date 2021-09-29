@@ -5,9 +5,9 @@ default_branch: "main"
 description: "\U0001F98E A NeoVim plugin for highlighting visual selections like in\
   \ a normal document editor!"
 history:
+  '2021-09-27T16:59:45Z': metadata acquired
   '2021-09-29T17:35:08Z': Added 1 items to "comments"
   '2021-09-29T17:36:10Z': Added 2 items to "tags"
-  Mon Sep 27 09:59:45 PM UTC 2021: metadata acquired
 name: "HighStr.nvim"
 owner: "Pocco81"
 stars: 117

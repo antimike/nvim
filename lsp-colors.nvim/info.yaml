@@ -5,9 +5,9 @@ default_branch: "main"
 description: "\U0001F308  Plugin that creates missing LSP diagnostics highlight groups\
   \ for color schemes that don't yet support the Neovim 0.5 builtin LSP client."
 history:
+  '2021-09-27T16:59:57Z': metadata acquired
   '2021-09-29T17:35:10Z': Added 1 items to "comments"
   '2021-09-29T17:36:12Z': Added 2 items to "tags"
-  Mon Sep 27 09:59:57 PM UTC 2021: metadata acquired
 name: "lsp-colors.nvim"
 owner: "folke"
 stars: 175
