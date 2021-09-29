@@ -11,6 +11,16 @@ get_urls ()
 }
 
 _jsonify_arg() {
+    local -a hist=( )
+    local -n log=hist
+    while getopts ":l:" opt; do
+        case "$opt" in
+            l) local -n log="$OPTARG" || return -1 ;;
+            *) echo "Unknown opt '${OPTARG}'" ;;
+        esac
+    done
+    shift $(( OPTIND - 1 )); OPTIND=1
+
     if [ $# -gt 1 ]; then
         local -a args=( "$@" )
         _jsonify_arg args
@@ -25,6 +35,7 @@ _jsonify_arg() {
                 printf "$(_jsonify_arg "$elem"),"
             done | sed 's/,$//'
             printf ']'
+            log+=( "Added ${#ref[@]} items to array \"${!ref}\"" )
             ;;
         *A*)        # Associative array
             printf '{'
@@ -34,12 +45,15 @@ _jsonify_arg() {
                     "$(_jsonify_arg "${ref[$key]}")"
             done | sed 's/,$//'
             printf '}'
+            log+=( "Added ${#ref[@]} items to dict \"${!ref}\"" )
             ;;
         *i*)        # Integer
             printf "$ref"
+            log+=( "Added item \"${!ref}\" with value $ref" )
             ;;
         *)          # Anything else gets treated as string
             printf '"%s"' "$ref"
+            log+=( "Added item \"${!ref}\" with value \"$ref\"" )
             ;;
     esac
     return $?
