@@ -109,6 +109,14 @@ _usage() {
     return $?
 }
 
+_get_keys() {
+    # Get subset of JSON object whose keys belong to the passed array
+    # Input:
+    #   stdin   --> JSON object
+    #   \$@     --> Keys to return
+    jq 'with_entries(select(.key | IN($ARGS.positional[])))' --args "$@"
+}
+
 _to_tsv() {
     # Convert a JSON object to TSV.  Sorts by keys before dumping TSV data.
     # Input (stdin): A JSON object
