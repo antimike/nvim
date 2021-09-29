@@ -1,9 +1,52 @@
 archived: false
 default_branch: "master"
 description: ":file_folder: The dark powered file explorer implementation for neovim/Vim8"
+history:
+  Mon Sep 27 09:59:46 PM UTC 2021: metadata acquired
 name: "defx.nvim"
 owner: "Shougo"
 stars: 1013
-url: "https://api.github.com/repos/Shougo/defx.nvim"
-history:
-  Mon Sep 27 09:59:46 PM UTC 2021: metadata acquired
+urls:
+  archive_url: https://api.github.com/repos/Shougo/defx.nvim/{archive_format}{/ref}
+  assignees_url: https://api.github.com/repos/Shougo/defx.nvim/assignees{/user}
+  blobs_url: https://api.github.com/repos/Shougo/defx.nvim/git/blobs{/sha}
+  branches_url: https://api.github.com/repos/Shougo/defx.nvim/branches{/branch}
+  clone_url: https://github.com/Shougo/defx.nvim.git
+  collaborators_url: https://api.github.com/repos/Shougo/defx.nvim/collaborators{/collaborator}
+  comments_url: https://api.github.com/repos/Shougo/defx.nvim/comments{/number}
+  commits_url: https://api.github.com/repos/Shougo/defx.nvim/commits{/sha}
+  compare_url: https://api.github.com/repos/Shougo/defx.nvim/compare/{base}...{head}
+  contents_url: https://api.github.com/repos/Shougo/defx.nvim/contents/{+path}
+  contributors_url: https://api.github.com/repos/Shougo/defx.nvim/contributors
+  deployments_url: https://api.github.com/repos/Shougo/defx.nvim/deployments
+  downloads_url: https://api.github.com/repos/Shougo/defx.nvim/downloads
+  events_url: https://api.github.com/repos/Shougo/defx.nvim/events
+  forks_url: https://api.github.com/repos/Shougo/defx.nvim/forks
+  git_commits_url: https://api.github.com/repos/Shougo/defx.nvim/git/commits{/sha}
+  git_refs_url: https://api.github.com/repos/Shougo/defx.nvim/git/refs{/sha}
+  git_tags_url: https://api.github.com/repos/Shougo/defx.nvim/git/tags{/sha}
+  git_url: git://github.com/Shougo/defx.nvim.git
+  hooks_url: https://api.github.com/repos/Shougo/defx.nvim/hooks
+  html_url: https://github.com/Shougo/defx.nvim
+  issue_comment_url: https://api.github.com/repos/Shougo/defx.nvim/issues/comments{/number}
+  issue_events_url: https://api.github.com/repos/Shougo/defx.nvim/issues/events{/number}
+  issues_url: https://api.github.com/repos/Shougo/defx.nvim/issues{/number}
+  keys_url: https://api.github.com/repos/Shougo/defx.nvim/keys{/key_id}
+  labels_url: https://api.github.com/repos/Shougo/defx.nvim/labels{/name}
+  languages_url: https://api.github.com/repos/Shougo/defx.nvim/languages
+  merges_url: https://api.github.com/repos/Shougo/defx.nvim/merges
+  milestones_url: https://api.github.com/repos/Shougo/defx.nvim/milestones{/number}
+  mirror_url: null
+  notifications_url: https://api.github.com/repos/Shougo/defx.nvim/notifications{?since,all,participating}
+  pulls_url: https://api.github.com/repos/Shougo/defx.nvim/pulls{/number}
+  releases_url: https://api.github.com/repos/Shougo/defx.nvim/releases{/id}
+  ssh_url: git@github.com:Shougo/defx.nvim.git
+  stargazers_url: https://api.github.com/repos/Shougo/defx.nvim/stargazers
+  statuses_url: https://api.github.com/repos/Shougo/defx.nvim/statuses/{sha}
+  subscribers_url: https://api.github.com/repos/Shougo/defx.nvim/subscribers
+  subscription_url: https://api.github.com/repos/Shougo/defx.nvim/subscription
+  svn_url: https://github.com/Shougo/defx.nvim
+  tags_url: https://api.github.com/repos/Shougo/defx.nvim/tags
+  teams_url: https://api.github.com/repos/Shougo/defx.nvim/teams
+  trees_url: https://api.github.com/repos/Shougo/defx.nvim/git/trees{/sha}
+  url: https://api.github.com/repos/Shougo/defx.nvim

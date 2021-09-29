@@ -2,9 +2,52 @@ archived: false
 default_branch: "coq"
 description: "Fast as FUCK nvim completion. SQLite, concurrent scheduler, hundreds\
   \ of hours of optimization."
+history:
+  Mon Sep 27 10:00:28 PM UTC 2021: metadata acquired
 name: "coq_nvim"
 owner: "ms-jpq"
 stars: 1573
-url: "https://api.github.com/repos/ms-jpq/coq_nvim"
-history:
-  Mon Sep 27 10:00:28 PM UTC 2021: metadata acquired
+urls:
+  archive_url: https://api.github.com/repos/ms-jpq/coq_nvim/{archive_format}{/ref}
+  assignees_url: https://api.github.com/repos/ms-jpq/coq_nvim/assignees{/user}
+  blobs_url: https://api.github.com/repos/ms-jpq/coq_nvim/git/blobs{/sha}
+  branches_url: https://api.github.com/repos/ms-jpq/coq_nvim/branches{/branch}
+  clone_url: https://github.com/ms-jpq/coq_nvim.git
+  collaborators_url: https://api.github.com/repos/ms-jpq/coq_nvim/collaborators{/collaborator}
+  comments_url: https://api.github.com/repos/ms-jpq/coq_nvim/comments{/number}
+  commits_url: https://api.github.com/repos/ms-jpq/coq_nvim/commits{/sha}
+  compare_url: https://api.github.com/repos/ms-jpq/coq_nvim/compare/{base}...{head}
+  contents_url: https://api.github.com/repos/ms-jpq/coq_nvim/contents/{+path}
+  contributors_url: https://api.github.com/repos/ms-jpq/coq_nvim/contributors
+  deployments_url: https://api.github.com/repos/ms-jpq/coq_nvim/deployments
+  downloads_url: https://api.github.com/repos/ms-jpq/coq_nvim/downloads
+  events_url: https://api.github.com/repos/ms-jpq/coq_nvim/events
+  forks_url: https://api.github.com/repos/ms-jpq/coq_nvim/forks
+  git_commits_url: https://api.github.com/repos/ms-jpq/coq_nvim/git/commits{/sha}
+  git_refs_url: https://api.github.com/repos/ms-jpq/coq_nvim/git/refs{/sha}
+  git_tags_url: https://api.github.com/repos/ms-jpq/coq_nvim/git/tags{/sha}
+  git_url: git://github.com/ms-jpq/coq_nvim.git
+  hooks_url: https://api.github.com/repos/ms-jpq/coq_nvim/hooks
+  html_url: https://github.com/ms-jpq/coq_nvim
+  issue_comment_url: https://api.github.com/repos/ms-jpq/coq_nvim/issues/comments{/number}
+  issue_events_url: https://api.github.com/repos/ms-jpq/coq_nvim/issues/events{/number}
+  issues_url: https://api.github.com/repos/ms-jpq/coq_nvim/issues{/number}
+  keys_url: https://api.github.com/repos/ms-jpq/coq_nvim/keys{/key_id}
+  labels_url: https://api.github.com/repos/ms-jpq/coq_nvim/labels{/name}
+  languages_url: https://api.github.com/repos/ms-jpq/coq_nvim/languages
+  merges_url: https://api.github.com/repos/ms-jpq/coq_nvim/merges
+  milestones_url: https://api.github.com/repos/ms-jpq/coq_nvim/milestones{/number}
+  mirror_url: null
+  notifications_url: https://api.github.com/repos/ms-jpq/coq_nvim/notifications{?since,all,participating}
+  pulls_url: https://api.github.com/repos/ms-jpq/coq_nvim/pulls{/number}
+  releases_url: https://api.github.com/repos/ms-jpq/coq_nvim/releases{/id}
+  ssh_url: git@github.com:ms-jpq/coq_nvim.git
+  stargazers_url: https://api.github.com/repos/ms-jpq/coq_nvim/stargazers
+  statuses_url: https://api.github.com/repos/ms-jpq/coq_nvim/statuses/{sha}
+  subscribers_url: https://api.github.com/repos/ms-jpq/coq_nvim/subscribers
+  subscription_url: https://api.github.com/repos/ms-jpq/coq_nvim/subscription
+  svn_url: https://github.com/ms-jpq/coq_nvim
+  tags_url: https://api.github.com/repos/ms-jpq/coq_nvim/tags
+  teams_url: https://api.github.com/repos/ms-jpq/coq_nvim/teams
+  trees_url: https://api.github.com/repos/ms-jpq/coq_nvim/git/trees{/sha}
+  url: https://api.github.com/repos/ms-jpq/coq_nvim

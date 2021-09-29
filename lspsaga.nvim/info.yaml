@@ -1,9 +1,52 @@
 archived: false
 default_branch: "main"
 description: "neovim lsp plugin "
+history:
+  Mon Sep 27 10:00:05 PM UTC 2021: metadata acquired
 name: "lspsaga.nvim"
 owner: "glepnir"
 stars: 969
-url: "https://api.github.com/repos/glepnir/lspsaga.nvim"
-history:
-  Mon Sep 27 10:00:05 PM UTC 2021: metadata acquired
+urls:
+  archive_url: https://api.github.com/repos/glepnir/lspsaga.nvim/{archive_format}{/ref}
+  assignees_url: https://api.github.com/repos/glepnir/lspsaga.nvim/assignees{/user}
+  blobs_url: https://api.github.com/repos/glepnir/lspsaga.nvim/git/blobs{/sha}
+  branches_url: https://api.github.com/repos/glepnir/lspsaga.nvim/branches{/branch}
+  clone_url: https://github.com/glepnir/lspsaga.nvim.git
+  collaborators_url: https://api.github.com/repos/glepnir/lspsaga.nvim/collaborators{/collaborator}
+  comments_url: https://api.github.com/repos/glepnir/lspsaga.nvim/comments{/number}
+  commits_url: https://api.github.com/repos/glepnir/lspsaga.nvim/commits{/sha}
+  compare_url: https://api.github.com/repos/glepnir/lspsaga.nvim/compare/{base}...{head}
+  contents_url: https://api.github.com/repos/glepnir/lspsaga.nvim/contents/{+path}
+  contributors_url: https://api.github.com/repos/glepnir/lspsaga.nvim/contributors
+  deployments_url: https://api.github.com/repos/glepnir/lspsaga.nvim/deployments
+  downloads_url: https://api.github.com/repos/glepnir/lspsaga.nvim/downloads
+  events_url: https://api.github.com/repos/glepnir/lspsaga.nvim/events
+  forks_url: https://api.github.com/repos/glepnir/lspsaga.nvim/forks
+  git_commits_url: https://api.github.com/repos/glepnir/lspsaga.nvim/git/commits{/sha}
+  git_refs_url: https://api.github.com/repos/glepnir/lspsaga.nvim/git/refs{/sha}
+  git_tags_url: https://api.github.com/repos/glepnir/lspsaga.nvim/git/tags{/sha}
+  git_url: git://github.com/glepnir/lspsaga.nvim.git
+  hooks_url: https://api.github.com/repos/glepnir/lspsaga.nvim/hooks
+  html_url: https://github.com/glepnir/lspsaga.nvim
+  issue_comment_url: https://api.github.com/repos/glepnir/lspsaga.nvim/issues/comments{/number}
+  issue_events_url: https://api.github.com/repos/glepnir/lspsaga.nvim/issues/events{/number}
+  issues_url: https://api.github.com/repos/glepnir/lspsaga.nvim/issues{/number}
+  keys_url: https://api.github.com/repos/glepnir/lspsaga.nvim/keys{/key_id}
+  labels_url: https://api.github.com/repos/glepnir/lspsaga.nvim/labels{/name}
+  languages_url: https://api.github.com/repos/glepnir/lspsaga.nvim/languages
+  merges_url: https://api.github.com/repos/glepnir/lspsaga.nvim/merges
+  milestones_url: https://api.github.com/repos/glepnir/lspsaga.nvim/milestones{/number}
+  mirror_url: null
+  notifications_url: https://api.github.com/repos/glepnir/lspsaga.nvim/notifications{?since,all,participating}
+  pulls_url: https://api.github.com/repos/glepnir/lspsaga.nvim/pulls{/number}
+  releases_url: https://api.github.com/repos/glepnir/lspsaga.nvim/releases{/id}
+  ssh_url: git@github.com:glepnir/lspsaga.nvim.git
+  stargazers_url: https://api.github.com/repos/glepnir/lspsaga.nvim/stargazers
+  statuses_url: https://api.github.com/repos/glepnir/lspsaga.nvim/statuses/{sha}
+  subscribers_url: https://api.github.com/repos/glepnir/lspsaga.nvim/subscribers
+  subscription_url: https://api.github.com/repos/glepnir/lspsaga.nvim/subscription
+  svn_url: https://github.com/glepnir/lspsaga.nvim
+  tags_url: https://api.github.com/repos/glepnir/lspsaga.nvim/tags
+  teams_url: https://api.github.com/repos/glepnir/lspsaga.nvim/teams
+  trees_url: https://api.github.com/repos/glepnir/lspsaga.nvim/git/trees{/sha}
+  url: https://api.github.com/repos/glepnir/lspsaga.nvim

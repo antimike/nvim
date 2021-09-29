@@ -1,9 +1,52 @@
 archived: false
 default_branch: "master"
 description: "A colorscheme template that is \"lite\" on logic for the developer."
+history:
+  Mon Sep 27 09:59:43 PM UTC 2021: metadata acquired
 name: "nvim-highlite"
 owner: "Iron-E"
 stars: 106
-url: "https://api.github.com/repos/Iron-E/nvim-highlite"
-history:
-  Mon Sep 27 09:59:43 PM UTC 2021: metadata acquired
+urls:
+  archive_url: https://api.github.com/repos/Iron-E/nvim-highlite/{archive_format}{/ref}
+  assignees_url: https://api.github.com/repos/Iron-E/nvim-highlite/assignees{/user}
+  blobs_url: https://api.github.com/repos/Iron-E/nvim-highlite/git/blobs{/sha}
+  branches_url: https://api.github.com/repos/Iron-E/nvim-highlite/branches{/branch}
+  clone_url: https://github.com/Iron-E/nvim-highlite.git
+  collaborators_url: https://api.github.com/repos/Iron-E/nvim-highlite/collaborators{/collaborator}
+  comments_url: https://api.github.com/repos/Iron-E/nvim-highlite/comments{/number}
+  commits_url: https://api.github.com/repos/Iron-E/nvim-highlite/commits{/sha}
+  compare_url: https://api.github.com/repos/Iron-E/nvim-highlite/compare/{base}...{head}
+  contents_url: https://api.github.com/repos/Iron-E/nvim-highlite/contents/{+path}
+  contributors_url: https://api.github.com/repos/Iron-E/nvim-highlite/contributors
+  deployments_url: https://api.github.com/repos/Iron-E/nvim-highlite/deployments
+  downloads_url: https://api.github.com/repos/Iron-E/nvim-highlite/downloads
+  events_url: https://api.github.com/repos/Iron-E/nvim-highlite/events
+  forks_url: https://api.github.com/repos/Iron-E/nvim-highlite/forks
+  git_commits_url: https://api.github.com/repos/Iron-E/nvim-highlite/git/commits{/sha}
+  git_refs_url: https://api.github.com/repos/Iron-E/nvim-highlite/git/refs{/sha}
+  git_tags_url: https://api.github.com/repos/Iron-E/nvim-highlite/git/tags{/sha}
+  git_url: git://github.com/Iron-E/nvim-highlite.git
+  hooks_url: https://api.github.com/repos/Iron-E/nvim-highlite/hooks
+  html_url: https://github.com/Iron-E/nvim-highlite
+  issue_comment_url: https://api.github.com/repos/Iron-E/nvim-highlite/issues/comments{/number}
+  issue_events_url: https://api.github.com/repos/Iron-E/nvim-highlite/issues/events{/number}
+  issues_url: https://api.github.com/repos/Iron-E/nvim-highlite/issues{/number}
+  keys_url: https://api.github.com/repos/Iron-E/nvim-highlite/keys{/key_id}
+  labels_url: https://api.github.com/repos/Iron-E/nvim-highlite/labels{/name}
+  languages_url: https://api.github.com/repos/Iron-E/nvim-highlite/languages
+  merges_url: https://api.github.com/repos/Iron-E/nvim-highlite/merges
+  milestones_url: https://api.github.com/repos/Iron-E/nvim-highlite/milestones{/number}
+  mirror_url: null
+  notifications_url: https://api.github.com/repos/Iron-E/nvim-highlite/notifications{?since,all,participating}
+  pulls_url: https://api.github.com/repos/Iron-E/nvim-highlite/pulls{/number}
+  releases_url: https://api.github.com/repos/Iron-E/nvim-highlite/releases{/id}
+  ssh_url: git@github.com:Iron-E/nvim-highlite.git
+  stargazers_url: https://api.github.com/repos/Iron-E/nvim-highlite/stargazers
+  statuses_url: https://api.github.com/repos/Iron-E/nvim-highlite/statuses/{sha}
+  subscribers_url: https://api.github.com/repos/Iron-E/nvim-highlite/subscribers
+  subscription_url: https://api.github.com/repos/Iron-E/nvim-highlite/subscription
+  svn_url: https://github.com/Iron-E/nvim-highlite
+  tags_url: https://api.github.com/repos/Iron-E/nvim-highlite/tags
+  teams_url: https://api.github.com/repos/Iron-E/nvim-highlite/teams
+  trees_url: https://api.github.com/repos/Iron-E/nvim-highlite/git/trees{/sha}
+  url: https://api.github.com/repos/Iron-E/nvim-highlite

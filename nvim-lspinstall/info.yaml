@@ -1,9 +1,52 @@
 archived: false
 default_branch: "main"
 description: "Provides the missing :LspInstall for nvim-lspconfig"
+history:
+  Mon Sep 27 10:00:15 PM UTC 2021: metadata acquired
 name: "nvim-lspinstall"
 owner: "kabouzeid"
 stars: 514
-url: "https://api.github.com/repos/kabouzeid/nvim-lspinstall"
-history:
-  Mon Sep 27 10:00:15 PM UTC 2021: metadata acquired
+urls:
+  archive_url: https://api.github.com/repos/kabouzeid/nvim-lspinstall/{archive_format}{/ref}
+  assignees_url: https://api.github.com/repos/kabouzeid/nvim-lspinstall/assignees{/user}
+  blobs_url: https://api.github.com/repos/kabouzeid/nvim-lspinstall/git/blobs{/sha}
+  branches_url: https://api.github.com/repos/kabouzeid/nvim-lspinstall/branches{/branch}
+  clone_url: https://github.com/kabouzeid/nvim-lspinstall.git
+  collaborators_url: https://api.github.com/repos/kabouzeid/nvim-lspinstall/collaborators{/collaborator}
+  comments_url: https://api.github.com/repos/kabouzeid/nvim-lspinstall/comments{/number}
+  commits_url: https://api.github.com/repos/kabouzeid/nvim-lspinstall/commits{/sha}
+  compare_url: https://api.github.com/repos/kabouzeid/nvim-lspinstall/compare/{base}...{head}
+  contents_url: https://api.github.com/repos/kabouzeid/nvim-lspinstall/contents/{+path}
+  contributors_url: https://api.github.com/repos/kabouzeid/nvim-lspinstall/contributors
+  deployments_url: https://api.github.com/repos/kabouzeid/nvim-lspinstall/deployments
+  downloads_url: https://api.github.com/repos/kabouzeid/nvim-lspinstall/downloads
+  events_url: https://api.github.com/repos/kabouzeid/nvim-lspinstall/events
+  forks_url: https://api.github.com/repos/kabouzeid/nvim-lspinstall/forks
+  git_commits_url: https://api.github.com/repos/kabouzeid/nvim-lspinstall/git/commits{/sha}
+  git_refs_url: https://api.github.com/repos/kabouzeid/nvim-lspinstall/git/refs{/sha}
+  git_tags_url: https://api.github.com/repos/kabouzeid/nvim-lspinstall/git/tags{/sha}
+  git_url: git://github.com/kabouzeid/nvim-lspinstall.git
+  hooks_url: https://api.github.com/repos/kabouzeid/nvim-lspinstall/hooks
+  html_url: https://github.com/kabouzeid/nvim-lspinstall
+  issue_comment_url: https://api.github.com/repos/kabouzeid/nvim-lspinstall/issues/comments{/number}
+  issue_events_url: https://api.github.com/repos/kabouzeid/nvim-lspinstall/issues/events{/number}
+  issues_url: https://api.github.com/repos/kabouzeid/nvim-lspinstall/issues{/number}
+  keys_url: https://api.github.com/repos/kabouzeid/nvim-lspinstall/keys{/key_id}
+  labels_url: https://api.github.com/repos/kabouzeid/nvim-lspinstall/labels{/name}
+  languages_url: https://api.github.com/repos/kabouzeid/nvim-lspinstall/languages
+  merges_url: https://api.github.com/repos/kabouzeid/nvim-lspinstall/merges
+  milestones_url: https://api.github.com/repos/kabouzeid/nvim-lspinstall/milestones{/number}
+  mirror_url: null
+  notifications_url: https://api.github.com/repos/kabouzeid/nvim-lspinstall/notifications{?since,all,participating}
+  pulls_url: https://api.github.com/repos/kabouzeid/nvim-lspinstall/pulls{/number}
+  releases_url: https://api.github.com/repos/kabouzeid/nvim-lspinstall/releases{/id}
+  ssh_url: git@github.com:kabouzeid/nvim-lspinstall.git
+  stargazers_url: https://api.github.com/repos/kabouzeid/nvim-lspinstall/stargazers
+  statuses_url: https://api.github.com/repos/kabouzeid/nvim-lspinstall/statuses/{sha}
+  subscribers_url: https://api.github.com/repos/kabouzeid/nvim-lspinstall/subscribers
+  subscription_url: https://api.github.com/repos/kabouzeid/nvim-lspinstall/subscription
+  svn_url: https://github.com/kabouzeid/nvim-lspinstall
+  tags_url: https://api.github.com/repos/kabouzeid/nvim-lspinstall/tags
+  teams_url: https://api.github.com/repos/kabouzeid/nvim-lspinstall/teams
+  trees_url: https://api.github.com/repos/kabouzeid/nvim-lspinstall/git/trees{/sha}
+  url: https://api.github.com/repos/kabouzeid/nvim-lspinstall

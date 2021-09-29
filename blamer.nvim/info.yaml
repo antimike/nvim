@@ -1,9 +1,52 @@
 archived: false
 default_branch: "master"
 description: "A git blame plugin for neovim inspired by VS Code's GitLens plugin"
+history:
+  Mon Sep 27 09:59:41 PM UTC 2021: metadata acquired
 name: "blamer.nvim"
 owner: "APZelos"
 stars: 404
-url: "https://api.github.com/repos/APZelos/blamer.nvim"
-history:
-  Mon Sep 27 09:59:41 PM UTC 2021: metadata acquired
+urls:
+  archive_url: https://api.github.com/repos/APZelos/blamer.nvim/{archive_format}{/ref}
+  assignees_url: https://api.github.com/repos/APZelos/blamer.nvim/assignees{/user}
+  blobs_url: https://api.github.com/repos/APZelos/blamer.nvim/git/blobs{/sha}
+  branches_url: https://api.github.com/repos/APZelos/blamer.nvim/branches{/branch}
+  clone_url: https://github.com/APZelos/blamer.nvim.git
+  collaborators_url: https://api.github.com/repos/APZelos/blamer.nvim/collaborators{/collaborator}
+  comments_url: https://api.github.com/repos/APZelos/blamer.nvim/comments{/number}
+  commits_url: https://api.github.com/repos/APZelos/blamer.nvim/commits{/sha}
+  compare_url: https://api.github.com/repos/APZelos/blamer.nvim/compare/{base}...{head}
+  contents_url: https://api.github.com/repos/APZelos/blamer.nvim/contents/{+path}
+  contributors_url: https://api.github.com/repos/APZelos/blamer.nvim/contributors
+  deployments_url: https://api.github.com/repos/APZelos/blamer.nvim/deployments
+  downloads_url: https://api.github.com/repos/APZelos/blamer.nvim/downloads
+  events_url: https://api.github.com/repos/APZelos/blamer.nvim/events
+  forks_url: https://api.github.com/repos/APZelos/blamer.nvim/forks
+  git_commits_url: https://api.github.com/repos/APZelos/blamer.nvim/git/commits{/sha}
+  git_refs_url: https://api.github.com/repos/APZelos/blamer.nvim/git/refs{/sha}
+  git_tags_url: https://api.github.com/repos/APZelos/blamer.nvim/git/tags{/sha}
+  git_url: git://github.com/APZelos/blamer.nvim.git
+  hooks_url: https://api.github.com/repos/APZelos/blamer.nvim/hooks
+  html_url: https://github.com/APZelos/blamer.nvim
+  issue_comment_url: https://api.github.com/repos/APZelos/blamer.nvim/issues/comments{/number}
+  issue_events_url: https://api.github.com/repos/APZelos/blamer.nvim/issues/events{/number}
+  issues_url: https://api.github.com/repos/APZelos/blamer.nvim/issues{/number}
+  keys_url: https://api.github.com/repos/APZelos/blamer.nvim/keys{/key_id}
+  labels_url: https://api.github.com/repos/APZelos/blamer.nvim/labels{/name}
+  languages_url: https://api.github.com/repos/APZelos/blamer.nvim/languages
+  merges_url: https://api.github.com/repos/APZelos/blamer.nvim/merges
+  milestones_url: https://api.github.com/repos/APZelos/blamer.nvim/milestones{/number}
+  mirror_url: null
+  notifications_url: https://api.github.com/repos/APZelos/blamer.nvim/notifications{?since,all,participating}
+  pulls_url: https://api.github.com/repos/APZelos/blamer.nvim/pulls{/number}
+  releases_url: https://api.github.com/repos/APZelos/blamer.nvim/releases{/id}
+  ssh_url: git@github.com:APZelos/blamer.nvim.git
+  stargazers_url: https://api.github.com/repos/APZelos/blamer.nvim/stargazers
+  statuses_url: https://api.github.com/repos/APZelos/blamer.nvim/statuses/{sha}
+  subscribers_url: https://api.github.com/repos/APZelos/blamer.nvim/subscribers
+  subscription_url: https://api.github.com/repos/APZelos/blamer.nvim/subscription
+  svn_url: https://github.com/APZelos/blamer.nvim
+  tags_url: https://api.github.com/repos/APZelos/blamer.nvim/tags
+  teams_url: https://api.github.com/repos/APZelos/blamer.nvim/teams
+  trees_url: https://api.github.com/repos/APZelos/blamer.nvim/git/trees{/sha}
+  url: https://api.github.com/repos/APZelos/blamer.nvim

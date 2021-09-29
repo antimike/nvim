@@ -1,9 +1,52 @@
 archived: false
 default_branch: "master"
 description: "Auto completion Lua plugin for nvim"
+history:
+  Mon Sep 27 10:00:10 PM UTC 2021: metadata acquired
 name: "nvim-compe"
 owner: "hrsh7th"
 stars: 1339
-url: "https://api.github.com/repos/hrsh7th/nvim-compe"
-history:
-  Mon Sep 27 10:00:10 PM UTC 2021: metadata acquired
+urls:
+  archive_url: https://api.github.com/repos/hrsh7th/nvim-compe/{archive_format}{/ref}
+  assignees_url: https://api.github.com/repos/hrsh7th/nvim-compe/assignees{/user}
+  blobs_url: https://api.github.com/repos/hrsh7th/nvim-compe/git/blobs{/sha}
+  branches_url: https://api.github.com/repos/hrsh7th/nvim-compe/branches{/branch}
+  clone_url: https://github.com/hrsh7th/nvim-compe.git
+  collaborators_url: https://api.github.com/repos/hrsh7th/nvim-compe/collaborators{/collaborator}
+  comments_url: https://api.github.com/repos/hrsh7th/nvim-compe/comments{/number}
+  commits_url: https://api.github.com/repos/hrsh7th/nvim-compe/commits{/sha}
+  compare_url: https://api.github.com/repos/hrsh7th/nvim-compe/compare/{base}...{head}
+  contents_url: https://api.github.com/repos/hrsh7th/nvim-compe/contents/{+path}
+  contributors_url: https://api.github.com/repos/hrsh7th/nvim-compe/contributors
+  deployments_url: https://api.github.com/repos/hrsh7th/nvim-compe/deployments
+  downloads_url: https://api.github.com/repos/hrsh7th/nvim-compe/downloads
+  events_url: https://api.github.com/repos/hrsh7th/nvim-compe/events
+  forks_url: https://api.github.com/repos/hrsh7th/nvim-compe/forks
+  git_commits_url: https://api.github.com/repos/hrsh7th/nvim-compe/git/commits{/sha}
+  git_refs_url: https://api.github.com/repos/hrsh7th/nvim-compe/git/refs{/sha}
+  git_tags_url: https://api.github.com/repos/hrsh7th/nvim-compe/git/tags{/sha}
+  git_url: git://github.com/hrsh7th/nvim-compe.git
+  hooks_url: https://api.github.com/repos/hrsh7th/nvim-compe/hooks
+  html_url: https://github.com/hrsh7th/nvim-compe
+  issue_comment_url: https://api.github.com/repos/hrsh7th/nvim-compe/issues/comments{/number}
+  issue_events_url: https://api.github.com/repos/hrsh7th/nvim-compe/issues/events{/number}
+  issues_url: https://api.github.com/repos/hrsh7th/nvim-compe/issues{/number}
+  keys_url: https://api.github.com/repos/hrsh7th/nvim-compe/keys{/key_id}
+  labels_url: https://api.github.com/repos/hrsh7th/nvim-compe/labels{/name}
+  languages_url: https://api.github.com/repos/hrsh7th/nvim-compe/languages
+  merges_url: https://api.github.com/repos/hrsh7th/nvim-compe/merges
+  milestones_url: https://api.github.com/repos/hrsh7th/nvim-compe/milestones{/number}
+  mirror_url: null
+  notifications_url: https://api.github.com/repos/hrsh7th/nvim-compe/notifications{?since,all,participating}
+  pulls_url: https://api.github.com/repos/hrsh7th/nvim-compe/pulls{/number}
+  releases_url: https://api.github.com/repos/hrsh7th/nvim-compe/releases{/id}
+  ssh_url: git@github.com:hrsh7th/nvim-compe.git
+  stargazers_url: https://api.github.com/repos/hrsh7th/nvim-compe/stargazers
+  statuses_url: https://api.github.com/repos/hrsh7th/nvim-compe/statuses/{sha}
+  subscribers_url: https://api.github.com/repos/hrsh7th/nvim-compe/subscribers
+  subscription_url: https://api.github.com/repos/hrsh7th/nvim-compe/subscription
+  svn_url: https://github.com/hrsh7th/nvim-compe
+  tags_url: https://api.github.com/repos/hrsh7th/nvim-compe/tags
+  teams_url: https://api.github.com/repos/hrsh7th/nvim-compe/teams
+  trees_url: https://api.github.com/repos/hrsh7th/nvim-compe/git/trees{/sha}
+  url: https://api.github.com/repos/hrsh7th/nvim-compe

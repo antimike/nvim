@@ -3,9 +3,52 @@ default_branch: "main"
 description: "\U0001F4A5   Create key bindings that stick. WhichKey is a lua plugin\
   \ for Neovim 0.5 that displays a popup with possible keybindings of the command\
   \ you started typing."
+history:
+  Mon Sep 27 10:00:00 PM UTC 2021: metadata acquired
 name: "which-key.nvim"
 owner: "folke"
 stars: 735
-url: "https://api.github.com/repos/folke/which-key.nvim"
-history:
-  Mon Sep 27 10:00:00 PM UTC 2021: metadata acquired
+urls:
+  archive_url: https://api.github.com/repos/folke/which-key.nvim/{archive_format}{/ref}
+  assignees_url: https://api.github.com/repos/folke/which-key.nvim/assignees{/user}
+  blobs_url: https://api.github.com/repos/folke/which-key.nvim/git/blobs{/sha}
+  branches_url: https://api.github.com/repos/folke/which-key.nvim/branches{/branch}
+  clone_url: https://github.com/folke/which-key.nvim.git
+  collaborators_url: https://api.github.com/repos/folke/which-key.nvim/collaborators{/collaborator}
+  comments_url: https://api.github.com/repos/folke/which-key.nvim/comments{/number}
+  commits_url: https://api.github.com/repos/folke/which-key.nvim/commits{/sha}
+  compare_url: https://api.github.com/repos/folke/which-key.nvim/compare/{base}...{head}
+  contents_url: https://api.github.com/repos/folke/which-key.nvim/contents/{+path}
+  contributors_url: https://api.github.com/repos/folke/which-key.nvim/contributors
+  deployments_url: https://api.github.com/repos/folke/which-key.nvim/deployments
+  downloads_url: https://api.github.com/repos/folke/which-key.nvim/downloads
+  events_url: https://api.github.com/repos/folke/which-key.nvim/events
+  forks_url: https://api.github.com/repos/folke/which-key.nvim/forks
+  git_commits_url: https://api.github.com/repos/folke/which-key.nvim/git/commits{/sha}
+  git_refs_url: https://api.github.com/repos/folke/which-key.nvim/git/refs{/sha}
+  git_tags_url: https://api.github.com/repos/folke/which-key.nvim/git/tags{/sha}
+  git_url: git://github.com/folke/which-key.nvim.git
+  hooks_url: https://api.github.com/repos/folke/which-key.nvim/hooks
+  html_url: https://github.com/folke/which-key.nvim
+  issue_comment_url: https://api.github.com/repos/folke/which-key.nvim/issues/comments{/number}
+  issue_events_url: https://api.github.com/repos/folke/which-key.nvim/issues/events{/number}
+  issues_url: https://api.github.com/repos/folke/which-key.nvim/issues{/number}
+  keys_url: https://api.github.com/repos/folke/which-key.nvim/keys{/key_id}
+  labels_url: https://api.github.com/repos/folke/which-key.nvim/labels{/name}
+  languages_url: https://api.github.com/repos/folke/which-key.nvim/languages
+  merges_url: https://api.github.com/repos/folke/which-key.nvim/merges
+  milestones_url: https://api.github.com/repos/folke/which-key.nvim/milestones{/number}
+  mirror_url: null
+  notifications_url: https://api.github.com/repos/folke/which-key.nvim/notifications{?since,all,participating}
+  pulls_url: https://api.github.com/repos/folke/which-key.nvim/pulls{/number}
+  releases_url: https://api.github.com/repos/folke/which-key.nvim/releases{/id}
+  ssh_url: git@github.com:folke/which-key.nvim.git
+  stargazers_url: https://api.github.com/repos/folke/which-key.nvim/stargazers
+  statuses_url: https://api.github.com/repos/folke/which-key.nvim/statuses/{sha}
+  subscribers_url: https://api.github.com/repos/folke/which-key.nvim/subscribers
+  subscription_url: https://api.github.com/repos/folke/which-key.nvim/subscription
+  svn_url: https://github.com/folke/which-key.nvim
+  tags_url: https://api.github.com/repos/folke/which-key.nvim/tags
+  teams_url: https://api.github.com/repos/folke/which-key.nvim/teams
+  trees_url: https://api.github.com/repos/folke/which-key.nvim/git/trees{/sha}
+  url: https://api.github.com/repos/folke/which-key.nvim

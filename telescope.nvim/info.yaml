@@ -1,9 +1,52 @@
 archived: false
 default_branch: "master"
 description: "Find, Filter, Preview, Pick. All lua, all the time."
+history:
+  Mon Sep 27 10:00:30 PM UTC 2021: metadata acquired
 name: "telescope.nvim"
 owner: "nvim-telescope"
 stars: 3494
-url: "https://api.github.com/repos/nvim-telescope/telescope.nvim"
-history:
-  Mon Sep 27 10:00:30 PM UTC 2021: metadata acquired
+urls:
+  archive_url: https://api.github.com/repos/nvim-telescope/telescope.nvim/{archive_format}{/ref}
+  assignees_url: https://api.github.com/repos/nvim-telescope/telescope.nvim/assignees{/user}
+  blobs_url: https://api.github.com/repos/nvim-telescope/telescope.nvim/git/blobs{/sha}
+  branches_url: https://api.github.com/repos/nvim-telescope/telescope.nvim/branches{/branch}
+  clone_url: https://github.com/nvim-telescope/telescope.nvim.git
+  collaborators_url: https://api.github.com/repos/nvim-telescope/telescope.nvim/collaborators{/collaborator}
+  comments_url: https://api.github.com/repos/nvim-telescope/telescope.nvim/comments{/number}
+  commits_url: https://api.github.com/repos/nvim-telescope/telescope.nvim/commits{/sha}
+  compare_url: https://api.github.com/repos/nvim-telescope/telescope.nvim/compare/{base}...{head}
+  contents_url: https://api.github.com/repos/nvim-telescope/telescope.nvim/contents/{+path}
+  contributors_url: https://api.github.com/repos/nvim-telescope/telescope.nvim/contributors
+  deployments_url: https://api.github.com/repos/nvim-telescope/telescope.nvim/deployments
+  downloads_url: https://api.github.com/repos/nvim-telescope/telescope.nvim/downloads
+  events_url: https://api.github.com/repos/nvim-telescope/telescope.nvim/events
+  forks_url: https://api.github.com/repos/nvim-telescope/telescope.nvim/forks
+  git_commits_url: https://api.github.com/repos/nvim-telescope/telescope.nvim/git/commits{/sha}
+  git_refs_url: https://api.github.com/repos/nvim-telescope/telescope.nvim/git/refs{/sha}
+  git_tags_url: https://api.github.com/repos/nvim-telescope/telescope.nvim/git/tags{/sha}
+  git_url: git://github.com/nvim-telescope/telescope.nvim.git
+  hooks_url: https://api.github.com/repos/nvim-telescope/telescope.nvim/hooks
+  html_url: https://github.com/nvim-telescope/telescope.nvim
+  issue_comment_url: https://api.github.com/repos/nvim-telescope/telescope.nvim/issues/comments{/number}
+  issue_events_url: https://api.github.com/repos/nvim-telescope/telescope.nvim/issues/events{/number}
+  issues_url: https://api.github.com/repos/nvim-telescope/telescope.nvim/issues{/number}
+  keys_url: https://api.github.com/repos/nvim-telescope/telescope.nvim/keys{/key_id}
+  labels_url: https://api.github.com/repos/nvim-telescope/telescope.nvim/labels{/name}
+  languages_url: https://api.github.com/repos/nvim-telescope/telescope.nvim/languages
+  merges_url: https://api.github.com/repos/nvim-telescope/telescope.nvim/merges
+  milestones_url: https://api.github.com/repos/nvim-telescope/telescope.nvim/milestones{/number}
+  mirror_url: null
+  notifications_url: https://api.github.com/repos/nvim-telescope/telescope.nvim/notifications{?since,all,participating}
+  pulls_url: https://api.github.com/repos/nvim-telescope/telescope.nvim/pulls{/number}
+  releases_url: https://api.github.com/repos/nvim-telescope/telescope.nvim/releases{/id}
+  ssh_url: git@github.com:nvim-telescope/telescope.nvim.git
+  stargazers_url: https://api.github.com/repos/nvim-telescope/telescope.nvim/stargazers
+  statuses_url: https://api.github.com/repos/nvim-telescope/telescope.nvim/statuses/{sha}
+  subscribers_url: https://api.github.com/repos/nvim-telescope/telescope.nvim/subscribers
+  subscription_url: https://api.github.com/repos/nvim-telescope/telescope.nvim/subscription
+  svn_url: https://github.com/nvim-telescope/telescope.nvim
+  tags_url: https://api.github.com/repos/nvim-telescope/telescope.nvim/tags
+  teams_url: https://api.github.com/repos/nvim-telescope/telescope.nvim/teams
+  trees_url: https://api.github.com/repos/nvim-telescope/telescope.nvim/git/trees{/sha}
+  url: https://api.github.com/repos/nvim-telescope/telescope.nvim

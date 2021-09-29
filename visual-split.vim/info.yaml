@@ -1,9 +1,52 @@
 archived: false
 default_branch: "master"
 description: "Vim plugin to control splits with visual selections or text objects"
+history:
+  Mon Sep 27 10:00:46 PM UTC 2021: metadata acquired
 name: "visual-split.vim"
 owner: "wellle"
 stars: 201
-url: "https://api.github.com/repos/wellle/visual-split.vim"
-history:
-  Mon Sep 27 10:00:46 PM UTC 2021: metadata acquired
+urls:
+  archive_url: https://api.github.com/repos/wellle/visual-split.vim/{archive_format}{/ref}
+  assignees_url: https://api.github.com/repos/wellle/visual-split.vim/assignees{/user}
+  blobs_url: https://api.github.com/repos/wellle/visual-split.vim/git/blobs{/sha}
+  branches_url: https://api.github.com/repos/wellle/visual-split.vim/branches{/branch}
+  clone_url: https://github.com/wellle/visual-split.vim.git
+  collaborators_url: https://api.github.com/repos/wellle/visual-split.vim/collaborators{/collaborator}
+  comments_url: https://api.github.com/repos/wellle/visual-split.vim/comments{/number}
+  commits_url: https://api.github.com/repos/wellle/visual-split.vim/commits{/sha}
+  compare_url: https://api.github.com/repos/wellle/visual-split.vim/compare/{base}...{head}
+  contents_url: https://api.github.com/repos/wellle/visual-split.vim/contents/{+path}
+  contributors_url: https://api.github.com/repos/wellle/visual-split.vim/contributors
+  deployments_url: https://api.github.com/repos/wellle/visual-split.vim/deployments
+  downloads_url: https://api.github.com/repos/wellle/visual-split.vim/downloads
+  events_url: https://api.github.com/repos/wellle/visual-split.vim/events
+  forks_url: https://api.github.com/repos/wellle/visual-split.vim/forks
+  git_commits_url: https://api.github.com/repos/wellle/visual-split.vim/git/commits{/sha}
+  git_refs_url: https://api.github.com/repos/wellle/visual-split.vim/git/refs{/sha}
+  git_tags_url: https://api.github.com/repos/wellle/visual-split.vim/git/tags{/sha}
+  git_url: git://github.com/wellle/visual-split.vim.git
+  hooks_url: https://api.github.com/repos/wellle/visual-split.vim/hooks
+  html_url: https://github.com/wellle/visual-split.vim
+  issue_comment_url: https://api.github.com/repos/wellle/visual-split.vim/issues/comments{/number}
+  issue_events_url: https://api.github.com/repos/wellle/visual-split.vim/issues/events{/number}
+  issues_url: https://api.github.com/repos/wellle/visual-split.vim/issues{/number}
+  keys_url: https://api.github.com/repos/wellle/visual-split.vim/keys{/key_id}
+  labels_url: https://api.github.com/repos/wellle/visual-split.vim/labels{/name}
+  languages_url: https://api.github.com/repos/wellle/visual-split.vim/languages
+  merges_url: https://api.github.com/repos/wellle/visual-split.vim/merges
+  milestones_url: https://api.github.com/repos/wellle/visual-split.vim/milestones{/number}
+  mirror_url: null
+  notifications_url: https://api.github.com/repos/wellle/visual-split.vim/notifications{?since,all,participating}
+  pulls_url: https://api.github.com/repos/wellle/visual-split.vim/pulls{/number}
+  releases_url: https://api.github.com/repos/wellle/visual-split.vim/releases{/id}
+  ssh_url: git@github.com:wellle/visual-split.vim.git
+  stargazers_url: https://api.github.com/repos/wellle/visual-split.vim/stargazers
+  statuses_url: https://api.github.com/repos/wellle/visual-split.vim/statuses/{sha}
+  subscribers_url: https://api.github.com/repos/wellle/visual-split.vim/subscribers
+  subscription_url: https://api.github.com/repos/wellle/visual-split.vim/subscription
+  svn_url: https://github.com/wellle/visual-split.vim
+  tags_url: https://api.github.com/repos/wellle/visual-split.vim/tags
+  teams_url: https://api.github.com/repos/wellle/visual-split.vim/teams
+  trees_url: https://api.github.com/repos/wellle/visual-split.vim/git/trees{/sha}
+  url: https://api.github.com/repos/wellle/visual-split.vim

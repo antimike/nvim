@@ -2,9 +2,52 @@ archived: false
 default_branch: "main"
 description: "\U0001F305  Twilight is a Lua plugin for Neovim 0.5 that dims inactive\
   \ portions of the code you're editing using TreeSitter."
+history:
+  Mon Sep 27 09:59:59 PM UTC 2021: metadata acquired
 name: "twilight.nvim"
 owner: "folke"
 stars: 241
-url: "https://api.github.com/repos/folke/twilight.nvim"
-history:
-  Mon Sep 27 09:59:59 PM UTC 2021: metadata acquired
+urls:
+  archive_url: https://api.github.com/repos/folke/twilight.nvim/{archive_format}{/ref}
+  assignees_url: https://api.github.com/repos/folke/twilight.nvim/assignees{/user}
+  blobs_url: https://api.github.com/repos/folke/twilight.nvim/git/blobs{/sha}
+  branches_url: https://api.github.com/repos/folke/twilight.nvim/branches{/branch}
+  clone_url: https://github.com/folke/twilight.nvim.git
+  collaborators_url: https://api.github.com/repos/folke/twilight.nvim/collaborators{/collaborator}
+  comments_url: https://api.github.com/repos/folke/twilight.nvim/comments{/number}
+  commits_url: https://api.github.com/repos/folke/twilight.nvim/commits{/sha}
+  compare_url: https://api.github.com/repos/folke/twilight.nvim/compare/{base}...{head}
+  contents_url: https://api.github.com/repos/folke/twilight.nvim/contents/{+path}
+  contributors_url: https://api.github.com/repos/folke/twilight.nvim/contributors
+  deployments_url: https://api.github.com/repos/folke/twilight.nvim/deployments
+  downloads_url: https://api.github.com/repos/folke/twilight.nvim/downloads
+  events_url: https://api.github.com/repos/folke/twilight.nvim/events
+  forks_url: https://api.github.com/repos/folke/twilight.nvim/forks
+  git_commits_url: https://api.github.com/repos/folke/twilight.nvim/git/commits{/sha}
+  git_refs_url: https://api.github.com/repos/folke/twilight.nvim/git/refs{/sha}
+  git_tags_url: https://api.github.com/repos/folke/twilight.nvim/git/tags{/sha}
+  git_url: git://github.com/folke/twilight.nvim.git
+  hooks_url: https://api.github.com/repos/folke/twilight.nvim/hooks
+  html_url: https://github.com/folke/twilight.nvim
+  issue_comment_url: https://api.github.com/repos/folke/twilight.nvim/issues/comments{/number}
+  issue_events_url: https://api.github.com/repos/folke/twilight.nvim/issues/events{/number}
+  issues_url: https://api.github.com/repos/folke/twilight.nvim/issues{/number}
+  keys_url: https://api.github.com/repos/folke/twilight.nvim/keys{/key_id}
+  labels_url: https://api.github.com/repos/folke/twilight.nvim/labels{/name}
+  languages_url: https://api.github.com/repos/folke/twilight.nvim/languages
+  merges_url: https://api.github.com/repos/folke/twilight.nvim/merges
+  milestones_url: https://api.github.com/repos/folke/twilight.nvim/milestones{/number}
+  mirror_url: null
+  notifications_url: https://api.github.com/repos/folke/twilight.nvim/notifications{?since,all,participating}
+  pulls_url: https://api.github.com/repos/folke/twilight.nvim/pulls{/number}
+  releases_url: https://api.github.com/repos/folke/twilight.nvim/releases{/id}
+  ssh_url: git@github.com:folke/twilight.nvim.git
+  stargazers_url: https://api.github.com/repos/folke/twilight.nvim/stargazers
+  statuses_url: https://api.github.com/repos/folke/twilight.nvim/statuses/{sha}
+  subscribers_url: https://api.github.com/repos/folke/twilight.nvim/subscribers
+  subscription_url: https://api.github.com/repos/folke/twilight.nvim/subscription
+  svn_url: https://github.com/folke/twilight.nvim
+  tags_url: https://api.github.com/repos/folke/twilight.nvim/tags
+  teams_url: https://api.github.com/repos/folke/twilight.nvim/teams
+  trees_url: https://api.github.com/repos/folke/twilight.nvim/git/trees{/sha}
+  url: https://api.github.com/repos/folke/twilight.nvim

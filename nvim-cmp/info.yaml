@@ -1,9 +1,52 @@
 archived: false
 default_branch: "main"
 description: "A completion plugin for neovim coded in Lua."
+history:
+  Mon Sep 27 10:00:09 PM UTC 2021: metadata acquired
 name: "nvim-cmp"
 owner: "hrsh7th"
 stars: 824
-url: "https://api.github.com/repos/hrsh7th/nvim-cmp"
-history:
-  Mon Sep 27 10:00:09 PM UTC 2021: metadata acquired
+urls:
+  archive_url: https://api.github.com/repos/hrsh7th/nvim-cmp/{archive_format}{/ref}
+  assignees_url: https://api.github.com/repos/hrsh7th/nvim-cmp/assignees{/user}
+  blobs_url: https://api.github.com/repos/hrsh7th/nvim-cmp/git/blobs{/sha}
+  branches_url: https://api.github.com/repos/hrsh7th/nvim-cmp/branches{/branch}
+  clone_url: https://github.com/hrsh7th/nvim-cmp.git
+  collaborators_url: https://api.github.com/repos/hrsh7th/nvim-cmp/collaborators{/collaborator}
+  comments_url: https://api.github.com/repos/hrsh7th/nvim-cmp/comments{/number}
+  commits_url: https://api.github.com/repos/hrsh7th/nvim-cmp/commits{/sha}
+  compare_url: https://api.github.com/repos/hrsh7th/nvim-cmp/compare/{base}...{head}
+  contents_url: https://api.github.com/repos/hrsh7th/nvim-cmp/contents/{+path}
+  contributors_url: https://api.github.com/repos/hrsh7th/nvim-cmp/contributors
+  deployments_url: https://api.github.com/repos/hrsh7th/nvim-cmp/deployments
+  downloads_url: https://api.github.com/repos/hrsh7th/nvim-cmp/downloads
+  events_url: https://api.github.com/repos/hrsh7th/nvim-cmp/events
+  forks_url: https://api.github.com/repos/hrsh7th/nvim-cmp/forks
+  git_commits_url: https://api.github.com/repos/hrsh7th/nvim-cmp/git/commits{/sha}
+  git_refs_url: https://api.github.com/repos/hrsh7th/nvim-cmp/git/refs{/sha}
+  git_tags_url: https://api.github.com/repos/hrsh7th/nvim-cmp/git/tags{/sha}
+  git_url: git://github.com/hrsh7th/nvim-cmp.git
+  hooks_url: https://api.github.com/repos/hrsh7th/nvim-cmp/hooks
+  html_url: https://github.com/hrsh7th/nvim-cmp
+  issue_comment_url: https://api.github.com/repos/hrsh7th/nvim-cmp/issues/comments{/number}
+  issue_events_url: https://api.github.com/repos/hrsh7th/nvim-cmp/issues/events{/number}
+  issues_url: https://api.github.com/repos/hrsh7th/nvim-cmp/issues{/number}
+  keys_url: https://api.github.com/repos/hrsh7th/nvim-cmp/keys{/key_id}
+  labels_url: https://api.github.com/repos/hrsh7th/nvim-cmp/labels{/name}
+  languages_url: https://api.github.com/repos/hrsh7th/nvim-cmp/languages
+  merges_url: https://api.github.com/repos/hrsh7th/nvim-cmp/merges
+  milestones_url: https://api.github.com/repos/hrsh7th/nvim-cmp/milestones{/number}
+  mirror_url: null
+  notifications_url: https://api.github.com/repos/hrsh7th/nvim-cmp/notifications{?since,all,participating}
+  pulls_url: https://api.github.com/repos/hrsh7th/nvim-cmp/pulls{/number}
+  releases_url: https://api.github.com/repos/hrsh7th/nvim-cmp/releases{/id}
+  ssh_url: git@github.com:hrsh7th/nvim-cmp.git
+  stargazers_url: https://api.github.com/repos/hrsh7th/nvim-cmp/stargazers
+  statuses_url: https://api.github.com/repos/hrsh7th/nvim-cmp/statuses/{sha}
+  subscribers_url: https://api.github.com/repos/hrsh7th/nvim-cmp/subscribers
+  subscription_url: https://api.github.com/repos/hrsh7th/nvim-cmp/subscription
+  svn_url: https://github.com/hrsh7th/nvim-cmp
+  tags_url: https://api.github.com/repos/hrsh7th/nvim-cmp/tags
+  teams_url: https://api.github.com/repos/hrsh7th/nvim-cmp/teams
+  trees_url: https://api.github.com/repos/hrsh7th/nvim-cmp/git/trees{/sha}
+  url: https://api.github.com/repos/hrsh7th/nvim-cmp

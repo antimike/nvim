@@ -1,9 +1,52 @@
 archived: false
 default_branch: "master"
 description: "Neovim as a TMUX replacement"
+history:
+  Mon Sep 27 10:00:08 PM UTC 2021: metadata acquired
 name: "nvimux"
 owner: "hkupty"
 stars: 325
-url: "https://api.github.com/repos/hkupty/nvimux"
-history:
-  Mon Sep 27 10:00:08 PM UTC 2021: metadata acquired
+urls:
+  archive_url: https://api.github.com/repos/hkupty/nvimux/{archive_format}{/ref}
+  assignees_url: https://api.github.com/repos/hkupty/nvimux/assignees{/user}
+  blobs_url: https://api.github.com/repos/hkupty/nvimux/git/blobs{/sha}
+  branches_url: https://api.github.com/repos/hkupty/nvimux/branches{/branch}
+  clone_url: https://github.com/hkupty/nvimux.git
+  collaborators_url: https://api.github.com/repos/hkupty/nvimux/collaborators{/collaborator}
+  comments_url: https://api.github.com/repos/hkupty/nvimux/comments{/number}
+  commits_url: https://api.github.com/repos/hkupty/nvimux/commits{/sha}
+  compare_url: https://api.github.com/repos/hkupty/nvimux/compare/{base}...{head}
+  contents_url: https://api.github.com/repos/hkupty/nvimux/contents/{+path}
+  contributors_url: https://api.github.com/repos/hkupty/nvimux/contributors
+  deployments_url: https://api.github.com/repos/hkupty/nvimux/deployments
+  downloads_url: https://api.github.com/repos/hkupty/nvimux/downloads
+  events_url: https://api.github.com/repos/hkupty/nvimux/events
+  forks_url: https://api.github.com/repos/hkupty/nvimux/forks
+  git_commits_url: https://api.github.com/repos/hkupty/nvimux/git/commits{/sha}
+  git_refs_url: https://api.github.com/repos/hkupty/nvimux/git/refs{/sha}
+  git_tags_url: https://api.github.com/repos/hkupty/nvimux/git/tags{/sha}
+  git_url: git://github.com/hkupty/nvimux.git
+  hooks_url: https://api.github.com/repos/hkupty/nvimux/hooks
+  html_url: https://github.com/hkupty/nvimux
+  issue_comment_url: https://api.github.com/repos/hkupty/nvimux/issues/comments{/number}
+  issue_events_url: https://api.github.com/repos/hkupty/nvimux/issues/events{/number}
+  issues_url: https://api.github.com/repos/hkupty/nvimux/issues{/number}
+  keys_url: https://api.github.com/repos/hkupty/nvimux/keys{/key_id}
+  labels_url: https://api.github.com/repos/hkupty/nvimux/labels{/name}
+  languages_url: https://api.github.com/repos/hkupty/nvimux/languages
+  merges_url: https://api.github.com/repos/hkupty/nvimux/merges
+  milestones_url: https://api.github.com/repos/hkupty/nvimux/milestones{/number}
+  mirror_url: null
+  notifications_url: https://api.github.com/repos/hkupty/nvimux/notifications{?since,all,participating}
+  pulls_url: https://api.github.com/repos/hkupty/nvimux/pulls{/number}
+  releases_url: https://api.github.com/repos/hkupty/nvimux/releases{/id}
+  ssh_url: git@github.com:hkupty/nvimux.git
+  stargazers_url: https://api.github.com/repos/hkupty/nvimux/stargazers
+  statuses_url: https://api.github.com/repos/hkupty/nvimux/statuses/{sha}
+  subscribers_url: https://api.github.com/repos/hkupty/nvimux/subscribers
+  subscription_url: https://api.github.com/repos/hkupty/nvimux/subscription
+  svn_url: https://github.com/hkupty/nvimux
+  tags_url: https://api.github.com/repos/hkupty/nvimux/tags
+  teams_url: https://api.github.com/repos/hkupty/nvimux/teams
+  trees_url: https://api.github.com/repos/hkupty/nvimux/git/trees{/sha}
+  url: https://api.github.com/repos/hkupty/nvimux

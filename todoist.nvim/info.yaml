@@ -1,9 +1,52 @@
 archived: false
 default_branch: "master"
 description: "A todoist extension for neovim"
+history:
+  Mon Sep 27 10:00:38 PM UTC 2021: metadata acquired
 name: "todoist.nvim"
 owner: "romgrk"
 stars: 96
-url: "https://api.github.com/repos/romgrk/todoist.nvim"
-history:
-  Mon Sep 27 10:00:38 PM UTC 2021: metadata acquired
+urls:
+  archive_url: https://api.github.com/repos/romgrk/todoist.nvim/{archive_format}{/ref}
+  assignees_url: https://api.github.com/repos/romgrk/todoist.nvim/assignees{/user}
+  blobs_url: https://api.github.com/repos/romgrk/todoist.nvim/git/blobs{/sha}
+  branches_url: https://api.github.com/repos/romgrk/todoist.nvim/branches{/branch}
+  clone_url: https://github.com/romgrk/todoist.nvim.git
+  collaborators_url: https://api.github.com/repos/romgrk/todoist.nvim/collaborators{/collaborator}
+  comments_url: https://api.github.com/repos/romgrk/todoist.nvim/comments{/number}
+  commits_url: https://api.github.com/repos/romgrk/todoist.nvim/commits{/sha}
+  compare_url: https://api.github.com/repos/romgrk/todoist.nvim/compare/{base}...{head}
+  contents_url: https://api.github.com/repos/romgrk/todoist.nvim/contents/{+path}
+  contributors_url: https://api.github.com/repos/romgrk/todoist.nvim/contributors
+  deployments_url: https://api.github.com/repos/romgrk/todoist.nvim/deployments
+  downloads_url: https://api.github.com/repos/romgrk/todoist.nvim/downloads
+  events_url: https://api.github.com/repos/romgrk/todoist.nvim/events
+  forks_url: https://api.github.com/repos/romgrk/todoist.nvim/forks
+  git_commits_url: https://api.github.com/repos/romgrk/todoist.nvim/git/commits{/sha}
+  git_refs_url: https://api.github.com/repos/romgrk/todoist.nvim/git/refs{/sha}
+  git_tags_url: https://api.github.com/repos/romgrk/todoist.nvim/git/tags{/sha}
+  git_url: git://github.com/romgrk/todoist.nvim.git
+  hooks_url: https://api.github.com/repos/romgrk/todoist.nvim/hooks
+  html_url: https://github.com/romgrk/todoist.nvim
+  issue_comment_url: https://api.github.com/repos/romgrk/todoist.nvim/issues/comments{/number}
+  issue_events_url: https://api.github.com/repos/romgrk/todoist.nvim/issues/events{/number}
+  issues_url: https://api.github.com/repos/romgrk/todoist.nvim/issues{/number}
+  keys_url: https://api.github.com/repos/romgrk/todoist.nvim/keys{/key_id}
+  labels_url: https://api.github.com/repos/romgrk/todoist.nvim/labels{/name}
+  languages_url: https://api.github.com/repos/romgrk/todoist.nvim/languages
+  merges_url: https://api.github.com/repos/romgrk/todoist.nvim/merges
+  milestones_url: https://api.github.com/repos/romgrk/todoist.nvim/milestones{/number}
+  mirror_url: null
+  notifications_url: https://api.github.com/repos/romgrk/todoist.nvim/notifications{?since,all,participating}
+  pulls_url: https://api.github.com/repos/romgrk/todoist.nvim/pulls{/number}
+  releases_url: https://api.github.com/repos/romgrk/todoist.nvim/releases{/id}
+  ssh_url: git@github.com:romgrk/todoist.nvim.git
+  stargazers_url: https://api.github.com/repos/romgrk/todoist.nvim/stargazers
+  statuses_url: https://api.github.com/repos/romgrk/todoist.nvim/statuses/{sha}
+  subscribers_url: https://api.github.com/repos/romgrk/todoist.nvim/subscribers
+  subscription_url: https://api.github.com/repos/romgrk/todoist.nvim/subscription
+  svn_url: https://github.com/romgrk/todoist.nvim
+  tags_url: https://api.github.com/repos/romgrk/todoist.nvim/tags
+  teams_url: https://api.github.com/repos/romgrk/todoist.nvim/teams
+  trees_url: https://api.github.com/repos/romgrk/todoist.nvim/git/trees{/sha}
+  url: https://api.github.com/repos/romgrk/todoist.nvim

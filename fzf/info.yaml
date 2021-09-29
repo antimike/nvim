@@ -1,9 +1,52 @@
 archived: false
 default_branch: "master"
 description: ":cherry_blossom: A command-line fuzzy finder"
+history:
+  Mon Sep 27 10:00:14 PM UTC 2021: metadata acquired
 name: "fzf"
 owner: "junegunn"
 stars: 39372
-url: "https://api.github.com/repos/junegunn/fzf"
-history:
-  Mon Sep 27 10:00:14 PM UTC 2021: metadata acquired
+urls:
+  archive_url: https://api.github.com/repos/junegunn/fzf/{archive_format}{/ref}
+  assignees_url: https://api.github.com/repos/junegunn/fzf/assignees{/user}
+  blobs_url: https://api.github.com/repos/junegunn/fzf/git/blobs{/sha}
+  branches_url: https://api.github.com/repos/junegunn/fzf/branches{/branch}
+  clone_url: https://github.com/junegunn/fzf.git
+  collaborators_url: https://api.github.com/repos/junegunn/fzf/collaborators{/collaborator}
+  comments_url: https://api.github.com/repos/junegunn/fzf/comments{/number}
+  commits_url: https://api.github.com/repos/junegunn/fzf/commits{/sha}
+  compare_url: https://api.github.com/repos/junegunn/fzf/compare/{base}...{head}
+  contents_url: https://api.github.com/repos/junegunn/fzf/contents/{+path}
+  contributors_url: https://api.github.com/repos/junegunn/fzf/contributors
+  deployments_url: https://api.github.com/repos/junegunn/fzf/deployments
+  downloads_url: https://api.github.com/repos/junegunn/fzf/downloads
+  events_url: https://api.github.com/repos/junegunn/fzf/events
+  forks_url: https://api.github.com/repos/junegunn/fzf/forks
+  git_commits_url: https://api.github.com/repos/junegunn/fzf/git/commits{/sha}
+  git_refs_url: https://api.github.com/repos/junegunn/fzf/git/refs{/sha}
+  git_tags_url: https://api.github.com/repos/junegunn/fzf/git/tags{/sha}
+  git_url: git://github.com/junegunn/fzf.git
+  hooks_url: https://api.github.com/repos/junegunn/fzf/hooks
+  html_url: https://github.com/junegunn/fzf
+  issue_comment_url: https://api.github.com/repos/junegunn/fzf/issues/comments{/number}
+  issue_events_url: https://api.github.com/repos/junegunn/fzf/issues/events{/number}
+  issues_url: https://api.github.com/repos/junegunn/fzf/issues{/number}
+  keys_url: https://api.github.com/repos/junegunn/fzf/keys{/key_id}
+  labels_url: https://api.github.com/repos/junegunn/fzf/labels{/name}
+  languages_url: https://api.github.com/repos/junegunn/fzf/languages
+  merges_url: https://api.github.com/repos/junegunn/fzf/merges
+  milestones_url: https://api.github.com/repos/junegunn/fzf/milestones{/number}
+  mirror_url: null
+  notifications_url: https://api.github.com/repos/junegunn/fzf/notifications{?since,all,participating}
+  pulls_url: https://api.github.com/repos/junegunn/fzf/pulls{/number}
+  releases_url: https://api.github.com/repos/junegunn/fzf/releases{/id}
+  ssh_url: git@github.com:junegunn/fzf.git
+  stargazers_url: https://api.github.com/repos/junegunn/fzf/stargazers
+  statuses_url: https://api.github.com/repos/junegunn/fzf/statuses/{sha}
+  subscribers_url: https://api.github.com/repos/junegunn/fzf/subscribers
+  subscription_url: https://api.github.com/repos/junegunn/fzf/subscription
+  svn_url: https://github.com/junegunn/fzf
+  tags_url: https://api.github.com/repos/junegunn/fzf/tags
+  teams_url: https://api.github.com/repos/junegunn/fzf/teams
+  trees_url: https://api.github.com/repos/junegunn/fzf/git/trees{/sha}
+  url: https://api.github.com/repos/junegunn/fzf

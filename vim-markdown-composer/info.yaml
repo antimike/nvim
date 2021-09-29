@@ -1,9 +1,52 @@
 archived: false
 default_branch: "master"
 description: "An asynchronous markdown preview plugin for Vim and Neovim."
+history:
+  Mon Sep 27 09:59:56 PM UTC 2021: metadata acquired
 name: "vim-markdown-composer"
 owner: "euclio"
 stars: 529
-url: "https://api.github.com/repos/euclio/vim-markdown-composer"
-history:
-  Mon Sep 27 09:59:56 PM UTC 2021: metadata acquired
+urls:
+  archive_url: https://api.github.com/repos/euclio/vim-markdown-composer/{archive_format}{/ref}
+  assignees_url: https://api.github.com/repos/euclio/vim-markdown-composer/assignees{/user}
+  blobs_url: https://api.github.com/repos/euclio/vim-markdown-composer/git/blobs{/sha}
+  branches_url: https://api.github.com/repos/euclio/vim-markdown-composer/branches{/branch}
+  clone_url: https://github.com/euclio/vim-markdown-composer.git
+  collaborators_url: https://api.github.com/repos/euclio/vim-markdown-composer/collaborators{/collaborator}
+  comments_url: https://api.github.com/repos/euclio/vim-markdown-composer/comments{/number}
+  commits_url: https://api.github.com/repos/euclio/vim-markdown-composer/commits{/sha}
+  compare_url: https://api.github.com/repos/euclio/vim-markdown-composer/compare/{base}...{head}
+  contents_url: https://api.github.com/repos/euclio/vim-markdown-composer/contents/{+path}
+  contributors_url: https://api.github.com/repos/euclio/vim-markdown-composer/contributors
+  deployments_url: https://api.github.com/repos/euclio/vim-markdown-composer/deployments
+  downloads_url: https://api.github.com/repos/euclio/vim-markdown-composer/downloads
+  events_url: https://api.github.com/repos/euclio/vim-markdown-composer/events
+  forks_url: https://api.github.com/repos/euclio/vim-markdown-composer/forks
+  git_commits_url: https://api.github.com/repos/euclio/vim-markdown-composer/git/commits{/sha}
+  git_refs_url: https://api.github.com/repos/euclio/vim-markdown-composer/git/refs{/sha}
+  git_tags_url: https://api.github.com/repos/euclio/vim-markdown-composer/git/tags{/sha}
+  git_url: git://github.com/euclio/vim-markdown-composer.git
+  hooks_url: https://api.github.com/repos/euclio/vim-markdown-composer/hooks
+  html_url: https://github.com/euclio/vim-markdown-composer
+  issue_comment_url: https://api.github.com/repos/euclio/vim-markdown-composer/issues/comments{/number}
+  issue_events_url: https://api.github.com/repos/euclio/vim-markdown-composer/issues/events{/number}
+  issues_url: https://api.github.com/repos/euclio/vim-markdown-composer/issues{/number}
+  keys_url: https://api.github.com/repos/euclio/vim-markdown-composer/keys{/key_id}
+  labels_url: https://api.github.com/repos/euclio/vim-markdown-composer/labels{/name}
+  languages_url: https://api.github.com/repos/euclio/vim-markdown-composer/languages
+  merges_url: https://api.github.com/repos/euclio/vim-markdown-composer/merges
+  milestones_url: https://api.github.com/repos/euclio/vim-markdown-composer/milestones{/number}
+  mirror_url: null
+  notifications_url: https://api.github.com/repos/euclio/vim-markdown-composer/notifications{?since,all,participating}
+  pulls_url: https://api.github.com/repos/euclio/vim-markdown-composer/pulls{/number}
+  releases_url: https://api.github.com/repos/euclio/vim-markdown-composer/releases{/id}
+  ssh_url: git@github.com:euclio/vim-markdown-composer.git
+  stargazers_url: https://api.github.com/repos/euclio/vim-markdown-composer/stargazers
+  statuses_url: https://api.github.com/repos/euclio/vim-markdown-composer/statuses/{sha}
+  subscribers_url: https://api.github.com/repos/euclio/vim-markdown-composer/subscribers
+  subscription_url: https://api.github.com/repos/euclio/vim-markdown-composer/subscription
+  svn_url: https://github.com/euclio/vim-markdown-composer
+  tags_url: https://api.github.com/repos/euclio/vim-markdown-composer/tags
+  teams_url: https://api.github.com/repos/euclio/vim-markdown-composer/teams
+  trees_url: https://api.github.com/repos/euclio/vim-markdown-composer/git/trees{/sha}
+  url: https://api.github.com/repos/euclio/vim-markdown-composer

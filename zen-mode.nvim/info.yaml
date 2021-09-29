@@ -1,9 +1,52 @@
 archived: false
 default_branch: "main"
 description: "\U0001F9D8  Distraction-free coding for Neovim"
+history:
+  Mon Sep 27 10:00:01 PM UTC 2021: metadata acquired
 name: "zen-mode.nvim"
 owner: "folke"
 stars: 243
-url: "https://api.github.com/repos/folke/zen-mode.nvim"
-history:
-  Mon Sep 27 10:00:01 PM UTC 2021: metadata acquired
+urls:
+  archive_url: https://api.github.com/repos/folke/zen-mode.nvim/{archive_format}{/ref}
+  assignees_url: https://api.github.com/repos/folke/zen-mode.nvim/assignees{/user}
+  blobs_url: https://api.github.com/repos/folke/zen-mode.nvim/git/blobs{/sha}
+  branches_url: https://api.github.com/repos/folke/zen-mode.nvim/branches{/branch}
+  clone_url: https://github.com/folke/zen-mode.nvim.git
+  collaborators_url: https://api.github.com/repos/folke/zen-mode.nvim/collaborators{/collaborator}
+  comments_url: https://api.github.com/repos/folke/zen-mode.nvim/comments{/number}
+  commits_url: https://api.github.com/repos/folke/zen-mode.nvim/commits{/sha}
+  compare_url: https://api.github.com/repos/folke/zen-mode.nvim/compare/{base}...{head}
+  contents_url: https://api.github.com/repos/folke/zen-mode.nvim/contents/{+path}
+  contributors_url: https://api.github.com/repos/folke/zen-mode.nvim/contributors
+  deployments_url: https://api.github.com/repos/folke/zen-mode.nvim/deployments
+  downloads_url: https://api.github.com/repos/folke/zen-mode.nvim/downloads
+  events_url: https://api.github.com/repos/folke/zen-mode.nvim/events
+  forks_url: https://api.github.com/repos/folke/zen-mode.nvim/forks
+  git_commits_url: https://api.github.com/repos/folke/zen-mode.nvim/git/commits{/sha}
+  git_refs_url: https://api.github.com/repos/folke/zen-mode.nvim/git/refs{/sha}
+  git_tags_url: https://api.github.com/repos/folke/zen-mode.nvim/git/tags{/sha}
+  git_url: git://github.com/folke/zen-mode.nvim.git
+  hooks_url: https://api.github.com/repos/folke/zen-mode.nvim/hooks
+  html_url: https://github.com/folke/zen-mode.nvim
+  issue_comment_url: https://api.github.com/repos/folke/zen-mode.nvim/issues/comments{/number}
+  issue_events_url: https://api.github.com/repos/folke/zen-mode.nvim/issues/events{/number}
+  issues_url: https://api.github.com/repos/folke/zen-mode.nvim/issues{/number}
+  keys_url: https://api.github.com/repos/folke/zen-mode.nvim/keys{/key_id}
+  labels_url: https://api.github.com/repos/folke/zen-mode.nvim/labels{/name}
+  languages_url: https://api.github.com/repos/folke/zen-mode.nvim/languages
+  merges_url: https://api.github.com/repos/folke/zen-mode.nvim/merges
+  milestones_url: https://api.github.com/repos/folke/zen-mode.nvim/milestones{/number}
+  mirror_url: null
+  notifications_url: https://api.github.com/repos/folke/zen-mode.nvim/notifications{?since,all,participating}
+  pulls_url: https://api.github.com/repos/folke/zen-mode.nvim/pulls{/number}
+  releases_url: https://api.github.com/repos/folke/zen-mode.nvim/releases{/id}
+  ssh_url: git@github.com:folke/zen-mode.nvim.git
+  stargazers_url: https://api.github.com/repos/folke/zen-mode.nvim/stargazers
+  statuses_url: https://api.github.com/repos/folke/zen-mode.nvim/statuses/{sha}
+  subscribers_url: https://api.github.com/repos/folke/zen-mode.nvim/subscribers
+  subscription_url: https://api.github.com/repos/folke/zen-mode.nvim/subscription
+  svn_url: https://github.com/folke/zen-mode.nvim
+  tags_url: https://api.github.com/repos/folke/zen-mode.nvim/tags
+  teams_url: https://api.github.com/repos/folke/zen-mode.nvim/teams
+  trees_url: https://api.github.com/repos/folke/zen-mode.nvim/git/trees{/sha}
+  url: https://api.github.com/repos/folke/zen-mode.nvim

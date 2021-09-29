@@ -1,9 +1,52 @@
 archived: false
 default_branch: "master"
 description: "Asynchronous Clojure Interactive Development"
+history:
+  Mon Sep 27 09:59:53 PM UTC 2021: metadata acquired
 name: "acid.nvim"
 owner: "clojure-vim"
 stars: 149
-url: "https://api.github.com/repos/clojure-vim/acid.nvim"
-history:
-  Mon Sep 27 09:59:53 PM UTC 2021: metadata acquired
+urls:
+  archive_url: https://api.github.com/repos/clojure-vim/acid.nvim/{archive_format}{/ref}
+  assignees_url: https://api.github.com/repos/clojure-vim/acid.nvim/assignees{/user}
+  blobs_url: https://api.github.com/repos/clojure-vim/acid.nvim/git/blobs{/sha}
+  branches_url: https://api.github.com/repos/clojure-vim/acid.nvim/branches{/branch}
+  clone_url: https://github.com/clojure-vim/acid.nvim.git
+  collaborators_url: https://api.github.com/repos/clojure-vim/acid.nvim/collaborators{/collaborator}
+  comments_url: https://api.github.com/repos/clojure-vim/acid.nvim/comments{/number}
+  commits_url: https://api.github.com/repos/clojure-vim/acid.nvim/commits{/sha}
+  compare_url: https://api.github.com/repos/clojure-vim/acid.nvim/compare/{base}...{head}
+  contents_url: https://api.github.com/repos/clojure-vim/acid.nvim/contents/{+path}
+  contributors_url: https://api.github.com/repos/clojure-vim/acid.nvim/contributors
+  deployments_url: https://api.github.com/repos/clojure-vim/acid.nvim/deployments
+  downloads_url: https://api.github.com/repos/clojure-vim/acid.nvim/downloads
+  events_url: https://api.github.com/repos/clojure-vim/acid.nvim/events
+  forks_url: https://api.github.com/repos/clojure-vim/acid.nvim/forks
+  git_commits_url: https://api.github.com/repos/clojure-vim/acid.nvim/git/commits{/sha}
+  git_refs_url: https://api.github.com/repos/clojure-vim/acid.nvim/git/refs{/sha}
+  git_tags_url: https://api.github.com/repos/clojure-vim/acid.nvim/git/tags{/sha}
+  git_url: git://github.com/clojure-vim/acid.nvim.git
+  hooks_url: https://api.github.com/repos/clojure-vim/acid.nvim/hooks
+  html_url: https://github.com/clojure-vim/acid.nvim
+  issue_comment_url: https://api.github.com/repos/clojure-vim/acid.nvim/issues/comments{/number}
+  issue_events_url: https://api.github.com/repos/clojure-vim/acid.nvim/issues/events{/number}
+  issues_url: https://api.github.com/repos/clojure-vim/acid.nvim/issues{/number}
+  keys_url: https://api.github.com/repos/clojure-vim/acid.nvim/keys{/key_id}
+  labels_url: https://api.github.com/repos/clojure-vim/acid.nvim/labels{/name}
+  languages_url: https://api.github.com/repos/clojure-vim/acid.nvim/languages
+  merges_url: https://api.github.com/repos/clojure-vim/acid.nvim/merges
+  milestones_url: https://api.github.com/repos/clojure-vim/acid.nvim/milestones{/number}
+  mirror_url: null
+  notifications_url: https://api.github.com/repos/clojure-vim/acid.nvim/notifications{?since,all,participating}
+  pulls_url: https://api.github.com/repos/clojure-vim/acid.nvim/pulls{/number}
+  releases_url: https://api.github.com/repos/clojure-vim/acid.nvim/releases{/id}
+  ssh_url: git@github.com:clojure-vim/acid.nvim.git
+  stargazers_url: https://api.github.com/repos/clojure-vim/acid.nvim/stargazers
+  statuses_url: https://api.github.com/repos/clojure-vim/acid.nvim/statuses/{sha}
+  subscribers_url: https://api.github.com/repos/clojure-vim/acid.nvim/subscribers
+  subscription_url: https://api.github.com/repos/clojure-vim/acid.nvim/subscription
+  svn_url: https://github.com/clojure-vim/acid.nvim
+  tags_url: https://api.github.com/repos/clojure-vim/acid.nvim/tags
+  teams_url: https://api.github.com/repos/clojure-vim/acid.nvim/teams
+  trees_url: https://api.github.com/repos/clojure-vim/acid.nvim/git/trees{/sha}
+  url: https://api.github.com/repos/clojure-vim/acid.nvim

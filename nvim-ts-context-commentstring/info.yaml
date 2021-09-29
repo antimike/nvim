@@ -2,9 +2,52 @@ archived: false
 default_branch: "main"
 description: "Neovim treesitter plugin for setting the commentstring based on the\
   \ cursor location in a file."
+history:
+  Mon Sep 27 09:59:43 PM UTC 2021: metadata acquired
 name: "nvim-ts-context-commentstring"
 owner: "JoosepAlviste"
 stars: 272
-url: "https://api.github.com/repos/JoosepAlviste/nvim-ts-context-commentstring"
-history:
-  Mon Sep 27 09:59:43 PM UTC 2021: metadata acquired
+urls:
+  archive_url: https://api.github.com/repos/JoosepAlviste/nvim-ts-context-commentstring/{archive_format}{/ref}
+  assignees_url: https://api.github.com/repos/JoosepAlviste/nvim-ts-context-commentstring/assignees{/user}
+  blobs_url: https://api.github.com/repos/JoosepAlviste/nvim-ts-context-commentstring/git/blobs{/sha}
+  branches_url: https://api.github.com/repos/JoosepAlviste/nvim-ts-context-commentstring/branches{/branch}
+  clone_url: https://github.com/JoosepAlviste/nvim-ts-context-commentstring.git
+  collaborators_url: https://api.github.com/repos/JoosepAlviste/nvim-ts-context-commentstring/collaborators{/collaborator}
+  comments_url: https://api.github.com/repos/JoosepAlviste/nvim-ts-context-commentstring/comments{/number}
+  commits_url: https://api.github.com/repos/JoosepAlviste/nvim-ts-context-commentstring/commits{/sha}
+  compare_url: https://api.github.com/repos/JoosepAlviste/nvim-ts-context-commentstring/compare/{base}...{head}
+  contents_url: https://api.github.com/repos/JoosepAlviste/nvim-ts-context-commentstring/contents/{+path}
+  contributors_url: https://api.github.com/repos/JoosepAlviste/nvim-ts-context-commentstring/contributors
+  deployments_url: https://api.github.com/repos/JoosepAlviste/nvim-ts-context-commentstring/deployments
+  downloads_url: https://api.github.com/repos/JoosepAlviste/nvim-ts-context-commentstring/downloads
+  events_url: https://api.github.com/repos/JoosepAlviste/nvim-ts-context-commentstring/events
+  forks_url: https://api.github.com/repos/JoosepAlviste/nvim-ts-context-commentstring/forks
+  git_commits_url: https://api.github.com/repos/JoosepAlviste/nvim-ts-context-commentstring/git/commits{/sha}
+  git_refs_url: https://api.github.com/repos/JoosepAlviste/nvim-ts-context-commentstring/git/refs{/sha}
+  git_tags_url: https://api.github.com/repos/JoosepAlviste/nvim-ts-context-commentstring/git/tags{/sha}
+  git_url: git://github.com/JoosepAlviste/nvim-ts-context-commentstring.git
+  hooks_url: https://api.github.com/repos/JoosepAlviste/nvim-ts-context-commentstring/hooks
+  html_url: https://github.com/JoosepAlviste/nvim-ts-context-commentstring
+  issue_comment_url: https://api.github.com/repos/JoosepAlviste/nvim-ts-context-commentstring/issues/comments{/number}
+  issue_events_url: https://api.github.com/repos/JoosepAlviste/nvim-ts-context-commentstring/issues/events{/number}
+  issues_url: https://api.github.com/repos/JoosepAlviste/nvim-ts-context-commentstring/issues{/number}
+  keys_url: https://api.github.com/repos/JoosepAlviste/nvim-ts-context-commentstring/keys{/key_id}
+  labels_url: https://api.github.com/repos/JoosepAlviste/nvim-ts-context-commentstring/labels{/name}
+  languages_url: https://api.github.com/repos/JoosepAlviste/nvim-ts-context-commentstring/languages
+  merges_url: https://api.github.com/repos/JoosepAlviste/nvim-ts-context-commentstring/merges
+  milestones_url: https://api.github.com/repos/JoosepAlviste/nvim-ts-context-commentstring/milestones{/number}
+  mirror_url: null
+  notifications_url: https://api.github.com/repos/JoosepAlviste/nvim-ts-context-commentstring/notifications{?since,all,participating}
+  pulls_url: https://api.github.com/repos/JoosepAlviste/nvim-ts-context-commentstring/pulls{/number}
+  releases_url: https://api.github.com/repos/JoosepAlviste/nvim-ts-context-commentstring/releases{/id}
+  ssh_url: git@github.com:JoosepAlviste/nvim-ts-context-commentstring.git
+  stargazers_url: https://api.github.com/repos/JoosepAlviste/nvim-ts-context-commentstring/stargazers
+  statuses_url: https://api.github.com/repos/JoosepAlviste/nvim-ts-context-commentstring/statuses/{sha}
+  subscribers_url: https://api.github.com/repos/JoosepAlviste/nvim-ts-context-commentstring/subscribers
+  subscription_url: https://api.github.com/repos/JoosepAlviste/nvim-ts-context-commentstring/subscription
+  svn_url: https://github.com/JoosepAlviste/nvim-ts-context-commentstring
+  tags_url: https://api.github.com/repos/JoosepAlviste/nvim-ts-context-commentstring/tags
+  teams_url: https://api.github.com/repos/JoosepAlviste/nvim-ts-context-commentstring/teams
+  trees_url: https://api.github.com/repos/JoosepAlviste/nvim-ts-context-commentstring/git/trees{/sha}
+  url: https://api.github.com/repos/JoosepAlviste/nvim-ts-context-commentstring

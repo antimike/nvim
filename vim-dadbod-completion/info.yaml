@@ -1,9 +1,52 @@
 archived: false
 default_branch: "master"
 description: "Database autocompletion powered by https://github.com/tpope/vim-dadbod"
+history:
+  Mon Sep 27 10:00:19 PM UTC 2021: metadata acquired
 name: "vim-dadbod-completion"
 owner: "kristijanhusak"
 stars: 236
-url: "https://api.github.com/repos/kristijanhusak/vim-dadbod-completion"
-history:
-  Mon Sep 27 10:00:19 PM UTC 2021: metadata acquired
+urls:
+  archive_url: https://api.github.com/repos/kristijanhusak/vim-dadbod-completion/{archive_format}{/ref}
+  assignees_url: https://api.github.com/repos/kristijanhusak/vim-dadbod-completion/assignees{/user}
+  blobs_url: https://api.github.com/repos/kristijanhusak/vim-dadbod-completion/git/blobs{/sha}
+  branches_url: https://api.github.com/repos/kristijanhusak/vim-dadbod-completion/branches{/branch}
+  clone_url: https://github.com/kristijanhusak/vim-dadbod-completion.git
+  collaborators_url: https://api.github.com/repos/kristijanhusak/vim-dadbod-completion/collaborators{/collaborator}
+  comments_url: https://api.github.com/repos/kristijanhusak/vim-dadbod-completion/comments{/number}
+  commits_url: https://api.github.com/repos/kristijanhusak/vim-dadbod-completion/commits{/sha}
+  compare_url: https://api.github.com/repos/kristijanhusak/vim-dadbod-completion/compare/{base}...{head}
+  contents_url: https://api.github.com/repos/kristijanhusak/vim-dadbod-completion/contents/{+path}
+  contributors_url: https://api.github.com/repos/kristijanhusak/vim-dadbod-completion/contributors
+  deployments_url: https://api.github.com/repos/kristijanhusak/vim-dadbod-completion/deployments
+  downloads_url: https://api.github.com/repos/kristijanhusak/vim-dadbod-completion/downloads
+  events_url: https://api.github.com/repos/kristijanhusak/vim-dadbod-completion/events
+  forks_url: https://api.github.com/repos/kristijanhusak/vim-dadbod-completion/forks
+  git_commits_url: https://api.github.com/repos/kristijanhusak/vim-dadbod-completion/git/commits{/sha}
+  git_refs_url: https://api.github.com/repos/kristijanhusak/vim-dadbod-completion/git/refs{/sha}
+  git_tags_url: https://api.github.com/repos/kristijanhusak/vim-dadbod-completion/git/tags{/sha}
+  git_url: git://github.com/kristijanhusak/vim-dadbod-completion.git
+  hooks_url: https://api.github.com/repos/kristijanhusak/vim-dadbod-completion/hooks
+  html_url: https://github.com/kristijanhusak/vim-dadbod-completion
+  issue_comment_url: https://api.github.com/repos/kristijanhusak/vim-dadbod-completion/issues/comments{/number}
+  issue_events_url: https://api.github.com/repos/kristijanhusak/vim-dadbod-completion/issues/events{/number}
+  issues_url: https://api.github.com/repos/kristijanhusak/vim-dadbod-completion/issues{/number}
+  keys_url: https://api.github.com/repos/kristijanhusak/vim-dadbod-completion/keys{/key_id}
+  labels_url: https://api.github.com/repos/kristijanhusak/vim-dadbod-completion/labels{/name}
+  languages_url: https://api.github.com/repos/kristijanhusak/vim-dadbod-completion/languages
+  merges_url: https://api.github.com/repos/kristijanhusak/vim-dadbod-completion/merges
+  milestones_url: https://api.github.com/repos/kristijanhusak/vim-dadbod-completion/milestones{/number}
+  mirror_url: null
+  notifications_url: https://api.github.com/repos/kristijanhusak/vim-dadbod-completion/notifications{?since,all,participating}
+  pulls_url: https://api.github.com/repos/kristijanhusak/vim-dadbod-completion/pulls{/number}
+  releases_url: https://api.github.com/repos/kristijanhusak/vim-dadbod-completion/releases{/id}
+  ssh_url: git@github.com:kristijanhusak/vim-dadbod-completion.git
+  stargazers_url: https://api.github.com/repos/kristijanhusak/vim-dadbod-completion/stargazers
+  statuses_url: https://api.github.com/repos/kristijanhusak/vim-dadbod-completion/statuses/{sha}
+  subscribers_url: https://api.github.com/repos/kristijanhusak/vim-dadbod-completion/subscribers
+  subscription_url: https://api.github.com/repos/kristijanhusak/vim-dadbod-completion/subscription
+  svn_url: https://github.com/kristijanhusak/vim-dadbod-completion
+  tags_url: https://api.github.com/repos/kristijanhusak/vim-dadbod-completion/tags
+  teams_url: https://api.github.com/repos/kristijanhusak/vim-dadbod-completion/teams
+  trees_url: https://api.github.com/repos/kristijanhusak/vim-dadbod-completion/git/trees{/sha}
+  url: https://api.github.com/repos/kristijanhusak/vim-dadbod-completion

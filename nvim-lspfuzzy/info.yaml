@@ -1,9 +1,52 @@
 archived: false
 default_branch: "main"
 description: "A Neovim plugin to make the LSP client use FZF"
+history:
+  Mon Sep 27 10:00:32 PM UTC 2021: metadata acquired
 name: "nvim-lspfuzzy"
 owner: "ojroques"
 stars: 212
-url: "https://api.github.com/repos/ojroques/nvim-lspfuzzy"
-history:
-  Mon Sep 27 10:00:32 PM UTC 2021: metadata acquired
+urls:
+  archive_url: https://api.github.com/repos/ojroques/nvim-lspfuzzy/{archive_format}{/ref}
+  assignees_url: https://api.github.com/repos/ojroques/nvim-lspfuzzy/assignees{/user}
+  blobs_url: https://api.github.com/repos/ojroques/nvim-lspfuzzy/git/blobs{/sha}
+  branches_url: https://api.github.com/repos/ojroques/nvim-lspfuzzy/branches{/branch}
+  clone_url: https://github.com/ojroques/nvim-lspfuzzy.git
+  collaborators_url: https://api.github.com/repos/ojroques/nvim-lspfuzzy/collaborators{/collaborator}
+  comments_url: https://api.github.com/repos/ojroques/nvim-lspfuzzy/comments{/number}
+  commits_url: https://api.github.com/repos/ojroques/nvim-lspfuzzy/commits{/sha}
+  compare_url: https://api.github.com/repos/ojroques/nvim-lspfuzzy/compare/{base}...{head}
+  contents_url: https://api.github.com/repos/ojroques/nvim-lspfuzzy/contents/{+path}
+  contributors_url: https://api.github.com/repos/ojroques/nvim-lspfuzzy/contributors
+  deployments_url: https://api.github.com/repos/ojroques/nvim-lspfuzzy/deployments
+  downloads_url: https://api.github.com/repos/ojroques/nvim-lspfuzzy/downloads
+  events_url: https://api.github.com/repos/ojroques/nvim-lspfuzzy/events
+  forks_url: https://api.github.com/repos/ojroques/nvim-lspfuzzy/forks
+  git_commits_url: https://api.github.com/repos/ojroques/nvim-lspfuzzy/git/commits{/sha}
+  git_refs_url: https://api.github.com/repos/ojroques/nvim-lspfuzzy/git/refs{/sha}
+  git_tags_url: https://api.github.com/repos/ojroques/nvim-lspfuzzy/git/tags{/sha}
+  git_url: git://github.com/ojroques/nvim-lspfuzzy.git
+  hooks_url: https://api.github.com/repos/ojroques/nvim-lspfuzzy/hooks
+  html_url: https://github.com/ojroques/nvim-lspfuzzy
+  issue_comment_url: https://api.github.com/repos/ojroques/nvim-lspfuzzy/issues/comments{/number}
+  issue_events_url: https://api.github.com/repos/ojroques/nvim-lspfuzzy/issues/events{/number}
+  issues_url: https://api.github.com/repos/ojroques/nvim-lspfuzzy/issues{/number}
+  keys_url: https://api.github.com/repos/ojroques/nvim-lspfuzzy/keys{/key_id}
+  labels_url: https://api.github.com/repos/ojroques/nvim-lspfuzzy/labels{/name}
+  languages_url: https://api.github.com/repos/ojroques/nvim-lspfuzzy/languages
+  merges_url: https://api.github.com/repos/ojroques/nvim-lspfuzzy/merges
+  milestones_url: https://api.github.com/repos/ojroques/nvim-lspfuzzy/milestones{/number}
+  mirror_url: null
+  notifications_url: https://api.github.com/repos/ojroques/nvim-lspfuzzy/notifications{?since,all,participating}
+  pulls_url: https://api.github.com/repos/ojroques/nvim-lspfuzzy/pulls{/number}
+  releases_url: https://api.github.com/repos/ojroques/nvim-lspfuzzy/releases{/id}
+  ssh_url: git@github.com:ojroques/nvim-lspfuzzy.git
+  stargazers_url: https://api.github.com/repos/ojroques/nvim-lspfuzzy/stargazers
+  statuses_url: https://api.github.com/repos/ojroques/nvim-lspfuzzy/statuses/{sha}
+  subscribers_url: https://api.github.com/repos/ojroques/nvim-lspfuzzy/subscribers
+  subscription_url: https://api.github.com/repos/ojroques/nvim-lspfuzzy/subscription
+  svn_url: https://github.com/ojroques/nvim-lspfuzzy
+  tags_url: https://api.github.com/repos/ojroques/nvim-lspfuzzy/tags
+  teams_url: https://api.github.com/repos/ojroques/nvim-lspfuzzy/teams
+  trees_url: https://api.github.com/repos/ojroques/nvim-lspfuzzy/git/trees{/sha}
+  url: https://api.github.com/repos/ojroques/nvim-lspfuzzy

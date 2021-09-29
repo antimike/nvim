@@ -1,9 +1,52 @@
 archived: false
 default_branch: "master"
 description: "Brings JetBrains/IntelliJ IDEs magic to Neovim with minimal setup."
+history:
+  Mon Sep 27 09:59:50 PM UTC 2021: metadata acquired
 name: "Comrade"
 owner: "beeender"
 stars: 156
-url: "https://api.github.com/repos/beeender/Comrade"
-history:
-  Mon Sep 27 09:59:50 PM UTC 2021: metadata acquired
+urls:
+  archive_url: https://api.github.com/repos/beeender/Comrade/{archive_format}{/ref}
+  assignees_url: https://api.github.com/repos/beeender/Comrade/assignees{/user}
+  blobs_url: https://api.github.com/repos/beeender/Comrade/git/blobs{/sha}
+  branches_url: https://api.github.com/repos/beeender/Comrade/branches{/branch}
+  clone_url: https://github.com/beeender/Comrade.git
+  collaborators_url: https://api.github.com/repos/beeender/Comrade/collaborators{/collaborator}
+  comments_url: https://api.github.com/repos/beeender/Comrade/comments{/number}
+  commits_url: https://api.github.com/repos/beeender/Comrade/commits{/sha}
+  compare_url: https://api.github.com/repos/beeender/Comrade/compare/{base}...{head}
+  contents_url: https://api.github.com/repos/beeender/Comrade/contents/{+path}
+  contributors_url: https://api.github.com/repos/beeender/Comrade/contributors
+  deployments_url: https://api.github.com/repos/beeender/Comrade/deployments
+  downloads_url: https://api.github.com/repos/beeender/Comrade/downloads
+  events_url: https://api.github.com/repos/beeender/Comrade/events
+  forks_url: https://api.github.com/repos/beeender/Comrade/forks
+  git_commits_url: https://api.github.com/repos/beeender/Comrade/git/commits{/sha}
+  git_refs_url: https://api.github.com/repos/beeender/Comrade/git/refs{/sha}
+  git_tags_url: https://api.github.com/repos/beeender/Comrade/git/tags{/sha}
+  git_url: git://github.com/beeender/Comrade.git
+  hooks_url: https://api.github.com/repos/beeender/Comrade/hooks
+  html_url: https://github.com/beeender/Comrade
+  issue_comment_url: https://api.github.com/repos/beeender/Comrade/issues/comments{/number}
+  issue_events_url: https://api.github.com/repos/beeender/Comrade/issues/events{/number}
+  issues_url: https://api.github.com/repos/beeender/Comrade/issues{/number}
+  keys_url: https://api.github.com/repos/beeender/Comrade/keys{/key_id}
+  labels_url: https://api.github.com/repos/beeender/Comrade/labels{/name}
+  languages_url: https://api.github.com/repos/beeender/Comrade/languages
+  merges_url: https://api.github.com/repos/beeender/Comrade/merges
+  milestones_url: https://api.github.com/repos/beeender/Comrade/milestones{/number}
+  mirror_url: null
+  notifications_url: https://api.github.com/repos/beeender/Comrade/notifications{?since,all,participating}
+  pulls_url: https://api.github.com/repos/beeender/Comrade/pulls{/number}
+  releases_url: https://api.github.com/repos/beeender/Comrade/releases{/id}
+  ssh_url: git@github.com:beeender/Comrade.git
+  stargazers_url: https://api.github.com/repos/beeender/Comrade/stargazers
+  statuses_url: https://api.github.com/repos/beeender/Comrade/statuses/{sha}
+  subscribers_url: https://api.github.com/repos/beeender/Comrade/subscribers
+  subscription_url: https://api.github.com/repos/beeender/Comrade/subscription
+  svn_url: https://github.com/beeender/Comrade
+  tags_url: https://api.github.com/repos/beeender/Comrade/tags
+  teams_url: https://api.github.com/repos/beeender/Comrade/teams
+  trees_url: https://api.github.com/repos/beeender/Comrade/git/trees{/sha}
+  url: https://api.github.com/repos/beeender/Comrade

@@ -1,9 +1,52 @@
 archived: false
 default_branch: "main"
 description: "Switch between single-line and multiline forms of code"
+history:
+  Mon Sep 27 09:59:42 PM UTC 2021: metadata acquired
 name: "splitjoin.vim"
 owner: "AndrewRadev"
 stars: 1550
-url: "https://api.github.com/repos/AndrewRadev/splitjoin.vim"
-history:
-  Mon Sep 27 09:59:42 PM UTC 2021: metadata acquired
+urls:
+  archive_url: https://api.github.com/repos/AndrewRadev/splitjoin.vim/{archive_format}{/ref}
+  assignees_url: https://api.github.com/repos/AndrewRadev/splitjoin.vim/assignees{/user}
+  blobs_url: https://api.github.com/repos/AndrewRadev/splitjoin.vim/git/blobs{/sha}
+  branches_url: https://api.github.com/repos/AndrewRadev/splitjoin.vim/branches{/branch}
+  clone_url: https://github.com/AndrewRadev/splitjoin.vim.git
+  collaborators_url: https://api.github.com/repos/AndrewRadev/splitjoin.vim/collaborators{/collaborator}
+  comments_url: https://api.github.com/repos/AndrewRadev/splitjoin.vim/comments{/number}
+  commits_url: https://api.github.com/repos/AndrewRadev/splitjoin.vim/commits{/sha}
+  compare_url: https://api.github.com/repos/AndrewRadev/splitjoin.vim/compare/{base}...{head}
+  contents_url: https://api.github.com/repos/AndrewRadev/splitjoin.vim/contents/{+path}
+  contributors_url: https://api.github.com/repos/AndrewRadev/splitjoin.vim/contributors
+  deployments_url: https://api.github.com/repos/AndrewRadev/splitjoin.vim/deployments
+  downloads_url: https://api.github.com/repos/AndrewRadev/splitjoin.vim/downloads
+  events_url: https://api.github.com/repos/AndrewRadev/splitjoin.vim/events
+  forks_url: https://api.github.com/repos/AndrewRadev/splitjoin.vim/forks
+  git_commits_url: https://api.github.com/repos/AndrewRadev/splitjoin.vim/git/commits{/sha}
+  git_refs_url: https://api.github.com/repos/AndrewRadev/splitjoin.vim/git/refs{/sha}
+  git_tags_url: https://api.github.com/repos/AndrewRadev/splitjoin.vim/git/tags{/sha}
+  git_url: git://github.com/AndrewRadev/splitjoin.vim.git
+  hooks_url: https://api.github.com/repos/AndrewRadev/splitjoin.vim/hooks
+  html_url: https://github.com/AndrewRadev/splitjoin.vim
+  issue_comment_url: https://api.github.com/repos/AndrewRadev/splitjoin.vim/issues/comments{/number}
+  issue_events_url: https://api.github.com/repos/AndrewRadev/splitjoin.vim/issues/events{/number}
+  issues_url: https://api.github.com/repos/AndrewRadev/splitjoin.vim/issues{/number}
+  keys_url: https://api.github.com/repos/AndrewRadev/splitjoin.vim/keys{/key_id}
+  labels_url: https://api.github.com/repos/AndrewRadev/splitjoin.vim/labels{/name}
+  languages_url: https://api.github.com/repos/AndrewRadev/splitjoin.vim/languages
+  merges_url: https://api.github.com/repos/AndrewRadev/splitjoin.vim/merges
+  milestones_url: https://api.github.com/repos/AndrewRadev/splitjoin.vim/milestones{/number}
+  mirror_url: null
+  notifications_url: https://api.github.com/repos/AndrewRadev/splitjoin.vim/notifications{?since,all,participating}
+  pulls_url: https://api.github.com/repos/AndrewRadev/splitjoin.vim/pulls{/number}
+  releases_url: https://api.github.com/repos/AndrewRadev/splitjoin.vim/releases{/id}
+  ssh_url: git@github.com:AndrewRadev/splitjoin.vim.git
+  stargazers_url: https://api.github.com/repos/AndrewRadev/splitjoin.vim/stargazers
+  statuses_url: https://api.github.com/repos/AndrewRadev/splitjoin.vim/statuses/{sha}
+  subscribers_url: https://api.github.com/repos/AndrewRadev/splitjoin.vim/subscribers
+  subscription_url: https://api.github.com/repos/AndrewRadev/splitjoin.vim/subscription
+  svn_url: https://github.com/AndrewRadev/splitjoin.vim
+  tags_url: https://api.github.com/repos/AndrewRadev/splitjoin.vim/tags
+  teams_url: https://api.github.com/repos/AndrewRadev/splitjoin.vim/teams
+  trees_url: https://api.github.com/repos/AndrewRadev/splitjoin.vim/git/trees{/sha}
+  url: https://api.github.com/repos/AndrewRadev/splitjoin.vim

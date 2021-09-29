@@ -1,9 +1,52 @@
 archived: false
 default_branch: "main"
 description: "✅  Highlight, list and search todo comments in your projects"
+history:
+  Mon Sep 27 09:59:58 PM UTC 2021: metadata acquired
 name: "todo-comments.nvim"
 owner: "folke"
 stars: 454
-url: "https://api.github.com/repos/folke/todo-comments.nvim"
-history:
-  Mon Sep 27 09:59:58 PM UTC 2021: metadata acquired
+urls:
+  archive_url: https://api.github.com/repos/folke/todo-comments.nvim/{archive_format}{/ref}
+  assignees_url: https://api.github.com/repos/folke/todo-comments.nvim/assignees{/user}
+  blobs_url: https://api.github.com/repos/folke/todo-comments.nvim/git/blobs{/sha}
+  branches_url: https://api.github.com/repos/folke/todo-comments.nvim/branches{/branch}
+  clone_url: https://github.com/folke/todo-comments.nvim.git
+  collaborators_url: https://api.github.com/repos/folke/todo-comments.nvim/collaborators{/collaborator}
+  comments_url: https://api.github.com/repos/folke/todo-comments.nvim/comments{/number}
+  commits_url: https://api.github.com/repos/folke/todo-comments.nvim/commits{/sha}
+  compare_url: https://api.github.com/repos/folke/todo-comments.nvim/compare/{base}...{head}
+  contents_url: https://api.github.com/repos/folke/todo-comments.nvim/contents/{+path}
+  contributors_url: https://api.github.com/repos/folke/todo-comments.nvim/contributors
+  deployments_url: https://api.github.com/repos/folke/todo-comments.nvim/deployments
+  downloads_url: https://api.github.com/repos/folke/todo-comments.nvim/downloads
+  events_url: https://api.github.com/repos/folke/todo-comments.nvim/events
+  forks_url: https://api.github.com/repos/folke/todo-comments.nvim/forks
+  git_commits_url: https://api.github.com/repos/folke/todo-comments.nvim/git/commits{/sha}
+  git_refs_url: https://api.github.com/repos/folke/todo-comments.nvim/git/refs{/sha}
+  git_tags_url: https://api.github.com/repos/folke/todo-comments.nvim/git/tags{/sha}
+  git_url: git://github.com/folke/todo-comments.nvim.git
+  hooks_url: https://api.github.com/repos/folke/todo-comments.nvim/hooks
+  html_url: https://github.com/folke/todo-comments.nvim
+  issue_comment_url: https://api.github.com/repos/folke/todo-comments.nvim/issues/comments{/number}
+  issue_events_url: https://api.github.com/repos/folke/todo-comments.nvim/issues/events{/number}
+  issues_url: https://api.github.com/repos/folke/todo-comments.nvim/issues{/number}
+  keys_url: https://api.github.com/repos/folke/todo-comments.nvim/keys{/key_id}
+  labels_url: https://api.github.com/repos/folke/todo-comments.nvim/labels{/name}
+  languages_url: https://api.github.com/repos/folke/todo-comments.nvim/languages
+  merges_url: https://api.github.com/repos/folke/todo-comments.nvim/merges
+  milestones_url: https://api.github.com/repos/folke/todo-comments.nvim/milestones{/number}
+  mirror_url: null
+  notifications_url: https://api.github.com/repos/folke/todo-comments.nvim/notifications{?since,all,participating}
+  pulls_url: https://api.github.com/repos/folke/todo-comments.nvim/pulls{/number}
+  releases_url: https://api.github.com/repos/folke/todo-comments.nvim/releases{/id}
+  ssh_url: git@github.com:folke/todo-comments.nvim.git
+  stargazers_url: https://api.github.com/repos/folke/todo-comments.nvim/stargazers
+  statuses_url: https://api.github.com/repos/folke/todo-comments.nvim/statuses/{sha}
+  subscribers_url: https://api.github.com/repos/folke/todo-comments.nvim/subscribers
+  subscription_url: https://api.github.com/repos/folke/todo-comments.nvim/subscription
+  svn_url: https://github.com/folke/todo-comments.nvim
+  tags_url: https://api.github.com/repos/folke/todo-comments.nvim/tags
+  teams_url: https://api.github.com/repos/folke/todo-comments.nvim/teams
+  trees_url: https://api.github.com/repos/folke/todo-comments.nvim/git/trees{/sha}
+  url: https://api.github.com/repos/folke/todo-comments.nvim

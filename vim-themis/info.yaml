@@ -1,9 +1,52 @@
 archived: false
 default_branch: "master"
 description: "A testing framework for Vim script."
+history:
+  Mon Sep 27 10:00:43 PM UTC 2021: metadata acquired
 name: "vim-themis"
 owner: "thinca"
 stars: 204
-url: "https://api.github.com/repos/thinca/vim-themis"
-history:
-  Mon Sep 27 10:00:43 PM UTC 2021: metadata acquired
+urls:
+  archive_url: https://api.github.com/repos/thinca/vim-themis/{archive_format}{/ref}
+  assignees_url: https://api.github.com/repos/thinca/vim-themis/assignees{/user}
+  blobs_url: https://api.github.com/repos/thinca/vim-themis/git/blobs{/sha}
+  branches_url: https://api.github.com/repos/thinca/vim-themis/branches{/branch}
+  clone_url: https://github.com/thinca/vim-themis.git
+  collaborators_url: https://api.github.com/repos/thinca/vim-themis/collaborators{/collaborator}
+  comments_url: https://api.github.com/repos/thinca/vim-themis/comments{/number}
+  commits_url: https://api.github.com/repos/thinca/vim-themis/commits{/sha}
+  compare_url: https://api.github.com/repos/thinca/vim-themis/compare/{base}...{head}
+  contents_url: https://api.github.com/repos/thinca/vim-themis/contents/{+path}
+  contributors_url: https://api.github.com/repos/thinca/vim-themis/contributors
+  deployments_url: https://api.github.com/repos/thinca/vim-themis/deployments
+  downloads_url: https://api.github.com/repos/thinca/vim-themis/downloads
+  events_url: https://api.github.com/repos/thinca/vim-themis/events
+  forks_url: https://api.github.com/repos/thinca/vim-themis/forks
+  git_commits_url: https://api.github.com/repos/thinca/vim-themis/git/commits{/sha}
+  git_refs_url: https://api.github.com/repos/thinca/vim-themis/git/refs{/sha}
+  git_tags_url: https://api.github.com/repos/thinca/vim-themis/git/tags{/sha}
+  git_url: git://github.com/thinca/vim-themis.git
+  hooks_url: https://api.github.com/repos/thinca/vim-themis/hooks
+  html_url: https://github.com/thinca/vim-themis
+  issue_comment_url: https://api.github.com/repos/thinca/vim-themis/issues/comments{/number}
+  issue_events_url: https://api.github.com/repos/thinca/vim-themis/issues/events{/number}
+  issues_url: https://api.github.com/repos/thinca/vim-themis/issues{/number}
+  keys_url: https://api.github.com/repos/thinca/vim-themis/keys{/key_id}
+  labels_url: https://api.github.com/repos/thinca/vim-themis/labels{/name}
+  languages_url: https://api.github.com/repos/thinca/vim-themis/languages
+  merges_url: https://api.github.com/repos/thinca/vim-themis/merges
+  milestones_url: https://api.github.com/repos/thinca/vim-themis/milestones{/number}
+  mirror_url: null
+  notifications_url: https://api.github.com/repos/thinca/vim-themis/notifications{?since,all,participating}
+  pulls_url: https://api.github.com/repos/thinca/vim-themis/pulls{/number}
+  releases_url: https://api.github.com/repos/thinca/vim-themis/releases{/id}
+  ssh_url: git@github.com:thinca/vim-themis.git
+  stargazers_url: https://api.github.com/repos/thinca/vim-themis/stargazers
+  statuses_url: https://api.github.com/repos/thinca/vim-themis/statuses/{sha}
+  subscribers_url: https://api.github.com/repos/thinca/vim-themis/subscribers
+  subscription_url: https://api.github.com/repos/thinca/vim-themis/subscription
+  svn_url: https://github.com/thinca/vim-themis
+  tags_url: https://api.github.com/repos/thinca/vim-themis/tags
+  teams_url: https://api.github.com/repos/thinca/vim-themis/teams
+  trees_url: https://api.github.com/repos/thinca/vim-themis/git/trees{/sha}
+  url: https://api.github.com/repos/thinca/vim-themis

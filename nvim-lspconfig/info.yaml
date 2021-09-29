@@ -1,9 +1,52 @@
 archived: false
 default_branch: "master"
 description: "Quickstart configurations for the Nvim LSP client"
+history:
+  Mon Sep 27 10:00:29 PM UTC 2021: metadata acquired
 name: "nvim-lspconfig"
 owner: "neovim"
 stars: 2798
-url: "https://api.github.com/repos/neovim/nvim-lspconfig"
-history:
-  Mon Sep 27 10:00:29 PM UTC 2021: metadata acquired
+urls:
+  archive_url: https://api.github.com/repos/neovim/nvim-lspconfig/{archive_format}{/ref}
+  assignees_url: https://api.github.com/repos/neovim/nvim-lspconfig/assignees{/user}
+  blobs_url: https://api.github.com/repos/neovim/nvim-lspconfig/git/blobs{/sha}
+  branches_url: https://api.github.com/repos/neovim/nvim-lspconfig/branches{/branch}
+  clone_url: https://github.com/neovim/nvim-lspconfig.git
+  collaborators_url: https://api.github.com/repos/neovim/nvim-lspconfig/collaborators{/collaborator}
+  comments_url: https://api.github.com/repos/neovim/nvim-lspconfig/comments{/number}
+  commits_url: https://api.github.com/repos/neovim/nvim-lspconfig/commits{/sha}
+  compare_url: https://api.github.com/repos/neovim/nvim-lspconfig/compare/{base}...{head}
+  contents_url: https://api.github.com/repos/neovim/nvim-lspconfig/contents/{+path}
+  contributors_url: https://api.github.com/repos/neovim/nvim-lspconfig/contributors
+  deployments_url: https://api.github.com/repos/neovim/nvim-lspconfig/deployments
+  downloads_url: https://api.github.com/repos/neovim/nvim-lspconfig/downloads
+  events_url: https://api.github.com/repos/neovim/nvim-lspconfig/events
+  forks_url: https://api.github.com/repos/neovim/nvim-lspconfig/forks
+  git_commits_url: https://api.github.com/repos/neovim/nvim-lspconfig/git/commits{/sha}
+  git_refs_url: https://api.github.com/repos/neovim/nvim-lspconfig/git/refs{/sha}
+  git_tags_url: https://api.github.com/repos/neovim/nvim-lspconfig/git/tags{/sha}
+  git_url: git://github.com/neovim/nvim-lspconfig.git
+  hooks_url: https://api.github.com/repos/neovim/nvim-lspconfig/hooks
+  html_url: https://github.com/neovim/nvim-lspconfig
+  issue_comment_url: https://api.github.com/repos/neovim/nvim-lspconfig/issues/comments{/number}
+  issue_events_url: https://api.github.com/repos/neovim/nvim-lspconfig/issues/events{/number}
+  issues_url: https://api.github.com/repos/neovim/nvim-lspconfig/issues{/number}
+  keys_url: https://api.github.com/repos/neovim/nvim-lspconfig/keys{/key_id}
+  labels_url: https://api.github.com/repos/neovim/nvim-lspconfig/labels{/name}
+  languages_url: https://api.github.com/repos/neovim/nvim-lspconfig/languages
+  merges_url: https://api.github.com/repos/neovim/nvim-lspconfig/merges
+  milestones_url: https://api.github.com/repos/neovim/nvim-lspconfig/milestones{/number}
+  mirror_url: null
+  notifications_url: https://api.github.com/repos/neovim/nvim-lspconfig/notifications{?since,all,participating}
+  pulls_url: https://api.github.com/repos/neovim/nvim-lspconfig/pulls{/number}
+  releases_url: https://api.github.com/repos/neovim/nvim-lspconfig/releases{/id}
+  ssh_url: git@github.com:neovim/nvim-lspconfig.git
+  stargazers_url: https://api.github.com/repos/neovim/nvim-lspconfig/stargazers
+  statuses_url: https://api.github.com/repos/neovim/nvim-lspconfig/statuses/{sha}
+  subscribers_url: https://api.github.com/repos/neovim/nvim-lspconfig/subscribers
+  subscription_url: https://api.github.com/repos/neovim/nvim-lspconfig/subscription
+  svn_url: https://github.com/neovim/nvim-lspconfig
+  tags_url: https://api.github.com/repos/neovim/nvim-lspconfig/tags
+  teams_url: https://api.github.com/repos/neovim/nvim-lspconfig/teams
+  trees_url: https://api.github.com/repos/neovim/nvim-lspconfig/git/trees{/sha}
+  url: https://api.github.com/repos/neovim/nvim-lspconfig

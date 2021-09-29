@@ -1,9 +1,52 @@
 archived: false
 default_branch: "master"
 description: "enhanced increment/decrement plugin for Neovim."
+history:
+  Mon Sep 27 10:00:27 PM UTC 2021: metadata acquired
 name: "dial.nvim"
 owner: "monaqa"
 stars: 124
-url: "https://api.github.com/repos/monaqa/dial.nvim"
-history:
-  Mon Sep 27 10:00:27 PM UTC 2021: metadata acquired
+urls:
+  archive_url: https://api.github.com/repos/monaqa/dial.nvim/{archive_format}{/ref}
+  assignees_url: https://api.github.com/repos/monaqa/dial.nvim/assignees{/user}
+  blobs_url: https://api.github.com/repos/monaqa/dial.nvim/git/blobs{/sha}
+  branches_url: https://api.github.com/repos/monaqa/dial.nvim/branches{/branch}
+  clone_url: https://github.com/monaqa/dial.nvim.git
+  collaborators_url: https://api.github.com/repos/monaqa/dial.nvim/collaborators{/collaborator}
+  comments_url: https://api.github.com/repos/monaqa/dial.nvim/comments{/number}
+  commits_url: https://api.github.com/repos/monaqa/dial.nvim/commits{/sha}
+  compare_url: https://api.github.com/repos/monaqa/dial.nvim/compare/{base}...{head}
+  contents_url: https://api.github.com/repos/monaqa/dial.nvim/contents/{+path}
+  contributors_url: https://api.github.com/repos/monaqa/dial.nvim/contributors
+  deployments_url: https://api.github.com/repos/monaqa/dial.nvim/deployments
+  downloads_url: https://api.github.com/repos/monaqa/dial.nvim/downloads
+  events_url: https://api.github.com/repos/monaqa/dial.nvim/events
+  forks_url: https://api.github.com/repos/monaqa/dial.nvim/forks
+  git_commits_url: https://api.github.com/repos/monaqa/dial.nvim/git/commits{/sha}
+  git_refs_url: https://api.github.com/repos/monaqa/dial.nvim/git/refs{/sha}
+  git_tags_url: https://api.github.com/repos/monaqa/dial.nvim/git/tags{/sha}
+  git_url: git://github.com/monaqa/dial.nvim.git
+  hooks_url: https://api.github.com/repos/monaqa/dial.nvim/hooks
+  html_url: https://github.com/monaqa/dial.nvim
+  issue_comment_url: https://api.github.com/repos/monaqa/dial.nvim/issues/comments{/number}
+  issue_events_url: https://api.github.com/repos/monaqa/dial.nvim/issues/events{/number}
+  issues_url: https://api.github.com/repos/monaqa/dial.nvim/issues{/number}
+  keys_url: https://api.github.com/repos/monaqa/dial.nvim/keys{/key_id}
+  labels_url: https://api.github.com/repos/monaqa/dial.nvim/labels{/name}
+  languages_url: https://api.github.com/repos/monaqa/dial.nvim/languages
+  merges_url: https://api.github.com/repos/monaqa/dial.nvim/merges
+  milestones_url: https://api.github.com/repos/monaqa/dial.nvim/milestones{/number}
+  mirror_url: null
+  notifications_url: https://api.github.com/repos/monaqa/dial.nvim/notifications{?since,all,participating}
+  pulls_url: https://api.github.com/repos/monaqa/dial.nvim/pulls{/number}
+  releases_url: https://api.github.com/repos/monaqa/dial.nvim/releases{/id}
+  ssh_url: git@github.com:monaqa/dial.nvim.git
+  stargazers_url: https://api.github.com/repos/monaqa/dial.nvim/stargazers
+  statuses_url: https://api.github.com/repos/monaqa/dial.nvim/statuses/{sha}
+  subscribers_url: https://api.github.com/repos/monaqa/dial.nvim/subscribers
+  subscription_url: https://api.github.com/repos/monaqa/dial.nvim/subscription
+  svn_url: https://github.com/monaqa/dial.nvim
+  tags_url: https://api.github.com/repos/monaqa/dial.nvim/tags
+  teams_url: https://api.github.com/repos/monaqa/dial.nvim/teams
+  trees_url: https://api.github.com/repos/monaqa/dial.nvim/git/trees{/sha}
+  url: https://api.github.com/repos/monaqa/dial.nvim

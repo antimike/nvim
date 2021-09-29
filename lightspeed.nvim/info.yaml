@@ -2,9 +2,52 @@ archived: false
 default_branch: "main"
 description: "\U0001F30C Next-generation motion plugin with incremental input processing,\
   \ allowing for unparalleled speed with near-zero cognitive effort"
+history:
+  Mon Sep 27 10:00:03 PM UTC 2021: metadata acquired
 name: "lightspeed.nvim"
 owner: "ggandor"
 stars: 439
-url: "https://api.github.com/repos/ggandor/lightspeed.nvim"
-history:
-  Mon Sep 27 10:00:03 PM UTC 2021: metadata acquired
+urls:
+  archive_url: https://api.github.com/repos/ggandor/lightspeed.nvim/{archive_format}{/ref}
+  assignees_url: https://api.github.com/repos/ggandor/lightspeed.nvim/assignees{/user}
+  blobs_url: https://api.github.com/repos/ggandor/lightspeed.nvim/git/blobs{/sha}
+  branches_url: https://api.github.com/repos/ggandor/lightspeed.nvim/branches{/branch}
+  clone_url: https://github.com/ggandor/lightspeed.nvim.git
+  collaborators_url: https://api.github.com/repos/ggandor/lightspeed.nvim/collaborators{/collaborator}
+  comments_url: https://api.github.com/repos/ggandor/lightspeed.nvim/comments{/number}
+  commits_url: https://api.github.com/repos/ggandor/lightspeed.nvim/commits{/sha}
+  compare_url: https://api.github.com/repos/ggandor/lightspeed.nvim/compare/{base}...{head}
+  contents_url: https://api.github.com/repos/ggandor/lightspeed.nvim/contents/{+path}
+  contributors_url: https://api.github.com/repos/ggandor/lightspeed.nvim/contributors
+  deployments_url: https://api.github.com/repos/ggandor/lightspeed.nvim/deployments
+  downloads_url: https://api.github.com/repos/ggandor/lightspeed.nvim/downloads
+  events_url: https://api.github.com/repos/ggandor/lightspeed.nvim/events
+  forks_url: https://api.github.com/repos/ggandor/lightspeed.nvim/forks
+  git_commits_url: https://api.github.com/repos/ggandor/lightspeed.nvim/git/commits{/sha}
+  git_refs_url: https://api.github.com/repos/ggandor/lightspeed.nvim/git/refs{/sha}
+  git_tags_url: https://api.github.com/repos/ggandor/lightspeed.nvim/git/tags{/sha}
+  git_url: git://github.com/ggandor/lightspeed.nvim.git
+  hooks_url: https://api.github.com/repos/ggandor/lightspeed.nvim/hooks
+  html_url: https://github.com/ggandor/lightspeed.nvim
+  issue_comment_url: https://api.github.com/repos/ggandor/lightspeed.nvim/issues/comments{/number}
+  issue_events_url: https://api.github.com/repos/ggandor/lightspeed.nvim/issues/events{/number}
+  issues_url: https://api.github.com/repos/ggandor/lightspeed.nvim/issues{/number}
+  keys_url: https://api.github.com/repos/ggandor/lightspeed.nvim/keys{/key_id}
+  labels_url: https://api.github.com/repos/ggandor/lightspeed.nvim/labels{/name}
+  languages_url: https://api.github.com/repos/ggandor/lightspeed.nvim/languages
+  merges_url: https://api.github.com/repos/ggandor/lightspeed.nvim/merges
+  milestones_url: https://api.github.com/repos/ggandor/lightspeed.nvim/milestones{/number}
+  mirror_url: null
+  notifications_url: https://api.github.com/repos/ggandor/lightspeed.nvim/notifications{?since,all,participating}
+  pulls_url: https://api.github.com/repos/ggandor/lightspeed.nvim/pulls{/number}
+  releases_url: https://api.github.com/repos/ggandor/lightspeed.nvim/releases{/id}
+  ssh_url: git@github.com:ggandor/lightspeed.nvim.git
+  stargazers_url: https://api.github.com/repos/ggandor/lightspeed.nvim/stargazers
+  statuses_url: https://api.github.com/repos/ggandor/lightspeed.nvim/statuses/{sha}
+  subscribers_url: https://api.github.com/repos/ggandor/lightspeed.nvim/subscribers
+  subscription_url: https://api.github.com/repos/ggandor/lightspeed.nvim/subscription
+  svn_url: https://github.com/ggandor/lightspeed.nvim
+  tags_url: https://api.github.com/repos/ggandor/lightspeed.nvim/tags
+  teams_url: https://api.github.com/repos/ggandor/lightspeed.nvim/teams
+  trees_url: https://api.github.com/repos/ggandor/lightspeed.nvim/git/trees{/sha}
+  url: https://api.github.com/repos/ggandor/lightspeed.nvim

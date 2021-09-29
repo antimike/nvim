@@ -1,9 +1,52 @@
 archived: false
 default_branch: "master"
 description: "Interactive Repl Over Neovim"
+history:
+  Mon Sep 27 10:00:07 PM UTC 2021: metadata acquired
 name: "iron.nvim"
 owner: "hkupty"
 stars: 317
-url: "https://api.github.com/repos/hkupty/iron.nvim"
-history:
-  Mon Sep 27 10:00:07 PM UTC 2021: metadata acquired
+urls:
+  archive_url: https://api.github.com/repos/hkupty/iron.nvim/{archive_format}{/ref}
+  assignees_url: https://api.github.com/repos/hkupty/iron.nvim/assignees{/user}
+  blobs_url: https://api.github.com/repos/hkupty/iron.nvim/git/blobs{/sha}
+  branches_url: https://api.github.com/repos/hkupty/iron.nvim/branches{/branch}
+  clone_url: https://github.com/hkupty/iron.nvim.git
+  collaborators_url: https://api.github.com/repos/hkupty/iron.nvim/collaborators{/collaborator}
+  comments_url: https://api.github.com/repos/hkupty/iron.nvim/comments{/number}
+  commits_url: https://api.github.com/repos/hkupty/iron.nvim/commits{/sha}
+  compare_url: https://api.github.com/repos/hkupty/iron.nvim/compare/{base}...{head}
+  contents_url: https://api.github.com/repos/hkupty/iron.nvim/contents/{+path}
+  contributors_url: https://api.github.com/repos/hkupty/iron.nvim/contributors
+  deployments_url: https://api.github.com/repos/hkupty/iron.nvim/deployments
+  downloads_url: https://api.github.com/repos/hkupty/iron.nvim/downloads
+  events_url: https://api.github.com/repos/hkupty/iron.nvim/events
+  forks_url: https://api.github.com/repos/hkupty/iron.nvim/forks
+  git_commits_url: https://api.github.com/repos/hkupty/iron.nvim/git/commits{/sha}
+  git_refs_url: https://api.github.com/repos/hkupty/iron.nvim/git/refs{/sha}
+  git_tags_url: https://api.github.com/repos/hkupty/iron.nvim/git/tags{/sha}
+  git_url: git://github.com/hkupty/iron.nvim.git
+  hooks_url: https://api.github.com/repos/hkupty/iron.nvim/hooks
+  html_url: https://github.com/hkupty/iron.nvim
+  issue_comment_url: https://api.github.com/repos/hkupty/iron.nvim/issues/comments{/number}
+  issue_events_url: https://api.github.com/repos/hkupty/iron.nvim/issues/events{/number}
+  issues_url: https://api.github.com/repos/hkupty/iron.nvim/issues{/number}
+  keys_url: https://api.github.com/repos/hkupty/iron.nvim/keys{/key_id}
+  labels_url: https://api.github.com/repos/hkupty/iron.nvim/labels{/name}
+  languages_url: https://api.github.com/repos/hkupty/iron.nvim/languages
+  merges_url: https://api.github.com/repos/hkupty/iron.nvim/merges
+  milestones_url: https://api.github.com/repos/hkupty/iron.nvim/milestones{/number}
+  mirror_url: null
+  notifications_url: https://api.github.com/repos/hkupty/iron.nvim/notifications{?since,all,participating}
+  pulls_url: https://api.github.com/repos/hkupty/iron.nvim/pulls{/number}
+  releases_url: https://api.github.com/repos/hkupty/iron.nvim/releases{/id}
+  ssh_url: git@github.com:hkupty/iron.nvim.git
+  stargazers_url: https://api.github.com/repos/hkupty/iron.nvim/stargazers
+  statuses_url: https://api.github.com/repos/hkupty/iron.nvim/statuses/{sha}
+  subscribers_url: https://api.github.com/repos/hkupty/iron.nvim/subscribers
+  subscription_url: https://api.github.com/repos/hkupty/iron.nvim/subscription
+  svn_url: https://github.com/hkupty/iron.nvim
+  tags_url: https://api.github.com/repos/hkupty/iron.nvim/tags
+  teams_url: https://api.github.com/repos/hkupty/iron.nvim/teams
+  trees_url: https://api.github.com/repos/hkupty/iron.nvim/git/trees{/sha}
+  url: https://api.github.com/repos/hkupty/iron.nvim

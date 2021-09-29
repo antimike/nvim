@@ -2,9 +2,52 @@ archived: false
 default_branch: "main"
 description: "\U0001F308  Plugin that creates missing LSP diagnostics highlight groups\
   \ for color schemes that don't yet support the Neovim 0.5 builtin LSP client."
+history:
+  Mon Sep 27 09:59:57 PM UTC 2021: metadata acquired
 name: "lsp-colors.nvim"
 owner: "folke"
 stars: 175
-url: "https://api.github.com/repos/folke/lsp-colors.nvim"
-history:
-  Mon Sep 27 09:59:57 PM UTC 2021: metadata acquired
+urls:
+  archive_url: https://api.github.com/repos/folke/lsp-colors.nvim/{archive_format}{/ref}
+  assignees_url: https://api.github.com/repos/folke/lsp-colors.nvim/assignees{/user}
+  blobs_url: https://api.github.com/repos/folke/lsp-colors.nvim/git/blobs{/sha}
+  branches_url: https://api.github.com/repos/folke/lsp-colors.nvim/branches{/branch}
+  clone_url: https://github.com/folke/lsp-colors.nvim.git
+  collaborators_url: https://api.github.com/repos/folke/lsp-colors.nvim/collaborators{/collaborator}
+  comments_url: https://api.github.com/repos/folke/lsp-colors.nvim/comments{/number}
+  commits_url: https://api.github.com/repos/folke/lsp-colors.nvim/commits{/sha}
+  compare_url: https://api.github.com/repos/folke/lsp-colors.nvim/compare/{base}...{head}
+  contents_url: https://api.github.com/repos/folke/lsp-colors.nvim/contents/{+path}
+  contributors_url: https://api.github.com/repos/folke/lsp-colors.nvim/contributors
+  deployments_url: https://api.github.com/repos/folke/lsp-colors.nvim/deployments
+  downloads_url: https://api.github.com/repos/folke/lsp-colors.nvim/downloads
+  events_url: https://api.github.com/repos/folke/lsp-colors.nvim/events
+  forks_url: https://api.github.com/repos/folke/lsp-colors.nvim/forks
+  git_commits_url: https://api.github.com/repos/folke/lsp-colors.nvim/git/commits{/sha}
+  git_refs_url: https://api.github.com/repos/folke/lsp-colors.nvim/git/refs{/sha}
+  git_tags_url: https://api.github.com/repos/folke/lsp-colors.nvim/git/tags{/sha}
+  git_url: git://github.com/folke/lsp-colors.nvim.git
+  hooks_url: https://api.github.com/repos/folke/lsp-colors.nvim/hooks
+  html_url: https://github.com/folke/lsp-colors.nvim
+  issue_comment_url: https://api.github.com/repos/folke/lsp-colors.nvim/issues/comments{/number}
+  issue_events_url: https://api.github.com/repos/folke/lsp-colors.nvim/issues/events{/number}
+  issues_url: https://api.github.com/repos/folke/lsp-colors.nvim/issues{/number}
+  keys_url: https://api.github.com/repos/folke/lsp-colors.nvim/keys{/key_id}
+  labels_url: https://api.github.com/repos/folke/lsp-colors.nvim/labels{/name}
+  languages_url: https://api.github.com/repos/folke/lsp-colors.nvim/languages
+  merges_url: https://api.github.com/repos/folke/lsp-colors.nvim/merges
+  milestones_url: https://api.github.com/repos/folke/lsp-colors.nvim/milestones{/number}
+  mirror_url: null
+  notifications_url: https://api.github.com/repos/folke/lsp-colors.nvim/notifications{?since,all,participating}
+  pulls_url: https://api.github.com/repos/folke/lsp-colors.nvim/pulls{/number}
+  releases_url: https://api.github.com/repos/folke/lsp-colors.nvim/releases{/id}
+  ssh_url: git@github.com:folke/lsp-colors.nvim.git
+  stargazers_url: https://api.github.com/repos/folke/lsp-colors.nvim/stargazers
+  statuses_url: https://api.github.com/repos/folke/lsp-colors.nvim/statuses/{sha}
+  subscribers_url: https://api.github.com/repos/folke/lsp-colors.nvim/subscribers
+  subscription_url: https://api.github.com/repos/folke/lsp-colors.nvim/subscription
+  svn_url: https://github.com/folke/lsp-colors.nvim
+  tags_url: https://api.github.com/repos/folke/lsp-colors.nvim/tags
+  teams_url: https://api.github.com/repos/folke/lsp-colors.nvim/teams
+  trees_url: https://api.github.com/repos/folke/lsp-colors.nvim/git/trees{/sha}
+  url: https://api.github.com/repos/folke/lsp-colors.nvim
