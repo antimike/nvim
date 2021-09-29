@@ -5,10 +5,14 @@ default_branch: "master"
 description: "Tag highlight in neovim"
 history:
   '2021-09-29T17:35:09Z': Added 1 items to "comments"
+  '2021-09-29T17:36:11Z': Added 2 items to "tags"
   Mon Sep 27 09:59:50 PM UTC 2021: metadata acquired
 name: "neotags.nvim"
 owner: "c0r73x"
 stars: 127
+tags:
+  - '@nvim'
+  - '@new'
 urls:
   archive_url: https://api.github.com/repos/c0r73x/neotags.nvim/{archive_format}{/ref}
   assignees_url: https://api.github.com/repos/c0r73x/neotags.nvim/assignees{/user}

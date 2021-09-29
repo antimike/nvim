@@ -6,10 +6,14 @@ description: "Navigate codes like a breeze.  Exploring LSP and \U0001F332Treesit
   \ symbols a piece of \U0001F370"
 history:
   '2021-09-29T17:35:15Z': Added 1 items to "comments"
+  '2021-09-29T17:36:17Z': Added 2 items to "tags"
   Mon Sep 27 10:00:36 PM UTC 2021: metadata acquired
 name: "navigator.lua"
 owner: "ray-x"
 stars: 343
+tags:
+  - '@nvim'
+  - '@new'
 urls:
   archive_url: https://api.github.com/repos/ray-x/navigator.lua/{archive_format}{/ref}
   assignees_url: https://api.github.com/repos/ray-x/navigator.lua/assignees{/user}

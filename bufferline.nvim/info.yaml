@@ -5,10 +5,14 @@ default_branch: "master"
 description: "A snazzy bufferline for Neovim"
 history:
   '2021-09-29T17:35:09Z': Added 1 items to "comments"
+  '2021-09-29T17:36:11Z': Added 2 items to "tags"
   Mon Sep 27 09:59:48 PM UTC 2021: metadata acquired
 name: "bufferline.nvim"
 owner: "akinsho"
 stars: 604
+tags:
+  - '@nvim'
+  - '@new'
 urls:
   archive_url: https://api.github.com/repos/akinsho/bufferline.nvim/{archive_format}{/ref}
   assignees_url: https://api.github.com/repos/akinsho/bufferline.nvim/assignees{/user}

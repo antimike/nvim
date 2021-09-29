@@ -5,10 +5,14 @@ default_branch: "master"
 description: "Set of operators and textobjects to search/select/edit sandwiched texts."
 history:
   '2021-09-29T17:35:13Z': Added 1 items to "comments"
+  '2021-09-29T17:36:15Z': Added 2 items to "tags"
   Mon Sep 27 10:00:23 PM UTC 2021: metadata acquired
 name: "vim-sandwich"
 owner: "machakann"
 stars: 892
+tags:
+  - '@nvim'
+  - '@new'
 urls:
   archive_url: https://api.github.com/repos/machakann/vim-sandwich/{archive_format}{/ref}
   assignees_url: https://api.github.com/repos/machakann/vim-sandwich/assignees{/user}

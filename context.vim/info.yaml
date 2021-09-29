@@ -5,10 +5,14 @@ default_branch: "master"
 description: "Vim plugin that shows the context of the currently visible buffer contents"
 history:
   '2021-09-29T17:35:17Z': Added 1 items to "comments"
+  '2021-09-29T17:36:19Z': Added 2 items to "tags"
   Mon Sep 27 10:00:46 PM UTC 2021: metadata acquired
 name: "context.vim"
 owner: "wellle"
 stars: 809
+tags:
+  - '@nvim'
+  - '@new'
 urls:
   archive_url: https://api.github.com/repos/wellle/context.vim/{archive_format}{/ref}
   assignees_url: https://api.github.com/repos/wellle/context.vim/assignees{/user}

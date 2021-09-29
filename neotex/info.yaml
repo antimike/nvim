@@ -5,10 +5,14 @@ default_branch: "master"
 description: "latex live preview - plugin for neovim and vim 8"
 history:
   '2021-09-29T17:35:09Z': Added 1 items to "comments"
+  '2021-09-29T17:36:11Z': Added 2 items to "tags"
   Mon Sep 27 09:59:55 PM UTC 2021: metadata acquired
 name: "neotex"
 owner: "donRaphaco"
 stars: 174
+tags:
+  - '@nvim'
+  - '@new'
 urls:
   archive_url: https://api.github.com/repos/donRaphaco/neotex/{archive_format}{/ref}
   assignees_url: https://api.github.com/repos/donRaphaco/neotex/assignees{/user}

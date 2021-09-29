@@ -5,10 +5,14 @@ default_branch: "master"
 description: ":file_folder: The dark powered file explorer implementation for neovim/Vim8"
 history:
   '2021-09-29T17:35:08Z': Added 1 items to "comments"
+  '2021-09-29T17:36:10Z': Added 2 items to "tags"
   Mon Sep 27 09:59:46 PM UTC 2021: metadata acquired
 name: "defx.nvim"
 owner: "Shougo"
 stars: 1013
+tags:
+  - '@nvim'
+  - '@new'
 urls:
   archive_url: https://api.github.com/repos/Shougo/defx.nvim/{archive_format}{/ref}
   assignees_url: https://api.github.com/repos/Shougo/defx.nvim/assignees{/user}

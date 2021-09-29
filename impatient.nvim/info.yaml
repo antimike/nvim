@@ -5,10 +5,14 @@ default_branch: "main"
 description: "Improve startup time for Neovim"
 history:
   '2021-09-29T17:35:13Z': Added 1 items to "comments"
+  '2021-09-29T17:36:15Z': Added 2 items to "tags"
   Mon Sep 27 10:00:21 PM UTC 2021: metadata acquired
 name: "impatient.nvim"
 owner: "lewis6991"
 stars: 243
+tags:
+  - '@nvim'
+  - '@new'
 urls:
   archive_url: https://api.github.com/repos/lewis6991/impatient.nvim/{archive_format}{/ref}
   assignees_url: https://api.github.com/repos/lewis6991/impatient.nvim/assignees{/user}

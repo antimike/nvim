@@ -5,10 +5,14 @@ default_branch: "main"
 description: "neovim lsp plugin "
 history:
   '2021-09-29T17:35:11Z': Added 1 items to "comments"
+  '2021-09-29T17:36:13Z': Added 2 items to "tags"
   Mon Sep 27 10:00:05 PM UTC 2021: metadata acquired
 name: "lspsaga.nvim"
 owner: "glepnir"
 stars: 969
+tags:
+  - '@nvim'
+  - '@new'
 urls:
   archive_url: https://api.github.com/repos/glepnir/lspsaga.nvim/{archive_format}{/ref}
   assignees_url: https://api.github.com/repos/glepnir/lspsaga.nvim/assignees{/user}

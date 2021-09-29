@@ -6,10 +6,14 @@ description: "A use-package inspired plugin manager for Neovim. Uses native pack
   \ supports Luarocks dependencies, written in Lua, allows for expressive config"
 history:
   '2021-09-29T17:35:17Z': Added 1 items to "comments"
+  '2021-09-29T17:36:19Z': Added 2 items to "tags"
   Mon Sep 27 10:00:45 PM UTC 2021: metadata acquired
 name: "packer.nvim"
 owner: "wbthomason"
 stars: 1409
+tags:
+  - '@nvim'
+  - '@new'
 urls:
   archive_url: https://api.github.com/repos/wbthomason/packer.nvim/{archive_format}{/ref}
   assignees_url: https://api.github.com/repos/wbthomason/packer.nvim/assignees{/user}

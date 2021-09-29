@@ -5,10 +5,14 @@ default_branch: "master"
 description: "The neovim tabline plugin."
 history:
   '2021-09-29T17:35:15Z': Added 1 items to "comments"
+  '2021-09-29T17:36:17Z': Added 2 items to "tags"
   Mon Sep 27 10:00:37 PM UTC 2021: metadata acquired
 name: "barbar.nvim"
 owner: "romgrk"
 stars: 696
+tags:
+  - '@nvim'
+  - '@new'
 urls:
   archive_url: https://api.github.com/repos/romgrk/barbar.nvim/{archive_format}{/ref}
   assignees_url: https://api.github.com/repos/romgrk/barbar.nvim/assignees{/user}

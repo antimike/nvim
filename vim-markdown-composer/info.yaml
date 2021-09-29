@@ -5,10 +5,14 @@ default_branch: "master"
 description: "An asynchronous markdown preview plugin for Vim and Neovim."
 history:
   '2021-09-29T17:35:10Z': Added 1 items to "comments"
+  '2021-09-29T17:36:11Z': Added 2 items to "tags"
   Mon Sep 27 09:59:56 PM UTC 2021: metadata acquired
 name: "vim-markdown-composer"
 owner: "euclio"
 stars: 529
+tags:
+  - '@nvim'
+  - '@new'
 urls:
   archive_url: https://api.github.com/repos/euclio/vim-markdown-composer/{archive_format}{/ref}
   assignees_url: https://api.github.com/repos/euclio/vim-markdown-composer/assignees{/user}

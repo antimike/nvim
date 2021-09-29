@@ -5,10 +5,14 @@ default_branch: "master"
 description: "Simple templates plugin for Vim "
 history:
   '2021-09-29T17:35:09Z': Added 1 items to "comments"
+  '2021-09-29T17:36:11Z': Added 2 items to "tags"
   Mon Sep 27 09:59:48 PM UTC 2021: metadata acquired
 name: "vim-template"
 owner: "aperezdc"
 stars: 343
+tags:
+  - '@nvim'
+  - '@new'
 urls:
   archive_url: https://api.github.com/repos/aperezdc/vim-template/{archive_format}{/ref}
   assignees_url: https://api.github.com/repos/aperezdc/vim-template/assignees{/user}

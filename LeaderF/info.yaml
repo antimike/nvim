@@ -6,10 +6,14 @@ description: "An efficient fuzzy finder that helps to locate files, buffers, mru
   \ gtags, etc. on the fly for both vim and neovim."
 history:
   '2021-09-29T17:35:08Z': Added 1 items to "comments"
+  '2021-09-29T17:36:10Z': Added 2 items to "tags"
   Mon Sep 27 09:59:47 PM UTC 2021: metadata acquired
 name: "LeaderF"
 owner: "Yggdroot"
 stars: 1672
+tags:
+  - '@nvim'
+  - '@new'
 urls:
   archive_url: https://api.github.com/repos/Yggdroot/LeaderF/{archive_format}{/ref}
   assignees_url: https://api.github.com/repos/Yggdroot/LeaderF/assignees{/user}

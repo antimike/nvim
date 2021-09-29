@@ -5,10 +5,14 @@ default_branch: "master"
 description: "A more adventurous wildmenu"
 history:
   '2021-09-29T17:35:10Z': Added 1 items to "comments"
+  '2021-09-29T17:36:12Z': Added 2 items to "tags"
   Mon Sep 27 10:00:02 PM UTC 2021: metadata acquired
 name: "wilder.nvim"
 owner: "gelguy"
 stars: 364
+tags:
+  - '@nvim'
+  - '@new'
 urls:
   archive_url: https://api.github.com/repos/gelguy/wilder.nvim/{archive_format}{/ref}
   assignees_url: https://api.github.com/repos/gelguy/wilder.nvim/assignees{/user}

@@ -6,10 +6,14 @@ description: "A blazing fast and easy to configure neovim statusline plugin writ
   \ in pure lua."
 history:
   '2021-09-29T17:35:11Z': Added 1 items to "comments"
+  '2021-09-29T17:36:13Z': Added 2 items to "tags"
   Mon Sep 27 10:00:08 PM UTC 2021: metadata acquired
 name: "lualine.nvim"
 owner: "hoob3rt"
 stars: 704
+tags:
+  - '@nvim'
+  - '@new'
 urls:
   archive_url: https://api.github.com/repos/hoob3rt/lualine.nvim/{archive_format}{/ref}
   assignees_url: https://api.github.com/repos/hoob3rt/lualine.nvim/assignees{/user}

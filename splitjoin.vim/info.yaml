@@ -5,10 +5,14 @@ default_branch: "main"
 description: "Switch between single-line and multiline forms of code"
 history:
   '2021-09-29T17:35:08Z': Added 1 items to "comments"
+  '2021-09-29T17:36:10Z': Added 2 items to "tags"
   Mon Sep 27 09:59:42 PM UTC 2021: metadata acquired
 name: "splitjoin.vim"
 owner: "AndrewRadev"
 stars: 1550
+tags:
+  - '@nvim'
+  - '@new'
 urls:
   archive_url: https://api.github.com/repos/AndrewRadev/splitjoin.vim/{archive_format}{/ref}
   assignees_url: https://api.github.com/repos/AndrewRadev/splitjoin.vim/assignees{/user}

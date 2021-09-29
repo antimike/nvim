@@ -6,10 +6,14 @@ description: "\U0001F4BB  Dev setup for init.lua and plugin development with ful
   \ signature help, docs and completion for the nvim lua API."
 history:
   '2021-09-29T17:35:10Z': Added 1 items to "comments"
+  '2021-09-29T17:36:12Z': Added 2 items to "tags"
   Mon Sep 27 09:59:58 PM UTC 2021: metadata acquired
 name: "lua-dev.nvim"
 owner: "folke"
 stars: 199
+tags:
+  - '@nvim'
+  - '@new'
 urls:
   archive_url: https://api.github.com/repos/folke/lua-dev.nvim/{archive_format}{/ref}
   assignees_url: https://api.github.com/repos/folke/lua-dev.nvim/assignees{/user}

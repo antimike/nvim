@@ -6,10 +6,14 @@ description: "(Do)cumentation (Ge)nerator 10+ languages \U0001F4DA Generate prop
   \ code documentation skeletons with a single keypress. ⚡️\U0001F525"
 history:
   '2021-09-29T17:35:12Z': Added 1 items to "comments"
+  '2021-09-29T17:36:14Z': Added 2 items to "tags"
   Mon Sep 27 10:00:17 PM UTC 2021: metadata acquired
 name: "vim-doge"
 owner: "kkoomen"
 stars: 644
+tags:
+  - '@nvim'
+  - '@new'
 urls:
   archive_url: https://api.github.com/repos/kkoomen/vim-doge/{archive_format}{/ref}
   assignees_url: https://api.github.com/repos/kkoomen/vim-doge/assignees{/user}

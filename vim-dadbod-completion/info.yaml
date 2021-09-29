@@ -5,10 +5,14 @@ default_branch: "master"
 description: "Database autocompletion powered by https://github.com/tpope/vim-dadbod"
 history:
   '2021-09-29T17:35:13Z': Added 1 items to "comments"
+  '2021-09-29T17:36:15Z': Added 2 items to "tags"
   Mon Sep 27 10:00:19 PM UTC 2021: metadata acquired
 name: "vim-dadbod-completion"
 owner: "kristijanhusak"
 stars: 236
+tags:
+  - '@nvim'
+  - '@new'
 urls:
   archive_url: https://api.github.com/repos/kristijanhusak/vim-dadbod-completion/{archive_format}{/ref}
   assignees_url: https://api.github.com/repos/kristijanhusak/vim-dadbod-completion/assignees{/user}

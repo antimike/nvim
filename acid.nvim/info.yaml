@@ -5,10 +5,14 @@ default_branch: "master"
 description: "Asynchronous Clojure Interactive Development"
 history:
   '2021-09-29T17:35:09Z': Added 1 items to "comments"
+  '2021-09-29T17:36:11Z': Added 2 items to "tags"
   Mon Sep 27 09:59:53 PM UTC 2021: metadata acquired
 name: "acid.nvim"
 owner: "clojure-vim"
 stars: 149
+tags:
+  - '@nvim'
+  - '@new'
 urls:
   archive_url: https://api.github.com/repos/clojure-vim/acid.nvim/{archive_format}{/ref}
   assignees_url: https://api.github.com/repos/clojure-vim/acid.nvim/assignees{/user}

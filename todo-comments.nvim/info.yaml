@@ -5,10 +5,14 @@ default_branch: "main"
 description: "✅  Highlight, list and search todo comments in your projects"
 history:
   '2021-09-29T17:35:10Z': Added 1 items to "comments"
+  '2021-09-29T17:36:12Z': Added 2 items to "tags"
   Mon Sep 27 09:59:58 PM UTC 2021: metadata acquired
 name: "todo-comments.nvim"
 owner: "folke"
 stars: 454
+tags:
+  - '@nvim'
+  - '@new'
 urls:
   archive_url: https://api.github.com/repos/folke/todo-comments.nvim/{archive_format}{/ref}
   assignees_url: https://api.github.com/repos/folke/todo-comments.nvim/assignees{/user}
