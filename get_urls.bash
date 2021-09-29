@@ -11,13 +11,12 @@ get_urls ()
 }
 
 add_attrs() {
-    local attr="$1" && shift
     local -n vals="$1" && shift || return -1
     for f in "$@"; do
         yq -Y -S -i '
     $ARGS.positional[0] as $n |
     $ARGS.positional[1:] as $vs |
-    .[$n]+=($vs | map({($n):.,"timestamp":(now|todate)}))
-        ' "$f" --args "${vals[@]}"
+    .[$n]+=($vs | map({"key":(now|todate),"value":(.)}) | from_entries)
+        ' "$f" --args "${!vals}" "${vals[@]}"
     done
 }
