@@ -1,9 +1,12 @@
 archived: false
+comments:
+  - Found in initial search of nvim plugins
 default_branch: "main"
 description: "\U0001F4A5   Create key bindings that stick. WhichKey is a lua plugin\
   \ for Neovim 0.5 that displays a popup with possible keybindings of the command\
   \ you started typing."
 history:
+  '2021-09-29T17:35:10Z': Added 1 items to "comments"
   Mon Sep 27 10:00:00 PM UTC 2021: metadata acquired
 name: "which-key.nvim"
 owner: "folke"

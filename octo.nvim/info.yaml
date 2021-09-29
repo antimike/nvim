@@ -1,8 +1,11 @@
 archived: false
+comments:
+  - Found in initial search of nvim plugins
 default_branch: "master"
 description: "Edit and review GitHub issues and pull requests from the comfort of\
   \ your favorite editor"
 history:
+  '2021-09-29T17:35:15Z': Added 1 items to "comments"
   Mon Sep 27 10:00:34 PM UTC 2021: metadata acquired
 name: "octo.nvim"
 owner: "pwntester"

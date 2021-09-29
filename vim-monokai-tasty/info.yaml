@@ -1,7 +1,10 @@
 archived: false
+comments:
+  - Found in initial search of nvim plugins
 default_branch: "master"
 description: "VIM Colour scheme"
 history:
+  '2021-09-29T17:35:15Z': Added 1 items to "comments"
   Mon Sep 27 10:00:33 PM UTC 2021: metadata acquired
 name: "vim-monokai-tasty"
 owner: "patstockwell"

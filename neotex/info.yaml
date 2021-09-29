@@ -1,7 +1,10 @@
 archived: true
+comments:
+  - Found in initial search of nvim plugins
 default_branch: "master"
 description: "latex live preview - plugin for neovim and vim 8"
 history:
+  '2021-09-29T17:35:09Z': Added 1 items to "comments"
   Mon Sep 27 09:59:55 PM UTC 2021: metadata acquired
 name: "neotex"
 owner: "donRaphaco"

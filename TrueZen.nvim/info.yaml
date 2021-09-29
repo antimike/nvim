@@ -1,7 +1,10 @@
 archived: false
+comments:
+  - Found in initial search of nvim plugins
 default_branch: "main"
 description: "\U0001F99D Clean and elegant distraction-free writing for NeoVim."
 history:
+  '2021-09-29T17:35:08Z': Added 1 items to "comments"
   Mon Sep 27 09:59:46 PM UTC 2021: metadata acquired
 name: "TrueZen.nvim"
 owner: "Pocco81"

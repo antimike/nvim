@@ -1,8 +1,11 @@
 archived: false
+comments:
+  - Found in initial search of nvim plugins
 default_branch: "main"
 description: "\U0001F30C Next-generation motion plugin with incremental input processing,\
   \ allowing for unparalleled speed with near-zero cognitive effort"
 history:
+  '2021-09-29T17:35:10Z': Added 1 items to "comments"
   Mon Sep 27 10:00:03 PM UTC 2021: metadata acquired
 name: "lightspeed.nvim"
 owner: "ggandor"

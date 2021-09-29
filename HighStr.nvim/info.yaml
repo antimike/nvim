@@ -1,8 +1,11 @@
 archived: false
+comments:
+  - Found in initial search of nvim plugins
 default_branch: "main"
 description: "\U0001F98E A NeoVim plugin for highlighting visual selections like in\
   \ a normal document editor!"
 history:
+  '2021-09-29T17:35:08Z': Added 1 items to "comments"
   Mon Sep 27 09:59:45 PM UTC 2021: metadata acquired
 name: "HighStr.nvim"
 owner: "Pocco81"

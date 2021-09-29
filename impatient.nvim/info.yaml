@@ -1,7 +1,10 @@
 archived: false
+comments:
+  - Found in initial search of nvim plugins
 default_branch: "main"
 description: "Improve startup time for Neovim"
 history:
+  '2021-09-29T17:35:13Z': Added 1 items to "comments"
   Mon Sep 27 10:00:21 PM UTC 2021: metadata acquired
 name: "impatient.nvim"
 owner: "lewis6991"

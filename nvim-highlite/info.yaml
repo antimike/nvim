@@ -1,7 +1,10 @@
 archived: false
+comments:
+  - Found in initial search of nvim plugins
 default_branch: "master"
 description: "A colorscheme template that is \"lite\" on logic for the developer."
 history:
+  '2021-09-29T17:35:08Z': Added 1 items to "comments"
   Mon Sep 27 09:59:43 PM UTC 2021: metadata acquired
 name: "nvim-highlite"
 owner: "Iron-E"

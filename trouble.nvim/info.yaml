@@ -1,8 +1,11 @@
 archived: false
+comments:
+  - Found in initial search of nvim plugins
 default_branch: "main"
 description: "\U0001F6A6 A pretty diagnostics, references, telescope results, quickfix\
   \ and location list to help you solve all the trouble your code is causing."
 history:
+  '2021-09-29T17:35:10Z': Added 1 items to "comments"
   Mon Sep 27 09:59:59 PM UTC 2021: metadata acquired
 name: "trouble.nvim"
 owner: "folke"

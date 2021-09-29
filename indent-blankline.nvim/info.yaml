@@ -1,7 +1,10 @@
 archived: false
+comments:
+  - Found in initial search of nvim plugins
 default_branch: "master"
 description: "Indent guides  for Neovim"
 history:
+  '2021-09-29T17:35:13Z': Added 1 items to "comments"
   Mon Sep 27 10:00:23 PM UTC 2021: metadata acquired
 name: "indent-blankline.nvim"
 owner: "lukas-reineke"

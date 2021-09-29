@@ -1,8 +1,11 @@
 archived: false
+comments:
+  - Found in initial search of nvim plugins
 default_branch: "main"
 description: "\U0001F9B4 A NeoVim plugin for saving your work before the world collapses\
   \ or you type :qa!"
 history:
+  '2021-09-29T17:35:08Z': Added 1 items to "comments"
   Mon Sep 27 09:59:45 PM UTC 2021: metadata acquired
 name: "AutoSave.nvim"
 owner: "Pocco81"
