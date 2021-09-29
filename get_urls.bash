@@ -15,8 +15,9 @@ add_attrs() {
     for f in "$@"; do
         yq -Y -S -i '
     $ARGS.positional[0] as $n |
-    $ARGS.positional[1:] as $vs |
-    .[$n]+=($vs | map({"key":(now|todate),"value":(.)}) | from_entries)
+        $ARGS.positional[1:] as $vs |
+        .[$n]+=$vs |
+        .history+={(now|todate): "Added \($vs | length) items to \"\($n)\""}
         ' "$f" --args "${!vals}" "${vals[@]}"
     done
 }
