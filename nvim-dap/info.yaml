@@ -4,9 +4,12 @@ comments:
 default_branch: "master"
 description: "Debug Adapter Protocol client implementation for Neovim (>= 0.5)"
 history:
-  '2021-09-27T17:00:24Z': metadata acquired
-  '2021-09-29T17:35:14Z': Added 1 items to "comments"
-  '2021-09-29T17:36:16Z': Added 2 items to "tags"
+  '2021-09-27T17:00:24Z':
+    - metadata acquired
+  '2021-09-29T17:35:14Z':
+    - Added 1 items to "comments"
+  '2021-09-29T17:36:16Z':
+    - Added 2 items to "tags"
 name: "nvim-dap"
 owner: "mfussenegger"
 stars: 836

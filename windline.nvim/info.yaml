@@ -4,9 +4,12 @@ comments:
 default_branch: "master"
 description: "The next generation neovim statusline.  Animation statusline"
 history:
-  '2021-09-27T17:00:48Z': metadata acquired
-  '2021-09-29T17:35:17Z': Added 1 items to "comments"
-  '2021-09-29T17:36:19Z': Added 2 items to "tags"
+  '2021-09-27T17:00:48Z':
+    - metadata acquired
+  '2021-09-29T17:35:17Z':
+    - Added 1 items to "comments"
+  '2021-09-29T17:36:19Z':
+    - Added 2 items to "tags"
 name: "windline.nvim"
 owner: "windwp"
 stars: 106

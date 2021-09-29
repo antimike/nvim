@@ -4,9 +4,12 @@ comments:
 default_branch: "master"
 description: "Find, Filter, Preview, Pick. All lua, all the time."
 history:
-  '2021-09-27T17:00:30Z': metadata acquired
-  '2021-09-29T17:35:15Z': Added 1 items to "comments"
-  '2021-09-29T17:36:17Z': Added 2 items to "tags"
+  '2021-09-27T17:00:30Z':
+    - metadata acquired
+  '2021-09-29T17:35:15Z':
+    - Added 1 items to "comments"
+  '2021-09-29T17:36:17Z':
+    - Added 2 items to "tags"
 name: "telescope.nvim"
 owner: "nvim-telescope"
 stars: 3494

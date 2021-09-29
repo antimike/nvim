@@ -4,9 +4,12 @@ comments:
 default_branch: "master"
 description: ":file_folder: The dark powered file explorer implementation for neovim/Vim8"
 history:
-  '2021-09-27T16:59:46Z': metadata acquired
-  '2021-09-29T17:35:08Z': Added 1 items to "comments"
-  '2021-09-29T17:36:10Z': Added 2 items to "tags"
+  '2021-09-27T16:59:46Z':
+    - metadata acquired
+  '2021-09-29T17:35:08Z':
+    - Added 1 items to "comments"
+  '2021-09-29T17:36:10Z':
+    - Added 2 items to "tags"
 name: "defx.nvim"
 owner: "Shougo"
 stars: 1013

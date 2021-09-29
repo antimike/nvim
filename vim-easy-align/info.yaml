@@ -4,9 +4,12 @@ comments:
 default_branch: "master"
 description: ":sunflower: A Vim alignment plugin"
 history:
-  '2021-09-27T17:00:15Z': metadata acquired
-  '2021-09-29T17:35:12Z': Added 1 items to "comments"
-  '2021-09-29T17:36:14Z': Added 2 items to "tags"
+  '2021-09-27T17:00:15Z':
+    - metadata acquired
+  '2021-09-29T17:35:12Z':
+    - Added 1 items to "comments"
+  '2021-09-29T17:36:14Z':
+    - Added 2 items to "tags"
 name: "vim-easy-align"
 owner: "junegunn"
 stars: 3429

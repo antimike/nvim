@@ -4,9 +4,12 @@ comments:
 default_branch: "master"
 description: "Async completion framework made ease."
 history:
-  '2021-09-27T17:00:24Z': metadata acquired
-  '2021-09-29T17:35:14Z': Added 1 items to "comments"
-  '2021-09-29T17:36:15Z': Added 2 items to "tags"
+  '2021-09-27T17:00:24Z':
+    - metadata acquired
+  '2021-09-29T17:35:14Z':
+    - Added 1 items to "comments"
+  '2021-09-29T17:36:15Z':
+    - Added 2 items to "tags"
 name: "completor.vim"
 owner: "maralla"
 stars: 1180

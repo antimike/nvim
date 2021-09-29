@@ -4,9 +4,12 @@ comments:
 default_branch: "master"
 description: "A 24bit colorscheme for Vim, Airline and Lightline"
 history:
-  '2021-09-27T17:00:11Z': metadata acquired
-  '2021-09-29T17:35:11Z': Added 1 items to "comments"
-  '2021-09-29T17:36:13Z': Added 2 items to "tags"
+  '2021-09-27T17:00:11Z':
+    - metadata acquired
+  '2021-09-29T17:35:11Z':
+    - Added 1 items to "comments"
+  '2021-09-29T17:36:13Z':
+    - Added 2 items to "tags"
 name: "tender.vim"
 owner: "jacoborus"
 stars: 865

@@ -4,9 +4,12 @@ comments:
 default_branch: "main"
 description: "Git signs written in pure lua"
 history:
-  '2021-09-27T17:00:20Z': metadata acquired
-  '2021-09-29T17:35:13Z': Added 1 items to "comments"
-  '2021-09-29T17:36:15Z': Added 2 items to "tags"
+  '2021-09-27T17:00:20Z':
+    - metadata acquired
+  '2021-09-29T17:35:13Z':
+    - Added 1 items to "comments"
+  '2021-09-29T17:36:15Z':
+    - Added 2 items to "tags"
 name: "gitsigns.nvim"
 owner: "lewis6991"
 stars: 757

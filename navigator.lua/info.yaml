@@ -5,9 +5,12 @@ default_branch: "master"
 description: "Navigate codes like a breeze.  Exploring LSP and \U0001F332Treesitter\
   \ symbols a piece of \U0001F370"
 history:
-  '2021-09-27T17:00:36Z': metadata acquired
-  '2021-09-29T17:35:15Z': Added 1 items to "comments"
-  '2021-09-29T17:36:17Z': Added 2 items to "tags"
+  '2021-09-27T17:00:36Z':
+    - metadata acquired
+  '2021-09-29T17:35:15Z':
+    - Added 1 items to "comments"
+  '2021-09-29T17:36:17Z':
+    - Added 2 items to "tags"
 name: "navigator.lua"
 owner: "ray-x"
 stars: 343

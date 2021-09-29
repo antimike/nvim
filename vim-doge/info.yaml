@@ -5,9 +5,12 @@ default_branch: "master"
 description: "(Do)cumentation (Ge)nerator 10+ languages \U0001F4DA Generate proper\
   \ code documentation skeletons with a single keypress. ⚡️\U0001F525"
 history:
-  '2021-09-27T17:00:17Z': metadata acquired
-  '2021-09-29T17:35:12Z': Added 1 items to "comments"
-  '2021-09-29T17:36:14Z': Added 2 items to "tags"
+  '2021-09-27T17:00:17Z':
+    - metadata acquired
+  '2021-09-29T17:35:12Z':
+    - Added 1 items to "comments"
+  '2021-09-29T17:36:14Z':
+    - Added 2 items to "tags"
 name: "vim-doge"
 owner: "kkoomen"
 stars: 644

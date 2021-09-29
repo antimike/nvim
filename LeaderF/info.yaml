@@ -5,9 +5,12 @@ default_branch: "master"
 description: "An efficient fuzzy finder that helps to locate files, buffers, mrus,\
   \ gtags, etc. on the fly for both vim and neovim."
 history:
-  '2021-09-27T16:59:47Z': metadata acquired
-  '2021-09-29T17:35:08Z': Added 1 items to "comments"
-  '2021-09-29T17:36:10Z': Added 2 items to "tags"
+  '2021-09-27T16:59:47Z':
+    - metadata acquired
+  '2021-09-29T17:35:08Z':
+    - Added 1 items to "comments"
+  '2021-09-29T17:36:10Z':
+    - Added 2 items to "tags"
 name: "LeaderF"
 owner: "Yggdroot"
 stars: 1672

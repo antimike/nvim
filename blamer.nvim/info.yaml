@@ -4,9 +4,12 @@ comments:
 default_branch: "master"
 description: "A git blame plugin for neovim inspired by VS Code's GitLens plugin"
 history:
-  '2021-09-27T16:59:41Z': metadata acquired
-  '2021-09-29T17:35:07Z': Added 1 items to "comments"
-  '2021-09-29T17:36:09Z': Added 2 items to "tags"
+  '2021-09-27T16:59:41Z':
+    - metadata acquired
+  '2021-09-29T17:35:07Z':
+    - Added 1 items to "comments"
+  '2021-09-29T17:36:09Z':
+    - Added 2 items to "tags"
 name: "blamer.nvim"
 owner: "APZelos"
 stars: 404

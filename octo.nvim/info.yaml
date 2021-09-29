@@ -5,9 +5,12 @@ default_branch: "master"
 description: "Edit and review GitHub issues and pull requests from the comfort of\
   \ your favorite editor"
 history:
-  '2021-09-27T17:00:34Z': metadata acquired
-  '2021-09-29T17:35:15Z': Added 1 items to "comments"
-  '2021-09-29T17:36:17Z': Added 2 items to "tags"
+  '2021-09-27T17:00:34Z':
+    - metadata acquired
+  '2021-09-29T17:35:15Z':
+    - Added 1 items to "comments"
+  '2021-09-29T17:36:17Z':
+    - Added 2 items to "tags"
 name: "octo.nvim"
 owner: "pwntester"
 stars: 520

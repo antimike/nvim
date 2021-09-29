@@ -5,9 +5,12 @@ default_branch: "master"
 description: "A neovim plugin to run lines/blocs of code (independently of the rest\
   \ of the file), supporting multiples languages"
 history:
-  '2021-09-27T17:00:26Z': metadata acquired
-  '2021-09-29T17:35:14Z': Added 1 items to "comments"
-  '2021-09-29T17:36:16Z': Added 2 items to "tags"
+  '2021-09-27T17:00:26Z':
+    - metadata acquired
+  '2021-09-29T17:35:14Z':
+    - Added 1 items to "comments"
+  '2021-09-29T17:36:16Z':
+    - Added 2 items to "tags"
 name: "sniprun"
 owner: "michaelb"
 stars: 353

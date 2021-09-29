@@ -4,9 +4,12 @@ comments:
 default_branch: "master"
 description: null
 history:
-  '2021-09-27T17:00:26Z': metadata acquired
-  '2021-09-29T17:35:14Z': Added 1 items to "comments"
-  '2021-09-29T17:36:16Z': Added 2 items to "tags"
+  '2021-09-27T17:00:26Z':
+    - metadata acquired
+  '2021-09-29T17:35:14Z':
+    - Added 1 items to "comments"
+  '2021-09-29T17:36:16Z':
+    - Added 2 items to "tags"
 name: "formatter.nvim"
 owner: "mhartington"
 stars: 328

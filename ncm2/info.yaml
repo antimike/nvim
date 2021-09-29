@@ -4,9 +4,12 @@ comments:
 default_branch: "master"
 description: ":heart: Slim, Fast and Hackable Completion Framework for Neovim"
 history:
-  '2021-09-27T17:00:28Z': metadata acquired
-  '2021-09-29T17:35:14Z': Added 1 items to "comments"
-  '2021-09-29T17:36:16Z': Added 2 items to "tags"
+  '2021-09-27T17:00:28Z':
+    - metadata acquired
+  '2021-09-29T17:35:14Z':
+    - Added 1 items to "comments"
+  '2021-09-29T17:36:16Z':
+    - Added 2 items to "tags"
 name: "ncm2"
 owner: "ncm2"
 stars: 1254

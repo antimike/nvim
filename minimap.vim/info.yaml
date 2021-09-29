@@ -5,9 +5,12 @@ default_branch: "master"
 description: "\U0001F4E1 Blazing fast minimap / scrollbar for vim, powered by code-minimap\
   \ written in Rust."
 history:
-  '2021-09-27T17:00:47Z': metadata acquired
-  '2021-09-29T17:35:17Z': Added 1 items to "comments"
-  '2021-09-29T17:36:19Z': Added 2 items to "tags"
+  '2021-09-27T17:00:47Z':
+    - metadata acquired
+  '2021-09-29T17:35:17Z':
+    - Added 1 items to "comments"
+  '2021-09-29T17:36:19Z':
+    - Added 2 items to "tags"
 name: "minimap.vim"
 owner: "wfxr"
 stars: 586

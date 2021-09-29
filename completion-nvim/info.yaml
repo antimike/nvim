@@ -5,9 +5,12 @@ default_branch: "master"
 description: "A async completion framework aims to provide completion to neovim's\
   \ built in LSP written in Lua"
 history:
-  '2021-09-27T17:00:30Z': metadata acquired
-  '2021-09-29T17:35:15Z': Added 1 items to "comments"
-  '2021-09-29T17:36:16Z': Added 2 items to "tags"
+  '2021-09-27T17:00:30Z':
+    - metadata acquired
+  '2021-09-29T17:35:15Z':
+    - Added 1 items to "comments"
+  '2021-09-29T17:36:16Z':
+    - Added 2 items to "tags"
 name: "completion-nvim"
 owner: "nvim-lua"
 stars: 990

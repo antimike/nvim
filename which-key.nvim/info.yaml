@@ -6,9 +6,12 @@ description: "\U0001F4A5   Create key bindings that stick. WhichKey is a lua plu
   \ for Neovim 0.5 that displays a popup with possible keybindings of the command\
   \ you started typing."
 history:
-  '2021-09-27T17:00:00Z': metadata acquired
-  '2021-09-29T17:35:10Z': Added 1 items to "comments"
-  '2021-09-29T17:36:12Z': Added 2 items to "tags"
+  '2021-09-27T17:00:00Z':
+    - metadata acquired
+  '2021-09-29T17:35:10Z':
+    - Added 1 items to "comments"
+  '2021-09-29T17:36:12Z':
+    - Added 2 items to "tags"
 name: "which-key.nvim"
 owner: "folke"
 stars: 735

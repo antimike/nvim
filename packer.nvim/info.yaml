@@ -5,9 +5,12 @@ default_branch: "master"
 description: "A use-package inspired plugin manager for Neovim. Uses native packages,\
   \ supports Luarocks dependencies, written in Lua, allows for expressive config"
 history:
-  '2021-09-27T17:00:45Z': metadata acquired
-  '2021-09-29T17:35:17Z': Added 1 items to "comments"
-  '2021-09-29T17:36:19Z': Added 2 items to "tags"
+  '2021-09-27T17:00:45Z':
+    - metadata acquired
+  '2021-09-29T17:35:17Z':
+    - Added 1 items to "comments"
+  '2021-09-29T17:36:19Z':
+    - Added 2 items to "tags"
 name: "packer.nvim"
 owner: "wbthomason"
 stars: 1409

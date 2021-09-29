@@ -4,9 +4,12 @@ comments:
 default_branch: "master"
 description: "Orgmode clone written in Lua for Neovim 0.5+."
 history:
-  '2021-09-27T17:00:18Z': metadata acquired
-  '2021-09-29T17:35:13Z': Added 1 items to "comments"
-  '2021-09-29T17:36:15Z': Added 2 items to "tags"
+  '2021-09-27T17:00:18Z':
+    - metadata acquired
+  '2021-09-29T17:35:13Z':
+    - Added 1 items to "comments"
+  '2021-09-29T17:36:15Z':
+    - Added 2 items to "tags"
 name: "orgmode.nvim"
 owner: "kristijanhusak"
 stars: 712

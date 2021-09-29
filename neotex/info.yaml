@@ -4,9 +4,12 @@ comments:
 default_branch: "master"
 description: "latex live preview - plugin for neovim and vim 8"
 history:
-  '2021-09-27T16:59:55Z': metadata acquired
-  '2021-09-29T17:35:09Z': Added 1 items to "comments"
-  '2021-09-29T17:36:11Z': Added 2 items to "tags"
+  '2021-09-27T16:59:55Z':
+    - metadata acquired
+  '2021-09-29T17:35:09Z':
+    - Added 1 items to "comments"
+  '2021-09-29T17:36:11Z':
+    - Added 2 items to "tags"
 name: "neotex"
 owner: "donRaphaco"
 stars: 174
