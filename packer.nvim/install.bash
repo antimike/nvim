@@ -1,7 +1,7 @@
 #!/bin/bash
 
 export NVIM_PLUGIN_DIR="${NVIM_PLUGIN_DIR:-$HOME/.local/share/nvim/site/pack}"
-declare url="$(yq -r '.url' info.yaml)"
+declare url="$(yq -r '.urls.clone_url' info.yaml)"
 declare name="$(yq -r '.name' info.yaml)"
 declare dest="${NVIM_PLUGIN_DIR}/${name%.*}/start/${name}"
 declare repo="`pwd`/${name}"
