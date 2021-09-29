@@ -17,7 +17,7 @@ add_attrs() {
     $ARGS.positional[0] as $n |
         $ARGS.positional[1:] as $vs |
         .[$n]+=$vs |
-        .history+={(now|todate): "Added \($vs | length) items to \"\($n)\""}
+        .history+={(now|todate): ["Added \($vs | length) items to \"\($n)\""]}
         ' "$f" --args "${!vals}" "${vals[@]}"
     done
 }
