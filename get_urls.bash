@@ -1,6 +1,6 @@
 #!/bin/bash
-get_urls () 
-{ 
+
+get_urls () { 
     local fname="$1" url=;
     url="$(yq -r '.url' "$fname")" || { 
         echo "Whoops" 1>&2;
@@ -11,8 +11,8 @@ get_urls ()
 }
 
 _jsonify_arg() {
-    local -a hist=( )
-    local -n log=hist
+    local -a _hist_=( )
+    local -n log=_hist_
     while getopts ":l:" opt; do
         case "$opt" in
             l) local -n log="$OPTARG" || return -1 ;;
@@ -35,13 +35,13 @@ _jsonify_arg() {
                 printf "$(_jsonify_arg "$elem"),"
             done | sed 's/,$//'
             printf ']'
-            log+=( "Added ${#ref[@]} items to array \"${!ref}\"" )
+            log+=( "Added ${#ref[@]} item(s) to array \"${!ref}\"" )
             ;;
         *A*)        # Associative array
             printf '{'
             for key in "${!ref[@]}"; do
-                printf '%s:%s,' \
-                    "$(_jsonify_arg "$key")" \
+                printf '"%s":%s,' \
+                    "$key" \
                     "$(_jsonify_arg "${ref[$key]}")"
             done | sed 's/,$//'
             printf '}'
