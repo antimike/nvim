@@ -83,18 +83,29 @@ add_attrs() {
         shift
     done
 
+    local -a opts=( -Y -S )
+    local script='
+        (.)+=$ARGS.positional[0] |
+        .history+={(now|todate): ["Added \($vs | length) items to \"\($n)\""]}
+        '
+
+    if [ ${#files[@]} -gt 0 ]; then
+        opts+=( -i )
+    fi
+
     if [ ${#props[@]} -gt 0 ]; then
         attrs["$propname"]=props
     fi
 
+    local json="$(_jsonify_arg -l hist attrs)"
+
+    local -a cmd=( 
+        jq "${opts[@]}" "$script" --jsonargs "$json" "$(_jsonify_arg hist)" 
+    )
+    
     local -n vals="$1" && shift || return -1
     for f in "$@"; do
-        yq -Y -S -i '
-    $ARGS.positional[0] as $n |
-        $ARGS.positional[1:] as $vs |
-        .[$n]+=$vs |
-        .history+={(now|todate): ["Added \($vs | length) items to \"\($n)\""]}
-        ' "$f" --args "${!vals}" "${vals[@]}"
+        yq -Y -S -i  "$f" --args "${!vals}" "${vals[@]}"
     done
 }
 
