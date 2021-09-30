@@ -45,9 +45,6 @@ return require('packer').startup(function()
   use_rocks 'penlight'
   use_rocks {'lua-resty-http', 'lpeg'}
 
-  -- Local plugins can be included
-  use '~/projects/personal/hover.nvim'
-
   -- Plugins can have post-install/update hooks
   use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'}
 

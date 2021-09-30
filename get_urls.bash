@@ -60,6 +60,33 @@ _jsonify_arg() {
 }
 
 add_attrs() {
+    local -a files=( )
+    local -A attrs=( )
+    local -a props=( )
+    local -a hist=( )
+    local propname="props"
+
+    while [ $# -gt 0 ]; do
+        case "$1" in
+            --files) shift; files+=( "$@" ); break ;;
+            -n|--propname) propname="$2"; shift ;;
+            *=*) attrs["${1%%=*}"]="${1#*=}" ;;
+            *:*) attrs["${1%%:*}"]="${1#*:}" ;;
+            *)
+                if declare -p "$1" >/dev/null 2>&1; then
+                    attrs["$1"]="$1"
+                else
+                    props+=( "$1" )
+                fi
+                ;;
+        esac
+        shift
+    done
+
+    if [ ${#props[@]} -gt 0 ]; then
+        attrs["$propname"]=props
+    fi
+
     local -n vals="$1" && shift || return -1
     for f in "$@"; do
         yq -Y -S -i '
