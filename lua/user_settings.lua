@@ -1,3 +1,5 @@
+vim.opt.shell = "/bin/zsh"
+
 -- Function for make mapping easier.
 local function map(mode, lhs, rhs, opts)
   local options = {noremap = true}
