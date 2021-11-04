@@ -3,3 +3,4 @@ test.*
 Session.vim
 *.test.*
 .history
+*~
