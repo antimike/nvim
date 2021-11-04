@@ -1,0 +1,6 @@
+#!/bin/zsh -f
+# Script to find and tag info.yaml files
+
+find . -name "info.yaml" |
+    rofi -keep-right -dmenu -i -p "Plugins" -multi-select |
+    xargs -I{} yq -Y -S '.tags+=$ARGS.positional' 
