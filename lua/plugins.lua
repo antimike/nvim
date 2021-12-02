@@ -158,10 +158,24 @@ return require('packer').startup({function()
   -- LSP, LSP installer and tab completion.
   use { 'neovim/nvim-lspconfig' }
   use { 'williamboman/nvim-lsp-installer' }
+
+  -- DAP
+  use { 'mfussenegger/nvim-dap' }
+  use { 'nvim-telescope/telescope-dap.nvim' }
+  use { 'mfussenegger/nvim-dap-python' } -- Python
+
+  -- Snippets
   use {
      'rafamadriz/friendly-snippets',
      event = 'InsertEnter'
   }
+  use {
+      'norcalli/snippets.nvim'
+  }
+  use { 'honza/vim-snippets' }
+  use { 'SirVer/ultisnips' }
+
+  -- Completion
   use {
     'hrsh7th/nvim-cmp',
     after = "friendly-snippets",
