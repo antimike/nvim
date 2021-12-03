@@ -19,6 +19,15 @@ return require('packer').startup(function()
   }
   use { 'nvim-lua/completion-nvim' }
 
+  -- Snippets
+  use { 'honza/vim-snippets' }
+  use { 'SirVer/ultisnips' }
+
+  -- DAP
+  use { 'mfussenegger/nvim-dap' }
+  use { 'nvim-telescope/telescope-dap.nvim' }
+  use { 'mfussenegger/nvim-dap-python' } -- Python
+
   -- Lua development
   use { 'tjdevries/nlua.nvim' }
 
