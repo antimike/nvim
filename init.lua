@@ -19,7 +19,7 @@ vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile' -- Auto compile when th
 require('plugins')
 
 -- Key mappings
-require('keymappings')
+require('keymaps')
 
 -- Setup Lua language server using submodule
 require('lsp_lua')
@@ -31,5 +31,3 @@ require('config')
 --require('config.colorscheme')  -- color scheme
 --require('config.completion')   -- completion
 --require('config.fugitive')     -- fugitive
-
-
