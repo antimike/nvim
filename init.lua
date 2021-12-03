@@ -22,7 +22,7 @@ require('plugins')
 require('keymaps')
 
 -- Setup Lua language server using submodule
-require('lsp_lua')
+require('lang')
 
 -- Another option is to groups configuration in one folder
 require('config')
