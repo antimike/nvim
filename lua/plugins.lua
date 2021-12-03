@@ -13,7 +13,10 @@ return require('packer').startup(function()
   }
 
   -- LSP and completion
-  use { 'neovim/nvim-lspconfig' }
+  use {
+    'neovim/nvim-lspconfig',
+    'williamboman/nvim-lsp-installer',
+  }
   use { 'nvim-lua/completion-nvim' }
 
   -- Lua development
