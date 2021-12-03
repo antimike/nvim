@@ -80,6 +80,10 @@ return require('packer').startup({function()
     end
   }
 
+  use {
+     'glepnir/galaxyline.nvim'
+    }
+
   -- TreeSitter.
   use {
     'nvim-treesitter/nvim-treesitter',
@@ -100,6 +104,9 @@ return require('packer').startup({function()
       require('plugins/treesitter')
     end
   }
+  use {
+      'nvim-treesitter/playground'
+    }
 
   -- Colorizer (for highlighting color codes).
   use {
