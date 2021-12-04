@@ -5,6 +5,7 @@ return require('packer').startup(function()
 
   -- Color scheme
   use { 'sainnhe/gruvbox-material' }
+  use { 'sainnhe/edge' }
 
   -- Fuzzy finder
   use {
