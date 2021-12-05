@@ -23,26 +23,26 @@ return require('packer').startup({function()
       'TZAtaraxis',
       'TZMinimalist',
     },
---    setup = function()
---      require('plugins/true-zen')
---    end
+    setup = function()
+      require('plugins/true-zen')
+    end
   }
 
   -- This plugin adds indentation guides to all lines (including empty lines).
   use {
     'lukas-reineke/indent-blankline.nvim',
     event = 'BufRead',
---    setup = function()
---      require('plugins/indent-blankline')
---    end
+    setup = function()
+      require('plugins/indent-blankline')
+    end
   }
 
   -- This plugin show trailing whitespace.
   use {
     'ntpeters/vim-better-whitespace',
---    config = function()
---        require('plugins/better-whitespace')
---    end
+    config = function()
+        require('plugins/better-whitespace')
+    end
   }
 
   -- Icons.
@@ -59,9 +59,9 @@ return require('packer').startup({function()
       'NvimTreeFocus',
       'NvimTreeToggle',
     },
---    config = function()
---      require('plugins/nvim-tree')
---    end
+    config = function()
+      require('plugins/nvim-tree')
+    end
   }
 
   -- Snippets
@@ -71,9 +71,9 @@ return require('packer').startup({function()
   use {
     'akinsho/nvim-bufferline.lua',
     after = 'nvim-web-devicons',
---    config  = function()
---      require('plugins/bufferline')
---    end
+    config  = function()
+      require('plugins/bufferline')
+    end
   }
 
   -- DAP
@@ -84,9 +84,9 @@ return require('packer').startup({function()
   use {
     'nvim-lualine/lualine.nvim',
     after = 'nvim-bufferline.lua',
---    config = function ()
---      require('plugins/lualine')
---    end
+    config = function ()
+      require('plugins/lualine')
+    end
   }
 
   -- Lua development
@@ -107,19 +107,19 @@ return require('packer').startup({function()
       'TSUpdate',
       'TSUpdateSync'
     },
---    config = function()
---      require('plugins/treesitter')
---    end
+    config = function()
+      require('plugins/treesitter')
+    end
   }
 
   -- Colorizer (for highlighting color codes).
   use {
     'norcalli/nvim-colorizer.lua',
     event = 'BufRead',
---    config = function()
---      require('plugins/colorize')
---      vim.cmd('ColorizerAttachToBuffer')
---    end
+    config = function()
+      require('plugins/colorize')
+      vim.cmd('ColorizerAttachToBuffer')
+    end
   }
 
   -- Vim dispatch
@@ -138,9 +138,9 @@ return require('packer').startup({function()
       'SessionLoad',
       'SessionSave'
     },
---    setup = function()
---        require('plugins/dashboard')
---    end
+    setup = function()
+        require('plugins/dashboard')
+    end
   }
 
   -- Fuzzy finder and it requirments.
@@ -211,9 +211,9 @@ return require('packer').startup({function()
   use {
     'akinsho/nvim-toggleterm.lua',
     cmd = 'ToggleTerm',
---    setup = function()
---      require('plugins/toggleterm')
---    end
+    setup = function()
+      require('plugins/toggleterm')
+    end
   }
 
   -- Git support for nvim.
@@ -226,18 +226,18 @@ return require('packer').startup({function()
   use {
     'lewis6991/gitsigns.nvim',
     event = 'BufRead',
---    config = function()
---      require('gitsigns').setup()
---    end
+    config = function()
+      require('gitsigns').setup()
+    end
   }
 
   -- Auto closes.
   use {
     'windwp/nvim-autopairs',
     event = 'BufRead',
---    config = function()
---      require('nvim-autopairs').setup{}
---    end
+    config = function()
+      require('nvim-autopairs').setup{}
+    end
   }
   -- This is for html and it can autorename too!
   use {
@@ -249,27 +249,27 @@ return require('packer').startup({function()
   use {
     'dstein64/nvim-scrollview',
     event = 'BufRead',
---    config = function()
---      require('plugins/nvim-scroll')
---    end
+    config = function()
+      require('plugins/nvim-scroll')
+    end
   }
 
   -- Smooth scroll.
   use {
     'karb94/neoscroll.nvim',
     event = 'BufRead',
---    config = function()
---      require('neoscroll').setup()
---    end
+    config = function()
+      require('neoscroll').setup()
+    end
   }
   -- todo-comments is a lua plugin for Neovim to highlight and search for
   -- todo comments like TODO, HACK, BUG in code base.
   use {
     'folke/todo-comments.nvim',
     event = 'BufEnter',
---    config = function()
---      require('plugins/todo-comments')
---    end
+    config = function()
+      require('plugins/todo-comments')
+    end
   }
 
   -- WhichKey is a lua plugin that displays a popup with possible
@@ -281,9 +281,9 @@ return require('packer').startup({function()
   use {
     'jghauser/mkdir.nvim',
     cmd = 'new',
---    config = function()
---      require('mkdir')
---    end
+    config = function()
+      require('mkdir')
+    end
   }
 
   -- Neovim plugin to comment text in and out.
@@ -291,9 +291,9 @@ return require('packer').startup({function()
   use {
     'terrortylor/nvim-comment',
     cmd = 'CommentToggle',
---    config = function()
---      require('nvim_comment').setup()
---    end
+    config = function()
+      require('nvim_comment').setup()
+    end
   }
 
   -- match-up is a plugin that lets you highlight, navigate, and operate on sets of matching text.
