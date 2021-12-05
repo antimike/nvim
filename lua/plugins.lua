@@ -14,6 +14,22 @@ return require('packer').startup({function()
   use { 'navarasu/onedark.nvim' }
   use { 'wuelnerdotexe/vim-enfocado' }
 
+  -- Fuzzy finder and it requirments.
+  -- TODO: lazy load plenary, popup and telescope-media-files
+  use { 'nvim-lua/plenary.nvim' }
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}},
+  cmd = 'Telescope',
+    config = function()
+      require('plugins/telescope')
+    end
+  }
+  use {
+    'nvim-telescope/telescope-fzf-native.nvim', run = 'make',
+    cmd = 'Telescope'
+  }
+
   -- TrueZen.nvim is a Neovim plugin that aims to provide a cleaner and less cluttered interface
   -- when toggled in either of it's three different modes (Ataraxis, Minimalist and Focus).
   use {
@@ -143,21 +159,6 @@ return require('packer').startup({function()
     end
   }
 
-  -- Fuzzy finder and it requirments.
-  -- TODO: lazy load plenary, popup and telescope-media-files
-  use { 'nvim-lua/plenary.nvim' }
-  use {
-    'nvim-telescope/telescope.nvim',
-    requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}},
-    cmd = 'Telescope',
---    config = function()
---      require('plugins/telescope')
---    end
-  }
-  use {
-    'nvim-telescope/telescope-fzf-native.nvim', run = 'make',
-    cmd = 'Telescope'
-  }
 
   -- LSP, LSP installer and tab completion.
   use { 'nvim-lua/completion-nvim' }
