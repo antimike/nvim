@@ -13,8 +13,8 @@ utils.map('n', '<leader>fl', '<cmd>Telescope git_files<CR>')
 -- DAP keybindings
 -- TODO: Refactor into dedicated submodule
 
-require('telescope').load_extension('dap')
-require('dbg.python')
+--require('telescope').load_extension('dap')
+--require('dbg.python')
 
 utils.map('n', '<leader>dc', '<cmd>lua require"dap".continue()<CR>') 
 utils.map('n', '<leader>dsv', '<cmd>lua require"dap".step_over()<CR>') 
