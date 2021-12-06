@@ -4,6 +4,9 @@ vim.g.mapleader = ' '
 local fn = vim.fn
 local execute = vim.api.nvim_command
 
+-- Install plugins
+require('plugins')
+
 -- Sensible defaults
 require('settings')
 
@@ -14,9 +17,6 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 vim.cmd [[packadd packer.nvim]]
 vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile' -- Auto compile when there are changes in plugins.lua
-
--- Install plugins
-require('plugins')
 
 -- Key mappings
 require('keymaps')
