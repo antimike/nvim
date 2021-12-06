@@ -1,4 +1,5 @@
 require('config.colorscheme')
-require('config.completion')
-require('config.fugitive')
-
+require('config.keymaps')
+require('config.lang')
+require('config.sensible')
+require('config.theme')
