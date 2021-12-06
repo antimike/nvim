@@ -20,7 +20,7 @@ return require('packer').startup({function()
     'norcalli/nvim-colorizer.lua',
     event = 'BufRead',
     config = function()
-      require('plugins/colorize')
+      require('config.plugins.colorize')
       vim.cmd('ColorizerAttachToBuffer')
     end
   }
@@ -30,7 +30,7 @@ return require('packer').startup({function()
     'dstein64/nvim-scrollview',
     event = 'BufRead',
     config = function()
-      require('plugins/nvim-scroll')
+      require('config.plugins.nvim-scroll')
     end
   }
 
@@ -54,7 +54,7 @@ return require('packer').startup({function()
     'akinsho/nvim-bufferline.lua',
     after = 'nvim-web-devicons',
     config  = function()
-      require('plugins/bufferline')
+      require('config.plugins.bufferline')
     end
   }
 
@@ -63,7 +63,7 @@ return require('packer').startup({function()
     'nvim-lualine/lualine.nvim',
     after = 'nvim-bufferline.lua',
     config = function ()
-      require('plugins/lualine')
+      require('config.plugins.lualine')
     end
   }
 
@@ -76,7 +76,7 @@ return require('packer').startup({function()
     requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}},
 --  cmd = 'Telescope',
     config = function()
-      require('plugins/telescope')
+      require('config.plugins.telescope')
     end
   }
   use {
@@ -96,7 +96,7 @@ return require('packer').startup({function()
       'NvimTreeToggle',
     },
     config = function()
-      require('plugins/nvim-tree')
+      require('config.plugins.nvim-tree')
     end
   }
 
@@ -107,7 +107,7 @@ return require('packer').startup({function()
     'lukas-reineke/indent-blankline.nvim',
     event = 'BufRead',
     setup = function()
-      require('plugins/indent-blankline')
+      require('config.plugins.indent-blankline')
     end
   }
 
@@ -115,7 +115,7 @@ return require('packer').startup({function()
   use {
     'ntpeters/vim-better-whitespace',
     config = function()
-        require('plugins/better-whitespace')
+        require('config.plugins.better-whitespace')
     end
   }
 
@@ -149,13 +149,17 @@ return require('packer').startup({function()
     'folke/todo-comments.nvim',
     event = 'BufEnter',
     config = function()
-      require('plugins/todo-comments')
+      require('config.plugins.todo-comments')
     end
   }
 
   -- Snippets
   use { 'honza/vim-snippets' }
   use { 'SirVer/ultisnips' }
+  use {
+     'rafamadriz/friendly-snippets',
+     event = 'InsertEnter'
+  }
 
   -- DAP
   use { 'mfussenegger/nvim-dap' }
@@ -172,7 +176,7 @@ return require('packer').startup({function()
       'TZMinimalist',
     },
     setup = function()
-      require('plugins/true-zen')
+      require('config.plugins.true-zen')
     end
   }
 
@@ -196,7 +200,7 @@ return require('packer').startup({function()
       'TSUpdateSync'
     },
     config = function()
-      require('plugins/treesitter')
+      require('config.plugins.treesitter')
     end
   }
 
@@ -217,7 +221,7 @@ return require('packer').startup({function()
       'SessionSave'
     },
     setup = function()
-        require('plugins/dashboard')
+        require('config.plugins.dashboard')
     end
   }
 
@@ -226,17 +230,13 @@ return require('packer').startup({function()
   use { 'neovim/nvim-lspconfig' }
   use { 'williamboman/nvim-lsp-installer' }
   use {
-     'rafamadriz/friendly-snippets',
-     event = 'InsertEnter'
-  }
-  use {
     'hrsh7th/nvim-cmp',
     after = "friendly-snippets",
     requires = {
       'hrsh7th/cmp-nvim-lsp'
     },
     config = function()
-      require('plugins/cmp')
+      require('config.plugins.cmp')
     end
   }
   use {
@@ -282,7 +282,7 @@ return require('packer').startup({function()
     'akinsho/nvim-toggleterm.lua',
     cmd = 'ToggleTerm',
     setup = function()
-      require('plugins/toggleterm')
+      require('config.plugins.toggleterm')
     end
   }
 
