@@ -2,11 +2,12 @@ local use = require('packer').use
 
 return require('packer').startup({function()
   use { 'wbthomason/packer.nvim' }
-  -- Color scheme
-  use { 'sainnhe/gruvbox-material' }
-  use { 'sainnhe/edge' }
+
+  ------------------------ EYE CANDY
 
   -- Color schemes.
+  use { 'sainnhe/gruvbox-material' }
+  use { 'sainnhe/edge' }
   use { 'folke/tokyonight.nvim' }
   use { 'bluz71/vim-nightfly-guicolors' }
   use { 'bluz71/vim-moonfly-colors' }
@@ -14,35 +15,92 @@ return require('packer').startup({function()
   use { 'navarasu/onedark.nvim' }
   use { 'wuelnerdotexe/vim-enfocado' }
 
+  -- Colorizer (for highlighting color codes).
+  use {
+    'norcalli/nvim-colorizer.lua',
+    event = 'BufRead',
+    config = function()
+      require('plugins/colorize')
+      vim.cmd('ColorizerAttachToBuffer')
+    end
+  }
+
+  -- Scrollbar.
+  use {
+    'dstein64/nvim-scrollview',
+    event = 'BufRead',
+    config = function()
+      require('plugins/nvim-scroll')
+    end
+  }
+
+  -- Smooth scroll.
+  use {
+    'karb94/neoscroll.nvim',
+    event = 'BufRead',
+    config = function()
+      require('neoscroll').setup()
+    end
+  }
+
+  -- Icons.
+  use {
+    'kyazdani42/nvim-web-devicons',
+    event = 'BufEnter'
+  }
+
+  -- Bufferline.
+  use {
+    'akinsho/nvim-bufferline.lua',
+    after = 'nvim-web-devicons',
+    config  = function()
+      require('plugins/bufferline')
+    end
+  }
+
+  -- Statusline.
+  use {
+    'nvim-lualine/lualine.nvim',
+    after = 'nvim-bufferline.lua',
+    config = function ()
+      require('plugins/lualine')
+    end
+  }
+
+  ------------------------ SEARCH AND NAVIGATION
+
   -- Fuzzy finder and it requirments.
-  -- TODO: lazy load plenary, popup and telescope-media-files
   use { 'nvim-lua/plenary.nvim' }
   use {
     'nvim-telescope/telescope.nvim',
     requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}},
-  cmd = 'Telescope',
+--  cmd = 'Telescope',
     config = function()
       require('plugins/telescope')
     end
   }
   use {
     'nvim-telescope/telescope-fzf-native.nvim', run = 'make',
-    cmd = 'Telescope'
+--    cmd = 'Telescope'
   }
+--  use {
+--      'nvim-telescope/telescope.nvim'
+--  }
 
-  -- TrueZen.nvim is a Neovim plugin that aims to provide a cleaner and less cluttered interface
-  -- when toggled in either of it's three different modes (Ataraxis, Minimalist and Focus).
+  -- File explorer tree.
   use {
-    'Pocco81/TrueZen.nvim',
+    'kyazdani42/nvim-tree.lua',
     cmd = {
-      'TZFocus',
-      'TZAtaraxis',
-      'TZMinimalist',
+      'NvimTreeOpen',
+      'NvimTreeFocus',
+      'NvimTreeToggle',
     },
-    setup = function()
-      require('plugins/true-zen')
+    config = function()
+      require('plugins/nvim-tree')
     end
   }
+
+  ------------------------ TEXT STYLING
 
   -- This plugin adds indentation guides to all lines (including empty lines).
   use {
@@ -61,52 +119,66 @@ return require('packer').startup({function()
     end
   }
 
-  -- Icons.
+  -- Auto closes.
   use {
-    'kyazdani42/nvim-web-devicons',
-    event = 'BufEnter'
+    'windwp/nvim-autopairs',
+    event = 'BufRead',
+    config = function()
+      require('nvim-autopairs').setup{}
+    end
   }
 
-  -- File explorer tree.
+  -- match-up is a plugin that lets you highlight, navigate, and operate on sets of matching text.
+  use { 'andymass/vim-matchup' }
+
+  ------------------------ IDE / LANGUAGES
+
+  -- Neovim plugin to comment text in and out.
+  -- Supports commenting out the current line, a visual selection and a motion.
   use {
-    'kyazdani42/nvim-tree.lua',
-    cmd = {
-      'NvimTreeOpen',
-      'NvimTreeFocus',
-      'NvimTreeToggle',
-    },
+    'terrortylor/nvim-comment',
+    cmd = 'CommentToggle',
     config = function()
-      require('plugins/nvim-tree')
+      require('nvim_comment').setup()
+    end
+  }
+
+  -- todo-comments is a lua plugin for Neovim to highlight and search for
+  -- todo comments like TODO, HACK, BUG in code base.
+  use {
+    'folke/todo-comments.nvim',
+    event = 'BufEnter',
+    config = function()
+      require('plugins/todo-comments')
     end
   }
 
   -- Snippets
   use { 'honza/vim-snippets' }
   use { 'SirVer/ultisnips' }
-  -- Bufferline.
-  use {
-    'akinsho/nvim-bufferline.lua',
-    after = 'nvim-web-devicons',
-    config  = function()
-      require('plugins/bufferline')
-    end
-  }
 
   -- DAP
   use { 'mfussenegger/nvim-dap' }
   use { 'nvim-telescope/telescope-dap.nvim' }
   use { 'mfussenegger/nvim-dap-python' } -- Python
-  -- Statusline.
+
+  -- TrueZen.nvim is a Neovim plugin that aims to provide a cleaner and less cluttered interface
+  -- when toggled in either of it's three different modes (Ataraxis, Minimalist and Focus).
   use {
-    'nvim-lualine/lualine.nvim',
-    after = 'nvim-bufferline.lua',
-    config = function ()
-      require('plugins/lualine')
+    'Pocco81/TrueZen.nvim',
+    cmd = {
+      'TZFocus',
+      'TZAtaraxis',
+      'TZMinimalist',
+    },
+    setup = function()
+      require('plugins/true-zen')
     end
   }
 
   -- Lua development
   use { 'tjdevries/nlua.nvim' }
+
   -- TreeSitter.
   use {
     'nvim-treesitter/nvim-treesitter',
@@ -125,16 +197,6 @@ return require('packer').startup({function()
     },
     config = function()
       require('plugins/treesitter')
-    end
-  }
-
-  -- Colorizer (for highlighting color codes).
-  use {
-    'norcalli/nvim-colorizer.lua',
-    event = 'BufRead',
-    config = function()
-      require('plugins/colorize')
-      vim.cmd('ColorizerAttachToBuffer')
     end
   }
 
@@ -158,7 +220,6 @@ return require('packer').startup({function()
         require('plugins/dashboard')
     end
   }
-
 
   -- LSP, LSP installer and tab completion.
   use { 'nvim-lua/completion-nvim' }
@@ -208,6 +269,14 @@ return require('packer').startup({function()
   -- View and search LSP symbols, tags in Neovim.
   use { 'liuchengxu/vista.vim', cmd = 'Vista' }
 
+  -- This is for html and it can autorename too!
+  use {
+    'windwp/nvim-ts-autotag',
+    after = 'nvim-treesitter',
+  }
+
+  ------------------------ TERMINAL / REPL / EXTERNAL TOOLS
+
   -- Terminal.
   use {
     'akinsho/nvim-toggleterm.lua',
@@ -232,45 +301,12 @@ return require('packer').startup({function()
     end
   }
 
-  -- Auto closes.
-  use {
-    'windwp/nvim-autopairs',
-    event = 'BufRead',
-    config = function()
-      require('nvim-autopairs').setup{}
-    end
-  }
-  -- This is for html and it can autorename too!
-  use {
-    'windwp/nvim-ts-autotag',
-    after = 'nvim-treesitter',
-  }
+  ------------------------ VIM
 
-  -- Scrollbar.
+  -- With this plugin you can resize Neovim buffers easily.
   use {
-    'dstein64/nvim-scrollview',
-    event = 'BufRead',
-    config = function()
-      require('plugins/nvim-scroll')
-    end
-  }
-
-  -- Smooth scroll.
-  use {
-    'karb94/neoscroll.nvim',
-    event = 'BufRead',
-    config = function()
-      require('neoscroll').setup()
-    end
-  }
-  -- todo-comments is a lua plugin for Neovim to highlight and search for
-  -- todo comments like TODO, HACK, BUG in code base.
-  use {
-    'folke/todo-comments.nvim',
-    event = 'BufEnter',
-    config = function()
-      require('plugins/todo-comments')
-    end
+    'artart222/vim-resize',
+    event = 'BufEnter'
   }
 
   -- WhichKey is a lua plugin that displays a popup with possible
@@ -285,25 +321,6 @@ return require('packer').startup({function()
     config = function()
       require('mkdir')
     end
-  }
-
-  -- Neovim plugin to comment text in and out.
-  -- Supports commenting out the current line, a visual selection and a motion.
-  use {
-    'terrortylor/nvim-comment',
-    cmd = 'CommentToggle',
-    config = function()
-      require('nvim_comment').setup()
-    end
-  }
-
-  -- match-up is a plugin that lets you highlight, navigate, and operate on sets of matching text.
-  use { 'andymass/vim-matchup' }
-
-  -- With this plugin you can resize Neovim buffers easily.
-  use {
-    'artart222/vim-resize',
-    event = 'BufEnter'
   }
 
   -- Import settings of plugins or start plugins.
