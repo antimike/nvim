@@ -1,5 +1,2 @@
-require('config.colorscheme')
-require('config.keymaps')
-require('config.lang')
 require('config.sensible')
-require('config.theme')
+return require('config.plugins')
