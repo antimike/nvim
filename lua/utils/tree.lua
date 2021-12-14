@@ -38,17 +38,17 @@ function private._fmt_val(val)
 end
 
 pkg.leaves = function (tab)
-    local function generator()
-        local curr = tab
+    local function generator(t)
+        local curr = t
         for k,v in pairs(curr) do
             if type(v) ~= "table" then
                 coroutine.yield(k,v)
             else
-                pkg.leaves(v)
+                generator(v)
             end
         end
     end
-    return coroutine.wrap(generator)
+    return coroutine.wrap(function () generator(tab) end)
 end
 
 function pkg.print(x)
