@@ -63,6 +63,14 @@ pkg.leaves = function (tab)
     return coroutine.wrap(function () leaves_gen(tab) end)
 end
 
+pkg.print_leaves = function (tab)
+    for val, path in pkg.leaves(tab) do
+        local str = private.fmt_val(val)
+        for _, k in ipairs(path) do
+            str = str .. private.const.is_child_of .. private.fmt_key(k)
+        end
+        print(str)
+    end
 end
 
 function pkg.print(x)
