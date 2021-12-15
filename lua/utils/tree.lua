@@ -4,33 +4,50 @@ local private = {
     const = {
         has_child = " => ",
         is_child_of = " <= ",
+        indent = "  ",
+        delimiter = ",",
     },
-    tbls = {N=0},
+    tbls = {
+        default_next = coroutine.wrap(function()
+            local N = 0
+            while true do
+                N = N + 1
+                coroutine.yield("T" .. N)
+            end
+        end),
+    },
 }
 
 -- Naming convention used by cache table and print/format fns
-function private.get_tableref_name(tab)
-    return "<T" .. private.tbls[tab] .. ">"
+function private.fmt_tableref_name(tab)
+    local name = tab
+    if type(name) == "table" then
+        name = private.cache_tableref(name)
+    end
+    return "<" .. name .. ">"
 end
 
-function private.cache_tableref(tab)
+function private.cache_tableref(tab, name)
     assert(type(tab) == "table")
-    if not private.tbls[tab] then
-        private.tbls.N = private.tbls.N + 1
-        private.tbls[tab] = private.tbls.N
+    if name or not private.tbls[tab] then
+        name = name or private.tbls.default_next()
+        assert(type(name) ~= "table", "Tree names must be scalar types")
+        assert(not private.tbls[name], "Tree '" .. name .. "' already exists in the cache!")
+        private.tbls[tab] = name
+        private.tbls[name] = tab
     end
+    return private.tbls[tab]
 end
 
 private.indent = function(str)
-    return string.gsub(str, "\n", "\n" .. "  ")
+    return string.gsub(str, "\n", "\n" .. private.const.indent)
 end
 
 function private.fmt_key(key)
     if not (type(key) == "table") then
         return "[" .. private.fmt_val(key) .. "]"
     else
-        private.cache_tableref(key)
-        return private.get_tableref_name(key)
+        return private.fmt_tableref_name(key)
     end
 end
 
@@ -39,12 +56,14 @@ function private.fmt_val(val)
     if _t == "string" then
         return string.format("%q", val)
     elseif _t == "table" then
-        private.cache_tableref(val)
-        local lines = {}
+        local open, close, elems = private.fmt_tableref_name(val) .. ":" .. "{", "}", ""
         for k,v in pairs(val) do
-            table.insert(lines, private.fmt_key(k) .. private.const.has_child .. private.indent(private.fmt_val(v)))
+            elems = elems .. "\n" .. private.const.indent .. private.fmt_key(k) .. private.const.has_child .. private.indent(private.fmt_val(v)) .. private.const.delimiter
         end
-        return "{\n  " .. table.concat(lines, ",\n  ") .. "\n}"
+        if string.sub(elems, -1) == private.const.delimiter then
+            elems = elems .. "\n"
+        end
+        return open .. elems .. close
     elseif _t == "number" then
         return val
     end
