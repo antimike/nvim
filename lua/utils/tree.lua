@@ -104,5 +104,52 @@ function pkg.print(x)
     print(private.fmt_val(x))
 end
 
+function pkg.new(tab, name, meta)   -- meta arg allows passing other metamethods besides __index
+    assert(type(tab) == "table")
+    meta = meta or {}
+    meta.__index = pkg
+    setmetatable(tab, meta)
+    private.cache_tableref(tab, name)
+    return tab
+end
+
+function pkg.touch_leaf(self, ...)
+    local path = {...}
+    local root = self
+    for i=1,#path do
+        local child = path[i]
+        root[child] = root[child] or {}
+        root = root[child]
+    end
+    return root
+end
+
+function pkg.touch_leaf_reverse(self, ...)
+    local path = {...}
+    local root = self
+    for i=#path,1,-1 do
+        local child = path[i]
+        root[child] = root[child] or {}
+        root = root[child]
+    end
+    return root
+end
+
+function pkg.insert(self, val, ...)
+    local node = self:touch_leaf(...)
+    node[val] = {}
+    return node[val]
+end
+
+function pkg.insert_reverse(self, val, ...)
+    local node = self:touch_leaf_reverse(...)
+    node[val] = {}
+    return node[val]
+end
+
+function pkg.index_with(self, idx_name, idx)
+    error("Not implemented")
+end
+
 pkg.private = private
 return pkg
