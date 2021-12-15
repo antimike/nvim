@@ -69,6 +69,14 @@ function private.fmt_val(val)
     end
 end
 
+function pkg.name(tab)
+    return private.tbls[tab]
+end
+
+function pkg.get(name)
+    return private.tbls[name]
+end
+
 pkg.leaves = function (tab)
     local function leaves_gen(t, ...)
         for k,v in pairs(t) do
