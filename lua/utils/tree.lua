@@ -1,35 +1,48 @@
 local pkg = {}
 
 local private = {
-    const = { eq = " => " },
+    const = {
+        has_child = " => ",
+        is_child_of = " <= ",
+    },
     tbls = {N=0},
 }
-function private.cache_table(tab)
+
+-- Naming convention used by cache table and print/format fns
+function private.get_tableref_name(tab)
+    return "<T" .. private.tbls[tab] .. ">"
+end
+
+function private.cache_tableref(tab)
     assert(type(tab) == "table")
-    if not private.tbls[tab] then private.tbls.N = private.tbls.N + 1
-        private.tbls[tab] = "<T" .. private.tbls.N .. ">"
+    if not private.tbls[tab] then
+        private.tbls.N = private.tbls.N + 1
+        private.tbls[tab] = private.tbls.N
     end
 end
-private._indent = function(str)
+
+private.indent = function(str)
     return string.gsub(str, "\n", "\n" .. "  ")
 end
-function private._fmt_key(key)
+
+function private.fmt_key(key)
     if not (type(key) == "table") then
-        return "[" .. private._fmt_val(key) .. "]"
+        return "[" .. private.fmt_val(key) .. "]"
     else
-        private.cache_table(key)
-        return private.tbls[key]
+        private.cache_tableref(key)
+        return private.get_tableref_name(key)
     end
 end
-function private._fmt_val(val)
+
+function private.fmt_val(val)
     local _t = type(val)
     if _t == "string" then
         return string.format("%q", val)
     elseif _t == "table" then
-        private.cache_table(val)
+        private.cache_tableref(val)
         local lines = {}
         for k,v in pairs(val) do
-            table.insert(lines, private._fmt_key(k) .. private.const.eq .. private._indent(private._fmt_val(v)))
+            table.insert(lines, private.fmt_key(k) .. private.const.has_child .. private.indent(private.fmt_val(v)))
         end
         return "{\n  " .. table.concat(lines, ",\n  ") .. "\n}"
     elseif _t == "number" then
@@ -53,7 +66,8 @@ end
 end
 
 function pkg.print(x)
-    print(private._fmt_val(x))
+    print(private.fmt_val(x))
 end
+
 pkg.private = private
 return pkg
