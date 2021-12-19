@@ -58,4 +58,22 @@ function pkg.foreach(func, iter, state, init)
     end
 end
 
+function gen.zip_ipairs_iter(lists, idx)
+    idx = idx + 1
+    local ret, vals, val = false, {}, nil
+    for _,l in ipairs(lists) do
+        val = l[idx]
+        ret = ret or val
+        table.insert(vals, val)
+    end
+    if ret then
+        return idx, table.unpack(vals)
+    end
+end
+
+function pkg.zip_ipairs(...)
+    local args = {...}
+    return gen.zip_ipairs, args, 0
+end
+
 return pkg
