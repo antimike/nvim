@@ -25,4 +25,10 @@ function utils.concat(...)
     return ret
 end
 
+-- Convenience function to produce a valid vim command from a fully-qualified Lua function name
+function utils.make_vim_cmd(lua_fncname)
+    local mod, fnc = lua_fncname:match'^(.*)%.([^%.]+)$'
+    return ":lua require" .. "'" .. mod .. "'" .. "." .. fnc .. "()"
+end
+
 return utils
