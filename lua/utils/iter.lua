@@ -1,7 +1,12 @@
 local sort = require("util.sort")
-local pkg = {}
-local priv = {}
-local gen = {}
+local pkg = {
+    heap = {},
+    tree = {}
+}
+local gen = {
+    heap = {},
+    tree = {}
+}
 
 --- Iterate over range (start, stop, step).
 -- If only one arg is provided, it is interpreted as the value of `stop`.
@@ -40,7 +45,7 @@ end
 -- Ugly and (possibly) inefficient; is there a way to improve this or bypass it entirely?
 -- @param iter Iterator function to canonicalize
 -- @return Transformed ("canonicalized") iterator function
-function priv.canonicalize(iter)
+local function canonicalize(iter)
     return function (...)
         local ret = table.pack(iter(...))
         return ret[1], table.pack(table.unpack(ret, 2))
@@ -53,7 +58,7 @@ end
 -- @param state Invariant state to pass to `iter`
 -- @param init Initial control variable to pass to `iter`
 function pkg.foreach(func, iter, state, init)
-    for ctrl, tab in priv.canonicalize(iter), state, init do
+    for ctrl, tab in canonicalize(iter), state, init do
         func(ctrl, table.unpack(tab))
     end
 end
@@ -74,6 +79,20 @@ end
 function pkg.zip_ipairs(...)
     local args = {...}
     return gen.zip_ipairs, args, 0
+end
+
+-- TODO: Refactor to use upvalues instead of coroutines to maintain state?
+function gen.heap.trees(h)
+    local N, idx = h.N, 1
+    while N ~= 0 do
+        coroutine.yield(idx-1, h[idx])
+        N = N >> 1
+        idx = idx + 1
+    end
+end
+
+function pkg.heap.trees(h)
+    return coroutine.wrap(function () gen.heap.trees(h) end)
 end
 
 return pkg
