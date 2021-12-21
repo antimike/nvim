@@ -63,7 +63,7 @@ function pkg.foreach(func, iter, state, init)
     end
 end
 
-function gen.zip_ipairs_iter(lists, idx)
+function gen.zip_ipairs(lists, idx)
     idx = idx + 1
     local ret, vals, val = false, {}, nil
     for _,l in ipairs(lists) do
@@ -76,6 +76,9 @@ function gen.zip_ipairs_iter(lists, idx)
     end
 end
 
+--- Zips passed lists, generating ordered tuples (idx, l1[idx], ...).
+-- @arg ... Lists to zip
+-- @return Ordered tuples (idx, ..., lj[idx], ...) for each value of idx such that at least one of lj[idx] is non-null
 function pkg.zip_ipairs(...)
     local args = {...}
     return gen.zip_ipairs, args, 0
