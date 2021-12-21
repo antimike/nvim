@@ -98,4 +98,14 @@ function pkg.heap.trees(h)
     return coroutine.wrap(function () gen.heap.trees(h) end)
 end
 
+function pkg.reverse_ipairs(tbl)
+    local function wrapped(t, idx)
+        idx = idx - 1
+        if idx > 0 then
+            return idx, t[idx]
+        end
+    end
+    return wrapped, tbl, #tbl+1
+end
+
 return pkg
