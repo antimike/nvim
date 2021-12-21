@@ -40,6 +40,20 @@ function pkg.range(start, stop, step)
     return ret
 end
 
+function pkg.pipe(fn, iter, state, init)
+    local function wrapped(s, c)
+        local val = iter(s, c)
+        if val then
+            return fn(val)
+        end
+    end
+    return wrapped, state, init
+end
+
+function pkg.tablerange(tab, start, stop, step)
+    return pkg.pipe(function (k) return k, tab[k] end, pkg.range(start, stop, step))
+end
+
 --- Transforms an iterator to return (at most) two values.
 -- Uses table packing and unpacking to transformm the passed iterator into one which always returns a control variable and a (possibly empty) table of other return values
 -- Ugly and (possibly) inefficient; is there a way to improve this or bypass it entirely?
