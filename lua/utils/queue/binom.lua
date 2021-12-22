@@ -37,6 +37,21 @@ function pkg.insert(h, elem)
     priv.add_tree(h, h.factory(elem))
 end
 
+function pkg.next(h)
+    local max_subtree = h.max
+    h[#max_subtree+1] = nil
+    h.max = nil
+    h.N = h.N - (1 << #max_subtree)
+    for _, t in ipairs(max_subtree) do
+        priv.add_tree(h, t)
+    end
+    return max_subtree[0]
+end
+
+function pkg.peek(h)
+    return h.max[0]
+end
+
 function priv.leq(h1, h2)
     if not (h1 and h2) then
         return h2
@@ -71,5 +86,7 @@ priv.mt = {
 }
 
 pkg.trees = iter.heap.trees_nonempty
+pkg.pop = pkg.next
+pkg.push = pkg.insert
 
 return pkg
