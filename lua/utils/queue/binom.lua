@@ -1,27 +1,7 @@
 local iter = require("utils.queue.iter")
 local tree = require("utils.queue.binom_tree")
 local pkg = {}
-
-local mt = {
-    __index = pkg,
-    __add = pkg.merge,
-    __concat = pkg.merge,
-    __le = function (h1, h2)
-        if not (h1 and h2) then
-            return h2
-        elseif not (h1.max and h2.max) then
-            return h2.max
-        else
-            return h1.max <= h2.max
-        end
-    end,
-    __ipairs = iter.heap.trees,
-    __tostring = function (h)
-        for t in h:trees() do
-            t:print()
-        end
-    end
-}
+local priv = {}
 
 function pkg.new(leq)
     local ret = {
@@ -29,11 +9,11 @@ function pkg.new(leq)
         max = nil,
         N = 0,
     }
-    setmetatable(ret, mt)
+    setmetatable(ret, priv.mt)
     return ret
 end
 
-function pkg.add_tree(h, t)
+function priv.add_tree(h, t)
     local idx = -2      -- Has to be -2 to avoid overwriting h[0] in edge case t == nil
     h.N = h.N + (1 << #t)
     while t and #t > idx do
@@ -54,7 +34,42 @@ function pkg.merge(h1, h2)
 end
 
 function pkg.insert(h, elem)
-    h:add_tree(h.factory(elem))
+    priv.add_tree(h, h.factory(elem))
 end
+
+function priv.leq(h1, h2)
+    if not (h1 and h2) then
+        return h2
+    elseif not (h1.max and h2.max) then
+        return h2.max
+    else
+        return h1.max <= h2.max
+    end
+end
+
+function priv.tostring(h)
+    local ret = ""
+    for ord, t in iter.heap.trees_all(h) do
+        ret = ret .. "\nOrder " .. ord .. ":"
+        if t then
+            ret = ret .. "\n" .. t:format("  ")
+        else
+            ret = ret .. " Empty"
+        end
+    end
+    return ret
+end
+
+priv.mt = {
+    __index = pkg,
+    __add = pkg.merge,
+    __concat = pkg.merge,
+    __le = priv.leq,
+    __ipairs = iter.heap.trees_nonempty,
+    __tostring = priv.tostring,
+    __len = function(h) return h.N end
+}
+
+pkg.trees = iter.heap.trees_nonempty
 
 return pkg
