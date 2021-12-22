@@ -28,8 +28,8 @@ function priv.add_tree(h, t)
 end
 
 function pkg.merge(h1, h2)
-    for t in h2:trees() do
-        h1:add_tree(t)
+    for _, t in ipairs(h2) do
+        priv.add_tree(h1, t)
     end
 end
 
