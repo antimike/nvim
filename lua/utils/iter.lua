@@ -98,28 +98,50 @@ function pkg.zip_ipairs(...)
     return gen.zip_ipairs, args, 0
 end
 
--- TODO: Refactor to use upvalues instead of coroutines to maintain state?
-function gen.heap.trees(h)
-    local N, idx = h.N, 1
-    while N ~= 0 do
-        coroutine.yield(idx-1, h[idx])
-        N = N >> 1
-        idx = idx + 1
+function gen.heap.trees(h, all)
+    local curr, shift = #h, 0
+    local function gen_nonempty()
+        if curr ~= 0 then
+            while curr % 2 == 0 do
+                curr = curr >> 1
+                shift = shift + 1
+            end
+            curr = curr >> 1
+            shift = shift + 1
+            return shift-1, h[shift]
+        end
+    end
+    local function gen_all()
+        if curr ~= 0 then
+            shift = shift + 1
+            curr = curr >> 1
+            return shift-1, h[shift]
+        end
+    end
+    if all then
+        return gen_all
+    else
+        return gen_nonempty
     end
 end
 
-function pkg.heap.trees(h)
-    return coroutine.wrap(function () gen.heap.trees(h) end)
+function pkg.heap.trees_all(h)
+    return gen.heap.trees(h, true)
+end
+
+function pkg.heap.trees_nonempty(h)
+    return gen.heap.trees(h, false)
+end
+
+function gen.reverse_ipairs(tbl, idx)
+    idx = idx - 1
+    if idx > 0 then
+        return idx, tbl[idx]
+    end
 end
 
 function pkg.reverse_ipairs(tbl)
-    local function wrapped(t, idx)
-        idx = idx - 1
-        if idx > 0 then
-            return idx, t[idx]
-        end
-    end
-    return wrapped, tbl, #tbl+1
+    return gen.reverse_ipairs, tbl, #tbl+1
 end
 
 return pkg
