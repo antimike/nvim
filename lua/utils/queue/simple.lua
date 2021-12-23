@@ -1,77 +1,62 @@
 local pkg = {}
 local priv = {}
 
-function priv.elems_gen(state, ctrl)
-    ctrl = ctrl + 1
-    if ctrl <= state.max then
-        while not state[ctrl] and ctrl < state.max do
-            ctrl = ctrl + 1
-        end
-        return ctrl, state[ctrl]
-    end
-end
-
-function priv.elems(q)
-    local min = q.min or 0
-    return priv.elems_gen, q, (min - 1)
-end
-
 function priv.tostring(q)
     local ret = {}
-    for pri, elem in ipairs(q) do
-        table.insert(ret, pri .. ": " .. tostring(elem))
+    for _, elem in ipairs(q) do
+        table.insert(ret, q.pri[elem] .. ": " .. tostring(elem))
     end
     return table.concat(ret, "\n")
 end
 
-priv.mt = {
+function priv.sort(q)
+    table.sort(q.elems, function (a, b) return q.pri[a] < q.pri[b] end)
+end
+
+function priv.get(q, idx)
+    return q.elems[idx]
+end
+
+function priv.set(q, pri, elem)
+    pri = pri or q.pri[q.elems[#q]] + 1
+    q.pri[elem] = pri
+    table.insert(q.elems, elem)
+    priv.sort(q)
+end
+
+function priv.pop(q)
+    if #q > 0 then
+        local ret = table.remove(q.elems, 1)
+        q.pri[ret] = nil
+        return ret
+    end
+end
+
+priv.root_mt = {
     __index = pkg,
-    __ipairs = priv.elems,
-    __len = function (q) return q.N end,
-    __tostring = priv.tostring
 }
 
 function pkg.new()
-    local ret = {}
-    ret.N = 0
-    ret.min = nil
-    ret.max = nil
-    setmetatable(ret, priv.mt)
+    local ret = { elems = {}, pri = {}, }
+    local mt = {
+        __index = ret.elems,
+        __newindex = priv.set,
+        __tostring = priv.tostring,
+        __len = function (q) return #q.elems end,
+    }
+    setmetatable(ret, mt)
+    setmetatable(ret.elems, priv.root_mt)
     return ret
 end
 
-function pkg.insert(q, elem, pri)
-    pri = pri or 1
-    if q[pri] then
-        table.insert(q, pri, elem)
-        q.max = q.max + 1
-    else
-        q[pri] = elem
-    end
-    if not q.max or pri > q.max then
-        q.max = pri
-    end
-    if not q.min or pri < q.min then
-        q.min = pri
-    end
-    q.N = q.N + 1
-end
-
 function pkg.next(q)
-    if #q > 0 then
-        local pri, ret = q.min, q[q.min]
-        q[pri] = nil
-        while q[q.min] == nil and q.min < q.max do
-            q.min = q.min + 1
-        end
-        q.N = q.N - 1
-        return ret, pri
-    end
+    return priv.pop(q)
 end
 
 function pkg.peek(q)
-    return q[q.min]
+    return q.elems[1]
 end
 
-pkg.priv = priv
+pkg.pop = pkg.next
+
 return pkg
