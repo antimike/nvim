@@ -1,4 +1,4 @@
-local sort = require("util.sort")
+local sort = require("utils.sort")
 local pkg = {
     heap = {},
     tree = {}
@@ -64,6 +64,48 @@ local function canonicalize(iter)
         local ret = table.pack(iter(...))
         return ret[1], table.pack(table.unpack(ret, 2))
     end
+end
+
+--- Packs an iterator's return values into tables.
+-- Transforms the passed iterator triplet (fn, state, init) into a nullary closure which maintains iterator state via upvalues and returns a single table containing all return values of the original iterator.
+-- After the iterator is exhausted (i.e., returns nil, ...), it is "reset" so that it can be called again without error.
+-- @param fn Generator function (first of iterator triplet)
+-- @param state Invariant state (second of iterator triplet)
+-- @param init Initial value of control variable (third of iterator triplet)
+-- @return Nullary iterator function (i.e., state == ctrl == null)
+function pkg.pack(fn, state, init)
+    local vals = {init}
+    return function ()
+        vals = {fn(state, vals[1])}
+        if vals[1] then
+            return vals
+        else
+            vals = {init}
+        end
+    end
+end
+
+--- Applies standard Lua select function to iterator outputs.
+-- Interposes a call to select() with the supplied index before the values returned by the passed iterator triplet are returned to the caller.
+-- @param idx Index to pass to select
+-- @param fn Generator function (first of iterator triplet)
+-- @param ... Remainder of iterator triplet (state and control variable)
+-- @return New iterator triplet with the same state and control variables as the original but with generator composed with select
+function pkg.select(idx, fn, inv_state, init)
+    local curr = init
+    local function restricted(state)
+        local ret = table.pack(fn(state, curr))
+        curr = ret[1]
+        if curr then
+            -- Use field ret[n] provided by table.pack
+            -- This ensures that nil return values don't cut off subsequent values
+            return table.unpack(ret, idx, ret.n)
+        else
+            -- "Reset" iterator for future use
+            curr = init
+        end
+    end
+    return restricted, inv_state
 end
 
 --- Call a function for each value returned by iterator.
