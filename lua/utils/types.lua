@@ -1,109 +1,62 @@
 -- TODO: Implement virtual inheritance (i.e., "common base class")---virtual ancestors can only appear once in a descendant's ancestor hierarchy
-function get_metafield(obj, name)
+local func = require("utils.func")
+local priv = {}
+
+local metafields = {}
+
+-- @param obj Object whose metafield should be fetched
+-- @param name Name of metafield
+-- @return Value of metatable[name]
+function priv.get_metafield(obj, name)
     local mt = getmetatable(obj)
     return mt and rawget(mt, name)
 end
 
-function define_metafield(env, name, default, metaname)
-    metaname = metaname or "__" .. name
-    local accessor = rawget(env, name)
-    if accessor then
-        local backup_name = "raw" .. name
-        while rawget(env, backup_name) do
-            backup_name = "_" .. backup_name
-        end
-        rawset(env, backup_name, accessor)
-    end
-    local function new_accessor(obj)
-        if obj then
-            return get_metafield(obj, metaname) or (accessor and accessor(obj)) or default
-        else
-            return nil
-        end
-    end
-    rawset(env, name, new_accessor)
+--- Setup object to inherit ancestor tables' properties.
+-- @param obj Descendant object (i.e., "inheritor").  If nil, new object is assigned
+-- @param ... Ancestors to inherit from
+-- @return Object with inheritance from specified ancestors
+function priv.inherit_from(obj, ...)
+    obj = obj or {}
+    local mt = getmetatable(obj) or {}
+    mt.__index = func.switch(mt.__index, ...)
+    return setmetatable(obj, mt)
 end
 
-define_metafield(_G, "type", "object")
-define_metafield(_G, "name")
-define_metafield(_G, "super")
-
-function dfs(tree, key, eval)
-    eval = eval or rawget
-    local ret = eval(tree, key)
-    local k, v = next(tree, nil)
-    while ret == nil do
-        ret = dfs(next)
-    end
+--- Ensure an object's metatable is unique and return it.
+-- @param obj Object to create and fetch unique metatable for
+-- @return Unique metatable for obj
+function priv.own_metatable(obj)
+    local mt = getmetatable(obj)
+    mt = mt and priv.inherit_from({}, mt) or {}
+    setmetatable(obj, mt)
+    return mt
 end
 
-function bfs(tree, key, depth)
-    if depth <= 0 then
-        return tree[key]
-    else
-        local k, v = next(tree, nil)
-        while k ~= key do
-            ret = 
+--- Define a metafield access function with behavior similar to `type` on the specified environment.
+-- The created metafield will correspond to a key in each table's metatable.
+-- If env[name] already exists, its original value will be renamed to "raw" .. env[name].
+-- @param env Environment in which to define metafield.  Defaults to _G
+-- @param name Name of metafield accessor function to define (e.g., "type" for __type metafield)
+-- @param default Default value of metafield
+-- @param metaname Key of metatable corresponding to metafield.  Defaults to "__" .. name
+function priv.define_metafield(env, name, default, metaname)
+    env = env or _G
+    if not metafields[env] or not metafields[env][name] then
+        metaname = metaname or "__" .. name
+        local accessor = rawget(env, name)
+        if accessor then
+            local backup_name = "raw" .. name
+            rawset(env, backup_name, rawget(env, backup_name) or accessor)
         end
-    end
-end
-
-Class = {}
-
--- Metatable of "Class" metaclass itself
-local class_mt = {
-    __call = function (cls, obj)
-        obj.__mt = obj.__mt or {
-            __index = obj,
-            __type = obj,
+        metafields[env] = metafields[env] or {}
+        metafields[env][name] = {
+            metaname = metaname,
+            default = default,
+            accessor = func.switch(func.curry(priv.get_metafield, nil, metaname), accessor, {metaname = default})
         }
-        setmetatable(obj.__mt, {__index = cls.__mt})
-        setmetatable(obj, cls.__mt)
-        return obj
-    end,
-    __name = "Class",
-    __type = "class",
-}
-setmetatable(Class, class_mt)
-
--- Metatable assigned to instances
-Class.__mt = {
-    __index = function (obj, key)
-        local curr = obj
-    end,
-    __type = "class",
-    __index = Class,
-    __call = function (cls, obj)
-        setmetatable(obj, cls)
-        return obj
-    end
-}
-
--- Metatable assigned to subclasses
-Class.__sub_mt = {
-    __index = function (sub, key)
-    end
-}
-
--- TODO: Implement (stateless?) iterator over ancestors for a given property / method
-function super(obj, prop)
-    local curr = obj
-    while not rawget(curr, prop) do
+        rawset(env, name, metafields[env][name].accessor)
     end
 end
 
-function instance(class, obj)
-    return setmetatable(obj, {__index = class})
-end
-
-function class(obj, ...)
-    -- Private / public fields
-    -- Methods
-    local mt = {
-        __type = name,
-        __index = defaults
-    }
-    return function (obj)
-        return setmetatable(obj, mt)
-    end
-end
+return priv
