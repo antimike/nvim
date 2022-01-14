@@ -26,14 +26,22 @@ function pkg.tensor(fn)
     end
 end
 
---- Functional version of get operator
+--- Functional version of get operator.
 -- Analagous to rawget, but doesn't bypass metatables
 -- @param obj Table to access
 -- @param key Key to get
+-- @return Value of obj[key]
 function pkg.get(obj, key)
     return obj[key]
 end
 
+--- Lua implementation of standard reduce function.
+-- @param acc Accumulator function to fold over iterable
+-- @param seed Initial value to pass to acc
+-- @param fn Generator function (first of iterator triplet)
+-- @param inv_state Invariant state (second of iterator triplet)
+-- @param init Initial control variable (third of iterator triplet)
+-- @return Value of acc folded over iterable
 function pkg.reduce(acc, seed, fn, inv_state, init)
     local ret = seed
     for vals in iter.pack(fn, inv_state, init) do
@@ -57,6 +65,9 @@ function pkg.map(fn, ...)
     )
 end
 
+--- Compose functions.
+-- @param ... Functions to compose
+-- @return Composition of passed functions
 function pkg.comp(...)
     args = {...}
     return pkg.reduce(
@@ -66,10 +77,17 @@ function pkg.comp(...)
     )
 end
 
+--- Identity function of arbitrary arity.
+-- Useful as (e.g.) the "seed" value of a reducer acting on a list of functions.
+-- @param ... Params to return
+-- @return Passed parameters
 function pkg.id(...)
     return ...
 end
 
+--- Trivial function (i.e., always-nill).
+-- @param ... Parameters
+-- @return nil
 function pkg.trivial(...)
     return nil
 end
@@ -98,6 +116,10 @@ function pkg.apply_n(fn, n)
     end
 end
 
+--- Add values.
+-- @param tot First value
+-- @param val Second value
+-- @return Sum
 function pkg.add(tot, val)
     if not val then
         coroutine.yield(tot)
