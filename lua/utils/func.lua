@@ -64,13 +64,6 @@ function pkg.comp(...)
         pkg.id,
         iter.select(2, ipairs(args))
     )
---     return function (...)
---         local ret = {...}
---         for i = #args, 1, -1 do
---             ret = table.pack(args[i](table.unpack(ret)))
---         end
---         return table.unpack(ret)
---     end
 end
 
 function pkg.id(...)
