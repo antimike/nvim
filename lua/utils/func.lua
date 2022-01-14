@@ -42,12 +42,16 @@ function pkg.reduce(acc, seed, fn, inv_state, init)
     return ret
 end
 
+--- Map a function over an iterator triplet.
+-- @param fn Function to map
+-- @param ... Iterator triplet (function, state, control variable)
+-- @return Iterator function returning mapped values
 function pkg.map(fn, ...)
-    local args = {...}
+    local it = iter.pack(...)
     return coroutine.wrap(
         function ()
-            for val in iter.canonicalize(table.unpack(args)) do
-                coroutine.yield(fn(val))
+            for val in it do
+                coroutine.yield(fn(vals and table.unpack(vals)))
             end
         end
     )
