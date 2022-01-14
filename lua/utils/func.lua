@@ -1,12 +1,17 @@
 local iter = require("utils.iter")
 local pkg = {}
 
+--- Partial function application.
+-- @param fn Function to partially apply
+-- @param ... Args to apply fn to.  Any nil values in the passed list will be
+-- considered "gaps" to be filled when calling the resulting function.
+-- @return Function which concatenates its args with ... and passes to fn.
 function pkg.curry(fn, ...)
-    local args = {...}
+    local args = table.pack(...)
     return function (...)
         local passed = {...}
-        for i = 1, #args do
-            if args[i] then
+        for i = 1, args.n do
+            if args[i] ~= nil then
                 table.insert(passed, i, args[i])
             end
         end
