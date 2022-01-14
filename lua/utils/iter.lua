@@ -186,4 +186,25 @@ function pkg.reverse_ipairs(tbl)
     return gen.reverse_ipairs, tbl, #tbl+1
 end
 
+-- @param data_ctor Function to enqueue nodes to examine
+-- @param predicate Condition to search for
+function recurse(iter, data_ctor, predicate)
+	-- First coroutine: recursive iterable to search produces child values
+    -- Second coroutine: "validator" / "dispatcher"
+    -- Third coroutine: Abstract datastructure handles dispatched nodes and produces next
+    local function examine_node(node)
+        while node and not predicate(node) do
+            node = coroutine.yield(node.children)
+        end
+        return node
+    end
+    local function dispatch(...)
+        local nodes = table.pack(...)
+        while true do
+            local queue = data_ctor(table.unpack(nodes))
+            nodes = table.pack(coroutine.yield(queue:pop()))
+        end
+    end
+end
+
 return pkg
