@@ -108,4 +108,37 @@ function pkg.add(tot, val)
     end
 end
 
+--- "Fallback" composition of functions.
+-- @param ... Functions to try and / or fallback values
+-- @return "Fallback composition" of passed functions, i.e., the equivalent of
+-- reduce(function (f, g) return function (...) return f(...) or g(...) end end, ...)
+function pkg.switch(...)
+    local opts = table.pack(...)
+    return function (...)
+        local ret, idx = nil, 1
+        while ret == nil and idx <= opts.n do
+            ret = opts[idx]
+            if type(ret) == "function" then
+                ret = ret(...)
+            elseif type(ret) == "table" then
+                ret = pkg.table(ret)
+            end
+            idx = idx + 1
+        end
+        return ret
+    end
+end
+
+--- Construct getter for passed table.
+-- @param tab Table to construct getter for
+-- @return Getter for passed table
+function priv.table(tab)
+    return function(...)
+        -- Only passes the last arg
+        -- This is to allow treating the wrapped function as a metatable-style
+        -- __index function or as a 1-ary key-value mapping
+        return tab[select(-1, ...)]
+    end
+end
+
 return pkg
