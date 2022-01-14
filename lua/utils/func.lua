@@ -74,10 +74,28 @@ function pkg.trivial(...)
     return nil
 end
 
+--- "Rotate" and return passed args.
+-- If n arguments are passed, apply an n-cycle and return the resulting permutation of the arguments.
+-- @param ... Parameters to permute
+-- @return Permuted parameters
 function pkg.cycle(...)
-    local args = {...}
-    table.insert(args, 1, table.remove(args))
-    return table.unpack(args)
+    local args = table.pack(...)
+    last, args[args.n], args.n = args[args.n], nil, args.n - 1
+    return last, table.unpack(args)
+end
+
+--- Apply a function n times.
+-- @param fn Function to apply
+-- @param n Number of times to iterate fn
+-- @return Functional power fn^n
+function pkg.apply_n(fn, n)
+    return function (...)
+        local ret = table.pack(...)
+        for i = 1, n do
+            ret = table.pack(fn(table.unpack(ret)))
+        end
+        return table.unpack(ret)
+    end
 end
 
 function pkg.add(tot, val)
