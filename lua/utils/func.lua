@@ -163,7 +163,7 @@ end
 --- Construct getter for passed table.
 -- @param tab Table to construct getter for
 -- @return Getter for passed table
-function priv.table(tab)
+function pkg.table(tab)
     return function(...)
         -- Only passes the last arg
         -- This is to allow treating the wrapped function as a metatable-style
