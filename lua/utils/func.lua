@@ -9,7 +9,7 @@ local pkg = {}
 function pkg.curry(fn, ...)
     local args = table.pack(...)
     return function (...)
-        local passed = {...}
+        local passed = table.pack(...)
         for i = 1, args.n do
             if args[i] ~= nil then
                 table.insert(passed, i, args[i])
@@ -85,14 +85,14 @@ function pkg.id(...)
     return ...
 end
 
---- Trivial function (i.e., always-nill).
+--- Trivial function (i.e., always-nil).
 -- @param ... Parameters
 -- @return nil
 function pkg.trivial(...)
     return nil
 end
 
---- "Rotate" and return passed args.
+--- Apply cycle 1->2, 2->3, ..., n->1 to passed args.
 -- If n arguments are passed, apply an n-cycle and return the resulting permutation of the arguments.
 -- @param ... Parameters to permute
 -- @return Permuted parameters
