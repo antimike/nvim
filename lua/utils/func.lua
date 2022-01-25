@@ -96,10 +96,19 @@ end
 -- If n arguments are passed, apply an n-cycle and return the resulting permutation of the arguments.
 -- @param ... Parameters to permute
 -- @return Permuted parameters
-function pkg.cycle(...)
+function pkg.cycle_forward(...)
     local args = table.pack(...)
-    last, args[args.n], args.n = args[args.n], nil, args.n - 1
-    return last, table.unpack(args)
+    return args[args.n], table.unpack(args, 1, args.n-1)
+end
+
+--- Apply cycle 1->n, 2->1, ..., n->(n-1) to passed args.
+-- If n arguments are passed, apply an n-cycle and return the resulting permutation of the arguments.
+-- @param ... Parameters to permute
+-- @return Permuted parameters
+function pkg.cycle_backward(...)
+    local args = table.pack(...)
+    args[args.n+1] = args[1]
+    return table.unpack(args, 2, args.n+1)
 end
 
 --- Apply a function n times.
