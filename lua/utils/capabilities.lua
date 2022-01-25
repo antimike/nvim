@@ -1,50 +1,57 @@
 -- Functions to help organize correspondence between keybindings (what the user actually does) and functionality exposed by plugins
 -- Keybindings consist of mappings from keys to **capabilities**, which are then mapped separately to **providers**, i.e., functions and/or commands provided by plugins
 
+local pkg = {}
+local func = require("utils.func")
 
-Capability = {
-    new = function(self, tab)
-        self = tab
-        self.name = assert(self.name)
-        self.providers = self.providers or {}
-        return self
-    end,
-}
-Plugin = {
-    __index = Plugin,
-}
-
-function Plugin:new (props)
-    local function setDefault (name, val)
-        props[name] = props[name] or val
+--- Construct a recursive, stateful iterator.
+-- @param mark :: ctx -> state -> callback -> result
+-- @param accum :: ctx -> state -> state
+--  Can be further decomposed into state extractor + state reducer
+-- @param init_state
+-- @return Unary function which recurses into its argument in the manner
+-- prescribed by (mark, accum), beginning with initial state init_state
+function pkg.recursor(mark, accum, init_state)
+    local function recurse(obj, state)
+        state = accum(state, obj)
+        mark(obj, state, recurse)
     end
-    setDefault("opts", {})
-    setDefault("capabilities", {})
-    setmetatable(props, Plugin)
-    return props
-end
-
-local function register_option(name, val)
-    table[name] = val
-end
-
-table.insert(register, plugin.priority, plugin.capabilities)        -- Higher priority --> higher likelihood plugin is used
-for c, t in pairs(plugin.capabilities) do
-    register_provider(c, t)
-end
-
--- Types of datastructures to support:
--- 1. "Keymaps": { n = { ["<leader>"] = { f = { _capabilities = navigate.search, b = "buffers" }}}}
--- 2. "Capability" maps: { explore = {...}, search = {...}}
-function makeBindings(keymap, opts)
-    local function bind_with_prefix(mode, prefix, rhs, map)
-        for lhs, expr in pairs(map) do
-            if type(expr) == "table" then
-                bind_with_prefix()
-    local opts = {noremap = true}
-    for mode, map in pairs(keymap) do
-        
+    return function (obj)
+        recurse(obj, init_state)
     end
 end
 
+-- * Some iterable structure it :: obj -> (prod :: inv -> ctrl -> obj | leaf | null, inv, init)
+-- * A reducer red :: state -> state -> state
+-- * Keeping full state history in order to unroll recursion is inefficient,
+-- so...
+-- * Construct "recursion graph" directly on-stack (locally)?
+-- * More concrete, easy-to-understand interface / summary:
+--  "reduce for graphs"
+--  Each path through a datastructure gets reduced to a final result
+-- * `paths` iterator
+--  paths :: base -> dest -> (prod ::
+--  Different ways of "slicing" or "factoring" recursive descent differ based on
+--  control and state parameters:
+--      * Breadth-first: ctrl -> depth, state -> (bfs(d-1), curr_it)
+--      * Depth-first: ctrl -> curr_node, state -> it_stack
+--      * "Algebra of iterators:" iterators "multiply" noncommutatively
 
+function pkg.iterator_dual(it_fn)
+    return func.with_default(func.conjugate_by_cycle(it_fn), nil)
+end
+
+-- fn
+-- (s_0, c_0)
+--> fn(s_0, c_0) = c_1, s_1
+--> fn(s_1, c_1) = c_2, s_2
+--> ...
+--> fn(s_n, c_n) = nil, s_{n+1}
+
+-- "state" for one iterator becomes "ctrl" for the next
+
+
+
+
+
+return pkg
