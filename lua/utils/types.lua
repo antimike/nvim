@@ -13,7 +13,7 @@ function priv.get_metafield(obj, name)
 end
 
 --- Setup object to inherit ancestor tables' properties.
--- @param obj Descendant object (i.e., "inheritor").  If nil, new object is assigned
+-- @param obj Descendant object (i.e., "inheritor").  If nil, new object is assigned and returned.
 -- @param ... Ancestors to inherit from
 -- @return Object with inheritance from specified ancestors
 function priv.inherit_from(obj, ...)
