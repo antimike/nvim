@@ -172,4 +172,28 @@ function pkg.table(tab)
     end
 end
 
+--- Construct function that returns default value on error.
+-- @param fn Function to wrap
+-- @param def Default value to return in case of error
+-- @return Pass-through to fn that handles errors by returnin def
+function pkg.with_default(fn, def)
+    return function(...)
+        local ret = table.pack(pcall(fn, ...))
+        if ret[1] then
+            return table.unpack(ret, 2)
+        else
+            return def
+        end
+    end
+end
+
+--- Wrapper for c^{-1}*fn*c, where c is a cycle.
+-- Useful for "reversing" iterators so that the state variable becomes the
+-- control variable and vice-versa.
+-- @param fn Function to conjugate
+-- @returns Function composition c^{-1}*fn*c, where c is a cycle
+function pkg.conjugate_by_cycle(fn)
+    return pkg.comp(pkg.cycle_backward, fn, pkg.cycle_forward)
+end
+
 return pkg
