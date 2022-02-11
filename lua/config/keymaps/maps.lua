@@ -44,7 +44,7 @@ map('n', '<leader>bh', '::BufferLineMovePrev<CR>')
 map('n', 'nt', ':NvimTreeToggle<CR>')
 
 
--- Telescop.
+-- Telescope.
 map("n", "<Leader>fw", ":Telescope live_grep<CR>")
 map("n", "<Leader>gt", ":Telescope git_status<CR>")
 map("n", "<Leader>cm", ":Telescope git_commits<CR>")
