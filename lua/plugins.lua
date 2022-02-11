@@ -100,6 +100,22 @@ return require('packer').startup({function()
       require('plugins/treesitter')
     end
   }
+  use {'nvim-treesitter/nvim-treesitter-textobjects'}
+  use {'JoosepAlviste/nvim-ts-context-commentstring'}
+  -- To help compose custom TS queries
+  use {'nvim-treesitter/playground'}
+  use {
+    'romgrk/nvim-treesitter-context',
+    config = function()
+      require('treesitter-context.config').setup {enable = true}
+    end
+  }
+  use {
+    "folke/twilight.nvim",
+    config = function()
+      require("plugins.twilight")
+    end
+  }
 
   -- Colorizer (for highlighting color codes).
   use {
@@ -286,13 +302,18 @@ return require('packer').startup({function()
 
   -- Neovim plugin to comment text in and out.
   -- Supports commenting out the current line, a visual selection and a motion.
-  use {
-    'terrortylor/nvim-comment',
-    cmd = 'CommentToggle',
-    config = function()
-      require('nvim_comment').setup()
-    end
-  }
+  -- use {
+  --   'terrortylor/nvim-comment',
+  --   cmd = 'CommentToggle',
+  --   config = function()
+  --     require('plugins.nvim_comment')
+  --   end
+  -- }
+ use {
+   'b3nj5m1n/kommentary',
+   config = function()
+   end
+ }
 
   -- match-up is a plugin that lets you highlight, navigate, and operate on sets of matching text.
   use { 'andymass/vim-matchup' }
