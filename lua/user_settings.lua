@@ -34,5 +34,5 @@ additional_plugins = {
 
 -- Suggested by https://alpha2phi.medium.com/vim-neovim-managing-multiple-projects-63180fc87188
 map('n', '<leader>fp', ':Telescope project<CR>')
-map('n', '<Leader>fx', "require('config.plugins.telescope').switch_projects()<CR>")
+map('n', '<Leader>fx', "require('custom.telescope').switch_projects()<CR>")
 map('n', '<C-Space>', ":call fzf#run(fzf#wrap({'source': 'find $HOME/Source -maxdepth 2 -type d'}))<CR>")

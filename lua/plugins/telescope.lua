@@ -34,12 +34,3 @@ else
   telescope.load_extension('fzf')
   telescope.load_extension('repo')
 end
-
-return {
-  switch_project = function()
-    require("telescope.builtin").find_files ({
-      prompt_title = "< Switch Project >",
-      cwd = "$HOME/Source",
-    })
-  end
-}
