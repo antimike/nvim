@@ -1,13 +1,27 @@
 local misc_nav_plugins = {
-  -- Fuzzy finder and it requirments.
+  -- Fuzzy finder and its requirments.
     { 'nvim-lua/plenary.nvim' },
     {
         'nvim-telescope/telescope.nvim',
         requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}},
-    --  cmd = 'Telescope',
+        cmd = 'Telescope',
         config = function()
             require('config.plugins.navigation.telescope')
-        end
+        end,
+        module = {'telescope'},
+        provides = {
+            navigation = {
+                search = {
+                    files = 'builtin.find_files',
+                    git_files = 'builtin.git_files',
+                    grep = {
+                        'builtin.grep_string',
+                        live = 'builtin.live_grep',
+                    },
+                },
+                explorer = 'builtin.file_browser'
+            },
+        }
     },
     {
         'nvim-telescope/telescope-fzf-native.nvim', run = 'make',
