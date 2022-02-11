@@ -1,6 +1,6 @@
 local present, telescope = pcall(require, "telescope")
 if not present then
-    return
+  return
 end
 
 if vim.fn.has('win32') == 0 then
@@ -32,4 +32,14 @@ else
     },
   }
   telescope.load_extension('fzf')
+  telescope.load_extension('repo')
 end
+
+return {
+  switch_project = function()
+    require("telescope.builtin").find_files ({
+      prompt_title = "< Switch Project >",
+      cwd = "$HOME/Source",
+    })
+  end
+}

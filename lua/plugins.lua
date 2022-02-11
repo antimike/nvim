@@ -136,6 +136,9 @@ return require('packer').startup({function()
   use {
     'nvim-telescope/telescope.nvim',
     cmd = 'Telescope',
+    requires = {
+      "cljoly/telescope-repo.nvim",
+    },
     config = function()
       require('plugins/telescope')
     end
