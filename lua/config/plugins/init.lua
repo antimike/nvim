@@ -1,4 +1,5 @@
 local utils = require('utils')
+
 return utils.concat(
     require('config.plugins.display'),
     require('config.plugins.external-tools'),

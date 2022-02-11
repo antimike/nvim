@@ -26,4 +26,4 @@ utils.opt('o', 'cmdheight', 2)
 utils.opt('o', 'updatetime', 500)
 
 -- Highlight on yank
-vim.cmd 'au TextYankPost * lua vim.highlight.on_yank {on_visual = false}'
+cmd 'au TextYankPost * lua vim.highlight.on_yank {on_visual = false}'

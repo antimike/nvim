@@ -17,9 +17,9 @@ end
 
 -- Maps lhs --> rhs given mode and opts
 function pkg.map(mode, lhs, rhs, opts)
-  local options = {noremap = true}
-  if opts then options = vim.tbl_extend('force', options, opts) end
-  vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+    local options = {noremap = true}
+    if opts then options = vim.tbl_extend('force', options, opts) end
+    vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
 -- Convenience function to produce a valid vim command from a fully-qualified Lua function name

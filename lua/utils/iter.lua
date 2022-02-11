@@ -1,4 +1,5 @@
 local sort = require("utils.sort")
+local stack = require("utils.stack")
 local pkg = {
     heap = {},
     tree = {}
@@ -185,6 +186,7 @@ end
 function pkg.reverse_ipairs(tbl)
     return gen.reverse_ipairs, tbl, #tbl+1
 end
+
 
 -- @param data_ctor Function to enqueue nodes to examine
 -- @param predicate Condition to search for
