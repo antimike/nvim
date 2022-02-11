@@ -80,6 +80,14 @@ return require('packer').startup({function()
     end
   }
 
+  -- Smarter status line context
+  use {
+    "SmiteshP/nvim-gps",
+    config = function()
+      require("nvim-gps").setup()
+    end,
+  }
+
   -- TreeSitter.
   use {
     'nvim-treesitter/nvim-treesitter',
@@ -118,6 +126,15 @@ return require('packer').startup({function()
   }
   use { "mfussenegger/nvim-ts-hint-textobject" }
   use {'RRethy/nvim-treesitter-textsubjects'}
+
+  -- nvim_context_vt: Uses Treesitter to display expanded node context
+  -- Toggleable
+  use {"haringsrob/nvim_context_vt"}
+
+  -- Allows fancy UI hooks
+  -- Requires nvim 0.6 for full effect
+  -- NOTE: May conflict with popui and telescope-ui-select.nvim
+  use {'stevearc/dressing.nvim'}
 
   -- Colorizer (for highlighting color codes).
   use {
@@ -175,6 +192,8 @@ return require('packer').startup({function()
       after = 'popup.nvim'
     }
   end
+  -- NOTE: May conflict with dressing.nvim and popui
+  use { 'nvim-telescope/telescope-ui-select.nvim' }
 
   -- LSP, LSP installer and tab completion.
   use { 'neovim/nvim-lspconfig' }
@@ -236,6 +255,32 @@ return require('packer').startup({function()
   use {
     'tpope/vim-fugitive',
     cmd = 'Git'
+  }
+  -- Shows hidden "git messages" for each line
+  use { "rhysd/git-messenger.vim" }
+  -- Magit clone for neovim
+  use {
+   "TimUntersberger/neogit",
+   cmd = "Neogit",
+   config = function()
+      require("custom.neogit").setup()
+   end,
+  }
+  -- Another visual git client
+  use {
+   "tanvirtin/vgit.nvim",
+   event = "BufWinEnter",
+   config = function()
+      require("vgit").setup()
+   end,
+  }
+
+  -- For better diffs
+  use {
+    "sindrets/diffview.nvim",
+    config = function()
+      require("plugins.diffview")
+    end
   }
 
   -- Git signs.
@@ -337,6 +382,52 @@ return require('packer').startup({function()
     'jbyuki/instant.nvim',
     config = function()
       vim.cmd('let g:instant_username = "antimike"')
+    end
+  }
+
+  -- Helps manage package.json
+  use {
+    "vuki656/package-info.nvim",
+    requires = "MunifTanjim/nui.nvim",
+    config = function()
+      require("package-info").setup()
+    end,
+  }
+
+  -- Rust dependency management
+  use {
+   "Saecki/crates.nvim",
+    event = { "BufRead Cargo.toml" },
+    config = function()
+      require("crates").setup()
+    end,
+  }
+
+  -- Other Rust tools
+  use {
+    'simrat39/rust-tools.nvim',
+    config = function()
+      require("rust-tools").setup({})
+    end
+  }
+
+  -- Startup speed optimization
+  use("nathom/filetype.nvim")
+
+  -- Preview buffer line during commands
+  use {
+   "nacro90/numb.nvim",
+   config = function()
+     require("numb").setup()
+   end,
+  }
+
+  -- Popui: custom popups
+  -- NOTE: May conflict with dressing.nvim and telescope-ui-select.nvim
+  use {
+    'hood/popui.nvim',
+    config = function()
+      vim.ui.select = require("popui.ui-overrider")
     end
   }
 

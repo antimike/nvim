@@ -43,6 +43,8 @@ cmp.setup({
     { name = 'buffer' },
     { name = 'path' },
     { name = 'nvim_lsp' },
-    { name = 'nvim_lua' }
+    { name = 'treesitter' },
+    { name = 'nvim_lua' },
+    { name = 'crates' },
   }
 })
