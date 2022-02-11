@@ -11,4 +11,4 @@ vim.cmd [[packadd packer.nvim]]
 vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile' -- Auto compile when there are changes in plugins.lua
 
 require('plugins')
-require('config')
+-- require('config') Not needed since it's already 'required' in plugins.lua
