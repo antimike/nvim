@@ -116,6 +116,8 @@ return require('packer').startup({function()
       require("plugins.twilight")
     end
   }
+  use { "mfussenegger/nvim-ts-hint-textobject" }
+  use {'RRethy/nvim-treesitter-textsubjects'}
 
   -- Colorizer (for highlighting color codes).
   use {
@@ -322,6 +324,20 @@ return require('packer').startup({function()
   use {
     'artart222/vim-resize',
     event = 'BufEnter'
+  }
+
+  -- Create shareable permalinks with line ranges
+  use {
+    'ruifm/gitlinker.nvim',
+    config = function() require("gitlinker").setup() end
+  }
+
+  -- Collaborative editing
+  use {
+    'jbyuki/instant.nvim',
+    config = function()
+      vim.cmd('let g:instant_username = "antimike"')
+    end
   }
 
   for key, plugin in pairs(additional_plugins) do

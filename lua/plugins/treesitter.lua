@@ -23,6 +23,13 @@ nvim_treesitter.setup {
     updatetime = 25,
     persist_queries = false
   },
+  textsubjects = {
+    enable = true,
+    keymaps = {
+      ['.'] = 'textsubjects-smart',
+      [';'] = 'textsubjects-container-outer',
+    }
+  },
   context_commentstring = {
     enable = true,
     -- For integration with kommentary.nvim
