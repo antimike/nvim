@@ -71,6 +71,15 @@ return require('packer').startup({function()
     end
   }
 
+  -- NOTE: May conflict with Bufferline
+  use {
+    'romgrk/barbar.nvim',
+    requires = {'kyazdani42/nvim-web-devicons'},
+    config = function()
+      require("plugins.barbar")
+    end
+  }
+
   -- Statusline.
   use {
     'nvim-lualine/lualine.nvim',
@@ -194,6 +203,18 @@ return require('packer').startup({function()
   end
   -- NOTE: May conflict with dressing.nvim and popui
   use { 'nvim-telescope/telescope-ui-select.nvim' }
+  use {
+    "nvim-telescope/telescope-frecency.nvim",
+    requires = {"tami5/sqlite.lua"}
+  }
+  -- Support web searches from neovim
+  use {
+    "nvim-telescope/telescope-arecibo.nvim",
+    rocks = {"openssl", "lua-http-parser"}
+  }
+  -- Symbol picker
+  -- TODO: Add shruggie symbol and others in custom data file
+  use('nvim-telescope/telescope-symbols.nvim')
 
   -- LSP, LSP installer and tab completion.
   use { 'neovim/nvim-lspconfig' }
@@ -422,6 +443,30 @@ return require('packer').startup({function()
    end,
   }
 
+  -- Markdown Preview
+  use {"ellisonleao/glow.nvim"}
+
+  -- Improved EasyMotion
+  use {
+    'phaazon/hop.nvim',
+    branch = 'v1', -- optional but strongly recommended
+    config = function()
+      -- you can configure Hop the way you like here; see :h hop-config
+      require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+    end
+  }
+
+  -- Register peeking
+  use('gennaro-tedesco/nvim-peekup')
+
+  -- Auto-resizes splits
+  use {
+    "beauwilliams/focus.nvim",
+    config = function()
+      require("focus").setup()
+    end
+  }
+
   -- Popui: custom popups
   -- NOTE: May conflict with dressing.nvim and telescope-ui-select.nvim
   use {
@@ -430,6 +475,9 @@ return require('packer').startup({function()
       vim.ui.select = require("popui.ui-overrider")
     end
   }
+
+  -- SQLite: required for frecency (Telescope plugin)
+  use { "tami5/sqlite.lua" }
 
   for key, plugin in pairs(additional_plugins) do
     if type(plugin) == "string" then
