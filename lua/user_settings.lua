@@ -40,3 +40,5 @@ map('n', '<C-Space>', ":call fzf#run(fzf#wrap({'source': 'find $HOME/Source -max
 -- Suggested by https://alpha2phi.medium.com/neovim-tips-for-a-better-coding-experience-part-2-3b6a5a09d7c8
 map('o', 'm', ':<C-U>lua require("tsht").nodes()<CR>')
 map('v', 'm', ':lua require("tsht").nodes()<CR>')
+
+return additional_plugins

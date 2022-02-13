@@ -1,5 +1,5 @@
 local use = require('packer').use
-local user_settings_file = require('../user_settings')
+local user_plugins = require('../user_settings')
 
 return require('packer').startup({function()
   use { 'wbthomason/packer.nvim' }
@@ -480,11 +480,11 @@ return require('packer').startup({function()
   -- SQLite: required for frecency (Telescope plugin)
   use { "tami5/sqlite.lua" }
 
-  for key, plugin in pairs(additional_plugins) do
+  for _, plugin in ipairs(user_plugins) do
     if type(plugin) == "string" then
       use { plugin }
-    else
-      use { unpack(plugin) }
+    elseif type(plugin) == "table" then
+      use(plugin)
     end
   end
 
