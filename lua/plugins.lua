@@ -63,31 +63,31 @@ return require('packer').startup({function()
   }
 
   -- Bufferline.
-  use {
-    'akinsho/nvim-bufferline.lua',
-    after = 'nvim-web-devicons',
-    config  = function()
-      require('plugins/bufferline')
-    end
-  }
+  -- use {
+  --   'akinsho/nvim-bufferline.lua',
+  --   after = 'nvim-web-devicons',
+  --   config  = function()
+  --     require('plugins/bufferline')
+  --   end
+  -- }
 
   -- NOTE: May conflict with Bufferline
-  use {
-    'romgrk/barbar.nvim',
-    requires = {'kyazdani42/nvim-web-devicons'},
-    config = function()
-      require("plugins.barbar")
-    end
-  }
+  -- use {
+  --   'romgrk/barbar.nvim',
+  --   requires = {'kyazdani42/nvim-web-devicons'},
+  --   config = function()
+  --     require("plugins.barbar")
+  --   end
+  -- }
 
   -- Statusline.
-  use {
-    'nvim-lualine/lualine.nvim',
-    after = 'nvim-bufferline.lua',
-    config = function ()
-      require('plugins/lualine')
-    end
-  }
+  -- use {
+  --   'nvim-lualine/lualine.nvim',
+  --   after = 'nvim-bufferline.lua',
+  --   config = function ()
+  --     require('plugins/lualine')
+  --   end
+  -- }
 
   -- Smarter status line context
   use {
@@ -469,12 +469,13 @@ return require('packer').startup({function()
 
   -- Popui: custom popups
   -- NOTE: May conflict with dressing.nvim and telescope-ui-select.nvim
-  use {
-    'hood/popui.nvim',
-    config = function()
-      vim.ui.select = require("popui.ui-overrider")
-    end
-  }
+  -- use('RishabhRD/popfix')
+  -- use {
+    -- 'hood/popui.nvim',
+    -- config = function()
+      -- vim.ui.select = require("popui.ui-overrider")
+    -- end,
+  -- }
 
   -- SQLite: required for frecency (Telescope plugin)
   use { "tami5/sqlite.lua" }
