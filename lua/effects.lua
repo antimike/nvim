@@ -17,21 +17,23 @@ return {
   -- Startup screen.
   {
     'glepnir/dashboard-nvim',
-    cmd = {
-      'Dashboard',
-      'DashboardChangeColorscheme',
-      'DashboardFindFile',
-      'DashboardFindHistory',
-      'DashboardFindWord',
-      'DashboardNewFile',
-      'DashboardJumpMarks',
-      'SessionLoad',
-      'SessionSave'
-    },
-    setup = function()
-      require('plugins/dashboard')
-    end,
-    opt = false
+    -- cmd = {
+    --   'Dashboard',
+    --   'DashboardChangeColorscheme',
+    --   'DashboardFindFile',
+    --   'DashboardFindHistory',
+    --   'DashboardFindWord',
+    --   'DashboardNewFile',
+    --   'DashboardJumpMarks',
+    --   'SessionLoad',
+    --   'SessionSave'
+    -- },
+    -- setup = function()
+    --   require('plugins/dashboard')
+    -- end,
+    opt = false,
+    disable = false,
+    as = "dashboard"
   },
   -- Scrollbar.
   {
