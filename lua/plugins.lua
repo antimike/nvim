@@ -34,6 +34,9 @@ return require('packer').startup({
       open_fn = function()
         return require('packer.util').float({ border = 'single' })
       end
-    }
+    },
+    transitive_opt = false,
+    -- opt_default = true,
+    transitive_disable = false,
   }
 })
