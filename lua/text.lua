@@ -33,7 +33,7 @@ return {
   {
     "haringsrob/nvim_context_vt",
     requires = {'nvim-treesitter/nvim-treesitter'}
-  }
+  },
   -- Auto closes.
   {
     'windwp/nvim-autopairs',

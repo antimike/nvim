@@ -7,7 +7,7 @@ local function map(mode, lhs, rhs, opts)
   vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
-additional_plugins = {
+local additional_plugins = {
   -- You can put your additional plugins here.
   -- Syntax is like normal packer.nvim Syntax. Examples:
 

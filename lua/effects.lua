@@ -29,7 +29,7 @@ return {
       'SessionSave'
     },
     setup = function()
-        require('plugins/dashboard')
+      require('plugins/dashboard')
     end
   },
   -- Scrollbar.
