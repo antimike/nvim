@@ -30,7 +30,8 @@ return {
     },
     setup = function()
       require('plugins/dashboard')
-    end
+    end,
+    opt = false
   },
   -- Scrollbar.
   {
