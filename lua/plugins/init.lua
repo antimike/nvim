@@ -1,5 +1,11 @@
 local plugins = {{'wbthomason/packer.nvim', opt = true}}
-vim.list_extend(plugins, require("plugins.workspace"))
+local plugin_groups = {
+  "workspace",
+  "colors"
+}
+for _, g in ipairs(plugin_groups) do
+  vim.list_extend(plugins, require("plugins." .. g))
+end
 
 return require('packer').startup({
     -- require('lsp_signature').setup()

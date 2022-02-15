@@ -11,5 +11,13 @@ vim.cmd
 ]]
 
 vim.g.tokyonight_style = 'night' -- styles: storm, night and day.
--- vim.g.onedark_style = 'deep'     -- styles: dark, darker, cool, deep, warm and warmer.
-vim.cmd('colorscheme onedark')
+local colorscheme = "industry"
+if pcall(require, "onedark") then
+  require("config.onedark")
+  colorscheme = "onedark"
+elseif pcall(require, "tokyonight") then
+  colorscheme = "tokyonight"
+elseif pcall(require, "nord") then
+  colorscheme = "nord"
+end
+vim.cmd('colorscheme ' .. colorscheme)
