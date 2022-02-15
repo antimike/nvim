@@ -12,3 +12,4 @@ vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile' -- Auto compile when th
 
 require("plugins")
 require("settings")
+require("theme")

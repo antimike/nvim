@@ -1,6 +1,6 @@
 local present, nvimtree = pcall(require, 'nvim-tree')
 if not present then
-    return
+  return
 end
 
 -- Set alias for vim.g.

@@ -3,7 +3,7 @@ if not present then
     return
 end
 
-local gps = require("nvim-gps")
+local gps_present, gps = pcall(require, "nvim-gps")
 
 lualine.setup {
   extensions = {'fugitive'},
@@ -26,7 +26,7 @@ lualine.setup {
       'filename',
       {
         gps.get_location,
-        cond = gps.is_available,
+        cond = gps_present and gps.is_available,
       }
     },
     lualine_x = {'encoding', 'fileformat', 'filetype'},
