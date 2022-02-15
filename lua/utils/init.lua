@@ -41,7 +41,7 @@ function BuildMapOpts(first, second)
   return vim.tbl_extend("force", first, second)
 end
 
-function get_map_opts(path)
+local function get_map_opts(path)
   local curr, prefix, default = trie, "", nil
   local opts = BuildMapOpts()
   for _, name in ipairs(path) do

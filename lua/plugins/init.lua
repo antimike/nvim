@@ -1,22 +1,17 @@
+local plugins = {{'wbthomason/packer.nvim', opt = true}}
+vim.list_extend(plugins, require("plugins.workspace"))
+
 return require('packer').startup({
     -- require('lsp_signature').setup()
-  {
-    {'wbthomason/packer.nvim', opt = true},
-    {
-      "folke/which-key.nvim",
-      config = function()
-        require("plugins.whichkey").setup()
-      end,
-    }
-  },
+  plugins,
   config = {
     display = {
       open_fn = function()
         return require('packer.util').float({ border = 'single' })
       end
     },
-    transitive_opt = false,
+    -- transitive_opt = false,
     -- opt_default = true,
-    transitive_disable = false,
+    -- transitive_disable = false,
   }
 })
