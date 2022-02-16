@@ -10,6 +10,9 @@ nvim_treesitter.setup {
   },
   matchup = {
     enable = true,
+    -- diable = {},     -- Languages to disable matching
+    disable_virtual_text = {"python"},
+    -- include_match_words = {}
   },
   indent = {
     enable = true

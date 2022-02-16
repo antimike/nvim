@@ -22,7 +22,7 @@ if vim.fn.has('win32') == 0 then
         }
       },
       frecency = {
-        -- db_root = "home/hactar/path/to/db_root",
+        db_root = "home/hactar/.config/nvim/data",
         show_scores = false,
         show_unindexed = true,
         ignore_patterns = {"*.git/*", "*/tmp/*"},
@@ -42,11 +42,11 @@ if vim.fn.has('win32') == 0 then
       },
       project = {
         base_dirs = {
-          '~/dev/src',
-          {'~/dev/src2'},
-          {'~/dev/src3', max_depth = 4},
-          {path = '~/dev/src4'},
-          {path = '~/dev/src5', max_depth = 2},
+          '~/Source',
+          -- {'~/dev/src2'},
+          -- {'~/dev/src3', max_depth = 4},
+          -- {path = '~/dev/src4'},
+          -- {path = '~/dev/src5', max_depth = 2},
         },
         hidden_files = true -- default: false
       },
@@ -55,7 +55,8 @@ if vim.fn.has('win32') == 0 then
   telescope.load_extension('media_files')
   telescope.load_extension('fzf')
   telescope.load_extension("ui-select")
-  telescope.load_extension("frecency")
+  -- TODO: Debug frecency config
+  -- telescope.load_extension("frecency")
   telescope.load_extension("arecibo")
   telescope.load_extension("project")
 else
@@ -74,5 +75,5 @@ else
 end
 
 -- Suggested by https://alpha2phi.medium.com/vim-neovim-managing-multiple-projects-63180fc87188
-map('n', '<leader>fp', ':Telescope project<CR>')
-map('n', '<Leader>fx', "require('custom.telescope').switch_projects()<CR>")
+-- map('n', '<leader>fp', ':Telescope project<CR>')
+-- map('n', '<Leader>fx', "require('custom.telescope').switch_projects()<CR>")
