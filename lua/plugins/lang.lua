@@ -1,8 +1,20 @@
 return {
-  {'nvim-treesitter/nvim-treesitter-textobjects'},
-  {'JoosepAlviste/nvim-ts-context-commentstring'},
+  {
+    'nvim-treesitter/nvim-treesitter-textobjects',
+    as = "ts-textobjects",
+    requires = "treesitter",
+  },
+  {
+    'JoosepAlviste/nvim-ts-context-commentstring',
+    as = "ts-context-commentstring",
+    requires = "treesitter",
+  },
   -- To help compose custom TS queries
-  {'nvim-treesitter/playground'},
+  {
+    'nvim-treesitter/playground',
+    as = "playground",
+    requires = "treesitter",
+  },
   -- {
   --   'romgrk/nvim-treesitter-context',
   --   config = function()
@@ -10,20 +22,39 @@ return {
   --   end
   -- },
   -- LSP, LSP installer and tab completion.
-  { 'neovim/nvim-lspconfig' },
-  { 'williamboman/nvim-lsp-installer' },
+  -- NOTE: GH page claims that 0.6.1 is required
+  {
+    'neovim/nvim-lspconfig',
+    as = "lspconfig"
+  },
+  {
+    'williamboman/nvim-lsp-installer',
+    requires = "lspconfig",
+  },
   -- LSP signature.
-  { "ray-x/lsp_signature.nvim" },
+  {
+    "ray-x/lsp_signature.nvim",
+    as = "lsp_signature",
+  },
 
   -- VsCode like pictograms for lsp.
-  { 'onsails/lspkind-nvim' },
+  {
+    'onsails/lspkind-nvim',
+    as = "lspkind"
+  },
 
   -- View and search LSP symbols, tags in Neovim.
-  { 'liuchengxu/vista.vim', cmd = 'Vista' },
+  {
+    'liuchengxu/vista.vim',
+    as = "vista",
+    cmd = 'Vista',
+  },
+
   -- This is for html and it can autorename too!
   {
     'windwp/nvim-ts-autotag',
-    after = 'nvim-treesitter',
+    as = "ts-autotag",
+    after = 'treesitter',
   },
   -- Neovim plugin to comment text in and out.
   -- Supports commenting out the current line, a visual selection and a motion.
@@ -36,13 +67,16 @@ return {
   -- },
   {
    'b3nj5m1n/kommentary',
+   as = "kommentary",
    config = function()
+     require("config.kommentary")
    end
   },
+
   -- Helps manage package.json
   {
     "vuki656/package-info.nvim",
-    requires = "MunifTanjim/nui.nvim",
+    requires = "nui",
     config = function()
       require("package-info").setup()
     end,
@@ -51,6 +85,7 @@ return {
   -- Rust dependency management
   {
    "Saecki/crates.nvim",
+   as = "crates",
     event = { "BufRead Cargo.toml" },
     config = function()
       require("crates").setup()
@@ -60,6 +95,7 @@ return {
   -- Other Rust tools
   {
     'simrat39/rust-tools.nvim',
+    as = "rust-tools",
     config = function()
       require("rust-tools").setup({})
     end

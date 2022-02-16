@@ -61,4 +61,10 @@ return {
       require("config.diffview")
     end
   },
+
+  -- Component library
+  {
+    "MunifTanjim/nui.nvim",
+    as = "nui"
+  }
 }

@@ -7,6 +7,7 @@ local plugin_groups = {
   "text",
   "git",
   "completion",
+  "lang",
 }
 for _, g in ipairs(plugin_groups) do
   vim.list_extend(plugins, require("plugins." .. g))
