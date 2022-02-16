@@ -9,15 +9,18 @@ return {
     'hrsh7th/nvim-cmp',
     as = "nvim-cmp",
     after = "friendly-snippets",
-    requires = {
-      'hrsh7th/cmp-nvim-lsp'
-    },
+    -- requires = {
+    --   'hrsh7th/cmp-nvim-lsp'
+    -- },
     config = function()
       require('config.cmp')
     end
   },
   {
     'hrsh7th/cmp-nvim-lsp',
+    requires = {
+      "nvim-cmp",
+    }
     -- as = 'cmp-nvim-lsp',
   },
   {
