@@ -1,7 +1,9 @@
 local plugins = {{'wbthomason/packer.nvim', opt = true}}
 local plugin_groups = {
+  "shared",
   "workspace",
-  "colors"
+  "colors",
+  "find",
 }
 for _, g in ipairs(plugin_groups) do
   vim.list_extend(plugins, require("plugins." .. g))

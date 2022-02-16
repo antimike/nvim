@@ -7,7 +7,7 @@ if vim.fn.has('win32') == 0 then
   telescope.setup {
     extensions = {
       media_files = {
-        filetypes = {"png", "webp", "jpg", "jpeg"},
+        filetypes = {"png", "webp", "jpg", "jpeg", "mp4","webm", "pdf"},
         find_cmd = "rg"
       },
       fzf = {
@@ -40,13 +40,24 @@ if vim.fn.has('win32') == 0 then
         ["show_http_headers"] = false,
         ["show_domain_icons"] = false,
       },
-    },
+      project = {
+        base_dirs = {
+          '~/dev/src',
+          {'~/dev/src2'},
+          {'~/dev/src3', max_depth = 4},
+          {path = '~/dev/src4'},
+          {path = '~/dev/src5', max_depth = 2},
+        },
+        hidden_files = true -- default: false
+      },
+    }
   }
   telescope.load_extension('media_files')
   telescope.load_extension('fzf')
   telescope.load_extension("ui-select")
   telescope.load_extension("frecency")
   telescope.load_extension("arecibo")
+  telescope.load_extension("project")
 else
   telescope.setup {
     extensions = {
@@ -61,3 +72,7 @@ else
   telescope.load_extension('fzf')
   telescope.load_extension('repo')
 end
+
+-- Suggested by https://alpha2phi.medium.com/vim-neovim-managing-multiple-projects-63180fc87188
+map('n', '<leader>fp', ':Telescope project<CR>')
+map('n', '<Leader>fx', "require('custom.telescope').switch_projects()<CR>")

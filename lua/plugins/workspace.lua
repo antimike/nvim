@@ -81,7 +81,7 @@ return {
       'NvimTreeToggle',
     },
     requires = {
-      'kyazdani42/nvim-web-devicons', -- optional, for file icon
+      'devicons', -- optional, for file icon
     },
     config = function()
       require('config.nvim-tree')
@@ -92,7 +92,7 @@ return {
   {
     'akinsho/nvim-bufferline.lua',
     as = "bufferline",
-    after = 'nvim-web-devicons',
+    after = 'devicons',
     config  = function()
       require('config.bufferline')
     end
@@ -102,7 +102,7 @@ return {
   -- {
   --   'romgrk/barbar.nvim',
   --   as = "barbar",
-  --   requires = {'kyazdani42/nvim-web-devicons'},
+  --   requires = {'devicons'},
   --   config = function()
   --     require("config.barbar")
   --   end
@@ -117,7 +117,7 @@ return {
   --   end,
   --   requires = {
   --     {'hoob3rt/lualine.nvim', opt = true },
-  --     {'kyazdani42/nvim-web-devicons', opt = true}
+  --     {'devicons', opt = true}
   --   }
   -- },
 
@@ -148,7 +148,7 @@ return {
     'folke/todo-comments.nvim',
     as = "todo-comments",
     requires = {
-      'nvim-lua/plenary.nvim'
+      'plenary'
     },
     event = 'BufEnter',
     config = function()

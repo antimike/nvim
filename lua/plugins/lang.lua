@@ -1,24 +1,4 @@
 return {
-  -- TreeSitter.
-  {
-    'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate',
-    event = 'BufRead',
-    cmd = {
-      'TSInstall',
-      'TSInstallSync',
-      'TSBufEnable',
-      'TSBufToggle',
-      'TSEnableAll',
-      'TSInstallFromGrammer',
-      'TSToggleAll',
-      'TSUpdate',
-      'TSUpdateSync'
-    },
-    config = function()
-      require('plugins/treesitter')
-    end
-  },
   {'nvim-treesitter/nvim-treesitter-textobjects'},
   {'JoosepAlviste/nvim-ts-context-commentstring'},
   -- To help compose custom TS queries

@@ -17,7 +17,6 @@ local additional_plugins = {
   -- { crispgm/nvim-go', ft = 'go'}
 
  -- Project
-  { 'nvim-telescope/telescope-project.nvim' },
   { 'airblade/vim-rooter' },
 }
 
@@ -32,9 +31,6 @@ local additional_plugins = {
 -- map('n', '<C-t>', ':ToggleTerm<CR>')
 -- map('t', '<C-t>', ':ToggleTerm<CR>')
 
--- Suggested by https://alpha2phi.medium.com/vim-neovim-managing-multiple-projects-63180fc87188
-map('n', '<leader>fp', ':Telescope project<CR>')
-map('n', '<Leader>fx', "require('custom.telescope').switch_projects()<CR>")
 map('n', '<C-Space>', ":call fzf#run(fzf#wrap({'source': 'find $HOME/Source -maxdepth 2 -type d'}))<CR>")
 
 -- Suggested by https://alpha2phi.medium.com/neovim-tips-for-a-better-coding-experience-part-2-3b6a5a09d7c8

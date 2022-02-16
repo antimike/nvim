@@ -15,11 +15,6 @@ return {
         require('plugins/better-whitespace')
     end
   },
-  -- Icons.
-  {
-    'kyazdani42/nvim-web-devicons',
-    event = 'BufEnter'
-  },
   {
     "mfussenegger/nvim-ts-hint-textobject",
     requires = {'nvim-treesitter/nvim-treesitter'}
