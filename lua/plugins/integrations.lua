@@ -6,7 +6,7 @@ return {
     as = "toggleterm",
     cmd = 'ToggleTerm',
     setup = function()
-      require('plugins/toggleterm')
+      require('config.toggleterm')
     end
   },
 
@@ -14,7 +14,7 @@ return {
   {
     'ruifm/gitlinker.nvim',
     as = "gitlinker",
-    requires = 'nvim-lua/plenary.nvim',
+    requires = 'plenary',
     config = function()
       require("config.gitlinker").setup()
     end

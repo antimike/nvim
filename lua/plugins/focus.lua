@@ -10,13 +10,13 @@ return {
       'TZMinimalist',
     },
     setup = function()
-      require('plugins/true-zen')
+      require('config.true-zen')
     end
   },
   {
     "folke/twilight.nvim",
     config = function()
-      require("plugins.twilight")
+      require("config.twilight")
     end
   }
 }

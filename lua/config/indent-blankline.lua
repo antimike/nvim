@@ -8,11 +8,13 @@ vim.g.indent_blankline_filetype_exclude = {
   "dashboard",
   "packer",
   "vista",
+  "TelescopePrompt",
 }
 vim.g.indent_blankline_buftype_exclude = {
   "terminal",
   'lsp-installer',
-  'lspinfo'
+  'lspinfo',
+  "TelescopePrompt",
 }
 
 vim.g.indent_blankline_show_trailing_blankline_indent = false
