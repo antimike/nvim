@@ -186,4 +186,7 @@ return {
       vim.cmd [[let g:rooter_silent_chdir=1]]
     end
   },
+  {
+    'tpope/vim-unimpaired'
+  }
 }
