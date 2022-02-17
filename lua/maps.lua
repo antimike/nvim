@@ -95,7 +95,7 @@ vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 map('n', '<leader>cw', ':StripWhitespace<CR>')
 
 -- TrueZen focus mode.
-map('n', '<leader>fs', ':TZFocus<CR>')
+map('n', '<leader>Fs', ':TZFocus<CR>')
 
 -- Toggle fold.
 map('n', '<leader>ft', 'za')
@@ -203,6 +203,18 @@ wk.register({
     name = "Theme",
     h = { ":Telescope colorscheme<CR>", "Find Colorscheme" },
     p = { ":Telescope colorscheme enable_preview=true<CR>", "Find Colorscheme with previwer " },
+  }
+}, { prefix = "<leader>" })
+
+-- Focus
+wk.register({
+  F = {
+    name = "Focus",
+    s = { ":TZFocus<CR>", "TrueZen Focus Mode" },
+    t = { ":FocusToggle<CR>", "Toggle Split Auto-Resizing" },
+    n = { ":FocusSplitNicely<CR>", "Split Window based on Golden Ratio"},
+    m = { ":FocusMaximise<CR>", "Maximize Window" },
+    e = { ":FocusEqualise<CR>", "Equalize Splits" },
   }
 }, { prefix = "<leader>" })
 
