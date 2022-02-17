@@ -109,17 +109,17 @@ return {
   -- },
 
   -- Style tabline like status line
-  -- {
-  --   'kdheepak/tabline.nvim',
-  --   as = "tabline",
-  --   config = function()
-  --     require("config.tabline").setup()
-  --   end,
-  --   requires = {
-  --     {'hoob3rt/lualine.nvim', opt = true },
-  --     {'devicons', opt = true}
-  --   }
-  -- },
+--   {
+--     'kdheepak/tabline.nvim',
+--     as = "tabline",
+--     config = function()
+--       require("config.tabline").setup()
+--     end,
+--     requires = {
+--       {'hoob3rt/lualine.nvim', opt = true },
+--       {'devicons', opt = true}
+--     }
+--   },
 
   -- Statusline.
   {
