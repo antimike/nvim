@@ -133,14 +133,14 @@ return {
 
   -- Smarter status line context
   -- Fails to install on clean packer install
-  -- {
-  --   "SmiteshP/nvim-gps",
-  --   as = "gps",
-  --   config = function()
-  --     require("nvim-gps").setup(require("config.gps"))
-  --   end,
-  --   requires = "nvim-treesitter/nvim-treesitter",
-  -- },
+  {
+    "SmiteshP/nvim-gps",
+    as = "gps",
+    config = function()
+      require("nvim-gps").setup(require("config.gps"))
+    end,
+    requires = "nvim-treesitter/nvim-treesitter",
+  },
 
   -- todo-comments is a lua plugin for Neovim to highlight and search for
   -- todo comments like TODO, HACK, BUG in code base.
@@ -187,6 +187,9 @@ return {
     end
   },
   {
-    'tpope/vim-unimpaired'
+    'tpope/vim-unimpaired',
+    config = function()
+      require("config.unimpaired")
+    end
   }
 }

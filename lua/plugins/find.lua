@@ -3,6 +3,17 @@ return {
   {
     'nvim-telescope/telescope.nvim',
     as = "telescope",
+    after = {
+      "telescope_find_directories",
+      "telescope-symbols",
+      "telescope-fzf-native",
+      "telescope-media-files",
+      "telescope-project",
+      "telescope-ui-select",
+      "telescope-file-browser",
+      "telescope-frecency",
+      "telescope-arecibo",
+    },
     -- cmd = 'Telescope',
     requires = {
       "cljoly/telescope-repo.nvim",
@@ -13,14 +24,12 @@ return {
   },
   {
     'nvim-telescope/telescope-project.nvim',
-    -- requires = "telescope",
+    as = "telescope-project",
   },
   {
     'nvim-telescope/telescope-fzf-native.nvim',
     as = "telescope-fzf-native",
-    -- requires = "telescope",
     run = 'make',
-    -- cmd = 'Telescope'
   },
   {
     'nvim-telescope/telescope-media-files.nvim',
@@ -28,15 +37,12 @@ return {
     requires = {
       "plenary",
       "popup",
-      -- "telescope"
     },
-    -- after = 'popup'
   },
   -- NOTE: May conflict with dressing.nvim and popui
   {
     'nvim-telescope/telescope-ui-select.nvim',
     as = "telescope-ui-select",
-    -- requires = "telescope"
   },
   {
     "nvim-telescope/telescope-file-browser.nvim",
@@ -46,7 +52,6 @@ return {
     "nvim-telescope/telescope-frecency.nvim",
     as = "telescope-frecency",
     requires = {
-      -- "telescope",
       "sqlite",
       "devicons"
     },
@@ -66,8 +71,11 @@ return {
   {
     'nvim-telescope/telescope-symbols.nvim',
     as = "telescope-symbols",
-    requires = {
-      -- "telescope"
-    }
   },
+  -- Directory finder
+  {
+    "artart222/telescope_find_directories",
+    as = "telescope_find_directories",
+    after = "telescope-fzf-native"
+  }
 }

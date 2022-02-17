@@ -4,6 +4,34 @@ if not present then
 end
 local lspkind = require('lspkind')
 
+local cmp_kinds = {
+  Text = " ",
+  Method = " ",
+  Function = " ",
+  Constructor = "略 ",
+  Field = "ﰠ" ,
+  Variable = " ",
+  Class = " ",
+  Interface = " ",
+  Module = " ",
+  Property = " ",
+  Unit = "塞 ",
+  Value = " ",
+  Enum = " ",
+  Keyword = " ",
+  Snippet = " ",
+  Color = " ",
+  File = " ",
+  Reference = " ",
+  Folder = " ",
+  EnumMember = " ",
+  Constant = " ",
+  Struct = " " ,
+  Event = " ",
+  Operator = " ",
+  TypeParameter = " ",
+}
+
 cmp.setup({
   snippet = {
     expand = function(args)
@@ -11,7 +39,30 @@ cmp.setup({
     end,
   },
   formatting = {
-    format = lspkind.cmp_format({with_text = false, maxwidth = 50})
+    -- TODO: Figure out why CodeArt deprecated lspkind dep
+    -- format = lspkind.cmp_format({with_text = false, maxwidth = 50})
+    fields = { "abbr", "kind", "menu" },
+    format = function(entry, vim_item)
+      -- Kind icons
+      vim_item.kind = string.format("%s %s", vim_item.kind, cmp_kinds[vim_item.kind]) -- This concatonates the icons with the name of the item kind
+      -- Source
+      vim_item.menu = ({
+        buffer = "[Buffer]",
+        nvim_lsp = "[LSP]",
+        luasnip = "[LuaSnip]",
+        nvim_lua = "[Lua]",
+        path = "[Path]",
+      })[entry.source.name]
+
+      return vim_item
+    end
+  },
+  documentation = {
+    border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+  },
+  experimental = {
+    ghost_text = true,
+    native_menu = false,
   },
   mapping = {
     ['<C-d>'] = cmp.mapping.scroll_docs(-4),

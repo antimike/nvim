@@ -66,5 +66,11 @@ return {
   {
     "MunifTanjim/nui.nvim",
     as = "nui"
+  },
+
+  -- Required for Tig plugin
+  {
+    'rbgrouleff/bclose.vim',
+    as = "bclose"
   }
 }

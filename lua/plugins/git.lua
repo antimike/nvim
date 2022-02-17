@@ -16,13 +16,13 @@ return {
 
   -- Magit clone for neovim
   {
-   "TimUntersberger/neogit",
-   as = "neogit",
-   cmd = "Neogit",
-   requires = "diffview",
-   config = function()
+    "TimUntersberger/neogit",
+    as = "neogit",
+    cmd = "Neogit",
+    requires = "diffview",
+    config = function()
       require("config.neogit").setup()
-   end,
+    end,
   },
 
   -- Another visual git client
@@ -51,4 +51,11 @@ return {
       require('config.gitsigns').setup()
     end
   },
+
+  -- Tig explorer.
+  {
+    'iberianpig/tig-explorer.vim',
+    as = "tig",
+    requires = 'bclose',
+  }
 }

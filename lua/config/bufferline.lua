@@ -1,8 +1,3 @@
-local present, bufferline = pcall(require, "bufferline")
-if not present then
-    return
-end
-
 -- can also be a table containing 2 custom separators
 -- [focused and unfocused]. eg: { '|', '|' }
 -- local separator_style = "slant" | "thick" | "thin" | { 'any', 'any' }
@@ -39,28 +34,6 @@ local function custom_filter(buf_number, buf_numbers)
     return true
   end
 end
-
--- Old config (CodeArt)
--- bufferline.setup {
---   options = {
---     numbers = function(opts)
---       return string.format('%s', opts.id)
---     end,
---     diagnostics = "nvim_lsp",
---     offsets = {
---       {
---         filetype = "NvimTree",
---         text = "File Explorer",
---         highlight = "Directory",
---         text_align = "left"
---       },
---       {
---         filetype = "vista_kind",
---         text = "LSP Tags",
---       }
---     }
---   }
--- }
 
 require('bufferline').setup {
   options = {
@@ -102,6 +75,7 @@ require('bufferline').setup {
       {
         filetype = "vista_kind",
         text = "LSP Tags",
+        text_align = "center",
       }
     },
     show_buffer_close_icons = true,

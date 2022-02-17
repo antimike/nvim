@@ -3,27 +3,63 @@ if not present then
     return
 end
 
+-- From CodeArt
+local lualine_styles = {
+    {
+      { left = " ", right = " " },
+      { left = "│", right = "│" },
+    },
+    {
+      { left = " ", right = "" },
+      { left = " ", right = " " },
+    },
+    {
+      { left = "", right = "" },
+      { left = " ", right = " " },
+    },
+    {
+      { left = "", right = "" },
+      { left = "", right = "" }
+    },
+    {
+      { left = "", right = "" },
+      { left = " ", right = " " }
+    }
+}
 local gps_present, gps = pcall(require, "nvim-gps")
 
 lualine.setup {
-  extensions = {'fugitive'},
   options = {
     icons_enabled = true,
     theme = 'auto',
-    component_separators = { left = '', right = ''},
-    section_separators = { left = '', right = ''},
     disabled_filetypes = {
       'toggleterm',
       'NvimTree',
-      'vista'
+      'vista',
+      'vista_kind',
+      'dapui_scopes',
+      'dapui_breakpoints',
+      'dapui_stacks',
+      'dapui_watches',
+      'dap-repl',
     },
     always_divide_middle = true,
+    component_separators = lualine_styles[4][2],
+    section_separators = lualine_styles[4][1]
   },
+  extensions = { "fugitive" },
   sections = {
     lualine_a = {'mode'},
-    lualine_b = {'branch', 'diff', 'diagnostics'},
+    lualine_b = {
+      {'branch'},
+      {
+        'diff',
+        symbols = { added = "  ", modified = "柳", removed = " " }, -- changes diff symbols
+      },
+      {'diagnostics'}
+    },
     lualine_c = {
-      'filename',
+      {'filename'},
       {
         gps.get_location,
         cond = gps_present and gps.is_available,

@@ -48,6 +48,9 @@ return {
     'liuchengxu/vista.vim',
     as = "vista",
     cmd = 'Vista',
+    config = function()
+      require("config.vista")
+    end
   },
 
   -- This is for html and it can autorename too!
@@ -71,6 +74,12 @@ return {
    config = function()
      require("config.kommentary")
    end
+  },
+
+  -- Code formatter
+  {
+    "sbdchd/neoformat",
+    cmd = "Neoformat"
   },
 
   -- Helps manage package.json
