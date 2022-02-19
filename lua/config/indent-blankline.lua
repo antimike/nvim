@@ -17,12 +17,14 @@ vim.g.indent_blankline_filetype_exclude = {
   "lsp-installer",
   "lspinfo",
   "vista_kind",
+  "NvimTree",
 }
 vim.g.indent_blankline_buftype_exclude = {
   "terminal",
   'lsp-installer',
   'lspinfo',
   "TelescopePrompt",
+  "nofile",
 }
 
 vim.g.indent_blankline_char = indent_blankline_styles.short_dash
