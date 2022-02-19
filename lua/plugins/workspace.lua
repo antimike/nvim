@@ -191,5 +191,9 @@ return {
     config = function()
       require("config.unimpaired")
     end
+  },
+  {
+    'kevinhwang91/rnvimr',
+    as = "ranger"
   }
 }
