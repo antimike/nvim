@@ -72,5 +72,8 @@ return {
   {
     'rbgrouleff/bclose.vim',
     as = "bclose"
+  },
+  {
+    'roxma/nvim-yarp',
   }
 }
