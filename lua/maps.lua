@@ -93,12 +93,12 @@ map('n', '<leader>r', '<Plug>SnipRunOperator')
 map('v', 'r', '<Plug>SnipRun')
 wk.register({
   r = {
-    name = "SnipRun",
+    name = "Code Runners",
     i = {"<Plug>SnipInfo", "Display language-specific info"},
     r = {"<Plug>SnipRun", "Send current line to SnipRun"},
+    d = {":DashRun<CR>", "Run script with Dash"},
   }
 }, {prefix = '<leader>', mode = 'n', silent = true})
-
 
 -- Remove unnecessary white spaces.
 map('n', '<leader>cw', ':StripWhitespace<CR>')
