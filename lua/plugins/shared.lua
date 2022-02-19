@@ -76,11 +76,17 @@ return {
   {
     'roxma/nvim-yarp',
     as = "yarp",
-  }
+  },
 
   -- Optional dependency for wilder.nvim
   {
     'nixprime/cpsm',
     as = "cpsm",
-  }
+  },
+
+  -- Optional dependency for wilder.nvim
+  {
+    'romgrk/fzy-lua-native',
+    as = 'fzy-lua-native',
+    }
 }
