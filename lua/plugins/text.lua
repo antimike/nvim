@@ -21,6 +21,9 @@ return {
     "mfussenegger/nvim-ts-hint-textobject",
     as = "ts-hint-textobject",
     requires = 'treesitter',
+    config = function()
+      require('config.nvim-ts-hint-textobject')
+    end
   },
 
   {
