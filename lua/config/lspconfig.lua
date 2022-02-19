@@ -14,6 +14,7 @@ local servers = {
   'zeta_note',
   'html',
   'bashls',
+  'sumneko_lua',
 }
 
 for _, s in ipairs(servers) do
