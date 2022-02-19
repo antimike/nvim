@@ -34,20 +34,17 @@ map('n', '<leader>bl', ':BufferLineMoveNext<CR>')
 map('n', '<leader>bh', '::BufferLineMovePrev<CR>')
 
 -- Buffer resizing.
-map('n', '<S-h>', ':call ResizeLeft(3)<CR><Esc>')
-map('n', '<S-l>', ':call ResizeRight(3)<CR><Esc>')
-map('n', '<S-k>', ':call ResizeUp(1)<CR><Esc>')
-map('n', '<S-j>', ':call ResizeDown(1)<CR><Esc>')
+map('n', '<C-A-h>', ':call ResizeLeft(3)<CR><Esc>')
+map('n', '<C-A-l>', ':call ResizeRight(3)<CR><Esc>')
+map('n', '<C-A-k>', ':call ResizeUp(1)<CR><Esc>')
+map('n', '<C-A-j>', ':call ResizeDown(1)<CR><Esc>')
 
 -- Dashboard
-map("n", "<Leader>db", ":Dashboard<CR>")
+map("n", "<Leader>D", ":Dashboard<CR>")
 map("n", "<Leader>fn", ":DashboardNewFile<CR>")
 map("n", "<Leader>bm", ":DashboardJumpMarks<CR>")
 map("n", "<C-s>l", ":SessionLoad<CR>")
 map("n", "<C-s>s", ":SessionSave<CR>")
-
--- NvimTree toggle
-map('n', 'nt', ':NvimTreeToggle<CR>')
 
 -- Telescope.
 map("n", "<Leader>fw", ":Telescope live_grep<CR>")
