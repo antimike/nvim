@@ -51,5 +51,11 @@ return {
   {
     'metakirby5/codi.vim',
     as = "scratchpad",
+  },
+
+  -- Literate code support
+  {
+    'jbyuki/ntangle.nvim',
+    as = "ntangle",
   }
 }
