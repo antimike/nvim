@@ -15,21 +15,24 @@ return {
     as = "playground",
     requires = "treesitter",
   },
-  -- {
-  --   'romgrk/nvim-treesitter-context',
-  --   config = function()
-  --     require('treesitter-context.config').setup {enable = true},
-  --   end
-  -- },
+  {
+    'romgrk/nvim-treesitter-context',
+    config = function()
+      require('treesitter-context.config').setup {enable = true}
+    end
+  },
   -- LSP, LSP installer and tab completion.
   -- NOTE: GH page claims that 0.6.1 is required
   {
     'neovim/nvim-lspconfig',
-    as = "lspconfig"
+    as = "lspconfig",
   },
   {
     'williamboman/nvim-lsp-installer',
     requires = "lspconfig",
+    config = function()
+      require("config.lspconfig")
+    end
   },
   -- LSP signature.
   {
