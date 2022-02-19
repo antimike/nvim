@@ -13,6 +13,7 @@ return {
       "telescope-file-browser",
       "telescope-frecency",
       "telescope-arecibo",
+      "command-palette",
     },
     -- cmd = 'Telescope',
     requires = {
@@ -55,6 +56,11 @@ return {
       "sqlite",
       "devicons"
     },
+  },
+  -- Define and search for custom commands
+  {
+    "LinArcX/telescope-command-palette.nvim",
+    as = "command-palette",
   },
   -- Support web searches from neovim
   {
