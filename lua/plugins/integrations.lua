@@ -57,5 +57,11 @@ return {
   {
     'jbyuki/ntangle.nvim',
     as = "ntangle",
+  },
+
+  -- Dash (script runner)
+  {
+    'jbyuki/dash.nvim',
+    as = "dash",
   }
 }
