@@ -209,5 +209,5 @@ return {
     rocks = {
         'pcre2'
     }
-  }
+  },
 }

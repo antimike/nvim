@@ -47,4 +47,9 @@ return {
         require('config.sniprun')
     end
   },
+  -- Interactive code scratchpad
+  {
+    'metakirby5/codi.vim',
+    as = "scratchpad",
+  }
 }
