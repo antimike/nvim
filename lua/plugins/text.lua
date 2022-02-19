@@ -13,7 +13,7 @@ return {
     'ntpeters/vim-better-whitespace',
     as = "better-whitespace",
     config = function()
-        require('config.better-whitespace')
+      require('config.better-whitespace')
     end
   },
 

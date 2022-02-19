@@ -17,7 +17,6 @@ local additional_plugins = {
   -- { crispgm/nvim-go', ft = 'go'}
 
  -- Project
-  { 'airblade/vim-rooter' },
 }
 
 -- Other settings here

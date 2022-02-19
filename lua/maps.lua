@@ -220,7 +220,6 @@ wk.register({
   }
 }, { prefix = "<leader>" })
 
-
 -- Lsp
 wk.register({
   l = {
