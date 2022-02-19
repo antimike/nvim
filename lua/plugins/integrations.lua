@@ -27,4 +27,24 @@ return {
       vim.cmd('let g:instant_username = "antimike"')
     end
   },
+
+  -- Competitive programming
+  {
+    'xeluxee/competitest.nvim',
+    as = 'competitest',
+    requires = 'nui',
+    config = function()
+        require('config.competitest')
+    end
+  },
+
+  -- Code runner
+  {
+    'michaelb/sniprun',
+    as = "sniprun",
+    run = 'bash ./install.sh',
+    config = function()
+        require('config.sniprun')
+    end
+  },
 }

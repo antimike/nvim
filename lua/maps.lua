@@ -88,6 +88,18 @@ function _G.set_terminal_keymaps()
 end
 vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 
+-- SnipRun
+map('n', '<leader>r', '<Plug>SnipRunOperator')
+map('v', 'r', '<Plug>SnipRun')
+wk.register({
+  r = {
+    name = "SnipRun",
+    i = {"<Plug>SnipInfo", "Display language-specific info"},
+    r = {"<Plug>SnipRun", "Send current line to SnipRun"},
+  }
+}, {prefix = '<leader>', mode = 'n', silent = true})
+
+
 -- Remove unnecessary white spaces.
 map('n', '<leader>cw', ':StripWhitespace<CR>')
 
