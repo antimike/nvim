@@ -107,12 +107,17 @@ map('v', '<leader>ct', '<Plug>kommentary_visual_default', {})
 -- Don't copy the replaced text after pasting.
 map("v", "p", "\"_dP")
 
--- Jk for going to normal mode while you are in insert mode.
+-- Jl for going to normal mode while you are in insert mode.
 map("i", "jl", "<ESC>")
 
 -- With this you can use > < multiple time for changing indent when you visual selected text.
 map("v", "<", "<gv")
 map("v", ">", ">gv")
+
+-- Ranger
+-- map('t', '<M-i>', '<C-\\><C-n>:RnvimrResize<CR>', {silent = true})
+map('n', '<M-o>', ':RnvimrToggle<CR>', {silent = true})
+-- map('t', '<M-o>', '<C-\\><C-n>:RnvimrToggle<CR>', {silent = true})
 
 -- Buffer
 wk.register({
