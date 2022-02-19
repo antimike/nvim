@@ -75,5 +75,12 @@ return {
   },
   {
     'roxma/nvim-yarp',
+    as = "yarp",
+  }
+
+  -- Optional dependency for wilder.nvim
+  {
+    'nixprime/cpsm',
+    as = "cpsm",
   }
 }

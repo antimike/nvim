@@ -195,5 +195,19 @@ return {
   {
     'kevinhwang91/rnvimr',
     as = "ranger"
+  },
+  {
+    'gelguy/wilder.nvim',
+    as = "wilder",
+    requires = {
+        'cpsm',
+        'yarp'
+    },
+    config = function()
+        require('config.wilder').basic_config()
+    end,
+    rocks = {
+        'pcre2'
+    }
   }
 }
