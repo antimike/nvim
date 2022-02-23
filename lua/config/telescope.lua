@@ -51,7 +51,48 @@ telescope.setup {
   },
   pickers = {
     find_files = {
-      find_command = { finder, "--type=file", "--hidden", "--follow", "--exclude=.git" }
+      find_command = {
+        finder,
+        "--type=file",
+        "--hidden",
+        "--follow",
+        "--exclude=.git"
+      },
+      theme = "dropdown",
+    },
+    oldfiles = {
+      theme = "dropdown",
+    },
+    find_directories = {
+      theme = "dropdown",
+    },
+    help_tags = {
+      theme = "ivy",
+    },
+    git_status = {
+      theme = "dropdown",
+    },
+    git_commits = {
+      theme = "ivy",
+    },
+    git_bcommits = {
+      theme = "dropdown",
+    },
+    git_branches = {
+      theme = "ivy",
+    },
+    colorscheme = {
+      enable_preview = true,
+      theme = "dropdown",
+    },
+    diagnostics = {
+      theme = "ivy",
+    },
+    live_grep = {
+      theme = "ivy",
+    },
+    buffers = {
+      theme = "dropdown",
     },
   },
   extensions = {
