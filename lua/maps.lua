@@ -59,8 +59,8 @@ map('t', '<C-t>', ':ToggleTerm<CR>')
 map('n', 'v:count1 <C-t>', ':v:count1' .. '"ToggleTerm"<CR>')
 map('v', 'v:count1 <C-t>', ':v:count1' .. '"ToggleTerm"<CR>')
 function _G.set_terminal_keymaps()
-  map('t', '<esc>', '<C-\\><C-n>')
-  map('t', 'jk', '<C-\\><C-n>')
+  -- map('t', '<esc>', '<C-\\><C-n>')
+  -- map('t', 'jl', '<C-\\><C-n>')
   map('t', '<A-h>', '<c-\\><c-n><c-w>h')
   map('t', '<A-j>', '<c-\\><c-n><c-w>j')
   map('t', '<A-k>', '<c-\\><c-n><c-w>k')
@@ -71,7 +71,7 @@ function _G.set_terminal_keymaps()
   map('t', '<S-k>', '<c-\\><C-n>:call ResizeUp(1)<CR>')
   map('t', '<S-l>', '<c-\\><C-n>:call ResizeRight(3)<CR>')
 end
-vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
+-- vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 
 -- Code runners and REPLs
 wk.register({
