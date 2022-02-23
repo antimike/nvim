@@ -16,7 +16,7 @@ toggle_term.setup {
     border = "curved",
     width = 120,
     height = 40,
-    winblend = 3,
+    winblend = 20,
     highlights = {
       border = "Normal",
       background = "Normal",
