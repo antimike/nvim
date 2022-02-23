@@ -85,6 +85,16 @@ return {
     cmd = "Neoformat"
   },
 
+  {
+    "danymat/neogen",
+    config = function()
+        require('config.neogen')
+    end,
+    requires = "treesitter",
+    -- Uncomment next line if you want to follow only stable versions
+    tag = "*"
+  },
+
   -- Helps manage package.json
   {
     "vuki656/package-info.nvim",
@@ -112,5 +122,4 @@ return {
       require("rust-tools").setup({})
     end
   },
-
 }
