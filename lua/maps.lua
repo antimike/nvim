@@ -88,17 +88,26 @@ function _G.set_terminal_keymaps()
 end
 vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 
--- SnipRun
-map('n', '<leader>r', '<Plug>SnipRunOperator')
-map('v', 'r', '<Plug>SnipRun')
+-- Code runners and REPLs
 wk.register({
   r = {
     name = "Code Runners",
+    r = {"<Plug>ReplSend", "Send text motion to REPL"},
+    s = {"<Plug>SnipRunOperator", "Send text motion to SnipRun"},
     i = {"<Plug>SnipInfo", "Display language-specific info"},
-    r = {"<Plug>SnipRun", "Send current line to SnipRun"},
+    sl = {"<Plug>SnipRun", "Send current line to SnipRun"},
     d = {":DashRun<CR>", "Run script with Dash"},
+    rl = {"<Plug>ReplSendLine", "Send current line to REPL"},
   }
 }, {prefix = '<leader>', mode = 'n', silent = true})
+
+wk.register({
+    r = {
+        name = "Code Runners",
+        r = {"<Plug>ReplSend", "Send selection to REPL"},
+        s = {"<Plug>SnipRun", "Send selection to SnipRun"},
+    }
+}, {prefix = '<leader>', mode = 'v', silent = true})
 
 -- Remove unnecessary white spaces.
 map('n', '<leader>cw', ':StripWhitespace<CR>')

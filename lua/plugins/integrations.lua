@@ -71,5 +71,8 @@ return {
   {
     'HiPhish/repl.nvim',
     as = "repl",
+    config = function()
+        require("config.repl")
+    end,
   },
 }
