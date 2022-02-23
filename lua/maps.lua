@@ -112,6 +112,9 @@ wk.register({
         i = {"Increase comment level"},
         d = {"Decrease comment level"},
         t = {"Kommentary line default"},
+        f = {function() require('nvim-comment-frame').add_comment() end, "Single-Line Comment Frame"},
+        F = {function() require('nvim-comment-frame').add_multiline_comment() end, "Multiline Comment Frame"},
+        p = {":ProComment<CR>", "Add comment with ProComment"},
     }
 }, {prefix = '<leader>', mode = 'n', silent = true})
 
@@ -275,6 +278,7 @@ wk.register({
     D = {
         name = "Document",
         s = {function() vim.lsp.buf.document_symbol() end, "Document Symbol"},
+        p = {":ProDoc<CR>", "Add Docs with ProDoc"},
     },
     s = { function() vim.lsp.buf.signature_help() end, "Signature Help" },
     g = {
