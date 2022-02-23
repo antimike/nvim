@@ -247,8 +247,7 @@ wk.register({
 wk.register({
   t = {
     name = "Theme",
-    h = { ":Telescope colorscheme<CR>", "Find Colorscheme" },
-    p = { ":Telescope colorscheme enable_preview=true<CR>", "Find Colorscheme with previwer " },
+    c = { ":Telescope colorscheme<CR>", "Set Colorscheme" },
   }
 }, { prefix = "<leader>" })
 
