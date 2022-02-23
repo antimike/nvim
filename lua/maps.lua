@@ -98,6 +98,17 @@ wk.register({
     sl = {"<Plug>SnipRun", "Send current line to SnipRun"},
     d = {":DashRun<CR>", "Run script with Dash"},
     rl = {"<Plug>ReplSendLine", "Send current line to REPL"},
+    p = {
+        name = "iPython",
+        c = {"<Plug>IPy-RunCell", "Run current cell"},
+        r = {"<Plug>IPy-RunOp", "Run movement or text object"},
+        rl = {"<Plug>IPy-Run", "Run current line"},
+        a = {"<Plug>IPy-RunAll", "Execute all lines in buffer"},
+        C = {"<Plug>IPy-Complete", "Kernel code completion"},
+        i = {"<Plug>IPy-WordObjInfo", "Inspect variable under cursor"},
+        t = {"<Plug>IPy-Interrupt", "Send SIGINT to kernel"},
+        T = {"<Plug>IPy-Terminate", "Terminate kernel"},
+    },
   }
 }, {prefix = '<leader>', mode = 'n', silent = true})
 

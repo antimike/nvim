@@ -75,4 +75,11 @@ return {
         require("config.repl")
     end,
   },
+  {
+    'bfredl/nvim-ipy',
+    as = "ipy",
+    config = function()
+        require("config.ipy")
+    end,
+  },
 }
