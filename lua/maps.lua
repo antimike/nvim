@@ -129,9 +129,6 @@ map('n', '<leader>Fs', ':TZFocus<CR>')
 -- Toggle fold.
 map('n', '<leader>ft', 'za')
 
--- comment
--- map("n", "ct", ":CommentToggle<CR>")
--- map("v", "ct", ":'<,'>CommentToggle<CR>")
 vim.g.kommentary_create_default_mappings = false
 map('n', '<leader>ct', '<Plug>kommentary_line_default', {})
 map('v', '<leader>ct', '<Plug>kommentary_visual_default', {})
