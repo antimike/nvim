@@ -88,5 +88,17 @@ return {
   {
     'romgrk/fzy-lua-native',
     as = 'fzy-lua-native',
-    }
+  },
+
+  -- vim-slime
+  {
+    'jpalardy/vim-slime',
+    as = "slime",
+    opt = true,
+  },
+    -- Repeatable <Plug> mappings
+  {
+    'tpope/vim-repeat',
+    as = "repeat",
+  },
 }
