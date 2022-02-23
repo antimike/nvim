@@ -63,5 +63,9 @@ return {
   {
     'jbyuki/dash.nvim',
     as = "dash",
-  }
+  },
+  {
+    'Olical/conjure',
+    as = "conjure",
+  },
 }
