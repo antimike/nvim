@@ -1,6 +1,8 @@
 local conf = require('kommentary.config')
 
 conf.use_extended_mappings()
+-- TODO: Investigate this
+vim.g.kommentary_create_default_mappings = false
 
 local langs = conf.config -- all default supported langs
 for lang, _ in pairs(langs) do
