@@ -68,4 +68,8 @@ return {
     'Olical/conjure',
     as = "conjure",
   },
+  {
+    'HiPhish/repl.nvim',
+    as = "repl",
+  },
 }
