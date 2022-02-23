@@ -176,7 +176,7 @@ wk.register({
     u = { ":PackerUpdate<CR>", "Update plugins" },
     r = { ":PackerClean<CR>", "Uninstall unused plugins" },
     s = { ":PackerSync<CR>", "Sync plugins" },
-    c = { ":PackerClean<CR>", "Compile plugins" },
+    c = { ":PackerCompile<CR>", "Compile plugins" },
   }
 }, { prefix = "<leader>" })
 
