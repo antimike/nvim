@@ -150,8 +150,18 @@ map("v", ">", ">gv")
 
 -- Ranger
 -- map('t', '<M-i>', '<C-\\><C-n>:RnvimrResize<CR>', {silent = true})
-map('n', '<M-o>', ':RnvimrToggle<CR>', {silent = true})
+-- map('n', '<M-o>', ':RnvimrToggle<CR>', {silent = true})
 -- map('t', '<M-o>', '<C-\\><C-n>:RnvimrToggle<CR>', {silent = true})
+
+-- File Managers
+wk.register({
+    o = {":Ranger<CR>", "Ranger (File Manager)"},
+}, {prefix = '<leader>'})
+
+-- Cheatsheets
+wk.register({
+    C = {":Cheatsheet<CR>", "Cheatsheets"},
+}, {prefix = '<leader>'})
 
 -- Buffer
 wk.register({

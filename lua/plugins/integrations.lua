@@ -82,4 +82,22 @@ return {
         require("config.ipy")
     end,
   },
+  {
+    'is0n/fm-nvim',
+    as = "file-managers",
+    config = function()
+        require("config.file-managers")
+    end,
+  },
+  {
+    'sudormrfbin/cheatsheet.nvim',
+    requires = {
+        'telescope',
+        'popup',
+        'plenary',
+    },
+    config = function()
+        require('config.cheatsheets')
+    end,
+}
 }

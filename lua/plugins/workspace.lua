@@ -194,7 +194,8 @@ return {
   },
   {
     'kevinhwang91/rnvimr',
-    as = "ranger"
+    as = "ranger",
+    opt = true
   },
   {
     'gelguy/wilder.nvim',
