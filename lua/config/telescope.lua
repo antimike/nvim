@@ -48,6 +48,7 @@ telescope.setup {
     },
     prompt_prefix = "   ",
     selection_caret = " ",
+    winblend = 20,
   },
   pickers = {
     find_files = {
