@@ -210,4 +210,12 @@ return {
         'pcre2'
     }
   },
+  {
+    'ggandor/lightspeed.nvim',
+    as = "lightspeed",
+    requires = "vim-repeat",
+    -- config = function()
+    --     require("config.lightspeed")
+    -- end,
+  },
 }
