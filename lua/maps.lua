@@ -40,33 +40,18 @@ map('n', '<C-A-k>', ':call ResizeUp(1)<CR><Esc>')
 map('n', '<C-A-j>', ':call ResizeDown(1)<CR><Esc>')
 
 -- Dashboard
-map("n", "<Leader>D", ":Dashboard<CR>")
-map("n", "<Leader>fn", ":DashboardNewFile<CR>")
-map("n", "<Leader>bm", ":DashboardJumpMarks<CR>")
-map("n", "<C-s>l", ":SessionLoad<CR>")
-map("n", "<C-s>s", ":SessionSave<CR>")
+wk.register({
+    D = {":Dashboard<CR>", "Dashboard"},
+}, {prefix = '<leader>'})
 
--- Telescope.
-map("n", "<Leader>fw", ":Telescope live_grep<CR>")
-map("n", "<Leader>gt", ":Telescope git_status<CR>")
-map("n", "<Leader>cm", ":Telescope git_commits<CR>")
-map("n", "<Leader>ff", ":Telescope find_files<CR>")
-map("n", "<Leader>fp", ":lua require('telescope').extensions.media_files.media_files()<CR>")
-map("n", "<Leader>fb", ":Telescope buffers<CR>")
-map("n", "<Leader>fh", ":Telescope help_tags<CR>")
-map("n", "<Leader>fo", ":Telescope oldfiles<CR>")
-map("n", "<Leader>th", ":Telescope colorscheme<CR>")
-
--- Lsp
-map('n', '<space>,', ':lua vim.lsp.diagnostic.goto_prev()<CR>')
-map('n', '<space>;', ':lua vim.lsp.diagnostic.goto_next()<CR>')
-map('n', '<space>a', ':lua vim.lsp.buf.code_action()<CR>')
-map('n', '<leader>gd', ':lua vim.lsp.buf.definition()<CR>')
-map('n', '<space>f', ':lua vim.lsp.buf.formatting()<CR>')
-map('n', '<space>h', ':lua vim.lsp.buf.hover()<CR>')
-map('n', '<space>m', ':lua vim.lsp.buf.rename()<CR>')
-map('n', '<space>r', ':lua vim.lsp.buf.references()<CR>')
-map('n', '<space>s', ':lua vim.lsp.buf.document_symbol()<CR>')
+-- Session Management
+wk.register({
+    ["<C-s>"] = {
+        name = "Session",
+        s = {":SessionLoad<CR>", "Load Session"},
+        S = {":SessionSave<CR>", "Save Session"},
+    }
+}, {prefix = '<leader>'})
 
 -- ToggleTerm
 map('n', '<C-t>', ':ToggleTerm<CR>')
@@ -120,24 +105,41 @@ wk.register({
     }
 }, {prefix = '<leader>', mode = 'v', silent = true})
 
--- Remove unnecessary white spaces.
-map('n', '<leader>cw', ':StripWhitespace<CR>')
+-- Comments
+wk.register({
+    c = {
+        name = "Comment",
+        i = {"Increase comment level"},
+        d = {"Decrease comment level"},
+        t = {"Kommentary line default"},
+    }
+}, {prefix = '<leader>', mode = 'n', silent = true})
 
--- TrueZen focus mode.
-map('n', '<leader>Fs', ':TZFocus<CR>')
+wk.register({
+    c = {
+        name = "Comment",
+        i = {"Increase comment level"},
+        d = {"Decrease comment level"},
+        t = {"Kommentary line default"},
+    }
+}, {prefix = '<leader>', mode = 'v', silent = true})
+
+-- Remove unnecessary white spaces.
+wk.register({
+    w = {':StripWhitespace<CR>', "Strip Whitespace"},
+}, {prefix = '<leader>', mode = 'n', silent = true})
 
 -- Toggle fold.
-map('n', '<leader>ft', 'za')
-
-vim.g.kommentary_create_default_mappings = false
-map('n', '<leader>ct', '<Plug>kommentary_line_default', {})
-map('v', '<leader>ct', '<Plug>kommentary_visual_default', {})
+wk.register({
+    z = {'za', "Toggle Fold"},
+}, {prefix = '<leader>'})
 
 -- Don't copy the replaced text after pasting.
 map("v", "p", "\"_dP")
 
--- Jl for going to normal mode while you are in insert mode.
+-- Jl for going to normal mode while you are in insert / visual mode.
 map("i", "jl", "<ESC>")
+map("v", "jl", "<ESC>")
 
 -- With this you can use > < multiple time for changing indent when you visual selected text.
 map("v", "<", "<gv")
@@ -190,16 +192,16 @@ wk.register({
 wk.register({
   f = {
     name = "Find",
-    w = { ":Telescope live_grep<CR>", "Word" },
-    f = { ":Telescope find_files<CR>", "File" },
-    o = { ":Telescope oldfiles<CR>", "Old File" },
+    w = { ":Telescope live_grep<CR>", "Words" },
+    f = { ":Telescope find_files<CR>", "Files" },
+    o = { ":Telescope oldfiles<CR>", "Old Files" },
     d = { ":Telescope find_directories<CR>", "Directory" },
-    b = { ":Telescope buffers<CR>", "Buffer" },
-    h = { ":Telescope help_tags<CR>", "Help File" },
+    b = { ":Telescope buffers<CR>", "Buffers" },
+    h = { ":Telescope help_tags<CR>", "Help Files" },
     B = { ":DashboardJumpMarks<CR>", "Find BookMark" },
+    p = { function() require('telescope').extensions.media_files.media_files() end, "Media files" },
   }
 }, { prefix = "<leader>" })
-
 
 -- Git keybinds.
 wk.register({
@@ -253,59 +255,73 @@ wk.register({
 wk.register({
   l = {
     name = "LSP",
-    a = { ":lua vim.lsp.buf.code_action()<CR>", "Code Action" },
+    a = { function() vim.lsp.buf.code_action() end, "Code Action" },
     d = { ":Telescope diagnostics<CR>", "Diagnostics" },
     i = { ":LspInfo<CR>", "Info" },
     I = { ":LspInstallInfo<CR>", "Installer Info" },
-    r = { ":lua vim.lsp.buf.rename()<CR>", "Rename" },
-    h = { ":lua vim.lsp.buf.hover()<CR>", "Display Information Of Symbol" },
-    s = { ":lua vim.lsp.buf.signature_help()<CR>", "Signature Help" },
+    r = { function() vim.lsp.buf.rename() end, "Rename" },
+    h = { function() vim.lsp.buf.hover() end, "Display Information Of Symbol" },
+    f = {
+        name = "Format",
+        b = {function() vim.lsp.buf.formatting() end, "Format Buffer"},
+    },
+    A = {
+        name = "Annotate (NeoGen)",
+        f = {function() require("neogen").generate {type = "func"} end, "Annotate Function"},
+        c = {function() require("neogen").generate {type = "class"} end, "Annotate Function"},
+        t = {function() require("neogen").generate {type = "type"} end, "Annotate Function"},
+        F = {function() require("neogen").generate {type = "file"} end, "Annotate Function"},
+    },
+    D = {
+        name = "Document",
+        s = {function() vim.lsp.buf.document_symbol() end, "Document Symbol"},
+    },
+    s = { function() vim.lsp.buf.signature_help() end, "Signature Help" },
     g = {
       name = "GOTO",
-      D = { ":lua vim.lsp.buf.declaration()<CR>", "Go To Declaration" },
-      i = { ":lua vim.lsp.buf.implementation()<CR>", "Go To Implementation" },
-      d = { "::lua vim.lsp.buf.definition()<CR>", "Go to Definition" },
-      j = { ":lua vim.lsp.diagnostic.goto_prev()<CR>", "Go To Previous Diagnostics" },
-      k = { ":lua vim.lsp.diagnostic.goto_next()<CR>", "Go To Next Diagnostics" },
-      t = { ":lua vim.lsp.buf.type_definition()<CR>", "Go To Type Definition" },
+      D = { function() vim.lsp.buf.declaration() end, "Go To Declaration" },
+      i = { function() vim.lsp.buf.implementation() end, "Go To Implementation" },
+      d = { function() vim.lsp.buf.definition() end, "Go to Definition" },
+      j = { function() vim.lsp.diagnostic.goto_prev() end, "Go To Previous Diagnostics" },
+      k = { function() vim.lsp.diagnostic.goto_next() end, "Go To Next Diagnostics" },
+      t = { function() vim.lsp.buf.type_definition() end, "Go To Type Definition" },
     },
     w = {
       name = "Workspace",
-      l = { ":lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>", "List Workspace Folder" },
-      a = { ":lua vim.lsp.buf.add_workspace_folder()<CR>", "Add Workspace Folder" },
-      r = { ":lua vim.lsp.buf.remove_workspace_folder()<CR>", "Remove Workspace Folder" },
+      l = { function() print(vim.inspect(vim.lsp.buf.list_workspace_folders())) end, "List Workspace Folder" },
+      a = { function() vim.lsp.buf.add_workspace_folder() end, "Add Workspace Folder" },
+      r = { function() vim.lsp.buf.remove_workspace_folder() end, "Remove Workspace Folder" },
     },
     l = {
       name = "List Reference/Diagnostic",
-      d = { ":lua vim.lsp.diagnostic.set_loclist()<CR>", "List Diagnostic" },
-      r = { ":lua vim.lsp.buf.references()<CR>", "Show References" },
+      d = { function() vim.lsp.diagnostic.set_loclist() end, "List Diagnostic" },
+      r = { function() vim.lsp.buf.references() end, "Show References" },
     },
   }
 }, { prefix = "<leader>" })
-
 
 -- Dap
 wk.register({
   d = {
     name = "Debugging",
-    c = { ":lua require(\"dap\").continue()<CR>", "Continue" },
-    t = { ":lua require(\"dap\").terminate()<CR>", "Terminate" },
-    l = { ":lua require(\"dap\").run_last()<CR>", "Run Last Debugging Config" },
-    d = { ":lua require(\"dap\").repl.open()<CR>", "Open Debug Console" },
+    c = { function() require('dap').continue() end, "Continue" },
+    t = { function() require('dap').terminate() end, "Terminate" },
+    l = { function() require('dap').run_last() end, "Run Last Debugging Config" },
+    d = { function() require('dap').repl.open() end, "Open Debug Console" },
     b = {
       name = "Breakpoint",
-      t = { ":lua require(\"dap\").toggle_breakpoint()<CR>", "Toggle" },
-      c = { ":lua require(\"dap\").set_breakpoint(vim.fn.input(\"Breakpoint condition: \"))<CR>", "Set conditional" },
-      l = { ":lua require(\"dap\").set_breakpoint(nil, nil, vim.fn.input(\"Log point message: \"))<CR>", "With Log Point Message" },
+      t = { function() require('dap').toggle_breakpoint() end, "Toggle" },
+      c = { function() require('dap').set_breakpoint(vim.fn.input("Breakpoint condition: ")) end, "Set conditional" },
+      l = { function() require("dap").set_breakpoint(nil, nil, vim.fn.input("Log point message: ")) end, "With Log Point Message" },
     },
     s = {
       name = "Step",
-      o = { ":lua require(\"dap\").step_over()<CR>", "Step Over" },
-      O = { ":lua require(\"dap\").step_into()<CR>", "Step Into" },
-      i = { ":lua require(\"dap\").step_out()<CR>", "Step Out" },
-      b = { ":lua require(\"dap\").step_back()<CR>", "Step Back" },
-      c = { ":lua require(\"dap\").run_to_cursor()<CR>", "Run To Cursor" },
+      o = { function() require("dap").step_over() end, "Step Over" },
+      O = { function() require("dap").step_into() end, "Step Into" },
+      i = { function() require("dap").step_out() end, "Step Out" },
+      b = { function() require("dap").step_back() end, "Step Back" },
+      c = { function() require("dap").run_to_cursor() end, "Run To Cursor" },
     },
-    u = { ":lua require(\"dapui\").toggle()<CR>", "Toggle UI" },
+    u = { function() require("dapui").toggle() end, "Toggle UI" },
   }
 }, { prefix = "<leader>" })
