@@ -79,12 +79,22 @@ return {
    end
   },
 
+  {
+    's1n7ax/nvim-comment-frame',
+    as = 'comment-frame',
+    requires = 'treesitter',
+    config = function()
+        require('config.comment-frame')
+    end,
+  },
+
   -- Code formatter
   {
     "sbdchd/neoformat",
     cmd = "Neoformat"
   },
 
+  -- Generate annotations and documentation
   {
     "danymat/neogen",
     config = function()
@@ -95,6 +105,15 @@ return {
     tag = "*"
   },
 
+  -- Alternative comment and docs generator
+  {
+    'glepnir/prodoc.nvim',
+    as = 'prodoc',
+    cmd = {
+        "ProDoc",
+        "ProComment",
+    }
+  },
   -- Helps manage package.json
   {
     "vuki656/package-info.nvim",
