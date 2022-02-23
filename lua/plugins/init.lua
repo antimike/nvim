@@ -23,8 +23,16 @@ return require('packer').startup({
   config = {
     display = {
       open_fn = function()
-        return require('packer.util').float({ border = 'single' })
+        return require('packer.util').float {
+            border = 'single',
+            -- shadow = 'true',
+            -- winblend = 20,
+        }
       end
+    },
+    profile = {
+        enable = true,
+        threshold = 1,
     },
     -- transitive_opt = false,
     -- opt_default = true,
