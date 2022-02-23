@@ -95,6 +95,9 @@ telescope.setup {
     buffers = {
       theme = "dropdown",
     },
+    notify = {
+      theme = "dropdown",
+    },
   },
   extensions = {
     media_files = {
@@ -191,6 +194,7 @@ telescope.load_extension("ui-select")
 telescope.load_extension("arecibo")
 telescope.load_extension("project")
 telescope.load_extension('command_palette')
+telescope.load_extension('notify')
 
 -- Suggested by https://alpha2phi.medium.com/vim-neovim-managing-multiple-projects-63180fc87188
 -- map('n', '<leader>fp', ':Telescope project<CR>')

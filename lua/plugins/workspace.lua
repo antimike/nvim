@@ -219,4 +219,14 @@ return {
     --     require("config.lightspeed")
     -- end,
   },
+  {
+    'rcarriga/nvim-notify',
+    as = "nvim-notify",
+    requires = {
+      "plenary",
+    },
+    config = function()
+        require('config.notify')
+    end,
+  },
 }

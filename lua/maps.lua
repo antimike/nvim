@@ -213,6 +213,7 @@ wk.register({
     h = { ":Telescope help_tags<CR>", "Help Files" },
     B = { ":DashboardJumpMarks<CR>", "Find BookMark" },
     p = { function() require('telescope').extensions.media_files.media_files() end, "Media files" },
+    n = { "Telescope notify<CR>", "Notifications" },
   }
 }, { prefix = "<leader>" })
 
