@@ -99,6 +99,6 @@ return {
     -- Repeatable <Plug> mappings
   {
     'tpope/vim-repeat',
-    as = "repeat",
+    as = "vim-repeat",
   },
 }
