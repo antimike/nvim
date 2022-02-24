@@ -1,5 +1,6 @@
   -- Color schemes.
 return {
+  { "ellisonleao/gruvbox.nvim" },
   { 'folke/tokyonight.nvim' },
   { 'bluz71/vim-nightfly-guicolors' },
   { 'bluz71/vim-moonfly-colors' },
