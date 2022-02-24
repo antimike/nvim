@@ -159,6 +159,69 @@ wk.register({
     o = {":Ranger<CR>", "Ranger (File Manager)"},
 }, {prefix = '<leader>'})
 
+-- hop.nvim
+wk.register({
+    ['<C-h>'] = {
+        name = "Hop",
+        f = {
+            function()
+                require("hop").hint_char1 {
+                    direction = require'hop.hint'.HintDirection.AFTER_CURSOR,
+                    current_line_only = true
+                }
+            end,
+            "Hop forward in line"
+        },
+        b = {
+            function()
+                require("hop").hint_char1 {
+                    direction = require'hop.hint'.HintDirection.BEFORE_CURSOR,
+                    current_line_only = true
+                }
+            end,
+            "Hop backward in line"
+        },
+        F = {
+            function()
+                require("hop").hint_char1 {
+                    direction = require'hop.hint'.HintDirection.AFTER_CURSOR,
+                    current_line_only = false
+                }
+            end,
+            "Hop forward in line"
+        },
+        B = {
+            function()
+                require("hop").hint_char1 {
+                    direction = require'hop.hint'.HintDirection.BEFORE_CURSOR,
+                    current_line_only = false
+                }
+            end,
+            "Hop backward in line"
+        },
+        l = {
+            ":HopLine<CR>",
+            "Hop to line"
+        },
+        L = {
+            ":HopLineStart<CR>",
+            "Hop to first char of line"
+        },
+        p = {
+            ":HopPattern<CR>",
+            "Hop to pattern"
+        },
+        d = {
+            ":HopChar2<CR>",
+            "Hop to bigram"
+        },
+        w = {
+            ":HopWord<CR>",
+            "Hop to word"
+        }
+    }
+})
+
 -- Cheatsheets
 wk.register({
     C = {":Cheatsheet<CR>", "Cheatsheets"},
