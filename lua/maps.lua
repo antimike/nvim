@@ -224,7 +224,11 @@ wk.register({
 
 -- Cheatsheets
 wk.register({
-    C = {":Cheatsheet<CR>", "Cheatsheets"},
+    C = {
+        name = "Cheatsheets",
+        f = {":Telescope cheat fd<CR>", "Find cheatsheet"},
+        r = {":Telescope cheat recache<CR>", "Recache cheatsheets"}
+    },
 }, {prefix = '<leader>'})
 
 -- Buffer
@@ -278,7 +282,8 @@ wk.register({
     h = { ":Telescope help_tags<CR>", "Help Files" },
     B = { ":DashboardJumpMarks<CR>", "Find BookMark" },
     p = { function() require('telescope').extensions.media_files.media_files() end, "Media files" },
-    n = { "Telescope notify<CR>", "Notifications" },
+    n = { ":Telescope notify<CR>", "Notifications" },
+    c = { ":Telescope cheat fd<CR>", "Cheatsheets" },
   }
 }, { prefix = "<leader>" })
 
