@@ -101,4 +101,10 @@ return {
     'tpope/vim-repeat',
     as = "vim-repeat",
   },
+  -- Colorscheme creation and editing tool
+  {
+    'rktjmp/lush.nvim',
+    as = "lush",
+    opt = true
+  },
 }
