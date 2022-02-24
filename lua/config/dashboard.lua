@@ -35,8 +35,7 @@ g.dashboard_custom_section = {
 
 g.dashboard_custom_footer = {
     " ",
-    "CodeArt Loaded " .. plugins_count .. " plugins!  ",
-    "CodeArt v0.1"
+    "Neovim Loaded " .. plugins_count .. " plugins!  ",
 }
 
 -- Disable statusline and cursorline in dashboard.
