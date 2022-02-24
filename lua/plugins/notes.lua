@@ -93,5 +93,25 @@ return {
         config = function()
             require('config.telekasten')
         end,
-    }
+    },
+    {
+        'jakewvincent/mkdnflow.nvim',
+        as = 'mkdnflow',
+        config = function()
+            require('config.mkdnflow')
+        end,
+    },
+    -- NOTE: Note sure this one's necessary in light of mkdnflow
+    {
+        'jghauser/follow-md-links.nvim',
+        as = 'follow-md-links',
+        requires = 'treesitter',
+        config = function()
+            require('follow-md-links')
+        end,
+    },
+    {
+        'mzlogin/vim-markdown-toc',
+        as = 'markdown-toc',
+    },
 }
