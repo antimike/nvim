@@ -86,7 +86,10 @@ return {
             'telescope',
             'calendar',
         },
-        after = 'telescope',
+        after = {
+            'telescope',
+            'calendar',
+        },
         config = function()
             require('config.telekasten')
         end,
