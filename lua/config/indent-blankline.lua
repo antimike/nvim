@@ -18,6 +18,7 @@ vim.g.indent_blankline_filetype_exclude = {
   "lspinfo",
   "vista_kind",
   "NvimTree",
+  "calendar",
 }
 vim.g.indent_blankline_buftype_exclude = {
   "terminal",
