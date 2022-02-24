@@ -2,6 +2,7 @@ local present, nvim_treesitter = pcall(require, "nvim-treesitter.configs")
 if not present then
     return
 end
+local parser_conf = require("nvim-treesitter.parsers").get_parser_configs()
 
 nvim_treesitter.setup {
   highlight = {
@@ -98,12 +99,14 @@ nvim_treesitter.setup {
       enable = true,
       border = 'none',
       peek_definition_code = {
-        ["<Leader>pf"] = "@function.outer",
-        ["<Leader>pc"] = "@class.outer",
+        ["<Leader>lpf"] = "@function.outer",
+        ["<Leader>lpc"] = "@class.outer",
       }
     }
   }
 }
+
+parser_conf.markdown.filetype_to_parsername = "octo"
 
 vim.cmd
 [[

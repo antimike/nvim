@@ -10,6 +10,18 @@ return {
     end
   },
 
+  {
+    'pwntester/octo.nvim',
+    requires = {
+      'plenary',
+      'telescope',
+      'devicons',
+    },
+    config = function ()
+      require("config.octo")
+    end,
+  },
+
   -- Create shareable permalinks with line ranges
   {
     'ruifm/gitlinker.nvim',
@@ -37,6 +49,12 @@ return {
         require('config.competitest')
     end
   },
+
+  -- {
+  --   'p00f/cphelper',
+  --   as = 'cphelper',
+  --   requires = 'plenary',
+  -- },
 
   -- Code runner
   {
@@ -89,15 +107,15 @@ return {
         require("config.file-managers")
     end,
   },
-  {
-    'sudormrfbin/cheatsheet.nvim',
-    requires = {
-        'telescope',
-        'popup',
-        'plenary',
-    },
-    config = function()
-        require('config.cheatsheets')
-    end,
-}
+--   {
+--     'sudormrfbin/cheatsheet.nvim',
+--     requires = {
+--         'telescope',
+--         'popup',
+--         'plenary',
+--     },
+--     config = function()
+--         require('config.cheatsheets')
+--     end,
+-- }
 }
