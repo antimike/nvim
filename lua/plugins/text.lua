@@ -8,15 +8,6 @@ return {
     end
   },
 
-  -- This plugin show trailing whitespace.
-  {
-    'ntpeters/vim-better-whitespace',
-    as = "better-whitespace",
-    config = function()
-      require('config.better-whitespace')
-    end
-  },
-
   {
     "mfussenegger/nvim-ts-hint-textobject",
     as = "ts-hint-textobject",
