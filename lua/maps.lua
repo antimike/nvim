@@ -83,6 +83,7 @@ wk.register({
     sl = {"<Plug>SnipRun", "Send current line to SnipRun"},
     d = {":DashRun<CR>", "Run script with Dash"},
     rl = {"<Plug>ReplSendLine", "Send current line to REPL"},
+    b = {function() require('mdeval').eval_code_block() end, "Evaluate Fenced Code Block"},
     p = {
         name = "iPython",
         c = {"<Plug>IPy-RunCell", "Run current cell"},
@@ -193,8 +194,8 @@ wk.register({
 
 -- NvimTree
 wk.register({
-  n = {
-    name = "NvimTree",
+  e = {
+    name = "Explorer",
     t = { ":NvimTreeToggle<CR>", "Toggle NvimTree" },
     f = { ":NvimTreeFocus<CR>", "Focus on NvimTree" },
   }
@@ -338,4 +339,43 @@ wk.register({
     },
     u = { function() require("dapui").toggle() end, "Toggle UI" },
   }
+
 }, { prefix = "<leader>" })
+
+wk.register({
+    n = {
+        name = "Notes",
+        m = {function() require("nabla").action() end, "Generate ASCII Formula"},
+        M = {function() require("nabla").popup() end, "Popup ASCII Formulas"},
+        d = {function() require("custom.venn").ToggleVenn() end, "Toggle Diagram Mode (venn.nvim)"},
+        t = {
+            name = "Telekasten",
+            f = {function() require('telekasten').find_notes() end, "Find Notes"},
+            d = {function() require('telekasten').find_daily_notes() end, "Find Daily Notes"},
+            g = {function() require('telekasten').search_notes() end, "Search Notes"},
+            z = {function() require('telekasten').follow_link() end, "Follow Link"},
+            p = {function() require('telekasten').panel() end, "Command Palette"},
+            n = {function() require('telekasten').new_note() end, "New Note"},
+            N = {function() require('telekasten').new_templated_note() end, "New Templated Note"},
+            t = {function() require('telekasten').goto_today() end, "Goto Today's Note"},
+            w = {function() require('telekasten').find_weekly_notes() end, "Find Weekly Notes"},
+            W = {function() require('telekasten').goto_thisweek() end, "Goto This Week's Note"},
+            l = {function() require('telekasten').insert_link() end, "Insert Link"},
+            L = {function() require('telekasten').follow_link() end, "Follow Link"},
+            F = {function() require('telekasten').find_friends() end, "Find Link Siblings"},
+            c = {function() require('telekasten').show_calendar() end, "Show Calendar"},
+            y = {function() require('telekasten').yank_notelink() end, "Yank Link to Current Note"},
+            i = {
+                name = "Image",
+                l = {function() require('telekasten').insert_img_link() end, "Insert Image Link"},
+                L = {function() require('telekasten').paste_img_and_link() end, "Paste Image and Link"},
+                p = {function() require('telekasten').preview_img() end, "Preview Image"},
+            },
+            T = {function() require('telekasten').toggle_todo() end, "Toggle Todo"},
+            b = {function() require('telekasten').show_backlinks() end, "Show Backlinks"},
+            b = {function() require('telekasten').browse_media() end, "Browse Media"},
+            ['#'] = {function() require('telekasten').show_tags() end, "Show Tags"},
+            r = {function() require('telekasten').rename_note() end, "Rename Note"},
+        }
+    }
+}, {prefix = '<leader>'})

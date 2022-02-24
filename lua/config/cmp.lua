@@ -101,5 +101,6 @@ cmp.setup({
     { name = 'treesitter' },
     { name = 'nvim_lua' },
     { name = 'crates' },
+    { name = 'orgmode' },
   }
 })

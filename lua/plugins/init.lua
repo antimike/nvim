@@ -12,6 +12,7 @@ local plugin_groups = {
   "effects",
   "focus",
   "dap",
+  "notes",
 }
 for _, g in ipairs(plugin_groups) do
   vim.list_extend(plugins, require("plugins." .. g))

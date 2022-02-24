@@ -6,6 +6,8 @@ end
 nvim_treesitter.setup {
   highlight = {
     enable = true,
+    disable = {'org'},
+    -- NOTE: nvim-orgmode author recommends val of {'org'} here
     additional_vim_regex_highlighting = true,
   },
   matchup = {
