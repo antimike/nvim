@@ -14,6 +14,8 @@ return {
       "telescope-frecency",
       "telescope-arecibo",
       "command-palette",
+      "smart-history",
+      "telescope-cheat",
     },
     -- cmd = 'Telescope',
     requires = {
@@ -22,6 +24,16 @@ return {
     config = function()
       require('config.telescope')
     end
+  },
+  {
+    'nvim-telescope/telescope-smart-history.nvim',
+    as = 'smart-history',
+    requires = 'sqlite',
+  },
+  {
+    'nvim-telescope/telescope-cheat.nvim',
+    as = 'telescope-cheat',
+    requires = 'sqlite',
   },
   {
     'nvim-telescope/telescope-project.nvim',

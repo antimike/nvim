@@ -34,6 +34,9 @@ end
 
 telescope.setup {
   defaults = {
+    history = {
+        path = '~/.local/share/nvim/databases/telescope_history.sqlite3',
+    },
     buffer_previewer_maker = new_maker,
     vimgrep_arguments = {
       "rg",
@@ -195,6 +198,8 @@ telescope.load_extension("arecibo")
 telescope.load_extension("project")
 telescope.load_extension('command_palette')
 telescope.load_extension('notify')
+telescope.load_extension('smart_history')
+telescope.load_extension('cheat')
 
 -- Suggested by https://alpha2phi.medium.com/vim-neovim-managing-multiple-projects-63180fc87188
 -- map('n', '<leader>fp', ':Telescope project<CR>')
