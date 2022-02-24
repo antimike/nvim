@@ -265,6 +265,15 @@ wk.register({
   }
 }, { prefix = "<leader>" })
 
+-- Treesitter
+-- NOTE: Bindings are in config.treesitter; these are just descriptions
+wk.register({
+    [']]'] = {"Goto next class"},
+    [']['] = {"Goto end of next class"},
+    ['[]'] = {"Goto end of previous class"},
+    ['[['] = {"Goto previous class"},
+})
+
 -- Lsp
 wk.register({
   l = {
@@ -292,6 +301,11 @@ wk.register({
         p = {":ProDoc<CR>", "Add Docs with ProDoc"},
     },
     s = { function() vim.lsp.buf.signature_help() end, "Signature Help" },
+    p = {               -- See config.treesitter
+        name = "Peek",
+        f = {"Function"},
+        c = {"Class"},
+    },
     g = {
       name = "GOTO",
       D = { function() vim.lsp.buf.declaration() end, "Go To Declaration" },
@@ -311,6 +325,11 @@ wk.register({
       name = "List Reference/Diagnostic",
       d = { function() vim.lsp.diagnostic.set_loclist() end, "List Diagnostic" },
       r = { function() vim.lsp.buf.references() end, "Show References" },
+    },
+    x = {                       -- See config.treesitter
+        name = "Swap",
+        p = {"Next parameter"},
+        P = {"Previous parameter"},
     },
   }
 }, { prefix = "<leader>" })
