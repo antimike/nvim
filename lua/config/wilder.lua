@@ -48,10 +48,9 @@ end
 
 function pkg.renderer.mux_config()
     vim.cmd [[
-    " 'highlighter' : applies highlighting to the candidates
+        " \    'highlighter': wilder#basic_highlighter(),
     call wilder#set_option('renderer', wilder#renderer_mux({
         \  '/': wilder#wildmenu_renderer({
-        " \    'highlighter': wilder#basic_highlighter(),
         \    'separator': ' · ',
         \    'left': [' ', wilder#wildmenu_spinner(), ' '],
         \    'right': [' ', wilder#wildmenu_index()],
@@ -81,7 +80,6 @@ end
 function pkg.renderer.popup_config()
     vim.cmd [[
     call wilder#set_option('renderer', wilder#popupmenu_renderer({
-          " \ 'highlighter': wilder#basic_highlighter(),
           \ 'highlighter': [
           \   wilder#lua_pcre2_highlighter(),
           \   wilder#lua_fzy_highlighter(),
@@ -147,6 +145,7 @@ function pkg.advanced_config()
 
     let s:popupmenu_renderer = wilder#popupmenu_renderer(wilder#popupmenu_border_theme({
           \ 'border': 'rounded',
+          \ 'pumblend': 40,
           \ 'empty_message': wilder#popupmenu_empty_message_with_spinner(),
           \ 'highlighter': s:highlighters,
           \ 'left': [

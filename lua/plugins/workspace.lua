@@ -204,8 +204,9 @@ return {
         'cpsm',
         'yarp'
     },
+    after = 'cpsm',
     config = function()
-        require('config.wilder').basic_config()
+        require('config.wilder').advanced_config()
     end,
     rocks = {
         'pcre2'
