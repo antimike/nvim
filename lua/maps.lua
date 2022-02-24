@@ -51,7 +51,7 @@ wk.register({
         s = {":SessionLoad<CR>", "Load Session"},
         S = {":SessionSave<CR>", "Save Session"},
     }
-}, {prefix = '<leader>'})
+})
 
 -- ToggleTerm
 map('n', '<C-t>', ':ToggleTerm<CR>')
