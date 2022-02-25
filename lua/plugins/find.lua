@@ -18,6 +18,7 @@ return {
       "telescope-cheat",
       "telescope-z",
       "telescope-github",
+      -- 'telescope-packer',
     },
     -- cmd = 'Telescope',
     requires = {
@@ -27,6 +28,10 @@ return {
       require('config.telescope')
     end
   },
+  -- {
+  --   'nvim-telescope/telescope-packer.nvim',
+  --   as = 'telescope-packer',
+  -- },
   {
     'nvim-telescope/telescope-smart-history.nvim',
     as = 'smart-history',

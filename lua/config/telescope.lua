@@ -103,6 +103,9 @@ telescope.setup {
     },
   },
   extensions = {
+    -- packer = {
+    --     theme = "ivy",
+    -- },
     media_files = {
       filetypes = {"png", "webp", "jpg", "jpeg", "mp4","webm", "pdf"},
       find_cmd = "rg"
@@ -202,6 +205,7 @@ telescope.load_extension('smart_history')
 telescope.load_extension('cheat')
 telescope.load_extension('z')
 telescope.load_extension('gh')
+-- telescope.load_extension('packer')
 
 -- Suggested by https://alpha2phi.medium.com/vim-neovim-managing-multiple-projects-63180fc87188
 -- map('n', '<leader>fp', ':Telescope project<CR>')
