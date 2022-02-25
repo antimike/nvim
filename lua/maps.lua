@@ -282,6 +282,7 @@ wk.register({
     h = { ":Telescope help_tags<CR>", "Help Files" },
     B = { ":DashboardJumpMarks<CR>", "Find BookMark" },
     p = { function() require('telescope').extensions.media_files.media_files() end, "Media files" },
+    P = { ":Telescope project<CR>", "Projects" },
     n = { ":Telescope notify<CR>", "Notifications" },
     c = { ":Telescope cheat fd<CR>", "Cheatsheets" },
     z = { ":Telescope z list<CR>", "Common Directories (Z)" },
@@ -310,10 +311,28 @@ wk.register({
     D = { ":VGit project_diff_preview<CR>", "Project Diff Preview" },
     i = { ":Neogit<CR>", "Interactive Git Client (Neogit)" },
     m = { ":GitMessenger<CR>", "Summary of Git Data for Current Line" },  -- Default mapping configured by plugin (git-messenger)
-    t = { ":Tig<CR>", "Git Explorer (Tig)" }
-    },
+    t = { ":Tig<CR>", "Git Explorer (Tig)" },
+    h = {
+        name = "GitHub",
+        i = {
+            function() require('telescope').extensions.gh.issues() end,
+            "Issues",
+        },
+        p = {
+            function() require('telescope').extensions.gh.pull_request() end,
+            "Pull Requests",
+        },
+        g = {
+            function() require('telescope').extensions.gh.gist() end,
+            "Gists",
+        },
+        r = {
+            function() require('telescope').extensions.gh.run() end,
+            "Run",
+        },
+    }
+  },
 }, { prefix = "<leader>" })
-
 
 -- ColorScheme keybindings.
 wk.register({

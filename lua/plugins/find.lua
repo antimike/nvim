@@ -17,6 +17,7 @@ return {
       "smart-history",
       "telescope-cheat",
       "telescope-z",
+      "telescope-github",
     },
     -- cmd = 'Telescope',
     requires = {
@@ -35,6 +36,11 @@ return {
     'nvim-telescope/telescope-cheat.nvim',
     as = 'telescope-cheat',
     requires = 'sqlite',
+  },
+  {
+    "nvim-telescope/telescope-github.nvim",
+    as = "telescope-github",
+    requires = "plenary",
   },
   {
     'nvim-telescope/telescope-z.nvim',

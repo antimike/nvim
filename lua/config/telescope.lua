@@ -201,6 +201,7 @@ telescope.load_extension('notify')
 telescope.load_extension('smart_history')
 telescope.load_extension('cheat')
 telescope.load_extension('z')
+telescope.load_extension('gh')
 
 -- Suggested by https://alpha2phi.medium.com/vim-neovim-managing-multiple-projects-63180fc87188
 -- map('n', '<leader>fp', ':Telescope project<CR>')
