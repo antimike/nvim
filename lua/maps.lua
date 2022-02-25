@@ -277,13 +277,14 @@ wk.register({
     w = { ":Telescope live_grep<CR>", "Words" },
     f = { ":Telescope find_files<CR>", "Files" },
     o = { ":Telescope oldfiles<CR>", "Old Files" },
-    d = { ":Telescope find_directories<CR>", "Directory" },
+    d = { ":Telescope find_directories<CR>", "Directories" },
     b = { ":Telescope buffers<CR>", "Buffers" },
     h = { ":Telescope help_tags<CR>", "Help Files" },
     B = { ":DashboardJumpMarks<CR>", "Find BookMark" },
     p = { function() require('telescope').extensions.media_files.media_files() end, "Media files" },
     n = { ":Telescope notify<CR>", "Notifications" },
     c = { ":Telescope cheat fd<CR>", "Cheatsheets" },
+    z = { ":Telescope z list<CR>", "Common Directories (Z)" },
   }
 }, { prefix = "<leader>" })
 
