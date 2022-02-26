@@ -3,6 +3,7 @@ local plugin_groups = {
   "shared",
   "workspace",
   "colors",
+  "dap",
   "find",
   "text",
   "git",
@@ -11,7 +12,6 @@ local plugin_groups = {
   "integrations",
   "effects",
   "focus",
-  "dap",
   "notes",
 }
 for _, g in ipairs(plugin_groups) do
