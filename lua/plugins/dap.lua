@@ -1,15 +1,18 @@
 return {
   {
     "mfussenegger/nvim-dap",
+    as = 'nvim-dap',
     event = "BufRead",
   },
   {
     "Pocco81/DAPInstall.nvim",
-    after = "nvim-dap"
+    as = 'DAPInstall',
+    after = "nvim-dap",
   },
   {
     "rcarriga/nvim-dap-ui",
-    after = "DAPInstall.nvim",
+    as = "nvim-dap-ui",
+    after = "DAPInstall",
     config = function ()
       require("config.dap")
     end
