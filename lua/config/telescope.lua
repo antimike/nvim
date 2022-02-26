@@ -106,6 +106,28 @@ telescope.setup {
     -- packer = {
     --     theme = "ivy",
     -- },
+    -- bibtex = {
+    --   -- Depth for the *.bib file
+    --   depth = 1,
+    --   -- Custom format for citation label
+    --   -- custom_formats = {},
+    --   -- Format to use for citation label.
+    --   -- Try to match the filetype by default, or use 'plain'
+    --   -- format = '',
+    --   -- Path to global bibliographies (placed outside of the project)
+    --   global_files = {
+    --         '~/library/library.bib'
+    --   },
+    --   -- Define the search keys to use in the picker
+    --   search_keys = { 'author', 'year', 'title', 'publisher', },
+    --   -- Template for the formatted citation
+    --   citation_format = '{{author}} ({{year}}), {{title}}.',
+    --   -- Only use initials for the authors first name
+    --   citation_trim_firstname = true,
+    --   -- Max number of authors to write in the formatted citation
+    --   -- following authors will be replaced by "et al."
+    --   citation_max_auth = 2,
+    -- },
     media_files = {
       filetypes = {"png", "webp", "jpg", "jpeg", "mp4","webm", "pdf"},
       find_cmd = "rg"
@@ -205,6 +227,9 @@ telescope.load_extension('smart_history')
 telescope.load_extension('cheat')
 telescope.load_extension('z')
 telescope.load_extension('gh')
+telescope.load_extension('dap')
+telescope.load_extension('file_browser')
+-- telescope.load_extension('bibtex')
 -- telescope.load_extension('packer')
 
 -- Suggested by https://alpha2phi.medium.com/vim-neovim-managing-multiple-projects-63180fc87188

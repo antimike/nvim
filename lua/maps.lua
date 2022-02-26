@@ -286,6 +286,29 @@ wk.register({
     n = { ":Telescope notify<CR>", "Notifications" },
     c = { ":Telescope cheat fd<CR>", "Cheatsheets" },
     z = { ":Telescope z list<CR>", "Common Directories (Z)" },
+    D = {
+        name = "Debug",
+        c = {
+            function() require("telescope").extensions.dap.commands() end,
+            "Commands",
+        },
+        C = {
+            function() require("telescope").extensions.dap.configurations() end,
+            "Configurations",
+        },
+        b = {
+            function() require("telescope").extensions.dap.list_breakpoints() end,
+            "Breakpoints",
+        },
+        v = {
+            function() require("telescope").extensions.dap.variables() end,
+            "Variables",
+        },
+        f = {
+            function() require("telescope").extensions.dap.frames() end,
+            "Frames",
+        },
+    }
   }
 }, { prefix = "<leader>" })
 
@@ -427,6 +450,29 @@ wk.register({
 wk.register({
   d = {
     name = "Debugging",
+      f = {
+        name = "Find",
+        c = {
+            function() require("telescope").extensions.dap.commands() end,
+            "Commands",
+        },
+        C = {
+            function() require("telescope").extensions.dap.configurations() end,
+            "Configurations",
+        },
+        b = {
+            function() require("telescope").extensions.dap.list_breakpoints() end,
+            "Breakpoints",
+        },
+        v = {
+            function() require("telescope").extensions.dap.variables() end,
+            "Variables",
+        },
+        f = {
+            function() require("telescope").extensions.dap.frames() end,
+            "Frames",
+        },
+      },
     c = { function() require('dap').continue() end, "Continue" },
     t = { function() require('dap').terminate() end, "Terminate" },
     l = { function() require('dap').run_last() end, "Run Last Debugging Config" },

@@ -18,6 +18,8 @@ return {
       "telescope-cheat",
       "telescope-z",
       "telescope-github",
+      "telescope-dap",
+      -- "telescope-bibtex",
       -- 'telescope-packer',
     },
     -- cmd = 'Telescope',
@@ -29,9 +31,19 @@ return {
     end
   },
   -- {
+  --   "nvim-telescope/telescope-bibtex.nvim",
+  --   as = "telescope-bibtex",
+  -- },
+  -- {
   --   'nvim-telescope/telescope-packer.nvim',
   --   as = 'telescope-packer',
   -- },
+  {
+    'nvim-telescope/telescope-dap.nvim',
+    as = 'telescope-dap',
+    requires = 'nvim-dap',
+    after = 'nvim-dap',
+  },
   {
     'nvim-telescope/telescope-smart-history.nvim',
     as = 'smart-history',
