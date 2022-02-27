@@ -1,10 +1,10 @@
 local plugins = {{'wbthomason/packer.nvim', opt = true}}
 local plugin_groups = {
   "shared",
-  "workspace",
   "colors",
   "dap",
   "find",
+  "workspace",
   "text",
   "git",
   "completion",

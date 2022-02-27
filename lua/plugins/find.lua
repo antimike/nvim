@@ -18,10 +18,11 @@ return {
       "telescope-cheat",
       "telescope-z",
       "telescope-github",
-      "telescope-dap",
+      -- "telescope-dap",
       -- "telescope-bibtex",
       -- 'telescope-packer',
     },
+    opt = false,
     -- cmd = 'Telescope',
     requires = {
       "cljoly/telescope-repo.nvim",
@@ -43,6 +44,9 @@ return {
     as = 'telescope-dap',
     requires = 'nvim-dap',
     after = 'nvim-dap',
+    config = function()
+        require('telescope').load_extension('dap')
+    end,
   },
   {
     'nvim-telescope/telescope-smart-history.nvim',
