@@ -51,6 +51,7 @@ return {
       'SessionSave'
     },
     as = "dashboard",
+    after = "telescope",
     setup = function()
       require('config.dashboard')
     end,
@@ -245,5 +246,13 @@ return {
     config = function()
         require('config.notify')
     end,
+  },
+  {
+    'simnalamburt/vim-mundo',
+    as = 'mundo',
+  },
+  {
+    'mbbill/undotree',
+    as = 'undotree',
   },
 }
