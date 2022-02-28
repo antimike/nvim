@@ -1,22 +1,21 @@
-
-  -- TrueZen.nvim is a Neovim plugin that aims to provide a cleaner and less cluttered interface
-  -- when toggled in either of it's three different modes (Ataraxis, Minimalist and Focus).
+-- TrueZen.nvim is a Neovim plugin that aims to provide a cleaner and less cluttered interface
+-- when toggled in either of it's three different modes (Ataraxis, Minimalist and Focus).
 return {
-  {
-    'Pocco81/TrueZen.nvim',
-    cmd = {
-      'TZFocus',
-      'TZAtaraxis',
-      'TZMinimalist',
-    },
-    setup = function()
-      require('config.true-zen')
-    end
-  },
-  {
-    "folke/twilight.nvim",
-    config = function()
-      require("config.twilight")
-    end
-  }
+	{
+		"Pocco81/TrueZen.nvim",
+		cmd = {
+			"TZFocus",
+			"TZAtaraxis",
+			"TZMinimalist",
+		},
+		setup = function()
+			require("config.true-zen")
+		end,
+	},
+	{
+		"folke/twilight.nvim",
+		config = function()
+			require("config.twilight")
+		end,
+	},
 }
