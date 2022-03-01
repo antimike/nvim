@@ -130,6 +130,8 @@ endif
 
 vim.cmd("command CodeArtTransparent lua make_codeart_transparent()")
 
+-- Persistent undo
+opt.undofile = true
 
 -- Add cursorline and diasable it in some buffers and filetypes.
 statusline_hide = {
