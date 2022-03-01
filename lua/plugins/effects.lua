@@ -3,12 +3,12 @@ return {
 	-- Requires nvim 0.6 for full effect
 	-- NOTE: May conflict with popui and telescope-ui-select.nvim
 	{
-                "stevearc/dressing.nvim",
-                as = "dressing",
-                config = function()
-                        require("config.dressing")
-                end
-        },
+		"stevearc/dressing.nvim",
+		as = "dressing",
+		config = function()
+			require("config.dressing")
+		end,
+	},
 
 	-- Markdown Preview
 	{ "ellisonleao/glow.nvim" },
@@ -34,6 +34,13 @@ return {
 		"hood/popui.nvim",
 		config = function()
 			vim.ui.select = require("popui.ui-overrider")
+		end,
+	},
+	{
+		"xiyaowong/nvim-transparent",
+		as = "transparent",
+		config = function()
+			require("config.transparent")
 		end,
 	},
 }
