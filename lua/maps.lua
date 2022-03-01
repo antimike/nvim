@@ -171,7 +171,7 @@ wk.register({
 
 -- Toggle fold.
 wk.register({
-	z = { "za", "Toggle Fold" },
+	z = { "zA", "Toggle Fold" },
 }, { prefix = "<leader>" })
 
 -- Don't copy the replaced text after pasting.
