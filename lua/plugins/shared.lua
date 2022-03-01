@@ -109,7 +109,7 @@ return {
 	{
 		"rktjmp/lush.nvim",
 		as = "lush",
-		opt = true,
+		opt = false,
 	},
 	-- GUI library
 	-- Required by navigator
