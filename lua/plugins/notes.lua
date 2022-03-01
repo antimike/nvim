@@ -106,6 +106,7 @@ return {
         'jghauser/follow-md-links.nvim',
         as = 'follow-md-links',
         requires = 'treesitter',
+        after = 'treesitter',
         config = function()
             require('follow-md-links')
         end,

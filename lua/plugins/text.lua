@@ -12,6 +12,7 @@ return {
     "mfussenegger/nvim-ts-hint-textobject",
     as = "ts-hint-textobject",
     requires = 'treesitter',
+    after = 'treesitter',
     config = function()
       require('config.nvim-ts-hint-textobject')
     end
@@ -21,6 +22,7 @@ return {
     'RRethy/nvim-treesitter-textsubjects',
     as = "ts-textsubjects",
     requires = 'treesitter',
+    after = 'treesitter',
   },
 
   -- nvim_context_vt: Uses Treesitter to display expanded node context
@@ -29,6 +31,7 @@ return {
     "haringsrob/nvim_context_vt",
     as = "ts-context-vt",
     requires = 'treesitter',
+    after = 'treesitter',
   },
 
   -- Auto closes.

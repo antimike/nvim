@@ -156,7 +156,8 @@ return {
 		config = function()
 			require("nvim-gps").setup(require("config.gps"))
 		end,
-		requires = "nvim-treesitter/nvim-treesitter",
+		requires = "treesitter",
+                after = "treesitter",
 	},
 
 	-- todo-comments is a lua plugin for Neovim to highlight and search for
