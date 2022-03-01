@@ -1,7 +1,24 @@
 -- Color schemes.
 return {
+	-- "jonstoler/werewolf.vim",
+	"sjl/badwolf",
+	-- "Lokaltog/vim-distinguished",
+	-- "ParamagicDev/vim-medic_chalk",
+	-- "tpope/vim-vividchalk",
+	-- "reedes/vim-colors-pencil",
+	-- TreeSitter colorschemes
+	{
+		"ChristianChiarulli/nvcode-color-schemes.vim",
+		as = "nvcode-colorschemes",
+		requires = "treesitter",
+	},
+	{
+		"metalelf0/jellybeans-nvim",
+		requires = "lush",
+                after = "lush",
+	},
 	{ "ellisonleao/gruvbox.nvim" },
-	{ "shaunsingh/nord.nvim" },
+	{ "shaunsingh/nord.nvim", after = "nvcode-colorschemes" },
 	{
 		"navarasu/onedark.nvim",
 		config = function()
@@ -9,17 +26,6 @@ return {
 		end,
 	},
 	{ "wuelnerdotexe/vim-enfocado" },
-	"jonstoler/werewolf.vim",
-	"sjl/badwolf",
-	"Lokaltog/vim-distinguished",
-	"ParamagicDev/vim-medic_chalk",
-	"tpope/vim-vividchalk",
-	"reedes/vim-colors-pencil",
-	{
-		"metalelf0/jellybeans-nvim",
-		requires = "lush",
-	},
-	-- TreeSitter colorschemes
 	{
 		"lalitmee/cobalt2.nvim",
 		as = "cobalt2",
@@ -87,11 +93,6 @@ return {
 		requires = "treesitter",
 	},
 	{
-		"ChristianChiarulli/nvcode-color-schemes.vim",
-		as = "nvcode-colorschemes",
-		requires = "treesitter",
-	},
-	{
 		"bluz71/vim-moonfly-colors",
 		as = "moonfly",
 		requires = "treesitter",
@@ -121,5 +122,58 @@ return {
 		"shaunsingh/moonlight.nvim",
 		as = "moonlight",
 		requires = "treesitter",
+	},
+	{
+		"lourenci/github-colors",
+		as = "github-colors",
+		requires = "treesitter",
+	},
+	{
+		"mcchrish/zenbones.nvim",
+		as = "zenbones",
+		requires = {
+			"treesitter",
+			"lush",
+		},
+                after = "lush",
+	},
+	{
+		"frenzyexists/aquarium-vim",
+		as = "aquarium",
+		requires = "treesitter",
+	},
+	{
+		"EdenEast/nightfox.nvim",
+		as = "nightfox",
+		requires = "treesitter",
+	},
+	{
+		"kvrohit/substrata.nvim",
+		as = "substrata",
+		requires = "treesitter",
+	},
+	{
+		"adisen99/apprentice.nvim",
+		as = "apprentice",
+		requires = {
+			"lush",
+			"treesitter",
+		},
+                after = "lush",
+		config = function()
+			require("config.apprentice")
+		end,
+	},
+	{
+		"rebelot/kanagawa.nvim",
+		as = "kanagawa",
+		requires = "treesitter",
+		config = function()
+			require("config.kanagawa")
+		end,
+	},
+	{
+		"tiagovla/tokyodark.nvim",
+		as = "tokyodark",
 	},
 }
