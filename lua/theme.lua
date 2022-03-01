@@ -45,7 +45,6 @@ vim.g.enfocado_style = "nature"    -- styles: nature and neon.
 
 local colorscheme = "industry"
 if pcall(require, "onedark") then
-  require("config.onedark")
   colorscheme = "onedark"
 elseif pcall(require, "tokyonight") then
   colorscheme = "tokyonight"
