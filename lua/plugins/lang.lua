@@ -3,31 +3,31 @@ return {
 		"nvim-treesitter/nvim-treesitter-textobjects",
 		as = "ts-textobjects",
 		requires = "treesitter",
-                after = "treesitter",
+		after = "treesitter",
 	},
 	{
 		"JoosepAlviste/nvim-ts-context-commentstring",
 		as = "ts-context-commentstring",
 		requires = "treesitter",
-                after = "treesitter",
+		after = "treesitter",
 	},
 	{
 		"nvim-treesitter/nvim-treesitter-refactor",
 		as = "ts-refactor",
 		requires = "treesitter",
-                after = "treesitter",
+		after = "treesitter",
 	},
 	-- To help compose custom TS queries
 	{
 		"nvim-treesitter/playground",
 		as = "playground",
 		requires = "treesitter",
-                after = "treesitter",
+		after = "treesitter",
 	},
 	{
 		"romgrk/nvim-treesitter-context",
-                as = "treesitter-context",
-                after = "treesitter",
+		as = "treesitter-context",
+		after = "treesitter",
 		config = function()
 			require("treesitter-context.config").setup({ enable = true })
 		end,
@@ -86,7 +86,7 @@ return {
 		"s1n7ax/nvim-comment-frame",
 		as = "comment-frame",
 		requires = "treesitter",
-                after = "treesitter",
+		after = "treesitter",
 		config = function()
 			require("config.comment-frame")
 		end,
@@ -105,7 +105,7 @@ return {
 			require("config.neogen")
 		end,
 		requires = "treesitter",
-                after = "treesitter",
+		after = "treesitter",
 		-- Uncomment next line if you want to follow only stable versions
 		tag = "*",
 	},
@@ -156,12 +156,12 @@ return {
 	-- 		"lsp_signature",
 	-- 		"lsp-installer",
 	-- 	},
-	--                after = {
-	--                        "guihua",
-	--                        "lspconfig",
-	--                        "lsp_signature",
-	--                        "lsp_installer",
-	--                },
+	-- 	after = {
+	-- 		"guihua",
+	-- 		"lspconfig",
+	-- 		"lsp_signature",
+	-- 		"lsp-installer",
+	-- 	},
 	-- 	as = "navigator",
 	-- 	config = function()
 	-- 		require("config.navigator")
