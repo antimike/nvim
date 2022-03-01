@@ -71,11 +71,11 @@ return {
 		as = "boo-colorscheme",
 		requires = "treesitter",
 	},
-	{
-		"glepnir/zephyr-nvim",
-		as = "zephyr",
-		requires = "treesitter",
-	},
+	-- {
+	-- 	"glepnir/zephyr-nvim",
+	-- 	as = "zephyr",
+	-- 	requires = "treesitter",
+	-- },
 	{
 		"mhartington/oceanic-next",
 		as = "oceanic-next",
