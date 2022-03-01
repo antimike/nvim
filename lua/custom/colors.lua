@@ -4,18 +4,44 @@ local impromptu = require("impromptu")
 -- @Summary Set config options for Neon colorscheme
 -- @Description Options can be selected with selectors provided by impromptu
 function pkg.NeonConfig()
-	impromptu.ask {
+	local opts = {
+		style = {
+			"Overall style",
+			default = "Default (soft-dark)",
+			dark = "Dark (high-contrast dark)",
+			doom = "Doom",
+			light = "Light",
+		},
+		italic = {
+			comment = { "Italicize comments", true, false },
+			keyword = { "Italicize keywords", false, true },
+			boolean = { "Italicize booleans", false, true },
+			["function"] = { "Italicize function names", false, true },
+			variable = { "Italicize variable names", false, true },
+		},
+		bold = { "Use bold for error and warning messages", false, true },
+		transparent = { "Remove background highlights", false, true },
+	}
+	impromptu.ask({
 		question = "Select Neon theme:",
 		options = {
-			"default",
-			"dark",
-			"doom",
-			"light",
+			Default = {
+				description = "Soft-dark theme",
+			},
+			Dark = {
+				description = "High-contrast dark theme",
+			},
+			Doom = {
+				description = "Doom-like theme",
+			},
+			Light = {
+				description = "Light theme",
+			},
 		},
 		handler = function(_, opt)
 			vim.g.neon_style = opt
 		end,
-	}
+	})
 end
 
 -- @Summary Remove background highlights
@@ -30,18 +56,19 @@ function pkg.MakeTransparent()
 end
 
 local function choose_config(option_tree)
-        impromptu.ask {
-                question = ""
-        }
+	local handler = function(context, opt)
+		vim.g[table.concat(context, "_")] = opt
+	end
+	impromptu.ask({
+		question = "",
+	})
 end
 
 function pkg.MoonlightConfig()
-        impromptu.ask {
-                question = "Select Moonlight option to set:",
-                options = {
-
-        }
-}
+	impromptu.ask({
+		question = "Select Moonlight option to set:",
+		options = {},
+	})
 end
 
 -- @Summary Set Lualine theme
@@ -134,3 +161,5 @@ highlight TSTag guifg=#569CD6
 highlight TSTagDelimiter guifg=#5C6370
 ]])
 end
+
+return pkg
