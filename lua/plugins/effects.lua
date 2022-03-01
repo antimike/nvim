@@ -43,4 +43,11 @@ return {
 			require("config.transparent")
 		end,
 	},
+	{
+		"wfxr/minimap.vim",
+		as = "minimap",
+		config = function()
+			require("config.minimap")
+		end,
+	},
 }
