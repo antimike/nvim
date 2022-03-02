@@ -75,10 +75,12 @@ end
 
 -- FTerm
 wk.register({
-        ["<A-t>"] = {
-                function() require("FTerm").toggle() end,
-                "Toggle floating terminal",
-        },
+	["<A-t>"] = {
+		function()
+			require("FTerm").toggle()
+		end,
+		"Toggle floating terminal",
+	},
 })
 
 -- Code runners and REPLs
