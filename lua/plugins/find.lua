@@ -19,8 +19,8 @@ return {
 			"telescope-z",
 			"telescope-github",
 			-- "telescope-dap",
-			-- "telescope-bibtex",
-			-- 'telescope-packer',
+			"telescope-bibtex",
+			"telescope-packer",
 		},
 		opt = false,
 		-- cmd = 'Telescope',
@@ -31,14 +31,14 @@ return {
 			require("config.telescope")
 		end,
 	},
-	-- {
-	--   "nvim-telescope/telescope-bibtex.nvim",
-	--   as = "telescope-bibtex",
-	-- },
-	-- {
-	--   'nvim-telescope/telescope-packer.nvim',
-	--   as = 'telescope-packer',
-	-- },
+	{
+		"nvim-telescope/telescope-bibtex.nvim",
+		as = "telescope-bibtex",
+	},
+	{
+		"nvim-telescope/telescope-packer.nvim",
+		as = "telescope-packer",
+	},
 	{
 		"AckslD/nvim-gfold.lua",
 		config = function()

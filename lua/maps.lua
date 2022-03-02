@@ -326,9 +326,15 @@ wk.register({
 		P = { ":Telescope project<CR>", "Projects" },
 		n = { ":Telescope notify<CR>", "Notifications" },
 		c = { ":Telescope cheat fd<CR>", "Cheatsheets" },
+                C = { ":Telescope command_palette<CR>", "Commands" },
 		z = { ":Telescope z list<CR>", "Common Directories (Z)" },
-                t = { "TodoTelescope<CR>", "Project TODOs" },
-                r = { function() require("gfold").pick_repo() end, "Repositories" },
+		t = { "TodoTelescope<CR>", "Project TODOs" },
+		r = {
+			function()
+				require("gfold").pick_repo()
+			end,
+			"Repositories",
+		},
 		D = {
 			name = "Debug",
 			c = {
@@ -480,10 +486,10 @@ wk.register({
 				end,
 				"Format Buffer using LSP",
 			},
-                        n = {
-                                ":Neoformat<CR>",
-                                "Format Buffer using Neoformat",
-                        }
+			n = {
+				":Neoformat<CR>",
+				"Format Buffer using Neoformat",
+			},
 		},
 		A = {
 			name = "Annotate (NeoGen)",
