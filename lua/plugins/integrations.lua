@@ -121,6 +121,9 @@ return {
 			require("config.fterm")
 		end,
 	},
+	{
+		"bfredl/nvim-luadev",
+	},
 	--   {
 	--     'sudormrfbin/cheatsheet.nvim',
 	--     requires = {

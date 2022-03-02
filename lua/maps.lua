@@ -90,6 +90,7 @@ wk.register({
 		r = { "<Plug>ReplSend", "Send text motion to REPL" },
 		s = { "<Plug>SnipRunOperator", "Send text motion to SnipRun" },
 		i = { "<Plug>SnipInfo", "Display language-specific info" },
+		l = { "<Plug>Luadev-RunLine", "Execute current line" },
 		sl = { "<Plug>SnipRun", "Send current line to SnipRun" },
 		d = { ":DashRun<CR>", "Run script with Dash" },
 		rl = { "<Plug>ReplSendLine", "Send current line to REPL" },
