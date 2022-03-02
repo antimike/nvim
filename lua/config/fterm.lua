@@ -3,7 +3,8 @@ require("FTerm").setup({
 	ft = "FTerm",
 
 	-- Command to run inside the terminal. It could be a `string` or `table`
-	cmd = os.getenv("SHELL"),
+	-- cmd = os.getenv("SHELL"),
+	cmd = "/bin/zsh",
 
 	-- Neovim's native window border. See `:h nvim_open_win` for more configuration options.
 	border = "single",
