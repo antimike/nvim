@@ -29,7 +29,7 @@ return {
 		as = "treesitter-context",
 		after = "treesitter",
 		config = function()
-			require("treesitter-context.config").setup({ enable = true })
+                        require("config.treesitter-context")
 		end,
 	},
 	-- LSP, LSP installer and tab completion.
