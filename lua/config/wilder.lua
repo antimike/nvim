@@ -48,7 +48,6 @@ end
 
 function pkg.renderer.mux_config()
     vim.cmd [[
-        " \    'highlighter': wilder#basic_highlighter(),
     call wilder#set_option('renderer', wilder#renderer_mux({
         \  '/': wilder#wildmenu_renderer({
         \    'separator': ' · ',
