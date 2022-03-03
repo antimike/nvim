@@ -125,7 +125,7 @@ function pkg.setup()
         end,
       },
       live_gutter = {
-        enabled = true,
+        enabled = false,
       },
       authorship_code_lens = {
         enabled = true,
