@@ -225,6 +225,11 @@ return {
 		after = "cpsm",
 		config = function()
 			require("config.wilder").advanced_config()
+                        -- local cfg = require("config.wilder")
+                        -- cfg.pipeline.config()
+                        -- cfg.renderer.add_border()
+                        -- cfg.renderer.mux_config()
+                        -- cfg.renderer.popup_config()
 		end,
 		rocks = {
 			"pcre2",
@@ -245,7 +250,8 @@ return {
 			"plenary",
 		},
 		config = function()
-			require("config.notify")
+			local conf = require("config.notify")
+                        conf.SetNotifyHighlights()
 		end,
 	},
 	{
