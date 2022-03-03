@@ -73,6 +73,21 @@ function _G.set_terminal_keymaps()
 end
 -- vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 
+-- Sidebars
+function _G.CloseSidebarsExcept(keeper)
+	local sidebars = {
+		vista = ":Vista",
+	}
+end
+
+wk.register({
+	gM = { ":MinimapToggle<CR>", "Toggle code minimap" },
+	["<A-u>"] = { ":MundoToggle<CR>", "Toggle undo sidebar" },
+	gV = { ":Vista nvim_lsp<CR>", "Show symbols sidebar (Vista + nvim-lsp)" },
+	gv = { ":Vista focus<CR>", "Jump to/from Vista sidebar" },
+	["GV"] = { ":Vista!!", "Toggle Vista sidebar" },
+})
+
 -- FTerm
 wk.register({
 	["<A-t>"] = {
@@ -326,9 +341,14 @@ wk.register({
 		P = { ":Telescope project<CR>", "Projects" },
 		n = { ":Telescope notify<CR>", "Notifications" },
 		c = { ":Telescope cheat fd<CR>", "Cheatsheets" },
-                C = { ":Telescope command_palette<CR>", "Commands" },
+		C = { ":Telescope command_palette<CR>", "Commands" },
 		z = { ":Telescope z list<CR>", "Common Directories (Z)" },
 		t = { "TodoTelescope<CR>", "Project TODOs" },
+		T = {
+			name = "Tags",
+			t = { ":Vista finder<CR>", "Search tags with Vista" },
+			r = { ":Vista finder!<CR>", "Search tags recursively (experimental)" },
+		},
 		r = {
 			function()
 				require("gfold").pick_repo()
