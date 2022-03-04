@@ -130,9 +130,9 @@ end
 wk.register({
 	gM = { ":MinimapToggle<CR>", "Toggle code minimap" },
 	["<A-u>"] = { ":MundoToggle<CR>", "Toggle undo sidebar" },
-	gV = { ":Vista nvim_lsp<CR>", "Show symbols sidebar (Vista + nvim-lsp)" },
-	gv = { ":Vista focus<CR>", "Jump to/from Vista sidebar" },
-	["GV"] = { ":Vista!!", "Toggle Vista sidebar" },
+	["<C-V>"] = { ":Vista nvim_lsp<CR>", "Show symbols sidebar (Vista + nvim-lsp)" },
+	["<C-v>"] = { ":Vista focus<CR>", "Jump to/from Vista sidebar" },
+	["<A-V>"] = { ":Vista!!", "Toggle Vista sidebar" },
 })
 
 -- FTerm
