@@ -253,7 +253,7 @@ return {
 		},
 		config = function()
 			local conf = require("config.notify")
-                        conf.SetNotifyHighlights()
+			conf.SetNotifyHighlights()
 		end,
 	},
 	{

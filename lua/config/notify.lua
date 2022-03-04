@@ -6,7 +6,9 @@ vim.notify = notify
 local function get_bg_highlight()
         local bg = fn.synIDattr(fn.synIDtrans(fn.hlID("Normal")), "bg")
         if bg == nil or #bg == 0 then
-                bg = "NormalFloat"
+                -- TODO: Figure out how to load plugins in an order so that this works
+                -- bg = "NormalFloat"
+                bg = "#000000"
         end
         return bg
 end
