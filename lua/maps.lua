@@ -620,6 +620,7 @@ wk.register({
 			end,
 			"Signature Help",
 		},
+		S = { ":SymbolsOutline<CR>", "Show symbols" },
 		p = { -- See config.treesitter
 			name = "Peek",
 			f = { "Function" },
