@@ -264,6 +264,7 @@ wk.register({
 	o = { ":Ranger<CR>", "Ranger (File Manager)" },
 }, { prefix = "<leader>" })
 
+-- Help pages
 wk.register({
 	gh = { ":Telescope help_tags<CR>", "Search help pages" },
 })
@@ -554,6 +555,7 @@ wk.register({
 			end,
 			"Code Action",
 		},
+                c = { ":TSContextToggle<CR>", "Toggle context display" },
 		d = { ":Telescope diagnostics<CR>", "Diagnostics" },
 		i = { ":LspInfo<CR>", "Info" },
 		I = { ":LspInstallInfo<CR>", "Installer Info" },
