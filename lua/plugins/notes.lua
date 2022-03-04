@@ -102,15 +102,15 @@ return {
         end,
     },
     -- NOTE: Note sure this one's necessary in light of mkdnflow
-    {
-        'jghauser/follow-md-links.nvim',
-        as = 'follow-md-links',
-        requires = 'treesitter',
-        after = 'treesitter',
-        config = function()
-            require('follow-md-links')
-        end,
-    },
+    -- {
+    --     'jghauser/follow-md-links.nvim',
+    --     as = 'follow-md-links',
+    --     requires = 'treesitter',
+    --     after = 'treesitter',
+    --     config = function()
+    --         require('follow-md-links')
+    --     end,
+    -- },
     {
         'mzlogin/vim-markdown-toc',
         as = 'markdown-toc',

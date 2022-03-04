@@ -16,7 +16,7 @@ return {
 			"command-palette",
 			"smart-history",
 			"telescope-cheat",
-                        -- "cheatsheet.nvim",
+			-- "cheatsheet.nvim",
 			"telescope-z",
 			"telescope-github",
 			-- "telescope-dap",
@@ -36,13 +36,22 @@ return {
 		"rmagatti/session-lens",
 		as = "session-lens",
 		requires = {
-                        "auto-session",
-                        "telescope",
-                },
-                after = "telescope",
+			"auto-session",
+			"telescope",
+		},
+		after = "telescope",
 		config = function()
-                        require("telescope").load_extension("session-lens")
+			require("telescope").load_extension("session-lens")
 			require("config.telescope-sessions")
+		end,
+	},
+	{
+		"crispgm/telescope-heading.nvim",
+		as = "telescope-heading",
+		requires = "telescope",
+		after = "telescope",
+		config = function()
+			require("telescope").load_extension("heading")
 		end,
 	},
 	{
