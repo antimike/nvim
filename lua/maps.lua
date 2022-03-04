@@ -351,6 +351,8 @@ wk.register({
 		name = "Cheatsheets",
 		f = { ":Telescope cheat fd<CR>", "Find cheatsheet" },
 		r = { ":Telescope cheat recache<CR>", "Recache cheatsheets" },
+		v = { ":Cheatsheet<CR>", "Vim cheatsheets" },
+		V = { ":CheatsheetEdit<CR>", "Edit vim cheatsheet" },
 	},
 }, { prefix = "<leader>" })
 
@@ -421,7 +423,11 @@ wk.register({
 			"Macros",
 		},
 		n = { ":Telescope notify<CR>", "Notifications" },
-		c = { ":Telescope cheat fd<CR>", "Cheatsheets" },
+		c = {
+			name = "Cheatsheets",
+			f = { ":Telescope cheat fd<CR>", "External" },
+			v = { ":Cheatsheet<CR>", "Vim" },
+		},
 		C = { ":Telescope command_palette<CR>", "Commands" },
 		y = {
 			name = "Yanks",
