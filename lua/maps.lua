@@ -387,7 +387,7 @@ wk.register({
 		d = { ":Telescope find_directories<CR>", "Directories" },
 		b = { ":Telescope buffers<CR>", "Buffers" },
 		h = { ":Telescope help_tags<CR>", "Help Files" },
-                gH = {
+                H = {
                         function() require("telescope").extensions.heading.heading() end,
                         "GOTO heading",
                 },
