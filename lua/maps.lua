@@ -260,6 +260,10 @@ wk.register({
 	o = { ":Ranger<CR>", "Ranger (File Manager)" },
 }, { prefix = "<leader>" })
 
+wk.register({
+	gh = { ":Telescope help_tags<CR>", "Search help pages" },
+})
+
 -- hop.nvim
 wk.register({
 	["<C-h>"] = {
