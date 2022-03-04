@@ -1,5 +1,5 @@
 -- Taken from https://github.com/SmiteshP/nvim-gps
-return {
+local default_cfg = {
 	disable_icons = false,           -- Setting it to true will disable all icons
 
 	icons = {
@@ -86,3 +86,5 @@ return {
 	-- indicator used when context is hits depth limit
 	depth_limit_indicator = ".."
 }
+
+require("nvim-gps").setup(default_cfg)

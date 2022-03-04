@@ -3,6 +3,8 @@ if not present then
 	return
 end
 
+local gps = require("nvim-gps")
+
 -- From CodeArt
 local lualine_styles = {
 	{
@@ -26,7 +28,6 @@ local lualine_styles = {
 		{ left = " ", right = " " },
 	},
 }
-local gps_present, gps = pcall(require, "nvim-gps")
 
 lualine.setup({
 	options = {
@@ -61,14 +62,25 @@ lualine.setup({
 		},
 		lualine_c = {
 			{ "filename" },
-			{
-				gps.get_location,
-				cond = gps_present and gps.is_available,
-			},
+			-- {
+			-- 	require("auto-session-library").current_session_name or "",
+			-- 	cond = function()
+			-- 		return pcall(require, "auto-session-library")
+			-- 	end,
+			-- },
 		},
 		lualine_x = { "encoding", "fileformat", "filetype" },
 		lualine_y = { "progress" },
-		lualine_z = { "location" },
+		lualine_z = {
+                -- { function() return "Hi there!" end },
+			{
+                                gps.get_location,
+                                cond = gps.is_available,
+                                -- gps.GetLocationIfAvailable,
+                                -- gps.GetLocation,
+                                -- cond = gps.IsAvailable,
+			},
+		},
 	},
 	inactive_sections = {
 		lualine_a = {},

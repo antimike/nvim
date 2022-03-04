@@ -138,26 +138,28 @@ return {
 	--     }
 	--   },
 
-	-- Statusline.
-	{
-		"nvim-lualine/lualine.nvim",
-		as = "lualine",
-		after = "bufferline",
-		config = function()
-			require("config.lualine")
-		end,
-	},
-
 	-- Smarter status line context
-	-- Fails to install on clean packer install
 	{
 		"SmiteshP/nvim-gps",
 		as = "gps",
 		config = function()
-			require("nvim-gps").setup(require("config.gps"))
+                        require("config.gps")
 		end,
 		requires = "treesitter",
-                after = "treesitter",
+		after = "treesitter",
+	},
+
+	-- Statusline.
+	{
+		"nvim-lualine/lualine.nvim",
+		as = "lualine",
+		after = {
+                        "bufferline",
+                        "gps",
+                },
+		config = function()
+			require("config.lualine")
+		end,
 	},
 
 	-- todo-comments is a lua plugin for Neovim to highlight and search for
