@@ -40,7 +40,7 @@ map("n", "<C-A-k>", ":call ResizeUp(1)<CR><Esc>")
 map("n", "<C-A-j>", ":call ResizeDown(1)<CR><Esc>")
 
 local function get_session()
-        require("telescope").extensions["session-lens"].search_session()
+	require("telescope").extensions["session-lens"].search_session()
 end
 
 -- Dashboard
@@ -61,9 +61,11 @@ wk.register({
 -- Clipboard / yank management
 wk.register({
 	gp = {
-                function() require("telescope").extensions.neoclip.default() end,
-                "Search yank history"
-        },
+		function()
+			require("telescope").extensions.neoclip.default()
+		end,
+		"Search yank history",
+	},
 	gy = { ":Telescope neoclip star extra=plus<CR>", "Move select yank into system clipboard (*)" },
 })
 
@@ -388,10 +390,12 @@ wk.register({
 		d = { ":Telescope find_directories<CR>", "Directories" },
 		b = { ":Telescope buffers<CR>", "Buffers" },
 		h = { ":Telescope help_tags<CR>", "Help Files" },
-                H = {
-                        function() require("telescope").extensions.heading.heading() end,
-                        "GOTO heading",
-                },
+		H = {
+			function()
+				require("telescope").extensions.heading.heading()
+			end,
+			"GOTO heading",
+		},
 		B = { ":DashboardJumpMarks<CR>", "Find BookMark" },
 		p = {
 			function()
@@ -412,10 +416,12 @@ wk.register({
 		y = {
 			name = "Yanks",
 			p = {
-                                function() require("telescope").extensions.neoclip.default() end,
-                                "Select"
-                        },
-                        -- TODO: Figure out how to call this with the Lua API
+				function()
+					require("telescope").extensions.neoclip.default()
+				end,
+				"Select",
+			},
+			-- TODO: Figure out how to call this with the Lua API
 			y = { ":Telescope neoclip star extra=plus<CR>", "Select and copy to system register (*)" },
 		},
 		S = { get_session, "Sessions" },
@@ -530,7 +536,7 @@ wk.register({
 }, { prefix = "<leader>" })
 
 wk.register({
-        gC = { ":Telescope colorscheme<CR>", "Choose colorscheme" }
+	gC = { ":Telescope colorscheme<CR>", "Choose colorscheme" },
 })
 
 -- Focus
@@ -556,10 +562,12 @@ wk.register({
 
 -- Headers
 wk.register({
-        gH = {
-                function() require("telescope").extensions.heading.heading() end,
-                "GOTO heading",
-        }
+	gH = {
+		function()
+			require("telescope").extensions.heading.heading()
+		end,
+		"GOTO heading",
+	},
 })
 
 -- Lsp
@@ -572,7 +580,7 @@ wk.register({
 			end,
 			"Code Action",
 		},
-                c = { ":TSContextToggle<CR>", "Toggle context display" },
+		c = { ":TSContextToggle<CR>", "Toggle context display" },
 		d = { ":Telescope diagnostics<CR>", "Diagnostics" },
 		i = { ":LspInfo<CR>", "Info" },
 		I = { ":LspInstallInfo<CR>", "Installer Info" },
