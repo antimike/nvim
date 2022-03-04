@@ -158,10 +158,20 @@ wk.register({
 		r = { "<Plug>ReplSend", "Send text motion to REPL" },
 		s = { "<Plug>SnipRunOperator", "Send text motion to SnipRun" },
 		i = { "<Plug>SnipInfo", "Display language-specific info" },
-		l = { "<Plug>Luadev-RunLine", "Execute current line" },
+		L = { "<Plug>Luadev-RunLine", "Execute current line in Lua (LuaDev)" },
 		sl = { "<Plug>SnipRun", "Send current line to SnipRun" },
 		d = { ":DashRun<CR>", "Run script with Dash" },
 		rl = { "<Plug>ReplSendLine", "Send current line to REPL" },
+		I = {
+			name = "IRON",
+			l = { "<Plug>(iron-send-line)", "Send current line to REPL" },
+			t = { "<Plug>(iron-send-motion)", "Send motion to REPL" },
+			r = { "<Plug>(iron-repeat-cmd)", "Repeat command" },
+			["<CR>"] = { "<Plug>(iron-cr)", "<CR> in REPL" },
+			i = { "<Plug>(iron-interrupt)", "Interrupt" },
+			q = { "<Plug>(iron-exit)", "Exit" },
+			c = { "<Plug>(iron-clear)", "Clear" },
+		},
 		b = {
 			function()
 				require("mdeval").eval_code_block()
