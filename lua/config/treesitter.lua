@@ -94,6 +94,8 @@ nvim_treesitter.setup({
 				["if"] = "@function.inner",
 				["ac"] = "@class.outer",
 				["ic"] = "@class.inner",
+                                ["ia"] = "@parameter.inner",
+                                ["aa"] = "@parameter.outer",
 			},
 		},
 		move = {
@@ -102,18 +104,22 @@ nvim_treesitter.setup({
 			goto_next_start = {
 				["]m"] = "@function.outer",
 				["]]"] = "@class.outer",
+                                ["ga"] = "@parameter.outer",
 			},
 			goto_next_end = {
 				["]M"] = "@function.outer",
 				["]["] = "@class.outer",
+                                ["gA"] = "@parameter.outer",
 			},
 			goto_previous_start = {
 				["[m"] = "@function.outer",
 				["[["] = "@class.outer",
+                                ["gpa"] = "@parameter.outer",
 			},
 			goto_previous_end = {
 				["[M"] = "@function.outer",
 				["[]"] = "@class.outer",
+                                ["gpA"] = "@parameter.outer",
 			},
 		},
 		swap = {

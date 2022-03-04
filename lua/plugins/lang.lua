@@ -29,7 +29,7 @@ return {
 		as = "treesitter-context",
 		after = "treesitter",
 		config = function()
-                        require("config.treesitter-context")
+			require("config.treesitter-context")
 		end,
 	},
 	-- LSP, LSP installer and tab completion.
@@ -178,5 +178,15 @@ return {
 		config = function()
 			require("config.symbols-outline")
 		end,
+	},
+	{
+		"AckslD/nvim-revJ.lua",
+                as = "revJ",
+		requires = {
+                        "ts-textobjects",
+                },
+                config = function()
+                        require("config.revJ")
+                end,
 	},
 }
