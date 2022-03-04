@@ -520,9 +520,13 @@ wk.register({
 wk.register({
 	t = {
 		name = "Theme",
-		c = { ":Telescope colorscheme<CR>", "Set Colorscheme" },
+		c = { ":Telescope colorscheme<CR>", "Choose colorscheme" },
 	},
 }, { prefix = "<leader>" })
+
+wk.register({
+        gC = { ":Telescope colorscheme<CR>", "Choose colorscheme" }
+})
 
 -- Focus
 wk.register({
