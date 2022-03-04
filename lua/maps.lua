@@ -39,6 +39,10 @@ map("n", "<C-A-l>", ":call ResizeRight(3)<CR><Esc>")
 map("n", "<C-A-k>", ":call ResizeUp(1)<CR><Esc>")
 map("n", "<C-A-j>", ":call ResizeDown(1)<CR><Esc>")
 
+local function get_session()
+        require("telescope").extensions["session-lens"].search_session()
+end
+
 -- Dashboard
 wk.register({
 	D = { ":Dashboard<CR>", "Dashboard" },
@@ -48,9 +52,9 @@ wk.register({
 wk.register({
 	["<C-s>"] = {
 		name = "Session",
-		s = { ":SessionLoad<CR>", "Load Session" },
-		S = { ":SessionSave<CR>", "Save Session" },
-		f = { ":SearchSession<CR>", "Search Sessions" },
+		s = { ":SessionLoad<CR>", "Load session for current working directory" },
+		S = { ":SessionSave<CR>", "Save session" },
+		f = { get_session, "Load named session" },
 	},
 })
 
@@ -408,6 +412,7 @@ wk.register({
                         -- TODO: Figure out how to call this with the Lua API
 			y = { ":Telescope neoclip star extra=plus<CR>", "Select and copy to system register (*)" },
 		},
+		S = { get_session, "Sessions" },
 		z = { ":Telescope z list<CR>", "Common Directories (Z)" },
 		t = { "TodoTelescope<CR>", "Project TODOs" },
 		T = {

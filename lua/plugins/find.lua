@@ -41,8 +41,8 @@ return {
                 },
                 after = "telescope",
 		config = function()
-			require("config.telescope-sessions")
                         require("telescope").load_extension("session-lens")
+			require("config.telescope-sessions")
 		end,
 	},
 	{
