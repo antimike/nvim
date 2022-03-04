@@ -18,10 +18,11 @@ local function all(tbl, check)
 	return true
 end
 
-require("neoclip").setup({
+local neoclip = require("neoclip")
+neoclip.setup({
 	history = 1000,
 	enable_persistent_history = true,
-	continious_sync = false,
+	continious_sync = true,
 	db_path = vim.fn.stdpath("data") .. "/databases/neoclip.sqlite3",
         -- Prevents pure-whitespace yanks from polluting the yank list
         -- Taken from https://github.com/AckslD/nvim-neoclip.lua
@@ -70,3 +71,4 @@ require("neoclip").setup({
 		},
 	},
 })
+neoclip.start()
