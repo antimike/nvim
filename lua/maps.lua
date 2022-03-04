@@ -233,9 +233,10 @@ wk.register({
 	},
 }, { prefix = "<leader>", mode = "v", silent = true })
 
--- Remove unnecessary white spaces.
+-- Search for bigrams (Lightspeed extensions)
 wk.register({
-	w = { ":StripWhitespace<CR>", "Strip Whitespace" },
+	s = { "<Plug>Lightspeed_omni_s", "Search window for bigram" },
+	S = { "<Plug>Lightspeed_omni_s", "Search all windows for bigram" },
 }, { prefix = "<leader>", mode = "n", silent = true })
 
 -- Toggle fold.
