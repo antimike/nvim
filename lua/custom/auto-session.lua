@@ -2,9 +2,12 @@ local pkg = {}
 
 function pkg.SessionName()
         local present, auto_session = pcall(require, "auto-session-library")
-        local name = nil
+        local name = ""
         if present then
-                name = auto_session.current_session_name
+                success, val = pcall(auto_session.current_session_name)
+                if success then
+                        name = val
+                end
         end
         return name
 end
