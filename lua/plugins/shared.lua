@@ -123,4 +123,17 @@ return {
 		"hkupty/impromptu.nvim",
 		as = "impromptu",
 	},
+	-- For async jobs
+	-- Required for asynctasks
+	{
+		"skywind3000/asyncrun.vim",
+		as = "asyncrun",
+	},
+	{
+		"rmagatti/auto-session",
+		as = "auto-session",
+                config = function()
+                        require("config.auto-session")
+                end,
+	},
 }

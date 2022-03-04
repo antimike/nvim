@@ -704,6 +704,25 @@ wk.register({
 	},
 }, { prefix = "<leader>" })
 
+-- Build
+wk.register({
+	P = {
+		name = "Project",
+		g = { ":Telescope project<CR>", "GOTO project" },
+		t = { "TodoTelescope<CR>", "Project TODOs" },
+		d = { ":VGit project_diff_preview<CR>", "Project Diff Preview" },
+		h = { ":VGit project_hunks_preview<CR>", "Project Hunks Preview" },
+		T = {
+			name = "Tasks",
+			e = { ":AsyncTaskEdit<CR>", "Edit" },
+			b = { ":AsyncTask file-build<CR>", "Build" },
+			r = { ":AsyncTask file-run<CR>", "Run" },
+			l = { ":AsyncTaskList!<CR>", "List" },
+			m = { ":AsyncTaskMacro<CR>", "List AsyncTask macros" },
+		},
+	},
+}, { prefix = "<leader>" })
+
 -- Dap
 wk.register({
 	d = {
