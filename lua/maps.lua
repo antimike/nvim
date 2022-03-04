@@ -387,6 +387,10 @@ wk.register({
 		d = { ":Telescope find_directories<CR>", "Directories" },
 		b = { ":Telescope buffers<CR>", "Buffers" },
 		h = { ":Telescope help_tags<CR>", "Help Files" },
+                gH = {
+                        function() require("telescope").extensions.heading.heading() end,
+                        "GOTO heading",
+                },
 		B = { ":DashboardJumpMarks<CR>", "Find BookMark" },
 		p = {
 			function()
@@ -547,6 +551,14 @@ wk.register({
 	["]["] = { "Goto end of next class" },
 	["[]"] = { "Goto end of previous class" },
 	["[["] = { "Goto previous class" },
+})
+
+-- Headers
+wk.register({
+        gH = {
+                function() require("telescope").extensions.heading.heading() end,
+                "GOTO heading",
+        }
 })
 
 -- Lsp
