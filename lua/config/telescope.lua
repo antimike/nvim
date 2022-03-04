@@ -39,6 +39,7 @@ telescope.setup({
 		history = {
 			path = "~/.local/share/nvim/databases/telescope_history.sqlite3",
 		},
+                dynamic_preview_title = true,
 		buffer_previewer_maker = new_maker,
 		vimgrep_arguments = {
 			"rg",

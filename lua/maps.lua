@@ -50,8 +50,55 @@ wk.register({
 		name = "Session",
 		s = { ":SessionLoad<CR>", "Load Session" },
 		S = { ":SessionSave<CR>", "Save Session" },
+		f = { ":SearchSession<CR>", "Search Sessions" },
 	},
 })
+
+-- Clipboard / yank management
+wk.register({
+	gp = {
+                function() require("telescope").extensions.neoclip.default() end,
+                "Search yank history"
+        },
+	gy = { ":Telescope neoclip star extra=plus<CR>", "Move select yank into system clipboard (*)" },
+})
+
+-- Macros
+wk.register({
+	gm = {
+		function()
+			require("telescope").extensions.macroscope.default()
+		end,
+		"Search macros",
+	},
+})
+
+wk.register({
+	x = {
+		name = "Miscellaneous",
+		c = {
+			name = "Neoclip",
+			s = {
+				function()
+					require("neoclip").start()
+				end,
+				"Start neoclip",
+			},
+			S = {
+				function()
+					require("neoclip").stop()
+				end,
+				"Stop neoclip",
+			},
+			t = {
+				function()
+					require("neoclip").toggle()
+				end,
+				"Toggle neoclip",
+			},
+		},
+	},
+}, { prefix = "<leader>" })
 
 -- ToggleTerm
 map("n", "<C-t>", ":ToggleTerm<CR>")
@@ -339,9 +386,24 @@ wk.register({
 			"Media files",
 		},
 		P = { ":Telescope project<CR>", "Projects" },
+		m = {
+			function()
+				require("telescope").extensions.macroscope.default()
+			end,
+			"Macros",
+		},
 		n = { ":Telescope notify<CR>", "Notifications" },
 		c = { ":Telescope cheat fd<CR>", "Cheatsheets" },
 		C = { ":Telescope command_palette<CR>", "Commands" },
+		y = {
+			name = "Yanks",
+			p = {
+                                function() require("telescope").extensions.neoclip.default() end,
+                                "Select"
+                        },
+                        -- TODO: Figure out how to call this with the Lua API
+			y = { ":Telescope neoclip star extra=plus<CR>", "Select and copy to system register (*)" },
+		},
 		z = { ":Telescope z list<CR>", "Common Directories (Z)" },
 		t = { "TodoTelescope<CR>", "Project TODOs" },
 		T = {

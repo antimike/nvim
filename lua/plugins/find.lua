@@ -16,19 +16,44 @@ return {
 			"command-palette",
 			"smart-history",
 			"telescope-cheat",
+                        -- "cheatsheet.nvim",
 			"telescope-z",
 			"telescope-github",
 			-- "telescope-dap",
 			"telescope-bibtex",
 			"telescope-packer",
+			-- "session-lens",
 		},
 		opt = false,
-		-- cmd = 'Telescope',
 		requires = {
 			"cljoly/telescope-repo.nvim",
 		},
 		config = function()
 			require("config.telescope")
+		end,
+	},
+	{
+		"rmagatti/session-lens",
+		as = "session-lens",
+		requires = {
+                        "auto-session",
+                        "telescope",
+                },
+                after = "telescope",
+		config = function()
+			require("config.telescope-sessions")
+                        require("telescope").load_extension("session-lens")
+		end,
+	},
+	{
+		"AckslD/nvim-neoclip.lua",
+		as = "neoclip",
+		requires = {
+			"telescope",
+			{ "sqlite", module = "sqlite" },
+		},
+		config = function()
+			require("config.neoclip")
 		end,
 	},
 	{
