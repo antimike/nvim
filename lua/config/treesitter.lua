@@ -17,6 +17,11 @@ local keymaps = {
 		goto_next_usage = "<A-*>",
 		goto_previous_usage = "<A-#>",
 	},
+        textsubjects = {
+                ["<space>"] = "textsubjects-smart",
+                ["A"] = "textsubjects-container-outer",
+                ["I"] = "textsubjects-container-inner",
+        },
 }
 
 local descriptions = {
@@ -32,6 +37,12 @@ local descriptions = {
 		goto_previous_usage = "GOTO previous usage",
 		_modes = { "n" },
 	},
+        textsubjects = {
+                ["textsubjects-smart"] = "Comments, calls, defns, loops, args",
+                ["textsubjects-container-outer"] = "Classes, structs, funcs, methods (outer)",
+                ["textsubjects-container-inner"] = "Classes, structs, funcs, methods (inner)",
+                _modes = { "v", "o" }
+        }
 }
 
 utils.document_keymaps(keymaps, descriptions)
