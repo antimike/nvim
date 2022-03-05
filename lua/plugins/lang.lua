@@ -12,6 +12,15 @@ return {
 		after = "treesitter",
 	},
 	{
+		"mizlan/iswap.nvim",
+		as = "iswap",
+		requires = "treesitter",
+		after = "treesitter",
+		config = function()
+			require("config.iswap")
+		end,
+	},
+	{
 		"nvim-treesitter/nvim-treesitter-refactor",
 		as = "ts-refactor",
 		requires = "treesitter",

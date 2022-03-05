@@ -757,6 +757,13 @@ wk.register({
 	},
 }, { prefix = "<leader>" })
 
+
+-- iswap
+wk.register({
+        gx = { ":ISwap<CR>", "Swap elements" },
+        gX = { "ISwapWith<CR>", "Swap with cursor element" },
+})
+
 -- Build
 wk.register({
 	P = {
