@@ -757,6 +757,23 @@ wk.register({
 	},
 }, { prefix = "<leader>" })
 
+-- Treehopper (ts-hint-textobject)
+wk.register({
+        m = {
+                function() require("tsht").nodes() end,
+                "Select TS node",
+        },
+}, {mode = "v"})
+wk.register({
+        m = {
+                function() require("tsht").nodes() end,
+                "Select TS node",
+        },
+}, {mode = "o"})
+
+wk.register({
+
+})
 
 -- iswap
 wk.register({

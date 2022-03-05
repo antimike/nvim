@@ -1,2 +1,11 @@
-vim.cmd [[omap     <silent> m :<C-U>lua require('tsht').nodes()<CR>]]
-vim.cmd [[vnoremap <silent> m :lua require('tsht').nodes()<CR>]]
+require("tsht").config.hint_keys = {
+	"h",
+	"j",
+	"f",
+	"d",
+	"n",
+	"v",
+	"s",
+	"l",
+	"a",
+}
