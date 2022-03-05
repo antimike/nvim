@@ -775,10 +775,12 @@ wk.register({
                 "Select TS node",
         },
 }, {mode = "o"})
-
 wk.register({
-
-})
+        m = {
+                function() require("tsht").nodes() end,
+                "Select TS node",
+        },
+}, {mode = "n"})
 
 -- iswap
 wk.register({
