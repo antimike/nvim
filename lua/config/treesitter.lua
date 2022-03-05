@@ -3,6 +3,49 @@ if not present then
 	return
 end
 local parser_conf = require("nvim-treesitter.parsers").get_parser_configs()
+local wk = require("which-key")
+
+-- Ensure all keymaps are registered with which-key
+local keymaps = {
+	smart_rename = {
+		smart_rename = "gr",
+	},
+        navigation = {
+                goto_definition = "gd",
+                list_definitions = "gD",
+                list_definitions_toc = "gO",
+                goto_next_usage = "<A-*>",
+                goto_previous_usage = "<A-#>",
+        }
+}
+
+local descriptions = {
+        smart_rename = {
+                smart_rename = "Rename",
+                _modes = {"n"},
+        },
+        navigation = {
+                goto_definition = "GOTO definition",
+                list_definitions = "List definitions",
+                list_definitions_toc = "Show definitions TOC",
+                goto_next_usage = "GOTO next usage",
+                goto_previous_usage = "GOTO previous usage",
+                _modes = {"n"},
+        },
+}
+
+local wk_maps = {}
+for name, map in pairs(keymaps) do
+        for k, rhs in pairs(map) do
+                for _, mode in ipairs(descriptions[name]._modes) do
+                        wk_maps[mode] = wk_maps[mode] or {}
+                        wk_maps[mode][rhs] = {descriptions[name][k]}
+                end
+        end
+end
+for mode, wk_map in pairs(wk_maps) do
+        wk.register(wk_map, {mode = mode})
+end
 
 nvim_treesitter.setup({
 	refactor = {
@@ -16,19 +59,11 @@ nvim_treesitter.setup({
 		},
 		smart_rename = {
 			enable = true,
-			keymaps = {
-				smart_rename = "grr",
-			},
+			keymaps = keymaps.smart_rename,
 		},
 		navigation = {
 			enable = true,
-			keymaps = {
-				goto_definition = "gnd",
-				list_definitions = "gnD",
-				list_definitions_toc = "gO",
-				goto_next_usage = "<a-*>",
-				goto_previous_usage = "<a-#>",
-			},
+			keymaps = keymaps.navigation,
 		},
 	},
 	highlight = {
@@ -94,8 +129,8 @@ nvim_treesitter.setup({
 				["if"] = "@function.inner",
 				["ac"] = "@class.outer",
 				["ic"] = "@class.inner",
-                                ["ia"] = "@parameter.inner",
-                                ["aa"] = "@parameter.outer",
+				["ia"] = "@parameter.inner",
+				["aa"] = "@parameter.outer",
 			},
 		},
 		move = {
@@ -104,22 +139,22 @@ nvim_treesitter.setup({
 			goto_next_start = {
 				["]m"] = "@function.outer",
 				["]]"] = "@class.outer",
-                                ["ga"] = "@parameter.outer",
+				["ga"] = "@parameter.outer",
 			},
 			goto_next_end = {
 				["]M"] = "@function.outer",
 				["]["] = "@class.outer",
-                                ["gA"] = "@parameter.outer",
+				["gA"] = "@parameter.outer",
 			},
 			goto_previous_start = {
 				["[m"] = "@function.outer",
 				["[["] = "@class.outer",
-                                ["gpa"] = "@parameter.outer",
+				["gpa"] = "@parameter.outer",
 			},
 			goto_previous_end = {
 				["[M"] = "@function.outer",
 				["[]"] = "@class.outer",
-                                ["gpA"] = "@parameter.outer",
+				["gpA"] = "@parameter.outer",
 			},
 		},
 		swap = {
