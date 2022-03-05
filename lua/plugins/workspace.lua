@@ -10,15 +10,6 @@ return {
 		end,
 	},
 
-	-- Wrapper for WhichKey
-	-- TODO: Figure out why Packer can't install this
-	-- {
-	--   'AcksID/nvim-whichkey-setup',
-	--   as = 'which-key-setup',
-	--   requires = 'which-key',
-	--   after = 'which-key',
-	-- },
-
 	-- Offers mapping conveniences in addition to / alternative to WK
 	-- TODO: Try this
 	-- {
