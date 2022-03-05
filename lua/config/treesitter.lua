@@ -10,41 +10,41 @@ local keymaps = {
 	smart_rename = {
 		smart_rename = "gr",
 	},
-        navigation = {
-                goto_definition = "gd",
-                list_definitions = "gD",
-                list_definitions_toc = "gO",
-                goto_next_usage = "<A-*>",
-                goto_previous_usage = "<A-#>",
-        }
+	navigation = {
+		goto_definition = "gd",
+		list_definitions = "gD",
+		list_definitions_toc = "gO",
+		goto_next_usage = "<A-*>",
+		goto_previous_usage = "<A-#>",
+	},
 }
 
 local descriptions = {
-        smart_rename = {
-                smart_rename = "Rename",
-                _modes = {"n"},
-        },
-        navigation = {
-                goto_definition = "GOTO definition",
-                list_definitions = "List definitions",
-                list_definitions_toc = "Show definitions TOC",
-                goto_next_usage = "GOTO next usage",
-                goto_previous_usage = "GOTO previous usage",
-                _modes = {"n"},
-        },
+	smart_rename = {
+		smart_rename = "Rename",
+		_modes = { "n" },
+	},
+	navigation = {
+		goto_definition = "GOTO definition",
+		list_definitions = "List definitions",
+		list_definitions_toc = "Show definitions TOC",
+		goto_next_usage = "GOTO next usage",
+		goto_previous_usage = "GOTO previous usage",
+		_modes = { "n" },
+	},
 }
 
 local wk_maps = {}
 for name, map in pairs(keymaps) do
-        for k, rhs in pairs(map) do
-                for _, mode in ipairs(descriptions[name]._modes) do
-                        wk_maps[mode] = wk_maps[mode] or {}
-                        wk_maps[mode][rhs] = {descriptions[name][k]}
-                end
-        end
+	for k, rhs in pairs(map) do
+		for _, mode in ipairs(descriptions[name]._modes) do
+			wk_maps[mode] = wk_maps[mode] or {}
+			wk_maps[mode][rhs] = { descriptions[name][k] }
+		end
+	end
 end
 for mode, wk_map in pairs(wk_maps) do
-        wk.register(wk_map, {mode = mode})
+	wk.register(wk_map, { mode = mode })
 end
 
 nvim_treesitter.setup({
