@@ -50,4 +50,15 @@ return {
 			require("config.minimap")
 		end,
 	},
+	-- Quickfix popup
+	{
+		"kevinhwang91/nvim-bqf",
+                as = "bqf",
+                ft = "qf",
+		requires = "treesitter",
+		after = "treesitter",
+                config = function()
+                        require("config.bqf")
+                end,
+	},
 }
