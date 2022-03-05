@@ -3,7 +3,7 @@ if not present then
 	return
 end
 local parser_conf = require("nvim-treesitter.parsers").get_parser_configs()
-local wk = require("which-key")
+local utils = require("utils")
 
 -- Ensure all keymaps are registered with which-key
 local keymaps = {
@@ -34,18 +34,7 @@ local descriptions = {
 	},
 }
 
-local wk_maps = {}
-for name, map in pairs(keymaps) do
-	for k, rhs in pairs(map) do
-		for _, mode in ipairs(descriptions[name]._modes) do
-			wk_maps[mode] = wk_maps[mode] or {}
-			wk_maps[mode][rhs] = { descriptions[name][k] }
-		end
-	end
-end
-for mode, wk_map in pairs(wk_maps) do
-	wk.register(wk_map, { mode = mode })
-end
+utils.document_keymaps(keymaps, descriptions)
 
 nvim_treesitter.setup({
 	refactor = {
