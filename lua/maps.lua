@@ -397,6 +397,10 @@ wk.register({
 	f = {
 		name = "Find",
 		w = { ":Telescope live_grep<CR>", "Words" },
+                W = {
+                        function() require("telescope").extensions.arecibo.websearch() end,
+                        "Web search",
+                },
 		f = { ":Telescope find_files<CR>", "Files" },
 		o = { ":Telescope oldfiles<CR>", "Old Files" },
 		d = { ":Telescope find_directories<CR>", "Directories" },
