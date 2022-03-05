@@ -636,25 +636,25 @@ wk.register({
 				function()
 					require("neogen").generate({ type = "func" })
 				end,
-				"Annotate Function",
+				"Function",
 			},
 			c = {
 				function()
 					require("neogen").generate({ type = "class" })
 				end,
-				"Annotate Function",
+				"Class",
 			},
 			t = {
 				function()
 					require("neogen").generate({ type = "type" })
 				end,
-				"Annotate Function",
+				"Type",
 			},
 			F = {
 				function()
 					require("neogen").generate({ type = "file" })
 				end,
-				"Annotate Function",
+				"File",
 			},
 		},
 		D = {
