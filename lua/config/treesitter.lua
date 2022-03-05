@@ -185,5 +185,5 @@ parser_conf.markdown = {
 vim.cmd([[
   autocmd BufEnter * set foldmethod=expr
   autocmd BufEnter * set foldexpr=nvim_treesitter#foldexpr()
-  set foldlevel=99
+  " set foldlevel=99
 ]])
