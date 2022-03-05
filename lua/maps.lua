@@ -785,6 +785,26 @@ wk.register({
         gX = { "ISwapWith<CR>", "Swap with cursor element" },
 })
 
+-- Trouble.nvim
+local function show_trouble(mode)
+        return function() vim.cmd("Trouble " .. mode) end
+end
+wk.register({
+        gq = {
+                name = "Trouble",
+                q = {show_trouble("quickfix"), "Quickfix"},
+                l = {show_trouble("loclist"), "Loclist"},
+                x = {show_trouble("document_diagnostics"), "Document diagnostics"},
+                X = {show_trouble("workspace_diagnostics"), "Workspace diagnostics"},
+                r = {show_trouble("lsp_references"), "References"},
+                d = {show_trouble("lsp_definitions"), "Definitions"},
+                t = {show_trouble("lsp_type_definitions"), "Type definitions"},
+                T = {":TodoTrouble<CR>", "TODOs"},
+                R = {":TroubleRefresh<CR>", "Refresh"},
+        },
+        gQ = {":TroubleClose<CR>", "Hide Trouble sidebar"},
+})
+
 -- Build
 wk.register({
 	P = {

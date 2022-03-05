@@ -190,12 +190,24 @@ return {
 	},
 	{
 		"AckslD/nvim-revJ.lua",
-                as = "revJ",
+		as = "revJ",
 		requires = {
-                        "ts-textobjects",
+			"ts-textobjects",
+		},
+		config = function()
+			require("config.revJ")
+		end,
+	},
+	-- Diagnostics + references + telescope + quickfix
+	{
+		"folke/trouble.nvim",
+                as = "trouble",
+		requires = {
+                        "devicons",
+                        "telescope",
                 },
-                config = function()
-                        require("config.revJ")
-                end,
+		config = function()
+			require("config.trouble")
+		end,
 	},
 }
