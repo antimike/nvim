@@ -552,6 +552,7 @@ wk.register({
 	t = {
 		name = "Theme",
 		c = { ":Telescope colorscheme<CR>", "Choose colorscheme" },
+                t = { ":TransparentToggle<CR>", "Toggle transparency" },
 	},
 }, { prefix = "<leader>" })
 
