@@ -6,7 +6,7 @@ return {
 		"folke/which-key.nvim",
 		as = "which-key",
 		config = function()
-			require("config.which_key").setup()
+			require("config.which_key")
 		end,
 	},
 
