@@ -210,4 +210,13 @@ return {
 			require("config.trouble")
 		end,
 	},
+        -- Language-specific "splitting" of one-liners to multiline block forms
+        -- TODO: Port to Lua / use Treesitter?
+	{
+		"AndrewRadev/splitjoin.vim",
+		as = "splitjoin",
+		config = function()
+			require("config.splitjoin")
+		end,
+	},
 }

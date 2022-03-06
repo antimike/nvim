@@ -152,6 +152,15 @@ wk.register({
 	},
 })
 
+-- SplitJoin
+wk.register({
+        j = {
+                name = "Split/Join",
+                j = { ":SplitjoinJoin<CR>", "Consolidate" },
+                s = { ":SplitjoinSplit<CR>", "Split" },
+        }
+}, {prefix = "<leader>"})
+
 -- Code runners and REPLs
 wk.register({
 	r = {
