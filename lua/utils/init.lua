@@ -1,4 +1,6 @@
-local pkg = {}
+local pkg = {
+	tree = require("utils.tree"),
+}
 
 -- @Summary Document keymaps without rebinding them using which-key
 -- @Description Uses which-key to "describe" existing keymaps, e.g. those configured automatically by a plugin
@@ -37,79 +39,34 @@ function pkg.document_keymaps(keymaps, descriptions)
 end
 
 local function print_debug_msg(msg)
-        print("    DEBUG: " .. msg)
+	print("    DEBUG: " .. msg)
 end
-
-local function eulerian_coroutine(obj)
-        -- NOTE: Could also insert obj into stack before repeat-until block and pop instead of push at the beginning of the block
-        -- Is this any more / less efficient?
-	local stack, path = {}, {}
-	local key, curr, descend = nil, obj, true
-        repeat
-                if curr == nil then     -- Edge case: curr == nil  ==> we've exhausted the current level
-                        -- NOTE: Will obviously cause problems if obj == nil.  This is a good thing
-                        -- print_debug_msg("Exhausted " .. tostring(curr) .. "; popping from stack...")
-                        curr, key = table.remove(stack), table.remove(path)
-                end
-                -- Insert the node being searched and determine whether we can go deeper
-                -- print_debug_msg("Searching " .. tostring(curr) .. " for children...")
-                table.insert(stack, curr)
-                descend, key, curr = pcall(next, curr, key)
-		if descend then
-                        if key ~= nil then
-                                -- print_debug_msg("Found child with key " .. tostring(key) .. "!  Descending...")
-                                table.insert(path, key)
-                                -- If we're descending then we know we haven't seen this node before, since this is a DFS
-                                key = nil
-                        else
-                                table.remove(stack)
-                                curr, key = table.remove(stack), table.remove(path)
-                        end
-                else
-                        -- Yield the full path to the leaf we just found
-                        -- The last item on the stack will be non-table-like and the value of the leaf itself, so we pop it here
-                        -- print_debug_msg("Attempted to descend into leaf with value " .. tostring(stack[#stack]) .. "!  Yielding leaf...")
-                        key = table.remove(path)
-                        coroutine.yield(path, key, table.remove(stack))
-                        curr = table.remove(stack)
-                        -- Backtrack
-                        -- NOTE: Inefficient bc the last item will get popped and restacked; is there a better way?
-                        -- NOTE: This will result in an error iff the original `obj` is non-table-like (good), so we deliberately omit the pcall
-                end
-        until curr == nil and #stack == 0
-end
-
-pkg.EulerianTraversal = function(obj) return coroutine.wrap(eulerian_coroutine), obj end
 
 pkg.blacklist = {
 	filetypes = {
-		"Filetype blacklist",
-		{
-			"help",
-			"terminal",
-			"dashboard",
-			"packer",
-			"vista",
-			"TelescopePrompt",
-			"lsp-installer",
-			"lspinfo",
-			"vista_kind",
-			"NvimTree",
-			"calendar",
-			"peek",
-			"fzf",
-			"fugitive",
-		},
+		description = "Filetype blacklist",
+		"help",
+		"terminal",
+		"dashboard",
+		"packer",
+		"vista",
+		"TelescopePrompt",
+		"lsp-installer",
+		"lspinfo",
+		"vista_kind",
+		"NvimTree",
+		"calendar",
+		"peek",
+		"fzf",
+		"fugitive",
 	},
 	buftypes = {
-		"Buftype blacklist",
-		{
-			"nofile",
-			"nowrite",
-			"quickfix",
-			"terminal",
-			"prompt",
-		},
+		description = "Buftype blacklist",
+		"nofile",
+		"nowrite",
+		"quickfix",
+		"terminal",
+		"prompt",
 	},
 }
 
