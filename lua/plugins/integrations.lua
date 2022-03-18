@@ -146,4 +146,8 @@ return {
 			require("config.cheatsheets")
 		end,
 	},
+	{
+		"https://github.com/HiPhish/info.vim",
+		as = "info.vim",
+	},
 }
