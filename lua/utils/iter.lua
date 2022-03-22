@@ -190,7 +190,7 @@ end
 
 -- @param data_ctor Function to enqueue nodes to examine
 -- @param predicate Condition to search for
-function recurse(iter, data_ctor, predicate)
+local function recurse(iter, data_ctor, predicate)
 	-- First coroutine: recursive iterable to search produces child values
     -- Second coroutine: "validator" / "dispatcher"
     -- Third coroutine: Abstract datastructure handles dispatched nodes and produces next

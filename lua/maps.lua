@@ -39,10 +39,6 @@ map("n", "<C-A-l>", ":call ResizeRight(3)<CR><Esc>")
 map("n", "<C-A-k>", ":call ResizeUp(1)<CR><Esc>")
 map("n", "<C-A-j>", ":call ResizeDown(1)<CR><Esc>")
 
-local function get_session()
-	require("telescope").extensions["session-lens"].search_session()
-end
-
 -- Dashboard
 wk.register({
 	D = { ":Dashboard<CR>", "Dashboard" },
@@ -52,59 +48,10 @@ wk.register({
 wk.register({
 	["<C-s>"] = {
 		name = "Session",
-		s = { ":SessionLoad<CR>", "Load session for current working directory" },
-		S = { ":SessionSave<CR>", "Save session" },
-		f = { get_session, "Load named session" },
+		s = { ":SessionLoad<CR>", "Load Session" },
+		S = { ":SessionSave<CR>", "Save Session" },
 	},
 })
-
--- Clipboard / yank management
-wk.register({
-	gp = {
-		function()
-			require("telescope").extensions.neoclip.default()
-		end,
-		"Search yank history",
-	},
-	gy = { ":Telescope neoclip star extra=plus<CR>", "Move select yank into system clipboard (*)" },
-})
-
--- Macros
-wk.register({
-	gm = {
-		function()
-			require("telescope").extensions.macroscope.default()
-		end,
-		"Search macros",
-	},
-})
-
-wk.register({
-	x = {
-		name = "Miscellaneous",
-		c = {
-			name = "Neoclip",
-			s = {
-				function()
-					require("neoclip").start()
-				end,
-				"Start neoclip",
-			},
-			S = {
-				function()
-					require("neoclip").stop()
-				end,
-				"Stop neoclip",
-			},
-			t = {
-				function()
-					require("neoclip").toggle()
-				end,
-				"Toggle neoclip",
-			},
-		},
-	},
-}, { prefix = "<leader>" })
 
 -- ToggleTerm
 map("n", "<C-t>", ":ToggleTerm<CR>")
@@ -124,22 +71,13 @@ function _G.set_terminal_keymaps()
 	map("t", "<S-k>", "<c-\\><C-n>:call ResizeUp(1)<CR>")
 	map("t", "<S-l>", "<c-\\><C-n>:call ResizeRight(3)<CR>")
 end
--- vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
-
--- Sidebars
-function _G.CloseSidebarsExcept(keeper)
-	local sidebars = {
-		vista = ":Vista",
-	}
-end
 
 wk.register({
 	gM = { ":MinimapToggle<CR>", "Toggle code minimap" },
 	["<A-u>"] = { ":MundoToggle<CR>", "Toggle undo sidebar" },
-	["<leader>u"] = { ":MundoToggle<CR>", "Toggle undo sidebar" },
-	["<C-V>"] = { ":Vista nvim_lsp<CR>", "Show symbols sidebar (Vista + nvim-lsp)" },
-	["<C-v>"] = { ":Vista focus<CR>", "Jump to/from Vista sidebar" },
-	["<A-V>"] = { ":Vista!!", "Toggle Vista sidebar" },
+	gV = { ":Vista nvim_lsp<CR>", "Show symbols sidebar (Vista + nvim-lsp)" },
+	gv = { ":Vista focus<CR>", "Jump to/from Vista sidebar" },
+	["<C-g>v"] = { ":Vista!!<CR>", "Toggle Vista sidebar" },
 })
 
 -- FTerm
@@ -152,15 +90,6 @@ wk.register({
 	},
 })
 
--- SplitJoin
-wk.register({
-        j = {
-                name = "Split/Join",
-                j = { ":SplitjoinJoin<CR>", "Consolidate" },
-                s = { ":SplitjoinSplit<CR>", "Split" },
-        }
-}, {prefix = "<leader>"})
-
 -- Code runners and REPLs
 wk.register({
 	r = {
@@ -168,20 +97,10 @@ wk.register({
 		r = { "<Plug>ReplSend", "Send text motion to REPL" },
 		s = { "<Plug>SnipRunOperator", "Send text motion to SnipRun" },
 		i = { "<Plug>SnipInfo", "Display language-specific info" },
-		L = { "<Plug>Luadev-RunLine", "Execute current line in Lua (LuaDev)" },
+		l = { "<Plug>Luadev-RunLine", "Execute current line" },
 		sl = { "<Plug>SnipRun", "Send current line to SnipRun" },
 		d = { ":DashRun<CR>", "Run script with Dash" },
 		rl = { "<Plug>ReplSendLine", "Send current line to REPL" },
-		I = {
-			name = "IRON",
-			l = { "<Plug>(iron-send-line)", "Send current line to REPL" },
-			t = { "<Plug>(iron-send-motion)", "Send motion to REPL" },
-			r = { "<Plug>(iron-repeat-cmd)", "Repeat command" },
-			["<CR>"] = { "<Plug>(iron-cr)", "<CR> in REPL" },
-			i = { "<Plug>(iron-interrupt)", "Interrupt" },
-			q = { "<Plug>(iron-exit)", "Exit" },
-			c = { "<Plug>(iron-clear)", "Clear" },
-		},
 		b = {
 			function()
 				require("mdeval").eval_code_block()
@@ -255,10 +174,9 @@ wk.register({
 	},
 }, { prefix = "<leader>", mode = "v", silent = true })
 
--- Search for bigrams (Lightspeed extensions)
+-- Remove unnecessary white spaces.
 wk.register({
-	s = { "<Plug>Lightspeed_omni_s", "Search window for bigram" },
-	S = { "<Plug>Lightspeed_omni_s", "Search all windows for bigram" },
+	w = { ":StripWhitespace<CR>", "Strip Whitespace" },
 }, { prefix = "<leader>", mode = "n", silent = true })
 
 -- Toggle fold.
@@ -287,7 +205,6 @@ wk.register({
 	o = { ":Ranger<CR>", "Ranger (File Manager)" },
 }, { prefix = "<leader>" })
 
--- Help pages
 wk.register({
 	gh = { ":Telescope help_tags<CR>", "Search help pages" },
 })
@@ -361,8 +278,6 @@ wk.register({
 		name = "Cheatsheets",
 		f = { ":Telescope cheat fd<CR>", "Find cheatsheet" },
 		r = { ":Telescope cheat recache<CR>", "Recache cheatsheets" },
-		v = { ":Cheatsheet<CR>", "Vim cheatsheets" },
-		V = { ":CheatsheetEdit<CR>", "Edit vim cheatsheet" },
 	},
 }, { prefix = "<leader>" })
 
@@ -407,21 +322,11 @@ wk.register({
 	f = {
 		name = "Find",
 		w = { ":Telescope live_grep<CR>", "Words" },
-                W = {
-                        function() require("telescope").extensions.arecibo.websearch() end,
-                        "Web search",
-                },
 		f = { ":Telescope find_files<CR>", "Files" },
 		o = { ":Telescope oldfiles<CR>", "Old Files" },
 		d = { ":Telescope find_directories<CR>", "Directories" },
 		b = { ":Telescope buffers<CR>", "Buffers" },
 		h = { ":Telescope help_tags<CR>", "Help Files" },
-		H = {
-			function()
-				require("telescope").extensions.heading.heading()
-			end,
-			"GOTO heading",
-		},
 		B = { ":DashboardJumpMarks<CR>", "Find BookMark" },
 		p = {
 			function()
@@ -430,31 +335,9 @@ wk.register({
 			"Media files",
 		},
 		P = { ":Telescope project<CR>", "Projects" },
-		m = {
-			function()
-				require("telescope").extensions.macroscope.default()
-			end,
-			"Macros",
-		},
 		n = { ":Telescope notify<CR>", "Notifications" },
-		c = {
-			name = "Cheatsheets",
-			f = { ":Telescope cheat fd<CR>", "External" },
-			v = { ":Cheatsheet<CR>", "Vim" },
-		},
+		c = { ":Telescope cheat fd<CR>", "Cheatsheets" },
 		C = { ":Telescope command_palette<CR>", "Commands" },
-		y = {
-			name = "Yanks",
-			p = {
-				function()
-					require("telescope").extensions.neoclip.default()
-				end,
-				"Select",
-			},
-			-- TODO: Figure out how to call this with the Lua API
-			y = { ":Telescope neoclip star extra=plus<CR>", "Select and copy to system register (*)" },
-		},
-		S = { get_session, "Sessions" },
 		z = { ":Telescope z list<CR>", "Common Directories (Z)" },
 		t = { "TodoTelescope<CR>", "Project TODOs" },
 		T = {
@@ -561,14 +444,9 @@ wk.register({
 wk.register({
 	t = {
 		name = "Theme",
-		c = { ":Telescope colorscheme<CR>", "Choose colorscheme" },
-                t = { ":TransparentToggle<CR>", "Toggle transparency" },
+		c = { ":Telescope colorscheme<CR>", "Set Colorscheme" },
 	},
 }, { prefix = "<leader>" })
-
-wk.register({
-	gC = { ":Telescope colorscheme<CR>", "Choose colorscheme" },
-})
 
 -- Focus
 wk.register({
@@ -591,16 +469,6 @@ wk.register({
 	["[["] = { "Goto previous class" },
 })
 
--- Headers
-wk.register({
-	gH = {
-		function()
-			require("telescope").extensions.heading.heading()
-		end,
-		"GOTO heading",
-	},
-})
-
 -- Lsp
 wk.register({
 	l = {
@@ -611,7 +479,6 @@ wk.register({
 			end,
 			"Code Action",
 		},
-		c = { ":TSContextToggle<CR>", "Toggle context display" },
 		d = { ":Telescope diagnostics<CR>", "Diagnostics" },
 		i = { ":LspInfo<CR>", "Info" },
 		I = { ":LspInstallInfo<CR>", "Installer Info" },
@@ -646,25 +513,25 @@ wk.register({
 				function()
 					require("neogen").generate({ type = "func" })
 				end,
-				"Function",
+				"Annotate Function",
 			},
 			c = {
 				function()
 					require("neogen").generate({ type = "class" })
 				end,
-				"Class",
+				"Annotate Function",
 			},
 			t = {
 				function()
 					require("neogen").generate({ type = "type" })
 				end,
-				"Type",
+				"Annotate Function",
 			},
 			F = {
 				function()
 					require("neogen").generate({ type = "file" })
 				end,
-				"File",
+				"Annotate Function",
 			},
 		},
 		D = {
@@ -683,7 +550,7 @@ wk.register({
 			end,
 			"Signature Help",
 		},
-		S = { ":SymbolsOutline<CR>", "Show symbols" },
+                S = {":SymbolsOutline<CR>", "Show symbols"},
 		p = { -- See config.treesitter
 			name = "Peek",
 			f = { "Function" },
@@ -768,71 +635,6 @@ wk.register({
 			name = "Swap",
 			p = { "Next parameter" },
 			P = { "Previous parameter" },
-		},
-	},
-}, { prefix = "<leader>" })
-
--- Treehopper (ts-hint-textobject)
-wk.register({
-        m = {
-                function() require("tsht").nodes() end,
-                "Select TS node",
-        },
-}, {mode = "v"})
-wk.register({
-        m = {
-                function() require("tsht").nodes() end,
-                "Select TS node",
-        },
-}, {mode = "o"})
-wk.register({
-        m = {
-                function() require("tsht").nodes() end,
-                "Select TS node",
-        },
-}, {mode = "n"})
-
--- iswap
-wk.register({
-        gx = { ":ISwap<CR>", "Swap elements" },
-        gX = { "ISwapWith<CR>", "Swap with cursor element" },
-})
-
--- Trouble.nvim
-local function show_trouble(mode)
-        return function() vim.cmd("Trouble " .. mode) end
-end
-wk.register({
-        gq = {
-                name = "Trouble",
-                q = {show_trouble("quickfix"), "Quickfix"},
-                l = {show_trouble("loclist"), "Loclist"},
-                x = {show_trouble("document_diagnostics"), "Document diagnostics"},
-                X = {show_trouble("workspace_diagnostics"), "Workspace diagnostics"},
-                r = {show_trouble("lsp_references"), "References"},
-                d = {show_trouble("lsp_definitions"), "Definitions"},
-                t = {show_trouble("lsp_type_definitions"), "Type definitions"},
-                T = {":TodoTrouble<CR>", "TODOs"},
-                R = {":TroubleRefresh<CR>", "Refresh"},
-        },
-        gQ = {":TroubleClose<CR>", "Hide Trouble sidebar"},
-})
-
--- Build
-wk.register({
-	P = {
-		name = "Project",
-		g = { ":Telescope project<CR>", "GOTO project" },
-		t = { "TodoTelescope<CR>", "Project TODOs" },
-		d = { ":VGit project_diff_preview<CR>", "Project Diff Preview" },
-		h = { ":VGit project_hunks_preview<CR>", "Project Hunks Preview" },
-		T = {
-			name = "Tasks",
-			e = { ":AsyncTaskEdit<CR>", "Edit" },
-			b = { ":AsyncTask file-build<CR>", "Build" },
-			r = { ":AsyncTask file-run<CR>", "Run" },
-			l = { ":AsyncTaskList!<CR>", "List" },
-			m = { ":AsyncTaskMacro<CR>", "List AsyncTask macros" },
 		},
 	},
 }, { prefix = "<leader>" })

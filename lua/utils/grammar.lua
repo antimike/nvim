@@ -29,6 +29,11 @@ local function expand_nonterminal(nt, state)
 	end
 end
 
+local function expand_list(list, state)
+        for idx, elem in ipairs(list) do
+                list[-idx] = expand_node(elem, state)
+        end
+end
 --[[
 Cases:
 1. rule == nil.  Here, we use ipairs(nt) (i.e., the "list part" of nt) as the RHS of the rule.

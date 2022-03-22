@@ -17,11 +17,52 @@ local keymaps = {
 		goto_next_usage = "<A-*>",
 		goto_previous_usage = "<A-#>",
 	},
-        textsubjects = {
-                ["<space>"] = "textsubjects-smart",
-                ["A"] = "textsubjects-container-outer",
-                ["I"] = "textsubjects-container-inner",
-        },
+	textsubjects = {
+		["<space>"] = "textsubjects-smart",
+		["A"] = "textsubjects-container-outer",
+		["I"] = "textsubjects-container-inner",
+	},
+	textobjects_select = {
+		["af"] = "@function.outer",
+		["if"] = "@function.inner",
+		["ac"] = "@class.outer",
+		["ic"] = "@class.inner",
+		["ia"] = "@parameter.inner",
+		["aa"] = "@parameter.outer",
+	},
+
+	textobjects_goto_next_start = {
+		["]m"] = "@function.outer",
+		["]]"] = "@class.outer",
+		["ga"] = "@parameter.outer",
+	},
+	textobjects_goto_next_end = {
+		["]M"] = "@function.outer",
+		["]["] = "@class.outer",
+		["gA"] = "@parameter.outer",
+	},
+	textobjects_goto_previous_start = {
+		["[m"] = "@function.outer",
+		["[["] = "@class.outer",
+		["gpa"] = "@parameter.outer",
+	},
+	textobjects_goto_previous_end = {
+		["[M"] = "@function.outer",
+		["[]"] = "@class.outer",
+		["gpA"] = "@parameter.outer",
+	},
+
+	textobjects_swap_next = {
+		["<Leader>xp"] = "@parameter.inner",
+	},
+	textobjects_swap_previous = {
+		["<Leader>xP"] = "@parameter.inner",
+	},
+
+	textobjects_peek_definition_code = {
+		["<Leader>lpf"] = "@function.outer",
+		["<Leader>lpc"] = "@class.outer",
+	},
 }
 
 local descriptions = {
@@ -37,12 +78,54 @@ local descriptions = {
 		goto_previous_usage = "GOTO previous usage",
 		_modes = { "n" },
 	},
-        textsubjects = {
-                ["textsubjects-smart"] = "Comments, calls, defns, loops, args",
-                ["textsubjects-container-outer"] = "Classes, structs, funcs, methods (outer)",
-                ["textsubjects-container-inner"] = "Classes, structs, funcs, methods (inner)",
-                _modes = { "v", "o" }
-        }
+	textsubjects = {
+		["textsubjects-smart"] = "Comments, calls, defns, loops, args",
+		["textsubjects-container-outer"] = "Classes, structs, funcs, methods (outer)",
+		["textsubjects-container-inner"] = "Classes, structs, funcs, methods (inner)",
+		_modes = { "v", "o" },
+	},
+	textobjects_select = {
+		["@function.outer"] = "Function (outer)",
+		["@function.inner"] = "Function (inner)",
+		["@class.outer"] = "Class (outer)",
+		["@class.inner"] = "Class (inner)",
+		["@parameter.inner"] = "Param (inner)",
+		["@parameter.outer"] = "Param (outer)",
+		_modes = { "v", "o" },
+	},
+
+	textobjects_goto_next_start = {
+		["@function.outer"] = "GOTO next function (start)",
+		["@class.outer"] = "GOTO next class (start)",
+		["@parameter.outer"] = "GOTO next parameter (start)",
+	},
+	textobjects_goto_next_end = {
+		["@function.outer"] = "GOTO next function (end)",
+		["@class.outer"] = "GOTO next class (end)",
+		["@parameter.outer"] = "GOTO next parameter (end)",
+	},
+	textobjects_goto_previous_start = {
+		["@function.outer"] = "GOTO previous function (start)",
+		["@class.outer"] = "GOTO previous class (start)",
+		["@parameter.outer"] = "GOTO previous parameter (start)",
+	},
+	textobjects_goto_previous_end = {
+		["@function.outer"] = "GOTO previous function (end)",
+		["@class.outer"] = "GOTO previous class (end)",
+		["@parameter.outer"] = "GOTO previous parameter (end)",
+	},
+
+	textobjects_swap_next = {
+		["@parameter.inner"] = "Swap next param",
+	},
+	textobjects_swap_previous = {
+		["@parameter.inner"] = "Swap previous param",
+	},
+
+	textobjects_peek_definition_code = {
+		["@function.outer"] = "Peek func defn",
+		["@class.outer"] = "Peek class defn",
+	},
 }
 
 utils.document_keymaps(keymaps, descriptions)
@@ -92,10 +175,7 @@ nvim_treesitter.setup({
 	},
 	textsubjects = {
 		enable = true,
-		keymaps = {
-			["."] = "textsubjects-smart",
-			[";"] = "textsubjects-container-outer",
-		},
+		keymaps = keymaps.textsubjects,
 	},
 	context_commentstring = {
 		enable = true,

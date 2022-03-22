@@ -49,9 +49,16 @@ return {
 	{
 		"williamboman/nvim-lsp-installer",
 		as = "lsp-installer",
-		requires = "lspconfig",
+		requires = {
+			"lspconfig",
+			"cmp-nvim-lsp",
+		},
+		after = {
+                        "cmp-nvim-lsp",
+                        "lspconfig",
+                },
 		config = function()
-			require("config.lspconfig")
+			require("config.lsp")
 		end,
 	},
 	-- LSP signature.
@@ -201,17 +208,17 @@ return {
 	-- Diagnostics + references + telescope + quickfix
 	{
 		"folke/trouble.nvim",
-                as = "trouble",
+		as = "trouble",
 		requires = {
-                        "devicons",
-                        "telescope",
-                },
+			"devicons",
+			"telescope",
+		},
 		config = function()
 			require("config.trouble")
 		end,
 	},
-        -- Language-specific "splitting" of one-liners to multiline block forms
-        -- TODO: Port to Lua / use Treesitter?
+	-- Language-specific "splitting" of one-liners to multiline block forms
+	-- TODO: Port to Lua / use Treesitter?
 	{
 		"AndrewRadev/splitjoin.vim",
 		as = "splitjoin",

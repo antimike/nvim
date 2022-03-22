@@ -129,10 +129,10 @@ return {
 		"skywind3000/asynctasks.vim",
 		as = "asynctasks",
 		requires = "asyncrun",
-                config = function()
-                        vim.g.asyncrun_open = 6
-                        vim.g.asynctasks_term_pos = "floaterm_reuse"
-                end,
+		config = function()
+			vim.g.asyncrun_open = 6
+			vim.g.asynctasks_term_pos = "floaterm_reuse"
+		end,
 	},
 	{
 		"sudormrfbin/cheatsheet.nvim",
@@ -141,7 +141,7 @@ return {
 			"popup",
 			"plenary",
 		},
-                after = "telescope",
+		after = "telescope",
 		config = function()
 			require("config.cheatsheets")
 		end,

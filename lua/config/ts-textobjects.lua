@@ -1,32 +1,36 @@
 local pkg = {}
+local utils = require("utils")
 
 local objs = {
 	types = {
-		block = { mnemonic = "block", "b" },
-		call = { mnemonic = "eXecute", "x" },
-		class = { mnemonic = "CLASS", "C" },
-		comment = { mnemonic = "comment", "c" },
-		conditional = { mnemonic = "_k_onditional", "k" },
-		frame = { mnemonic = "FRAME", "F" },
-		["function"] = { mnemonic = "function", "f" },
-		loop = { mnemonic = "loop", "l" },
-		parameter = {
-			"a",
-			mnemonic = "argument",
-		},
-		scopename = {
-			"P",
-			outer = false,
-			mnemonic = "package",
-		},
-		statement = {
-			"S",
-			inner = false,
-		},
+		block = { "b" },
+		call = { "x" },
+		class = { "C" },
+		comment = { "c" },
+		conditional = { "i" },
+		frame = { "F" },
+		["function"] = { "f" },
+		loop = { "l" },
+		parameter = { "a" },
+		scopename = { "P", outer = false },
+		statement = { "S" },
 	},
 	scopes = {
-		inner =  "i" ,
-		outer =  "a" ,
+		inner = "i",
+		outer = "a",
+	},
+	mnemonics = {
+		block = "_b_lock",
+		call = "e_x_ecute",
+		class = "_C_lass",
+		comment = "_c_omment",
+		conditional = "_i_f",
+		frame = "_F_rame",
+		["function"] = "_f_unction",
+		loop = "_l_oop",
+		parameter = "_a_rgument",
+		scopename = "_P_ackage",
+		statement = "_S_tatement",
 	},
 }
 
@@ -34,42 +38,108 @@ local objs = {
 objs.queries, objs.descriptions = {}, {}
 local query
 for name, info in pairs(objs.types) do
-        for scope, keymod in pairs(objs.scopes) do
-                if info[scope] ~= false then
-                        -- TODO: Add uniqueness check / implement multiple keybinds
-                        query = "@" .. name .. "." .. scope
-                        objs.queries[query] = keymod .. info[1]
-                        objs.descriptions[query] = name .. " (" .. scope .. ")"
-                end
-        end
+	for scope, keymod in pairs(objs.scopes) do
+		if info[scope] ~= false then
+			-- TODO: Add uniqueness check / implement multiple keybinds
+			query = "@" .. name .. "." .. scope
+			objs.queries[query] = keymod .. info[1]
+			objs.descriptions[query] = objs.mnemonics[name] .. " (" .. scope .. ")"
+		end
+	end
 end
 
 local actions = {
-	select = {},
-	GOTO = {
-		next = {
-			start = {},
-			["end"] = {},
+	modes = {
+		select = {"v", "o"},
+		swap = {"v", "n"},
+		["goto"] = {"v", "o"},
+		peek_definition = {"n"},
+	},
+	select = "",
+	["goto"] = {
+                next = "]",
+                previous = "[",
+	},
+	types = {
+		select = "",
+		["goto"] = {
+			next = {
+				"]",
+				start = "",
+				["end"] = string.upper,
+			},
+			previous = {
+				"[",
+				start = string.upper,
+				["end"] = "",
+			},
 		},
-		previous = {
-			start = {},
-			["end"] = {},
+		swap = {
+			"gx",
+			previous = string.upper,
+			next = "",
+		},
+		peek_definition = {
+			"gd",
 		},
 	},
-	swap = {
-		next = {},
-		previous = {},
+	descriptions = {
+		select = "Select",
+		["goto"] = "GOTO",
+		swap = "Swap",
+		peek_definition = "Peek defn:",
+		next = "next",
+		previous = "previous",
 	},
-	peek_definition = {},
+	keys = {
+		select = "",
+		["goto"] = {
+			next = "]",
+			previous = "[",
+		},
+		swap = {},
+	},
 }
 
 
+local function document_action(prefixes, description, content)
+        local new_prefixes, children = {}, {}
+        if type(content) ~= "table" then
+                for prefix in prefixes do
+                        wk.register({
+                                [prefix .. tostring(content)] = description
+                        })
+                end
+        else
+                for k, v in pairs(content) do
+                        if type(k) == "number" then
+                                table.insert(newprefixes, prefix .. v)
+                        else
+                end
+        end
+        for name, key in pairs(children) do
+                if type(name) == "number" then
+                        wk.register({
+                                [key] = {name = descriptions[action],}
+                        }, {prefix = prefix})
+                else
+                end
+        end
+        for verb, children in pairs(action) do
+                if type(verb) == "number" then
+                        wk_tree[children] = {description}
 
+                end
+        end
+end
 -- PLAN: DFS through actions tree, yielding the full path when we reach a leaf
 -- Preprocess obj tree with another DFS to assemble { obj = { desc, binds } table
 -- Helper fns:
 --      - Check if bind is already taken
 --      - Capitalize description
+-- Need to construct:
+--      - Table of hierarchical descriptions for each mode
+--      - Tables to pass to TS config
 
 textobjects_select = {
 	["@function.outer"] = "Function (outer)",
@@ -154,3 +224,5 @@ textobjects_peek_definition_code = {
 	["<Leader>lpf"] = "@function.outer",
 	["<Leader>lpc"] = "@class.outer",
 }
+
+return pkg
