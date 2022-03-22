@@ -1,0 +1,301 @@
+let SessionLoad = 1
+let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-1 siso=-1
+let v:this_session=expand("<sfile>:p")
+silent only
+silent tabonly
+cd ~/.config/nvim-self
+if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
+  let s:wipebuf = bufnr('%')
+endif
+set shortmess=aoO
+badd +62 ~/.config/i3/config
+badd +26 ~/.config/picom/picom.conf
+badd +527 ~/.config/kitty/kittens/themes/main.py
+badd +1 ~/.config/i3/change-volume.bash
+badd +1 ~/.config/i3/adjust-brightness.bash
+badd +1 ~/.config/pistol/pistol.conf
+badd +150 lua/plugins/integrations.lua
+argglobal
+%argdel
+tabnew +setlocal\ bufhidden=wipe
+tabnew +setlocal\ bufhidden=wipe
+tabrewind
+edit ~/.config/i3/change-volume.bash
+let s:save_splitbelow = &splitbelow
+let s:save_splitright = &splitright
+set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+1wincmd h
+wincmd w
+let &splitbelow = s:save_splitbelow
+let &splitright = s:save_splitright
+wincmd t
+let s:save_winminheight = &winminheight
+let s:save_winminwidth = &winminwidth
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+exe 'vert 1resize ' . ((&columns * 73 + 73) / 147)
+exe 'vert 2resize ' . ((&columns * 73 + 73) / 147)
+exe '3resize ' . ((&lines * 37 + 20) / 40)
+exe 'vert 3resize ' . ((&columns * 1 + 73) / 147)
+argglobal
+balt ~/.config/i3/config
+setlocal fdm=expr
+setlocal fde=nvim_treesitter#foldexpr()
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 8 - ((7 * winheight(0) + 18) / 37)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 8
+normal! 013|
+wincmd w
+argglobal
+if bufexists("~/.config/i3/adjust-brightness.bash") | buffer ~/.config/i3/adjust-brightness.bash | else | edit ~/.config/i3/adjust-brightness.bash | endif
+if &buftype ==# 'terminal'
+  silent file ~/.config/i3/adjust-brightness.bash
+endif
+balt ~/.config/picom/picom.conf
+setlocal fdm=expr
+setlocal fde=nvim_treesitter#foldexpr()
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 1 - ((0 * winheight(0) + 18) / 37)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 1
+normal! 0
+wincmd w
+argglobal
+enew
+balt ~/.config/i3/config
+setlocal fdm=expr
+setlocal fde=nvim_treesitter#foldexpr()
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+wincmd w
+exe 'vert 1resize ' . ((&columns * 73 + 73) / 147)
+exe 'vert 2resize ' . ((&columns * 73 + 73) / 147)
+exe '3resize ' . ((&lines * 37 + 20) / 40)
+exe 'vert 3resize ' . ((&columns * 1 + 73) / 147)
+tabnext
+edit ~/.config/kitty/kittens/themes/main.py
+let s:save_splitbelow = &splitbelow
+let s:save_splitright = &splitright
+set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+1wincmd h
+wincmd w
+let &splitbelow = s:save_splitbelow
+let &splitright = s:save_splitright
+wincmd t
+let s:save_winminheight = &winminheight
+let s:save_winminwidth = &winminwidth
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+exe 'vert 1resize ' . ((&columns * 73 + 73) / 147)
+exe 'vert 2resize ' . ((&columns * 73 + 73) / 147)
+exe '3resize ' . ((&lines * 11 + 20) / 40)
+exe 'vert 3resize ' . ((&columns * 1 + 73) / 147)
+argglobal
+balt ~/.config/i3/config
+setlocal fdm=expr
+setlocal fde=nvim_treesitter#foldexpr()
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+515
+normal! zo
+let s:l = 527 - ((12 * winheight(0) + 18) / 37)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 527
+normal! 0
+wincmd w
+argglobal
+if bufexists("~/.config/pistol/pistol.conf") | buffer ~/.config/pistol/pistol.conf | else | edit ~/.config/pistol/pistol.conf | endif
+if &buftype ==# 'terminal'
+  silent file ~/.config/pistol/pistol.conf
+endif
+balt ~/.config/kitty/kittens/themes/main.py
+setlocal fdm=expr
+setlocal fde=nvim_treesitter#foldexpr()
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 1 - ((0 * winheight(0) + 18) / 37)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 1
+normal! 0
+wincmd w
+argglobal
+enew
+balt ~/.config/kitty/kittens/themes/main.py
+setlocal fdm=expr
+setlocal fde=nvim_treesitter#foldexpr()
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+wincmd w
+exe 'vert 1resize ' . ((&columns * 73 + 73) / 147)
+exe 'vert 2resize ' . ((&columns * 73 + 73) / 147)
+exe '3resize ' . ((&lines * 11 + 20) / 40)
+exe 'vert 3resize ' . ((&columns * 1 + 73) / 147)
+tabnext
+edit lua/plugins/integrations.lua
+wincmd t
+let s:save_winminheight = &winminheight
+let s:save_winminwidth = &winminwidth
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+exe '2resize ' . ((&lines * 9 + 20) / 40)
+exe 'vert 2resize ' . ((&columns * 1 + 73) / 147)
+argglobal
+balt ~/.config/kitty/kittens/themes/main.py
+setlocal fdm=expr
+setlocal fde=nvim_treesitter#foldexpr()
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+2
+normal! zo
+4
+normal! zo
+8
+normal! zo
+13
+normal! zo
+15
+normal! zo
+20
+normal! zo
+26
+normal! zo
+30
+normal! zo
+36
+normal! zo
+38
+normal! zo
+44
+normal! zo
+48
+normal! zo
+60
+normal! zo
+64
+normal! zo
+69
+normal! zo
+75
+normal! zo
+81
+normal! zo
+89
+normal! zo
+92
+normal! zo
+96
+normal! zo
+99
+normal! zo
+103
+normal! zo
+106
+normal! zo
+110
+normal! zo
+113
+normal! zo
+117
+normal! zo
+120
+normal! zo
+124
+normal! zo
+128
+normal! zo
+132
+normal! zo
+137
+normal! zo
+139
+normal! zo
+145
+normal! zo
+149
+normal! zo
+let s:l = 150 - ((33 * winheight(0) + 18) / 37)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 150
+normal! 032|
+wincmd w
+argglobal
+enew
+balt lua/plugins/integrations.lua
+setlocal fdm=expr
+setlocal fde=nvim_treesitter#foldexpr()
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+wincmd w
+exe '2resize ' . ((&lines * 9 + 20) / 40)
+exe 'vert 2resize ' . ((&columns * 1 + 73) / 147)
+tabnext 3
+if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
+  silent exe 'bwipe ' . s:wipebuf
+endif
+unlet! s:wipebuf
+set winheight=1 winwidth=20 shortmess=filnxtToOFI
+let &winminheight = s:save_winminheight
+let &winminwidth = s:save_winminwidth
+let s:sx = expand("<sfile>:p:r")."x.vim"
+if filereadable(s:sx)
+  exe "source " . fnameescape(s:sx)
+endif
+let &g:so = s:so_save | let &g:siso = s:siso_save
+doautoall SessionLoadPost
+unlet SessionLoad
+" vim: set ft=vim :

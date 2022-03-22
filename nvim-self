@@ -1,0 +1,95 @@
+let SessionLoad = 1
+let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-1 siso=-1
+let v:this_session=expand("<sfile>:p")
+silent only
+silent tabonly
+cd ~/.config/nvim-self
+if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
+  let s:wipebuf = bufnr('%')
+endif
+set shortmess=aoO
+badd +139 lua/maps.lua
+badd +213 lua/config/treesitter.lua
+badd +5 lua/utils/init.lua
+badd +22 lua/plugins/text.lua
+badd +67 lua/custom/which-key.lua
+badd +1 lua/config/colorizer.lua
+badd +5 lua/config/onedark.lua
+badd +54 nvim-config
+badd +1 ~/Source/lua-language-server-2.6.6/meta/Lua\ 5.4\ en-us\ utf8/package.lua
+badd +66 lua/config/ts-textobjects.lua
+badd +4114 data/plugins.yaml
+argglobal
+%argdel
+$argadd lua/config/treesitter.lua
+edit lua/config/ts-textobjects.lua
+wincmd t
+let s:save_winminheight = &winminheight
+let s:save_winminwidth = &winminwidth
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+exe '2resize ' . ((&lines * 9 + 20) / 40)
+exe 'vert 2resize ' . ((&columns * 1 + 73) / 147)
+argglobal
+balt lua/config/treesitter.lua
+setlocal fdm=expr
+setlocal fde=nvim_treesitter#foldexpr()
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=99
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+3
+normal! zo
+4
+normal! zo
+36
+normal! zo
+37
+normal! zo
+47
+normal! zo
+49
+normal! zo
+let s:l = 66 - ((18 * winheight(0) + 18) / 37)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 66
+normal! 0
+lcd ~/.config/nvim-self
+wincmd w
+argglobal
+enew
+balt ~/.config/nvim-self/lua/config/ts-textobjects.lua
+setlocal fdm=expr
+setlocal fde=nvim_treesitter#foldexpr()
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+lcd ~/.config/nvim-self
+wincmd w
+exe '2resize ' . ((&lines * 9 + 20) / 40)
+exe 'vert 2resize ' . ((&columns * 1 + 73) / 147)
+tabnext 1
+if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
+  silent exe 'bwipe ' . s:wipebuf
+endif
+unlet! s:wipebuf
+set winheight=1 winwidth=20 shortmess=filnxtToOFI
+let &winminheight = s:save_winminheight
+let &winminwidth = s:save_winminwidth
+let s:sx = expand("<sfile>:p:r")."x.vim"
+if filereadable(s:sx)
+  exe "source " . fnameescape(s:sx)
+endif
+let &g:so = s:so_save | let &g:siso = s:siso_save
+doautoall SessionLoadPost
+unlet SessionLoad
+" vim: set ft=vim :
