@@ -250,4 +250,8 @@ return {
 		"mbbill/undotree",
 		as = "undotree",
 	},
+	{
+		"gpanders/editorconfig.nvim",
+		as = "editorconfig",
+	},
 }
