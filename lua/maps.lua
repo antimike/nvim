@@ -328,6 +328,12 @@ wk.register({
 		b = { ":Telescope buffers<CR>", "Buffers" },
 		h = { ":Telescope help_tags<CR>", "Help Files" },
 		B = { ":DashboardJumpMarks<CR>", "Find BookMark" },
+                y = {
+                        function()
+                                require('telescope').extensions.neoclip.default()
+                        end,
+                        "Yanks",
+                },
 		p = {
 			function()
 				require("telescope").extensions.media_files.media_files()
