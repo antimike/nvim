@@ -82,6 +82,7 @@ return {
 	{
 		"nixprime/cpsm",
 		as = "cpsm",
+                run = "./install.sh",
 	},
 
 	-- Optional dependency for wilder.nvim
