@@ -23,22 +23,22 @@ return {
 	},
 
 	-- Create shareable permalinks with line ranges
-	{
-		"ruifm/gitlinker.nvim",
-		as = "gitlinker",
-		requires = "plenary",
-		config = function()
-			require("config.gitlinker").setup()
-		end,
-	},
+	-- {
+	-- 	"ruifm/gitlinker.nvim",
+	-- 	as = "gitlinker",
+	-- 	requires = "plenary",
+	-- 	config = function()
+	-- 		require("config.gitlinker").setup()
+	-- 	end,
+	-- },
 
 	-- Collaborative editing
-	{
-		"jbyuki/instant.nvim",
-		config = function()
-			vim.cmd('let g:instant_username = "antimike"')
-		end,
-	},
+	-- {
+	-- 	"jbyuki/instant.nvim",
+	-- 	config = function()
+	-- 		vim.cmd('let g:instant_username = "antimike"')
+	-- 	end,
+	-- },
 
 	-- Competitive programming
 	{
@@ -149,5 +149,11 @@ return {
 	{
 		"https://github.com/HiPhish/info.vim",
 		as = "info.vim",
+	},
+	{
+		"glacambre/firenvim",
+		run = function()
+			vim.fn["firenvim#install"](0)
+		end,
 	},
 }

@@ -96,6 +96,17 @@ return {
 		end,
 	},
 
+	{
+		"ms-jpq/chadtree",
+		as = "chadtree",
+		run = {
+			"python3 -m chadtree deps",
+			":CHADdeps",
+		},
+		branch = "chad",
+		requires = "devicons",
+	},
+
 	-- Bufferline.
 	{
 		"akinsho/nvim-bufferline.lua",
@@ -134,7 +145,7 @@ return {
 		"SmiteshP/nvim-gps",
 		as = "gps",
 		config = function()
-                        require("config.gps")
+			require("config.gps")
 		end,
 		requires = "treesitter",
 		after = "treesitter",
@@ -145,9 +156,9 @@ return {
 		"nvim-lualine/lualine.nvim",
 		as = "lualine",
 		after = {
-                        "bufferline",
-                        "gps",
-                },
+			"bufferline",
+			"gps",
+		},
 		config = function()
 			require("config.lualine")
 		end,
@@ -236,7 +247,9 @@ return {
 		as = "nvim-notify",
 		requires = {
 			"plenary",
+                        "telescope",
 		},
+                after = "telescope",
 		config = function()
 			local conf = require("config.notify")
 			conf.SetNotifyHighlights()
@@ -253,5 +266,13 @@ return {
 	{
 		"gpanders/editorconfig.nvim",
 		as = "editorconfig",
+	},
+	{
+		"jedrzejboczar/possession.nvim",
+		requires = { "nvim-lua/plenary.nvim", "telescope" },
+                after = "telescope",
+                config = function()
+                        require("config.possession")
+                end,
 	},
 }

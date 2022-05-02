@@ -54,9 +54,9 @@ return {
 			"cmp-nvim-lsp",
 		},
 		after = {
-                        "cmp-nvim-lsp",
-                        "lspconfig",
-                },
+			"cmp-nvim-lsp",
+			"lspconfig",
+		},
 		config = function()
 			require("config.lsp")
 		end,
@@ -137,13 +137,13 @@ return {
 	},
 	-- Helps manage package.json
 	-- TODO: Figure out how to lazy-load this
-	{
-		"vuki656/package-info.nvim",
-		requires = "nui",
-		config = function()
-			require("package-info").setup()
-		end,
-	},
+	-- {
+	-- 	"vuki656/package-info.nvim",
+	-- 	requires = "nui",
+	-- 	config = function()
+	-- 		require("package-info").setup()
+	-- 	end,
+	-- },
 
 	-- Rust dependency management
 	{
@@ -225,5 +225,11 @@ return {
 		config = function()
 			require("config.splitjoin")
 		end,
+	},
+        -- NOTE: Another option is https://github.com/bfrg/vim-jq
+        -- TODO: Look into implementing TS / LSP support for jq
+	{
+		"vito-c/jq.vim",
+		as = "jq",
 	},
 }

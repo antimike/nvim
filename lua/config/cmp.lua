@@ -57,9 +57,9 @@ cmp.setup({
       return vim_item
     end
   },
-  documentation = {
-    border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-  },
+  -- documentation = {
+  --   border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+  -- },
   experimental = {
     ghost_text = true,
     native_menu = false,
@@ -101,6 +101,6 @@ cmp.setup({
     { name = 'treesitter' },
     { name = 'nvim_lua' },
     { name = 'crates' },
-    { name = 'orgmode' },
+    -- { name = 'orgmode' },
   }
 })

@@ -2,7 +2,7 @@ local plugins = { { "wbthomason/packer.nvim", opt = true } }
 local plugin_groups = {
 	"shared",
 	"colors",
-	"dap",
+	-- "dap",
 	"find",
 	"git",
 	"workspace",
@@ -33,7 +33,7 @@ return require("packer").startup({
 		},
 		profile = {
 			enable = true,
-			threshold = 1,
+			threshold = .2,
 		},
 		-- transitive_opt = false,
 		-- opt_default = true,

@@ -1,7 +1,4 @@
-local present, telescope = pcall(require, "telescope")
-if not present then
-	return
-end
+local telescope = require("telescope")
 
 local previewers = require("telescope.previewers")
 local Job = require("plenary.job")
@@ -229,24 +226,3 @@ telescope.setup({
 		},
 	},
 })
-telescope.load_extension("media_files")
-telescope.load_extension("find_directories")
-telescope.load_extension("fzf")
-telescope.load_extension("ui-select")
--- TODO: Debug frecency config
--- telescope.load_extension("frecency")
-telescope.load_extension("arecibo")
-telescope.load_extension("project")
-telescope.load_extension("command_palette")
-telescope.load_extension("notify")
-telescope.load_extension("smart_history")
-telescope.load_extension("cheat")
-telescope.load_extension("z")
-telescope.load_extension("gh")
-telescope.load_extension("file_browser")
-telescope.load_extension("bibtex")
--- telescope.load_extension('packer')
-
--- Suggested by https://alpha2phi.medium.com/vim-neovim-managing-multiple-projects-63180fc87188
--- map('n', '<leader>fp', ':Telescope project<CR>')
--- map('n', '<Leader>fx', "require('custom.telescope').switch_projects()<CR>")

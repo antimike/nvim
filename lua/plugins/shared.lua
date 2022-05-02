@@ -130,11 +130,11 @@ return {
 		"skywind3000/asyncrun.vim",
 		as = "asyncrun",
 	},
-	{
-		"rmagatti/auto-session",
-		as = "auto-session",
-                config = function()
-                        require("config.auto-session")
-                end,
-	},
+	-- {
+	-- 	"rmagatti/auto-session",
+	-- 	as = "auto-session",
+ --                config = function()
+ --                        require("config.auto-session")
+ --                end,
+	-- },
 }

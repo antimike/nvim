@@ -4,7 +4,7 @@ if not present then
 end
 
 local gps = require("nvim-gps")
-local session = require("custom.auto-session")
+-- local session = require("custom.auto-session")
 
 -- From CodeArt
 local lualine_styles = {
@@ -63,7 +63,7 @@ lualine.setup({
 		},
 		lualine_c = {
 			"filename",
-			{ session.SessionName, cond = function() return true end },
+			-- { session.SessionName, cond = function() return true end },
 			-- {
 			-- 	require("auto-session-library").current_session_name or "",
 			-- 	cond = function()

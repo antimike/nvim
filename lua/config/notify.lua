@@ -3,6 +3,7 @@ local pkg = {}
 local fn = vim.fn
 vim.notify = notify
 
+require("telescope").load_extension("notify")
 local function get_bg_highlight()
         local bg = fn.synIDattr(fn.synIDtrans(fn.hlID("Normal")), "bg")
         if bg == nil or #bg == 0 then

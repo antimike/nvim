@@ -48,8 +48,8 @@ wk.register({
 wk.register({
 	["<C-s>"] = {
 		name = "Session",
-		s = { ":SessionLoad<CR>", "Load Session" },
-		S = { ":SessionSave<CR>", "Save Session" },
+                s = { function() require("telescope").extensions.possession.list() end, "Load Session" },
+                S = { ":PossessionSave", "Save Session" },
 	},
 })
 
@@ -772,6 +772,7 @@ wk.register({
 wk.register({
 	n = {
 		name = "Notes",
+                p = { "<Plug>MarkdownPreviewToggle", "Toggle Markdown Preview" },
 		m = {
 			function()
 				require("nabla").action()
