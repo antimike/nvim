@@ -7,6 +7,8 @@ if fn.empty(fn.glob(install_path)) > 0 then
 	execute("!git clone https://github.com/wbthomason/packer.nvim " .. install_path)
 end
 
+-- Use neovim virtualenv for Python3 host
+vim.cmd([[let g:python3_host_prog='/home/hactar/.pyenv/versions/neovim/bin/python']])
 vim.cmd([[packadd packer.nvim]])
 -- vim.cmd("autocmd BufWritePost plugins.lua PackerCompile") -- Auto compile when there are changes in plugins.lua
 
