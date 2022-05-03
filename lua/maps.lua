@@ -297,7 +297,7 @@ wk.register({
 		n = { ":DashboardNewFile<CR>", "New Buffer" },
                 r = {
                         function()
-                                vim.lsp.buf.formatting()
+                                vim.lsp.buf.format({ async = true })
                         end,
                         "Format Buffer"
                 },
@@ -414,6 +414,8 @@ wk.register({
 	g = {
 		name = "Git",
 		s = { ":Telescope git_status<CR>", "Status + Git Diff" },
+                d = { ":DiffviewOpen<CR>", "Open Diff View" },
+                D = { ":DiffviewClose<CR>", "Open Diff View" },
 		c = { ":Telescope git_commits<CR>", "Commit History" },
 		C = { ":Telescope git_bcommits<CR>", "Buffer Commit History" },
 		b = { ":Telescope git_branches<CR>", "Branches History" },
@@ -424,12 +426,9 @@ wk.register({
 		R = { ":Gitsigns reset_buffer<CR>", "Reset Buffer" },
 		d = { ":Gitsigns diffthis<CR>", "Git Diff" },
 		l = { ":Gitsigns blame_line<CR>", "Blame For Current Line" },
+                L = { ":DiffviewLog", "Open Diffview Log" },
 		S = { ":Gitsigns stage_hunk<CR>", "Stage Hunk" },
 		u = { ":Gitsigns undo_stage_hunk<CR>", "Undo Stage Hunk" },
-		g = { ":VGit buffer_gutter_blame_preview<CR>", "Buffer Gutter Blame Preview" },
-		H = { ":VGit project_hunks_preview<CR>", "Project Hunks Preview" },
-		D = { ":VGit project_diff_preview<CR>", "Project Diff Preview" },
-		i = { ":Neogit<CR>", "Interactive Git Client (Neogit)" },
 		m = { ":GitMessenger<CR>", "Summary of Git Data for Current Line" }, -- Default mapping configured by plugin (git-messenger)
 		t = { ":Tig<CR>", "Git Explorer (Tig)" },
 		h = {
@@ -520,7 +519,7 @@ wk.register({
 			name = "Format",
 			b = {
 				function()
-					vim.lsp.buf.formatting()
+                                        vim.lsp.buf.format({ async = true })
 				end,
 				"Format Buffer using LSP",
 			},

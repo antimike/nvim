@@ -5,14 +5,16 @@ end
 
 -- Set alias for vim.g.
 local g = vim.g
-g.nvim_tree_indent_markers = 1 -- This option shows indent markers when folders are open.
-g.nvim_tree_ignore = { ".git", "node_modules", ".cache", "__pycache__" } -- Ignore these types in listing.
+-- g.nvim_tree_indent_markers = 1 -- This option shows indent markers when folders are open.
+-- g.nvim_tree_ignore = { ".git", "node_modules", ".cache", "__pycache__" } -- Ignore these types in listing.
 
 nvimtree.setup({ -- BEGIN_DEFAULT_OPTS
-	auto_close = false,
+        -- ignore = { ".git", "node_modules", ".cache", "__pycache__" }, -- Ignore these types in listing.
+        -- indent_markers = 1,
+	-- auto_close = false,
 	auto_reload_on_write = true,
 	disable_netrw = true,
-	hide_root_folder = false,
+	-- hide_root_folder = false,
 	hijack_cursor = false,
 	hijack_netrw = true,
 	hijack_unnamed_buffer_when_opening = false,

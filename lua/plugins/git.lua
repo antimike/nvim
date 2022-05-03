@@ -14,31 +14,6 @@ return {
     cmd = "GitMessenger",
   },
 
-  -- Magit clone for neovim
-  {
-    "TimUntersberger/neogit",
-    as = "neogit",
-    cmd = "Neogit",
-    requires = "diffview",
-    config = function()
-      require("config.neogit").setup()
-    end,
-  },
-
-  -- Another visual git client
-  {
-    "tanvirtin/vgit.nvim",
-    as = "vgit",
-    requires = {
-      'nvim-lua/plenary.nvim'
-    },
-    event = "BufWinEnter",
-    config = function()
-      -- require("vgit").setup()
-      require("config.vgit").setup()
-    end,
-  },
-
   -- Git signs.
   {
     'lewis6991/gitsigns.nvim',
@@ -52,10 +27,21 @@ return {
     end
   },
 
+        {
+                "https://github.com/whiteinge/diffconflicts",
+                as = "diffconflicts",
+                cmd = "DiffConflicts"
+        },
+
   -- Tig explorer.
   {
     'iberianpig/tig-explorer.vim',
     as = "tig",
     requires = 'bclose',
-  }
+        config = function()
+                -- From https://github.com/mhinz/neovim-remote
+                -- Auto-deletes git-related buffers when closed so that nvr knows we're done with them
+                vim.cmd([[autocmd FileType gitcommit,gitrebase,gitconfig set bufhidden=delete]])
+        end
+  },
 }
