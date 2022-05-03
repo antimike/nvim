@@ -1,5 +1,7 @@
 local lspconfig = require("lspconfig")
-local servers = {
+local M = {}
+
+M.servers = {
 	"pyright",
 	"clangd",
 	"cmake",
@@ -17,7 +19,7 @@ local servers = {
 	"sumneko_lua",
 }
 
-local on_attach = function(client, bufnr)
+M.on_attach = function(client, bufnr)
 	require("completion").on_attach()
 
 	local function buf_set_keymap(...)
@@ -69,6 +71,8 @@ local on_attach = function(client, bufnr)
 	end
 end
 
-for _, s in ipairs(servers) do
+for _, s in ipairs(M.servers) do
 	lspconfig[s].setup({})
 end
+
+return M

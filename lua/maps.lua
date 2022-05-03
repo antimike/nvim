@@ -49,7 +49,12 @@ wk.register({
 	["<C-s>"] = {
 		name = "Session",
                 s = { function() require("telescope").extensions.possession.list() end, "Load Session" },
-                S = { ":PossessionSave", "Save Session" },
+                S = {
+                        function()
+                                require("possession").save(vim.fn.input("Session name (empty for default): "))
+                        end,
+                        "Save Session"
+                },
 	},
 })
 
@@ -290,7 +295,12 @@ wk.register({
 		l = { ":BufferLineMoveNext<CR>", "Move Buffer Right" },
 		h = { ":BufferLineMovePrev<CR>", "Move buffer Left" },
 		n = { ":DashboardNewFile<CR>", "New Buffer" },
-		r = { ":Neoformat<CR>", "Format Buffer" },
+                r = {
+                        function()
+                                vim.lsp.buf.formatting()
+                        end,
+                        "Format Buffer"
+                },
 		m = { ":TZFocus<CR>", "Maximize Current Buffer" },
 	},
 }, { prefix = "<leader>" })
@@ -322,6 +332,12 @@ wk.register({
 	f = {
 		name = "Find",
 		w = { ":Telescope live_grep<CR>", "Words" },
+                S = {
+                        function()
+                                require("possession").save(vim.fn.input("Session name (empty for default): "))
+                        end,
+                        "Sessions",
+                },
 		f = { ":Telescope find_files<CR>", "Files" },
 		o = { ":Telescope oldfiles<CR>", "Old Files" },
 		d = { ":Telescope find_directories<CR>", "Directories" },

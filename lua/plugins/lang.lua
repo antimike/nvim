@@ -108,10 +108,14 @@ return {
 		end,
 	},
 
-	-- Code formatter
+	-- Helps manage external tools like code formatters, linters, etc.
 	{
-		"sbdchd/neoformat",
-		cmd = "Neoformat",
+		"jose-elias-alvarez/null-ls.nvim",
+		as = "null-ls",
+                requires = "plenary",
+		config = function()
+			require("config.null-ls")
+		end,
 	},
 
 	-- Generate annotations and documentation
@@ -226,8 +230,8 @@ return {
 			require("config.splitjoin")
 		end,
 	},
-        -- NOTE: Another option is https://github.com/bfrg/vim-jq
-        -- TODO: Look into implementing TS / LSP support for jq
+	-- NOTE: Another option is https://github.com/bfrg/vim-jq
+	-- TODO: Look into implementing TS / LSP support for jq
 	{
 		"vito-c/jq.vim",
 		as = "jq",
