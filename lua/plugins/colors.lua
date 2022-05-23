@@ -1,11 +1,6 @@
 -- Color schemes.
 return {
-	-- "jonstoler/werewolf.vim",
 	"sjl/badwolf",
-	-- "Lokaltog/vim-distinguished",
-	-- "ParamagicDev/vim-medic_chalk",
-	-- "tpope/vim-vividchalk",
-	-- "reedes/vim-colors-pencil",
 	-- TreeSitter colorschemes
 	{
 		"ChristianChiarulli/nvcode-color-schemes.vim",

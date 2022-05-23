@@ -14,6 +14,11 @@ return {
 	},
 	{
 		"folke/twilight.nvim",
+                cmd = {
+                        "Twilight",
+                        "TwilightEnable",
+                        "TwilightDisable"
+                },
 		config = function()
 			require("config.twilight")
 		end,
