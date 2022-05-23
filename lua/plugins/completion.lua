@@ -3,13 +3,12 @@ return {
 		"rafamadriz/friendly-snippets",
                 opt = false,
 		as = "friendly-snippets",
-		-- event = "InsertEnter",
+		event = "InsertEnter",
 	},
 	-- NOTE: Snippet "aggregator" (subsumes LuaSnip, e.g.)
 	{
 		"hrsh7th/nvim-cmp",
 		as = "nvim-cmp",
-                opt = false,
 		after = "friendly-snippets",
 		config = function()
 			require("config.cmp")
@@ -18,7 +17,6 @@ return {
 	{
 		"hrsh7th/cmp-nvim-lsp",
                 as = "cmp-nvim-lsp",
-                opt = false,
 		requires = {
 			"nvim-cmp",
 		},
