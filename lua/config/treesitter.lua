@@ -253,14 +253,13 @@ nvim_treesitter.setup({
 	},
 })
 
--- parser_conf.markdown = {
--- 	filetype_to_parsername = "octo",
--- 	install_info = {
--- 		url = "https://github.com/ikatyang/tree-sitter-markdown",
--- 		files = { "src/parser.c", "src/scanner.cc" },
--- 	},
--- 	filetype = "markdown",
--- }
+parser_conf.markdown = {
+	install_info = {
+		url = "https://github.com/MDeiml/tree-sitter-markdown",
+		files = { "src/parser.c", "src/scanner.cc" },
+	},
+	filetype = "markdown",
+}
 
 vim.cmd([[
   autocmd BufEnter * set foldmethod=expr

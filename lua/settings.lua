@@ -81,7 +81,7 @@ opt.ruler = true
 opt.timeoutlen = 200
 
 -- Setting up autocomplete menu.
-opt.completeopt = "menuone,noselect"
+opt.completeopt = "menu,menuone,noselect,preview,noinsert,noselect"
 
 -- Set line number for help files.
 vim.cmd([[

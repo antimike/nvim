@@ -66,6 +66,7 @@ return {
 	{
 		"AckslD/nvim-gfold.lua",
 		after = { "telescope" },
+                keys = "<leader>fr",
 		requires = "telescope",
 		config = function()
 			require("config.gfold")

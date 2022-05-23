@@ -53,7 +53,7 @@ lualine.setup({
 	sections = {
 		lualine_a = { "mode" },
 		lualine_b = {
-			{ "gfold" },
+			-- { "gfold" },
 			{ "branch" },
 			{
 				"diff",

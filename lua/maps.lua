@@ -333,9 +333,7 @@ wk.register({
 		name = "Find",
 		w = { ":Telescope live_grep<CR>", "Words" },
                 S = {
-                        function()
-                                require("possession").save(vim.fn.input("Session name (empty for default): "))
-                        end,
+                        function() require("telescope").extensions.possession.list() end,
                         "Sessions",
                 },
 		f = { ":Telescope find_files<CR>", "Files" },
@@ -522,10 +520,6 @@ wk.register({
                                         vim.lsp.buf.format({ async = true })
 				end,
 				"Format Buffer using LSP",
-			},
-			n = {
-				":Neoformat<CR>",
-				"Format Buffer using Neoformat",
 			},
 		},
 		A = {

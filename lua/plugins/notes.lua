@@ -106,6 +106,9 @@ return {
 	{
 		"vim-pandoc/vim-pandoc",
 		as = "vim-pandoc",
+                config = function()
+                        vim.cmd([[let g:pandoc#keyboard#use_default_mappings=0]])
+                end,
 	},
 	{
 		"vim-pandoc/vim-pandoc-syntax",

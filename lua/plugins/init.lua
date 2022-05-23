@@ -1,4 +1,7 @@
-local plugins = { { "wbthomason/packer.nvim", opt = true } }
+local plugins = {
+        { "wbthomason/packer.nvim", opt = true },
+        { "lewis6991/impatient.nvim", as = "impatient", opt = false }
+}
 local plugin_groups = {
 	"shared",
 	"colors",
@@ -16,6 +19,11 @@ local plugin_groups = {
 }
 for _, g in ipairs(plugin_groups) do
 	vim.list_extend(plugins, require("plugins." .. g))
+end
+
+local present, impatient = pcall(require, "impatient")
+if present then
+        impatient.enable_profile()
 end
 
 return require("packer").startup({

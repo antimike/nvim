@@ -13,8 +13,8 @@ null_ls.setup({
   --         extra_args = { "--dialect", "postgres" } -- change to your dialect
   -- }),
   builtins.formatting.jq,
-  builtins.formatting.lua_format,
+  -- builtins.formatting.lua_format,
   builtins.diagnostics.eslint,
-  builtins.completion.spell,
+  -- builtins.completion.spell,
  },
 })

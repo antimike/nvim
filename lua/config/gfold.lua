@@ -2,7 +2,7 @@
 require("gfold").setup({
 	-- base directory to look for repos
 	-- defaults to home
-	cwd = vim.fn.getenv("HOME"),
+	cwd = string.format("%s/%s", vim.fn.getenv("HOME"), "Source"),
 
 	-- What symbols to use, for both picker and status
 	status_symbols = {
