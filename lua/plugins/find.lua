@@ -3,7 +3,11 @@ return {
 	{
 		"nvim-telescope/telescope.nvim",
 		as = "telescope",
-		opt = false,
+                module = "telescope",
+                cmd = {
+                        "TodoTelescope",
+                        "Telescope"
+                },
 		requires = {
 			"cljoly/telescope-repo.nvim",
 		},
@@ -11,24 +15,10 @@ return {
 			require("config.telescope")
 		end,
 	},
-	-- {
-	-- 	"rmagatti/session-lens",
-	-- 	as = "session-lens",
-	-- 	requires = {
-	-- 		"auto-session",
-	-- 		"telescope",
-	-- 	},
-	-- 	after = "telescope",
-	-- 	config = function()
-	-- 		require("telescope").load_extension("session-lens")
-	-- 		require("config.telescope-sessions")
-	-- 	end,
-	-- },
 	{
 		"crispgm/telescope-heading.nvim",
 		as = "telescope-heading",
 		requires = "telescope",
-		-- after = "telescope",
 		config = function()
 			require("telescope").load_extension("heading")
 		end,
@@ -65,8 +55,8 @@ return {
 	},
 	{
 		"AckslD/nvim-gfold.lua",
+                module = "gfold",
 		after = { "telescope" },
-                keys = "<leader>fr",
 		requires = "telescope",
 		config = function()
 			require("config.gfold")
@@ -99,6 +89,7 @@ return {
 			require("telescope").load_extension("gh")
 		end,
 	},
+        -- TODO: Fix `z` executable path / replace by autojump in config
 	{
 		"nvim-telescope/telescope-z.nvim",
 		as = "telescope-z",
@@ -162,17 +153,6 @@ return {
 		config = function()
 			require("telescope").load_extension("file_browser")
 		end,
-	},
-	{
-		"nvim-telescope/telescope-frecency.nvim",
-		as = "telescope-frecency",
-		requires = {
-			"telescope",
-			"sqlite",
-			"devicons",
-		},
-		after = { "telescope" },
-		-- config = function() require("telescope").load_extension("frecency") end,
 	},
 	-- Define and search for custom commands
 	{

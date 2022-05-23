@@ -200,18 +200,13 @@ map("v", "jl", "<ESC>")
 map("v", "<", "<gv")
 map("v", ">", ">gv")
 
--- Ranger
--- map('t', '<M-i>', '<C-\\><C-n>:RnvimrResize<CR>', {silent = true})
--- map('n', '<M-o>', ':RnvimrToggle<CR>', {silent = true})
--- map('t', '<M-o>', '<C-\\><C-n>:RnvimrToggle<CR>', {silent = true})
-
 -- File Managers
 wk.register({
 	o = { ":Ranger<CR>", "Ranger (File Manager)" },
 }, { prefix = "<leader>" })
 
 wk.register({
-	gh = { ":Telescope help_tags<CR>", "Search help pages" },
+	gh = { function() require("telescope.builtin").help_tags() end, "Search help pages" },
 })
 
 -- hop.nvim
@@ -281,8 +276,8 @@ wk.register({
 wk.register({
 	C = {
 		name = "Cheatsheets",
-		f = { ":Telescope cheat fd<CR>", "Find cheatsheet" },
-		r = { ":Telescope cheat recache<CR>", "Recache cheatsheets" },
+		f = { function() require("telescope").extensions.cheat.fd() end, "Find cheatsheet" },
+		r = { function() require("telescope").extensions.cheat.recache() end, "Recache cheatsheets" },
 	},
 }, { prefix = "<leader>" })
 
@@ -331,16 +326,16 @@ wk.register({
 wk.register({
 	f = {
 		name = "Find",
-		w = { ":Telescope live_grep<CR>", "Words" },
+		w = { function() require("telescope.builtin").live_grep() end, "Words" },
                 S = {
                         function() require("telescope").extensions.possession.list() end,
                         "Sessions",
                 },
-		f = { ":Telescope find_files<CR>", "Files" },
-		o = { ":Telescope oldfiles<CR>", "Old Files" },
-		d = { ":Telescope find_directories<CR>", "Directories" },
-		b = { ":Telescope buffers<CR>", "Buffers" },
-		h = { ":Telescope help_tags<CR>", "Help Files" },
+		f = { function() require("telescope.builtin").find_files() end, "Files" },
+		o = { function() require("telescope.builtin").oldfiles() end, "Old Files" },
+		d = { function() require("telescope").extensions.find_directories() end, "Directories" },
+		b = { function() require("telescope.builtin").buffers() end, "Buffers" },
+		h = { function() require("telescope.builtin").help_tags() end, "Help Files" },
 		B = { ":DashboardJumpMarks<CR>", "Find BookMark" },
                 y = {
                         function()
@@ -354,11 +349,11 @@ wk.register({
 			end,
 			"Media files",
 		},
-		P = { ":Telescope project<CR>", "Projects" },
-		n = { ":Telescope notify<CR>", "Notifications" },
-		c = { ":Telescope cheat fd<CR>", "Cheatsheets" },
-		C = { ":Telescope command_palette<CR>", "Commands" },
-		z = { ":Telescope z list<CR>", "Common Directories (Z)" },
+		P = { function() require("telescope").extensions.project() end, "Projects" },
+		n = { function() require("telescope").extensions.notify() end, "Notifications" },
+		c = { function() require("telescope").extensions.cheat() end, "Cheatsheets" },
+		C = { function() require("telescope").extensions.command_palette() end, "Commands" },
+		z = { function() require("telescope").extensions.z() end, "Common Directories (Z)" },
 		t = { "TodoTelescope<CR>", "Project TODOs" },
 		T = {
 			name = "Tags",
@@ -411,12 +406,12 @@ wk.register({
 wk.register({
 	g = {
 		name = "Git",
-		s = { ":Telescope git_status<CR>", "Status + Git Diff" },
-                d = { ":DiffviewOpen<CR>", "Open Diff View" },
-                D = { ":DiffviewClose<CR>", "Open Diff View" },
-		c = { ":Telescope git_commits<CR>", "Commit History" },
-		C = { ":Telescope git_bcommits<CR>", "Buffer Commit History" },
-		b = { ":Telescope git_branches<CR>", "Branches History" },
+		s = { function() require("telescope.builtin").git_status() end, "Status + Git Diff" },
+                d = { function() require("diffview").open() end, "Open Diff View" },
+                D = { function() require("diffview").close() end, "Open Diff View" },
+		c = { function() require("telescope.builtin").git_commits() end, "Commit History" },
+		C = { function() require("telescope.builtin").git_bcommits() end, "Buffer Commit History" },
+		b = { function() require("telescope.builtin").git_branches() end, "Branches History" },
 		k = { ":Gitsigns prev_hunk<CR>", "Next Hunk" },
 		j = { ":Gitsigns next_hunk<CR>", "Prev Hunk" },
 		p = { ":Gitsigns preview_hunk<CR>", "Preview Hunk" },
@@ -463,7 +458,7 @@ wk.register({
 wk.register({
 	t = {
 		name = "Theme",
-		c = { ":Telescope colorscheme<CR>", "Set Colorscheme" },
+		c = { function() require("telescope.builtin").colorscheme() end, "Set Colorscheme" },
 	},
 }, { prefix = "<leader>" })
 
@@ -498,7 +493,7 @@ wk.register({
 			end,
 			"Code Action",
 		},
-		d = { ":Telescope diagnostics<CR>", "Diagnostics" },
+		d = { function() require("telescope.builtin").diagnostics() end, "Diagnostics" },
 		i = { ":LspInfo<CR>", "Info" },
 		I = { ":LspInstallInfo<CR>", "Installer Info" },
 		r = {
