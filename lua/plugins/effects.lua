@@ -1,6 +1,5 @@
 return {
  -- Allows fancy UI hooks
- -- Requires nvim 0.6 for full effect
  -- NOTE: May conflict with popui and telescope-ui-select.nvim
  {
   "stevearc/dressing.nvim",

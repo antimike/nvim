@@ -58,7 +58,7 @@ function pkg.map(fn, ...)
     local it = iter.pack(...)
     return coroutine.wrap(
         function ()
-            for val in it do
+            for vals in it do
                 coroutine.yield(fn(vals and table.unpack(vals)))
             end
         end
