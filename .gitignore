@@ -5,3 +5,5 @@ Session.vim
 .history
 *~
 plugin/
+
+nvim_exec()
