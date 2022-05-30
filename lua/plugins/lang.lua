@@ -244,5 +244,7 @@ return {
                 "jjo/vim-cue",
                 as = "cue"
  },
- { 'crispgm/nvim-go', ft = 'go' }
+ { 'crispgm/nvim-go', ft = 'go' },
+ { 'leafo/moonscript-vim', ft = 'moonscript' },
+ { 'pigpigyyy/yuescript-vim', ft = 'yuescript' },
 }
